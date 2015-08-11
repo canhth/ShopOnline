@@ -1,0 +1,11 @@
+platform :ios, "8.0"
+use_frameworks!
+
+target 'ShopOnline' do
+    pod 'SlideMenuControllerSwift'
+end
+
+target 'ShopOnlineTests' do
+    pod 'SlideMenuControllerSwift'
+end
+

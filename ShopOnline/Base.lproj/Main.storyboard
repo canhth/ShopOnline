@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZNI-IL-tg4">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <scenes>
+        <!--Right Menu View Controller-->
+        <scene sceneID="V3Y-Dc-HJW">
+            <objects>
+                <viewController storyboardIdentifier="SORightMenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tq8-Ao-iyq" customClass="SORightMenuViewController" customModule="ShopOnline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TEc-je-v83"/>
+                        <viewControllerLayoutGuide type="bottom" id="vM9-Av-9vd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aBd-8g-xf6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b7x-Bj-izS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272" y="-634"/>
+        </scene>
+        <!--Left Menu View Controller-->
+        <scene sceneID="Fnu-m7-0Ix">
+            <objects>
+                <viewController storyboardIdentifier="SOLeftMenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h5J-rC-egm" customClass="SOLeftMenuViewController" customModule="ShopOnline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KaP-eb-NIi"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vui-ub-SVW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EfG-wC-AIM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MZT-d7-efI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272" y="-1322"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="SOSplashViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="SOSplashViewController" customModule="ShopOnline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cqI-ls-0Wn"/>
+                    <connections>
+                        <segue destination="4S3-MI-FlP" kind="show" identifier="kSegue_Push_Splash_Intro" id="CCA-md-1w2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="136"/>
+        </scene>
+        <!--Intro View Controller-->
+        <scene sceneID="efC-eq-Zie">
+            <objects>
+                <viewController id="4S3-MI-FlP" customClass="SOIntroViewController" customModule="ShopOnline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gx1-jX-Fwa"/>
+                        <viewControllerLayoutGuide type="bottom" id="unR-Ur-XeR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5m0-1d-Oy5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZR7-lV-Rf3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="136"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qTB-Fb-gr8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZNI-IL-tg4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7ru-KW-69y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="R2f-Th-GJD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0j1-JR-YtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272" y="136"/>
+        </scene>
+    </scenes>
+</document>
