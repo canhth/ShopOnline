@@ -1,0 +1,37 @@
+PODS:
+  - FontAwesome.swift (0.4.3)
+  - GoogleMaps (1.10.1)
+  - JTSplashView (1.0.0)
+  - PermissionScope (0.7)
+  - SACollectionViewVerticalScalingFlowLayout (2.1.0)
+  - SlideMenuControllerSwift (1.2.1)
+  - SVProgressHUD (HEAD based on 1.1.3)
+  - SwiftPages (1.1.0)
+  - SwiftyJSON (2.2.1)
+  - TextFieldEffects (0.4.1)
+
+DEPENDENCIES:
+  - FontAwesome.swift
+  - GoogleMaps
+  - JTSplashView
+  - PermissionScope (~> 0.7)
+  - SACollectionViewVerticalScalingFlowLayout
+  - SlideMenuControllerSwift
+  - SVProgressHUD (HEAD)
+  - SwiftPages
+  - SwiftyJSON (~> 2.2.1)
+  - TextFieldEffects
+
+SPEC CHECKSUMS:
+  FontAwesome.swift: 4f3dbf913b9ef9db275d02b75f6b794fa3bcbabc
+  GoogleMaps: ebf08677f181d9c2dcdbd1721d206f02beccc9b1
+  JTSplashView: e7d15d11d4cba3077c9db44f1fc14de3507a12f5
+  PermissionScope: 1d27791185cca10c26f84d1aab905117dde50f39
+  SACollectionViewVerticalScalingFlowLayout: f11d0b0df02f9c63a3eb641cd0c14511ffc93581
+  SlideMenuControllerSwift: be087b89d74b861d769af0d677f77c7b7b5fdde8
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  SwiftPages: 1b24565cb91f24f4f912fbd9878a9c74b41a2ca6
+  SwiftyJSON: ae2d0a3d68025d136602a33c4ee215091ced3e33
+  TextFieldEffects: 955063c428d3262977d92c8804b3100e9142936a
+
+COCOAPODS: 0.38.2

@@ -1,11 +1,16 @@
-platform :ios, "8.0"
+platform :ios,'8.0'
 use_frameworks!
 
 target 'ShopOnline' do
     pod 'SlideMenuControllerSwift'
-end
-
-target 'ShopOnlineTests' do
-    pod 'SlideMenuControllerSwift'
+    pod 'JTSplashView'
+    pod 'PermissionScope', '~> 0.7'
+	pod 'SwiftPages'
+    pod 'TextFieldEffects'
+    pod 'FontAwesome.swift'
+    pod 'SwiftyJSON', '~> 2.2.1'
+    pod 'SACollectionViewVerticalScalingFlowLayout'
+    pod 'SVProgressHUD', :head
+    pod 'GoogleMaps'
 end
 
