@@ -13,6 +13,7 @@
 		CE3A393A1B78E2F50069A2A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3A39381B78E2F50069A2A5 /* Main.storyboard */; };
 		CE3A393F1B78E2F50069A2A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3A393D1B78E2F50069A2A5 /* LaunchScreen.xib */; };
 		CE3A394B1B78E2F50069A2A5 /* ShopOnlineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A394A1B78E2F50069A2A5 /* ShopOnlineTests.swift */; };
+		CE8D853F1B80962F001354A8 /* SOIntroPageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D853E1B80962F001354A8 /* SOIntroPageItemController.swift */; };
 		CE9AD5AB1B7A462A00A58D06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9AD5A51B7A462A00A58D06 /* Images.xcassets */; };
 		CE9AD5AC1B7A462A00A58D06 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9AD5A71B7A462A00A58D06 /* SlideMenuController.swift */; };
 		CE9AD5AF1B7A46C400A58D06 /* SOSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9AD5AE1B7A46C400A58D06 /* SOSplashViewController.swift */; };
@@ -45,6 +46,7 @@
 		CE3A39441B78E2F50069A2A5 /* ShopOnlineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopOnlineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3A39491B78E2F50069A2A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE3A394A1B78E2F50069A2A5 /* ShopOnlineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopOnlineTests.swift; sourceTree = "<group>"; };
+		CE8D853E1B80962F001354A8 /* SOIntroPageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOIntroPageItemController.swift; sourceTree = "<group>"; };
 		CE9AD5A51B7A462A00A58D06 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CE9AD5A71B7A462A00A58D06 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		CE9AD5AE1B7A46C400A58D06 /* SOSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOSplashViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CE8D85391B8094C0001354A8 /* Introduce */ = {
+			isa = PBXGroup;
+			children = (
+				CE9AD5B01B7A46D600A58D06 /* SOIntroViewController.swift */,
+				CE8D853E1B80962F001354A8 /* SOIntroPageItemController.swift */,
+			);
+			name = Introduce;
+			sourceTree = "<group>";
+		};
 		CE9AD5A21B7A462A00A58D06 /* SOShared */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,10 +214,10 @@
 		CE9AD5AD1B7A463F00A58D06 /* SOSections */ = {
 			isa = PBXGroup;
 			children = (
+				CE8D85391B8094C0001354A8 /* Introduce */,
 				CE9AD5C71B7A54DC00A58D06 /* SOSectionsPrefixHeader.pch */,
 				CE9AD5B21B7A46DF00A58D06 /* Menu */,
 				CE9AD5AE1B7A46C400A58D06 /* SOSplashViewController.swift */,
-				CE9AD5B01B7A46D600A58D06 /* SOIntroViewController.swift */,
 			);
 			path = SOSections;
 			sourceTree = "<group>";
@@ -347,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8D853F1B80962F001354A8 /* SOIntroPageItemController.swift in Sources */,
 				CE3A39371B78E2F50069A2A5 /* ViewController.swift in Sources */,
 				CE9AD5B11B7A46D600A58D06 /* SOIntroViewController.swift in Sources */,
 				CE9AD5C41B7A4E0B00A58D06 /* UITableViewController+Custom.swift in Sources */,
