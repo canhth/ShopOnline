@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		572C1BC43633266CB50A2009 /* Pods_ShopOnline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1E80F9667F0DB2E129E257 /* Pods_ShopOnline.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		CE3A39321B78E2F50069A2A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A39311B78E2F50069A2A5 /* AppDelegate.swift */; };
+		B5C039161B83A004009F49D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C039151B83A004009F49D3 /* AppDelegate.swift */; };
 		CE3A39351B78E2F50069A2A5 /* ShopOnline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE3A39331B78E2F50069A2A5 /* ShopOnline.xcdatamodeld */; };
 		CE3A39371B78E2F50069A2A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A39361B78E2F50069A2A5 /* ViewController.swift */; };
 		CE3A393A1B78E2F50069A2A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3A39381B78E2F50069A2A5 /* Main.storyboard */; };
@@ -38,10 +38,10 @@
 
 /* Begin PBXFileReference section */
 		4081AE140FE94B3FABB94590 /* Pods-ShopOnline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopOnline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShopOnline/Pods-ShopOnline.debug.xcconfig"; sourceTree = "<group>"; };
+		B5C039151B83A004009F49D3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ShopOnline/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		CB1E80F9667F0DB2E129E257 /* Pods_ShopOnline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopOnline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3A392C1B78E2F50069A2A5 /* ShopOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3A39301B78E2F50069A2A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE3A39311B78E2F50069A2A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../AppDelegate.swift; sourceTree = "<group>"; };
 		CE3A39341B78E2F50069A2A5 /* ShopOnline.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShopOnline.xcdatamodel; sourceTree = "<group>"; };
 		CE3A39361B78E2F50069A2A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE3A39391B78E2F50069A2A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -181,7 +181,7 @@
 		CE9AD5A31B7A462A00A58D06 /* Appdelegate */ = {
 			isa = PBXGroup;
 			children = (
-				CE3A39311B78E2F50069A2A5 /* AppDelegate.swift */,
+				B5C039151B83A004009F49D3 /* AppDelegate.swift */,
 			);
 			path = Appdelegate;
 			sourceTree = "<group>";
@@ -433,6 +433,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C039161B83A004009F49D3 /* AppDelegate.swift in Sources */,
 				CE8D853F1B80962F001354A8 /* SOIntroPageItemController.swift in Sources */,
 				CE3A39371B78E2F50069A2A5 /* ViewController.swift in Sources */,
 				CE9AD5B11B7A46D600A58D06 /* SOIntroViewController.swift in Sources */,
@@ -444,7 +445,6 @@
 				CE3A39351B78E2F50069A2A5 /* ShopOnline.xcdatamodeld in Sources */,
 				CE9AD5AC1B7A462A00A58D06 /* SlideMenuController.swift in Sources */,
 				CE9AD5B81B7A471600A58D06 /* SORightMenuViewController.swift in Sources */,
-				CE3A39321B78E2F50069A2A5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

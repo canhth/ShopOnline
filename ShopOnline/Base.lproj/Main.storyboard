@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4S3-MI-FlP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4S3-MI-FlP">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Right Menu View Controller-->
@@ -70,9 +71,81 @@
                     <view key="view" contentMode="scaleToFill" id="5m0-1d-Oy5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fov-7X-qf0">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4S3-MI-FlP" id="Prw-IX-X8q"/>
+                                </connections>
+                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="gTN-aG-Ov1">
+                                <rect key="frame" x="244" y="70" width="112" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="112" id="eQU-JM-AzI"/>
+                                    <constraint firstAttribute="width" secondItem="gTN-aG-Ov1" secondAttribute="height" multiplier="56:47" id="gu7-3V-Svl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description of page intro" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PJ-PO-5HR">
+                                <rect key="frame" x="30" y="378" width="540" height="25"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Text Icon" translatesAutoresizingMaskIntoConstraints="NO" id="tgP-fH-kGh">
+                                <rect key="frame" x="189" y="174" width="223" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tgP-fH-kGh" secondAttribute="height" multiplier="10:3" id="yTH-8J-mLH"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EwF-9e-omw">
+                                <rect key="frame" x="200" y="483" width="200" height="45"/>
+                                <color key="backgroundColor" red="0.18198148906230927" green="0.69426733255386353" blue="0.53024792671203613" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EwF-9e-omw" secondAttribute="height" multiplier="31:7" id="1BL-X9-Qsi"/>
+                                    <constraint firstAttribute="height" constant="45" id="wwE-gJ-mYt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
+                                <state key="normal" title="Bắt đầu">
+                                    <color key="titleColor" red="0.17077735066413879" green="0.30895513296127319" blue="0.37797331809997559" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickGetStartButton:" destination="4S3-MI-FlP" eventType="touchUpInside" id="qZE-jS-wad"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="wL1-rf-Qhx">
+                                <rect key="frame" x="272" y="543" width="55" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.87058823529999996" green="0.20784313730000001" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wL1-rf-Qhx" firstAttribute="top" secondItem="EwF-9e-omw" secondAttribute="bottom" constant="15" id="0WD-7K-PVE"/>
+                            <constraint firstItem="unR-Ur-XeR" firstAttribute="top" secondItem="fov-7X-qf0" secondAttribute="bottom" id="7Sb-ba-OMy"/>
+                            <constraint firstItem="tgP-fH-kGh" firstAttribute="centerX" secondItem="gTN-aG-Ov1" secondAttribute="centerX" id="ANX-qX-uV3"/>
+                            <constraint firstAttribute="centerX" secondItem="wL1-rf-Qhx" secondAttribute="centerX" id="Ahq-5a-T4d"/>
+                            <constraint firstAttribute="centerX" secondItem="gTN-aG-Ov1" secondAttribute="centerX" id="HdC-J1-EYc"/>
+                            <constraint firstAttribute="trailing" secondItem="3PJ-PO-5HR" secondAttribute="trailing" constant="30" id="M92-hl-Jli"/>
+                            <constraint firstItem="fov-7X-qf0" firstAttribute="top" secondItem="5m0-1d-Oy5" secondAttribute="top" id="bsc-F8-YHm"/>
+                            <constraint firstItem="unR-Ur-XeR" firstAttribute="top" secondItem="wL1-rf-Qhx" secondAttribute="bottom" constant="20" id="cul-L8-Q6T"/>
+                            <constraint firstAttribute="trailing" secondItem="fov-7X-qf0" secondAttribute="trailing" id="dzZ-KV-cVq"/>
+                            <constraint firstItem="EwF-9e-omw" firstAttribute="centerX" secondItem="3PJ-PO-5HR" secondAttribute="centerX" id="eC8-WX-M4T"/>
+                            <constraint firstItem="tgP-fH-kGh" firstAttribute="top" secondItem="gTN-aG-Ov1" secondAttribute="bottom" constant="10" id="eds-kV-mX3"/>
+                            <constraint firstItem="3PJ-PO-5HR" firstAttribute="leading" secondItem="5m0-1d-Oy5" secondAttribute="leading" constant="30" id="gAz-cL-pzS"/>
+                            <constraint firstItem="EwF-9e-omw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3PJ-PO-5HR" secondAttribute="bottom" priority="250" constant="10" id="gYp-qZ-Wqd"/>
+                            <constraint firstItem="gTN-aG-Ov1" firstAttribute="top" secondItem="gx1-jX-Fwa" secondAttribute="bottom" constant="50" id="iTJ-dg-5p7"/>
+                            <constraint firstAttribute="centerX" secondItem="3PJ-PO-5HR" secondAttribute="centerX" id="usV-zn-XnI"/>
+                            <constraint firstAttribute="centerY" secondItem="3PJ-PO-5HR" secondAttribute="centerY" constant="-90" id="v17-i5-kGl"/>
+                            <constraint firstItem="fov-7X-qf0" firstAttribute="leading" secondItem="5m0-1d-Oy5" secondAttribute="leading" id="z0t-qu-A6E"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="mDescriptionLabel" destination="3PJ-PO-5HR" id="BTS-Fs-yAF"/>
+                        <outlet property="mGetStartButton" destination="EwF-9e-omw" id="ny1-0B-XgU"/>
+                        <outlet property="mLogoImageView" destination="gTN-aG-Ov1" id="LDS-nM-ISg"/>
+                        <outlet property="mPageControl" destination="wL1-rf-Qhx" id="I8i-sn-wex"/>
+                        <outlet property="mScrollView" destination="fov-7X-qf0" id="WnA-6Q-Ldr"/>
+                        <outlet property="mTextImageView" destination="tgP-fH-kGh" id="OI4-MP-2bw"/>
                         <segue destination="XQU-bA-4H3" kind="show" identifier="kSegue_Push_MainView" id="vOh-Ml-5Ol"/>
                     </connections>
                 </viewController>
@@ -83,7 +156,7 @@
         <!--Page View Controller-->
         <scene sceneID="QHh-6i-lhc">
             <objects>
-                <pageViewController storyboardIdentifier="SOIntroView" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="FfA-qR-H5p" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="SOIntroView" autoresizesArchivedViewToFullSize="NO" wantsFullScreenLayout="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="FfA-qR-H5p" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQq-hb-vTK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1525" y="844"/>
@@ -102,7 +175,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="rMr-GB-VRw">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -181,6 +254,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Icon" width="182" height="204"/>
         <image name="SplashScreen" width="320" height="568"/>
+        <image name="Text Icon" width="223" height="54"/>
     </resources>
 </document>

@@ -8,107 +8,119 @@
 
 import UIKit
 
-class SOIntroViewController: UIViewController , UIPageViewControllerDataSource {
-
-    //Mark: - Variables
-    private var mPageViewController:UIPageViewController?
+class SOIntroViewController: UIViewController , UIScrollViewDelegate {
     
-    // Initialize it right away here
-    private let contentImages = ["temp1",
-        "temp2",
-        "temp3",
-        "temp4"];
+    @IBOutlet weak var mScrollView: UIScrollView!
+    @IBOutlet weak var mTextImageView: UIImageView!
+    @IBOutlet weak var mLogoImageView: UIImageView!
+    @IBOutlet weak var mGetStartButton: UIButton!
+    @IBOutlet weak var mDescriptionLabel: UILabel!
+    @IBOutlet weak var mPageControl: UIPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createPageViewController()
-        setupPageControl()
-        // Do any additional setup after loading the view.
+        self .setupView()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    private func createPageViewController() {
+    //Setup content of view
+    func setupView()
+    {
+        //Set up frame of scroll view equals super view
+        self.mScrollView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)
+        let scrollViewWidth:CGFloat = self.mScrollView.frame.width
+        let scrollViewHeight:CGFloat = self.mScrollView.frame.height
         
-        let pageController = self.storyboard!.instantiateViewControllerWithIdentifier("SOIntroView") as UIPageViewController
-        pageController.dataSource = self
+        //Setup text & button
+        self.mDescriptionLabel.text = "Bạn muốn trở thành doanh nhân ?"
+        self.mGetStartButton.layer.cornerRadius = 4.0;
         
-        if contentImages.count > 0 {
-            let firstController = getItemController(0)!
-            let startingViewControllers: NSArray = [firstController]
-            pageController.setViewControllers(startingViewControllers, direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
-        }
+        //Create background image for scroll view
+        var imgOne = UIImageView(frame: CGRectMake(0, 0, scrollViewWidth, scrollViewHeight))
+        imgOne.image = UIImage(named: "intro")
+        var imgTwo = UIImageView(frame: CGRectMake(scrollViewWidth, 0, scrollViewWidth, scrollViewHeight))
+        imgTwo.image = UIImage(named: "intro1")
+        var imgThree = UIImageView(frame: CGRectMake(scrollViewWidth * 2, 0, scrollViewWidth, scrollViewHeight))
+        imgThree.image = UIImage(named: "intro2")
+        var imgFour = UIImageView(frame: CGRectMake(scrollViewWidth * 3, 0, scrollViewWidth, scrollViewHeight))
+        imgFour.image = UIImage(named: "intro3")
         
-        mPageViewController = pageController
-        addChildViewController(mPageViewController!)
-        self.view.addSubview(mPageViewController!.view)
-        mPageViewController!.didMoveToParentViewController(self)
-    }
-    private func setupPageControl() {
-        let appearance = UIPageControl.appearance()
-        appearance.pageIndicatorTintColor = UIColor.whiteColor()
-        appearance.currentPageIndicatorTintColor = UIColor.darkGrayColor()
-        appearance.backgroundColor = UIColor.blueColor()
-        appearance.alpha = 0.5
-    }
-    
-    // MARK: - UIPageViewControllerDataSource
-    
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        //Add image into scrollview
+        self.mScrollView .addSubview(imgOne)
+        self.mScrollView.addSubview(imgTwo)
+        self.mScrollView.addSubview(imgThree)
+        self.mScrollView.addSubview(imgFour)
         
-        let itemController = viewController as SOIntroPageItemController
+        //Reset content size of scroll view
+        self.mScrollView.contentSize = CGSizeMake(scrollViewWidth * 4, scrollViewHeight)
+        self.mPageControl.currentPage = 0
         
-        if itemController.itemIndex > 0 {
-            return getItemController(itemController.itemIndex-1)
-        }
-        
-        return nil
-    }
-    
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        
-        let itemController = viewController as SOIntroPageItemController
-        
-        if itemController.itemIndex+1 < contentImages.count {
-            return getItemController(itemController.itemIndex+1)
-        }
-        
-        return nil
-    }
-    
-    private func getItemController(itemIndex: Int) -> SOIntroPageItemController? {
-        
-        if itemIndex < contentImages.count {
-            let pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("SOIntroPageItemController") as SOIntroPageItemController
-            pageItemController.itemIndex = itemIndex
-            pageItemController.imageName = contentImages[itemIndex]
-            return pageItemController
-        }
-        
-        return nil
-    }
-    
-    // MARK: - Page Indicator
-    
-    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return contentImages.count
-    }
-    
-    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 0
+        // Schedule a timer to auto slide to next page
+        NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func moveToNextPage ()
+    {
+        // Move to next page
+        var pageWidth:CGFloat = CGRectGetWidth(self.mScrollView.frame)
+        let maxWidth:CGFloat = pageWidth * 4
+        var contentOffset:CGFloat = self.mScrollView.contentOffset.x
+        
+        var slideToX = contentOffset + pageWidth
+       
+        if  contentOffset + pageWidth == maxWidth
+        {
+            slideToX = 0
+        }
+        self.mScrollView.scrollRectToVisible(CGRectMake(slideToX, 0, pageWidth, CGRectGetHeight(self.mScrollView.frame)), animated: true)
     }
-    */
+    
+    func scrollViewDidScroll(scrollView: UIScrollView)
+    {
+        var pageWidth:CGFloat = CGRectGetWidth(scrollView.frame)
+        var currentPage:CGFloat = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1
+        
+        // Change the indicator
+        self.mPageControl.currentPage = Int(currentPage)
+        // Change the text accordingly
+        if Int(currentPage) == 0
+        {
+            self.mDescriptionLabel.text = "Sweettutos.com is your blog of choice for Mobile tutorials"
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
+                self.mGetStartButton.alpha = 0.0
+            })
+        }
+        else if Int(currentPage) == 1
+        {
+            self.mDescriptionLabel.text = "I write mobile tutorials mainly targeting iOS"
+        }
+        else if Int(currentPage) == 2
+        {
+            self.mDescriptionLabel.text = "And sometimes I write games tutorials about Unity"
+            UIView.animateWithDuration(0.5, animations: { () -> Void in
+                self.mGetStartButton.alpha = 0.0
+            })
+        }
+        else
+        {
+            self.mDescriptionLabel.text = "Mua may bán đắt với ShopOnline nào!"
+            // Show the "Let's Start" button in the last slide (with a fade in animation)
+            UIView.animateWithDuration(1.0, animations: { () -> Void in
+                self.mGetStartButton.alpha = 1.0
+            })
+        }
 
+    }
+    
+    @IBAction func clickGetStartButton(sender: AnyObject)
+    {
+        
+    }
+ 
 }
+
+
