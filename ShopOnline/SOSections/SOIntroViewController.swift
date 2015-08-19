@@ -113,7 +113,18 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
                 self.mGetStartButton.alpha = 1.0
             })
         }
-
+    }
+    
+    func scrollViewWillBeginDragging(scrollView: UIScrollView)
+    {
+        if (self.mScrollView.frame.origin.x < 0 || self.mScrollView.frame.origin.x > self.view.frame.size.width * 3)
+        {
+            self.mScrollView.scrollEnabled = false
+        }
+        else
+        {
+            self.mScrollView.scrollEnabled = true
+        }
     }
     
     @IBAction func clickGetStartButton(sender: AnyObject)
