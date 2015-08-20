@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		572C1BC43633266CB50A2009 /* Pods_ShopOnline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1E80F9667F0DB2E129E257 /* Pods_ShopOnline.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B5C039161B83A004009F49D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C039151B83A004009F49D3 /* AppDelegate.swift */; };
+		B5FA708E1B864CE20050980A /* SOLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA708D1B864CE20050980A /* SOLoginViewController.swift */; };
 		CE3A39351B78E2F50069A2A5 /* ShopOnline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE3A39331B78E2F50069A2A5 /* ShopOnline.xcdatamodeld */; };
 		CE3A39371B78E2F50069A2A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A39361B78E2F50069A2A5 /* ViewController.swift */; };
 		CE3A393A1B78E2F50069A2A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3A39381B78E2F50069A2A5 /* Main.storyboard */; };
 		CE3A393F1B78E2F50069A2A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3A393D1B78E2F50069A2A5 /* LaunchScreen.xib */; };
 		CE3A394B1B78E2F50069A2A5 /* ShopOnlineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A394A1B78E2F50069A2A5 /* ShopOnlineTests.swift */; };
-		CE8D853F1B80962F001354A8 /* SOIntroPageItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8D853E1B80962F001354A8 /* SOIntroPageItemController.swift */; };
 		CE9AD5AB1B7A462A00A58D06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9AD5A51B7A462A00A58D06 /* Images.xcassets */; };
 		CE9AD5AC1B7A462A00A58D06 /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9AD5A71B7A462A00A58D06 /* SlideMenuController.swift */; };
 		CE9AD5AF1B7A46C400A58D06 /* SOSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9AD5AE1B7A46C400A58D06 /* SOSplashViewController.swift */; };
@@ -39,6 +39,7 @@
 /* Begin PBXFileReference section */
 		4081AE140FE94B3FABB94590 /* Pods-ShopOnline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopOnline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShopOnline/Pods-ShopOnline.debug.xcconfig"; sourceTree = "<group>"; };
 		B5C039151B83A004009F49D3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ShopOnline/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		B5FA708D1B864CE20050980A /* SOLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOLoginViewController.swift; sourceTree = "<group>"; };
 		CB1E80F9667F0DB2E129E257 /* Pods_ShopOnline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopOnline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3A392C1B78E2F50069A2A5 /* ShopOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3A39301B78E2F50069A2A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		CE3A39441B78E2F50069A2A5 /* ShopOnlineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopOnlineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3A39491B78E2F50069A2A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE3A394A1B78E2F50069A2A5 /* ShopOnlineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopOnlineTests.swift; sourceTree = "<group>"; };
-		CE8D853E1B80962F001354A8 /* SOIntroPageItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOIntroPageItemController.swift; sourceTree = "<group>"; };
 		CE9AD5A51B7A462A00A58D06 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CE9AD5A71B7A462A00A58D06 /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		CE9AD5AE1B7A46C400A58D06 /* SOSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOSplashViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +92,14 @@
 				E8B48BBD2AAE45D1BCDF2F05 /* Pods-ShopOnline.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B5FA708C1B864CD20050980A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B5FA708D1B864CE20050980A /* SOLoginViewController.swift */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 		CE3A39231B78E2F50069A2A5 = {
@@ -158,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				CE9AD5B01B7A46D600A58D06 /* SOIntroViewController.swift */,
-				CE8D853E1B80962F001354A8 /* SOIntroPageItemController.swift */,
 			);
 			name = Introduce;
 			sourceTree = "<group>";
@@ -230,6 +237,7 @@
 		CE9AD5AD1B7A463F00A58D06 /* SOSections */ = {
 			isa = PBXGroup;
 			children = (
+				B5FA708C1B864CD20050980A /* Login */,
 				CE8D85391B8094C0001354A8 /* Introduce */,
 				CE9AD5C71B7A54DC00A58D06 /* SOSectionsPrefixHeader.pch */,
 				CE9AD5B21B7A46DF00A58D06 /* Menu */,
@@ -434,9 +442,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5C039161B83A004009F49D3 /* AppDelegate.swift in Sources */,
-				CE8D853F1B80962F001354A8 /* SOIntroPageItemController.swift in Sources */,
 				CE3A39371B78E2F50069A2A5 /* ViewController.swift in Sources */,
 				CE9AD5B11B7A46D600A58D06 /* SOIntroViewController.swift in Sources */,
+				B5FA708E1B864CE20050980A /* SOLoginViewController.swift in Sources */,
 				CE9AD5C41B7A4E0B00A58D06 /* UITableViewController+Custom.swift in Sources */,
 				CE9AD5B61B7A470900A58D06 /* SOLeftMenuViewController.swift in Sources */,
 				CE9AD5AF1B7A46C400A58D06 /* SOSplashViewController.swift in Sources */,

@@ -12,5 +12,6 @@ target 'ShopOnline' do
     pod 'SACollectionViewVerticalScalingFlowLayout'
     pod 'SVProgressHUD', :head
     pod 'GoogleMaps'
+    pod 'Spring', '~> 1.0.3'
 end
 

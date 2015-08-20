@@ -12,8 +12,8 @@ class SOSplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //JTSplashView.splashViewWithBackgroundColor(nil, circleColor: nil, circleSize: nil)
+        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: Selector("hideSplashView"), userInfo: nil, repeats: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,9 +23,13 @@ class SOSplashViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.setNavigationBarItem()
-    }
 
+    }
+    func hideSplashView() {
+       // JTSplashView.finishWithCompletion { () -> Void in
+            UIApplication.sharedApplication().statusBarHidden = false
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -36,4 +40,4 @@ class SOSplashViewController: UIViewController {
     }
     */
 
-}
+

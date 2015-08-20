@@ -27,6 +27,8 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: Setup view
+    
     //Setup content of view
     func setupView()
     {
@@ -48,7 +50,7 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
         imgThree.image = UIImage(named: "intro2")
         var imgFour = UIImageView(frame: CGRectMake(scrollViewWidth * 3, 0, scrollViewWidth, scrollViewHeight))
         imgFour.image = UIImage(named: "intro3")
-        
+
         //Add image into scrollview
         self.mScrollView .addSubview(imgOne)
         self.mScrollView.addSubview(imgTwo)
@@ -79,8 +81,27 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
         self.mScrollView.scrollRectToVisible(CGRectMake(slideToX, 0, pageWidth, CGRectGetHeight(self.mScrollView.frame)), animated: true)
     }
     
+    func applyBlurEffect(image: UIImage) -> (UIImage){
+        var imageToBlur = CIImage(image: image)
+        var blurfilter = CIFilter(name: "CIGaussianBlur")
+        blurfilter.setValue(imageToBlur, forKey: "inputImage")
+        var resultImage = blurfilter.valueForKey("outputImage") as! CIImage
+        var blurredImage = UIImage(CIImage: resultImage)
+        return blurredImage!
+    }
+    //MARK: ScrollView Delegate
+    
     func scrollViewDidScroll(scrollView: UIScrollView)
     {
+        if (self.mScrollView.contentOffset.x < 0 || self.mScrollView.contentOffset.x > self.view.frame.size.width * 3)
+        {
+            self.mScrollView.scrollEnabled = false
+        }
+        else
+        {
+            self.mScrollView.scrollEnabled = true
+        }
+        
         var pageWidth:CGFloat = CGRectGetWidth(scrollView.frame)
         var currentPage:CGFloat = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1
         
@@ -89,25 +110,25 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
         // Change the text accordingly
         if Int(currentPage) == 0
         {
-            self.mDescriptionLabel.text = "Sweettutos.com is your blog of choice for Mobile tutorials"
+            self.mDescriptionLabel.text = "Những mặt hàng chất lượng."
             UIView.animateWithDuration(0.5, animations: { () -> Void in
                 self.mGetStartButton.alpha = 0.0
             })
         }
         else if Int(currentPage) == 1
         {
-            self.mDescriptionLabel.text = "I write mobile tutorials mainly targeting iOS"
+            self.mDescriptionLabel.text = "Giúp bạn có những sự lựa chọn tốt nhất!"
         }
         else if Int(currentPage) == 2
         {
-            self.mDescriptionLabel.text = "And sometimes I write games tutorials about Unity"
+            self.mDescriptionLabel.text = "Phong phú, đa dạng các mặt hàng."
             UIView.animateWithDuration(0.5, animations: { () -> Void in
                 self.mGetStartButton.alpha = 0.0
             })
         }
         else
         {
-            self.mDescriptionLabel.text = "Mua may bán đắt với ShopOnline nào!"
+            self.mDescriptionLabel.text = "Hãy cùng ShopOnline mua may bán đắt nào!"
             // Show the "Let's Start" button in the last slide (with a fade in animation)
             UIView.animateWithDuration(1.0, animations: { () -> Void in
                 self.mGetStartButton.alpha = 1.0
@@ -115,21 +136,12 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
         }
     }
     
-    func scrollViewWillBeginDragging(scrollView: UIScrollView)
-    {
-        if (self.mScrollView.frame.origin.x < 0 || self.mScrollView.frame.origin.x > self.view.frame.size.width * 3)
-        {
-            self.mScrollView.scrollEnabled = false
-        }
-        else
-        {
-            self.mScrollView.scrollEnabled = true
-        }
-    }
     
     @IBAction func clickGetStartButton(sender: AnyObject)
     {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier("SOLoginViewController") as! UIViewController
+        self.presentViewController(vc, animated: true, completion: nil)
     }
  
 }

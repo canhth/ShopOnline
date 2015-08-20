@@ -6,63 +6,68 @@
 	<dict>
 		<key>FontAwesome.swift-FontAwesome.swift.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>FontAwesome.swift.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>JTSplashView.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>PermissionScope.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-ShopOnline.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SACollectionViewVerticalScalingFlowLayout.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SVProgressHUD.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SlideMenuControllerSwift.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Spring.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SwiftPages.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>9</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>10</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>TextFieldEffects.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>11</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2F363952F5035D37ECBE9FCFEA04DF57</key>
+		<key>1CF9F8D06E12F8AE9C06DCCA4F825E3D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,17 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>595F8F173A6084E2305E7580417EF7A6</key>
+		<key>4ADDC830F1F3957A877DC0A28F0CBD4E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>5DC02D504E0403AE9863F5E9FFE8E658</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>64015ED0BD7D8B0BA60818CCDA4B06CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,7 +97,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A72210A485A4F72EB5C2F6DFDC9D3ECF</key>
+		<key>B73E1AC97BE4677DD9BC70DB307AE395</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,12 +107,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>C2EA73FE3F59985892BFD3953997A3F9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D2A06966C95A0B1BC13B3E9F2ACF3A61</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F7ED902DA9B8C7F94554D537AB6765C7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FAFF3B06683D35792DCCDCA33A338F6A</key>
+		<key>F8E71339785797837AC03026D94DBB80</key>
 		<dict>
 			<key>primary</key>
 			<true/>
