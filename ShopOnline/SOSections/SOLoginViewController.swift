@@ -26,6 +26,8 @@ class SOLoginViewController: UIViewController {
 
         self.mLoginButton.layer.cornerRadius = 5;
         self.mLoginFaceBookButton.layer.cornerRadius = 5;
+        
+ 
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +35,11 @@ class SOLoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func hideSplashView() {
+        JTSplashView.finishWithCompletion { () -> Void in
+            UIApplication.sharedApplication().statusBarHidden = false
+        }
+    }
     /*
     // MARK: - Navigation
 
@@ -47,6 +53,8 @@ class SOLoginViewController: UIViewController {
 
     @IBAction func clickForgotPasswordGesture(sender: AnyObject)
     {
+        JTSplashView.splashViewWithBackgroundColor(nil, circleColor: nil, circleSize: nil)
+        NSTimer.scheduledTimerWithTimeInterval(20.0, target: self, selector: Selector("hideSplashView"), userInfo: nil, repeats: false)
     }
 
 }

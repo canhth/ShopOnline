@@ -38,7 +38,6 @@
 		3E640BEAF1EA2964ADCFBF7F171115D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849DEA8AA4B8CF302AE6E56AAA4EDB88 /* UIKit.framework */; };
 		42581F03308BE4DC09E9F33500BA2112 /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACB452A1E11A72AC4FB35EFF69EDB65 /* YokoTextField.swift */; };
 		451570EC2532B5950ECAFBB06467C626 /* SVProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CF4872AC631E92D0FC3E12DBFC7B0523 /* SVProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		469350ACEF52C29B34F06637F66EEEE3 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62E29431F436C857869BF29487980789 /* FontAwesome.otf */; };
 		4AC63369F44D2E1FF5754F4817036BE9 /* SpringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9CC2BB93470648CCEE42F06CF16EF1 /* SpringButton.swift */; };
 		4AEC16254AB33CD52714CBF96CB8A50D /* SpringTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47A46C4CDA26763F8A89977615BA750 /* SpringTextField.swift */; };
 		517F1DE21F94DA3FF085EDA1B36FB83B /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA9D681ECFAAE32FD85E95492713D02 /* SlideMenuController.swift */; };
@@ -97,7 +96,6 @@
 		F2ED934944ADF50EDFB218D4571CC2F3 /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CA2B7F5183F6AE27E629EBD18E7D29 /* MinoruTextField.swift */; };
 		FDD11A163E0E272D38230B50C4202AEE /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C0F51565A5346A442CC17CBFEE3FBD /* SoundPlayer.swift */; };
 		FE620513CE15D542F383AEDF4C6A8B07 /* SlideMenuControllerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB546B2588E86F82C841314B3D064147 /* SlideMenuControllerSwift-dummy.m */; };
-		FF8DF150180657E759D95B042620617B /* FontAwesome.swift.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 57573C8C62B078DF941B2152427C65F4 /* FontAwesome.swift.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,13 +133,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4ADDC830F1F3957A877DC0A28F0CBD4E;
 			remoteInfo = Spring;
-		};
-		942D2B0130D2EDEB0F28ABDA4B0BCF96 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F8E71339785797837AC03026D94DBB80;
-			remoteInfo = "FontAwesome.swift-FontAwesome.swift";
 		};
 		AE5E53A56810209C76633C8BD8034DB5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -227,7 +218,6 @@
 		5130A69E51586F77FF832D1282C3798F /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVProgressHUD.h; path = SVProgressHUD/SVProgressHUD.h; sourceTree = "<group>"; };
 		52D307AE416F17E46C97152C8B9E6956 /* SVProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SVProgressHUD.xcconfig; sourceTree = "<group>"; };
 		572D03BF3B9ED122E28FEC97BF85AA41 /* TextFieldEffects.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TextFieldEffects.modulemap; sourceTree = "<group>"; };
-		57573C8C62B078DF941B2152427C65F4 /* FontAwesome.swift.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FontAwesome.swift.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D57404E1BC37F0486DE6BC2C80FE7CB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60B11326E117F16B77C4601D8FF6FC0B /* Spring.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spring.swift; path = Spring/Spring.swift; sourceTree = "<group>"; };
 		6106FA0626AF6849CC0B8FA5321C5814 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpringApp/Images.xcassets; sourceTree = "<group>"; };
@@ -343,13 +333,6 @@
 				E098A4D8234A300004EB5037B4546084 /* CoreText.framework in Frameworks */,
 				DAC5A66130F344DC420E078287E091E3 /* Foundation.framework in Frameworks */,
 				ADBBE6D7FB65D165F7D544A61F0B791C /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5B81DA1A101841B6CECE0015DB8CE3EB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,7 +754,6 @@
 		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				57573C8C62B078DF941B2152427C65F4 /* FontAwesome.swift.bundle */,
 				CD05FF7E557153237761CF09750125E8 /* FontAwesome_swift.framework */,
 				63FDF9D95BFF3C99DB7859301D81C6D7 /* JTSplashView.framework */,
 				399DD8083768A51E41B2BB4D8A35B150 /* PermissionScope.framework */,
@@ -1075,7 +1057,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				A6DEA2690636DEF145D7F916E322E2A6 /* PBXTargetDependency */,
 			);
 			name = FontAwesome.swift;
 			productName = FontAwesome.swift;
@@ -1160,23 +1141,6 @@
 			productReference = 2174303F8C0850CDFB6E105FF4FE4121 /* TextFieldEffects.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F8E71339785797837AC03026D94DBB80 /* FontAwesome.swift-FontAwesome.swift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D3B6445BFA254A3AEE787DF8971FADEE /* Build configuration list for PBXNativeTarget "FontAwesome.swift-FontAwesome.swift" */;
-			buildPhases = (
-				99A18CFEC805B3876C173C08323CCE46 /* Sources */,
-				5B81DA1A101841B6CECE0015DB8CE3EB /* Frameworks */,
-				D106B44D5C36838B993022F66CD8C7E3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "FontAwesome.swift-FontAwesome.swift";
-			productName = "FontAwesome.swift-FontAwesome.swift";
-			productReference = 57573C8C62B078DF941B2152427C65F4 /* FontAwesome.swift.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1199,7 +1163,6 @@
 			projectRoot = "";
 			targets = (
 				B73E1AC97BE4677DD9BC70DB307AE395 /* FontAwesome.swift */,
-				F8E71339785797837AC03026D94DBB80 /* FontAwesome.swift-FontAwesome.swift */,
 				D2A06966C95A0B1BC13B3E9F2ACF3A61 /* JTSplashView */,
 				1CF9F8D06E12F8AE9C06DCCA4F825E3D /* PermissionScope */,
 				C2EA73FE3F59985892BFD3953997A3F9 /* Pods-ShopOnline */,
@@ -1236,15 +1199,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF8DF150180657E759D95B042620617B /* FontAwesome.swift.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D106B44D5C36838B993022F66CD8C7E3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				469350ACEF52C29B34F06637F66EEEE3 /* FontAwesome.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1310,13 +1264,6 @@
 				E021A6A16EF471CF0EAB7EEC6B006FBA /* Enum.swift in Sources */,
 				5D07E0866F5DED6C7C5799812519FF5C /* FontAwesome.swift in Sources */,
 				EFF203B76F1A0723BC436434D8519D7F /* FontAwesome.swift-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		99A18CFEC805B3876C173C08323CCE46 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1437,12 +1384,6 @@
 			name = JTSplashView;
 			target = D2A06966C95A0B1BC13B3E9F2ACF3A61 /* JTSplashView */;
 			targetProxy = 3BDB9E10E310C70EDADAFC86A21511D6 /* PBXContainerItemProxy */;
-		};
-		A6DEA2690636DEF145D7F916E322E2A6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "FontAwesome.swift-FontAwesome.swift";
-			target = F8E71339785797837AC03026D94DBB80 /* FontAwesome.swift-FontAwesome.swift */;
-			targetProxy = 942D2B0130D2EDEB0F28ABDA4B0BCF96 /* PBXContainerItemProxy */;
 		};
 		B9EAEAEF59B148B9ED0B4ACAC7B3CA02 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1854,18 +1795,6 @@
 			};
 			name = Debug;
 		};
-		A5EBB2183F16B3C0AD3E9882B0CE371A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00014F85DFFA1096554996864A0D0273 /* FontAwesome.swift-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = FontAwesome.swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2040,18 +1969,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		E75C1B2E916D0EAE73529617E6B6E227 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 00014F85DFFA1096554996864A0D0273 /* FontAwesome.swift-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = FontAwesome.swift;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
 		};
 		ECDF2F20AA4CBB67ED1278219E112A0F /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2232,15 +2149,6 @@
 			buildConfigurations = (
 				8349EAF9B8DE41E9ED287FC7E7E74553 /* Debug */,
 				89FEDCC285545AD0212E7624137F4435 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D3B6445BFA254A3AEE787DF8971FADEE /* Build configuration list for PBXNativeTarget "FontAwesome.swift-FontAwesome.swift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E75C1B2E916D0EAE73529617E6B6E227 /* Debug */,
-				A5EBB2183F16B3C0AD3E9882B0CE371A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
