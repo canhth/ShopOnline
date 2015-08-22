@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FontAwesome_swift
 
 class SOLoginViewController: UIViewController {
 
@@ -21,13 +22,18 @@ class SOLoginViewController: UIViewController {
     @IBOutlet weak var mLoginButton: UIButton!
     @IBOutlet weak var mLoginFaceBookButton: UIButton!
     
+    @IBOutlet weak var mCloseButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self .dismissKeyboard()
         self.mLoginButton.layer.cornerRadius = 5;
         self.mLoginFaceBookButton.layer.cornerRadius = 5;
         
- 
+        // FontAwesome icon in button
+        self.mCloseButton.titleLabel?.font = UIFont.fontAwesomeOfSize(25)
+        self.mCloseButton.setTitle(String.fontAwesomeIconWithName(.TimesCircleO), forState: .Normal)
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,11 +41,22 @@ class SOLoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func hideSplashView() {
-        JTSplashView.finishWithCompletion { () -> Void in
-            UIApplication.sharedApplication().statusBarHidden = false
-        }
+    // MARK: - Gesture & keyboard
+    
+    func addGesture()
+    {
+        //Looks for single or multiple taps.
+        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        view.addGestureRecognizer(tap)
     }
+    
+    //Calls this function when the tap is recognized.
+    func dismissKeyboard()
+    {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -50,11 +67,15 @@ class SOLoginViewController: UIViewController {
     }
     */
     
+    @IBAction func clickCloseButton(sender: AnyObject)
+    {
+        //Dismiss view controller after this viewcontroller is presentViewController
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
     @IBAction func clickForgotPasswordGesture(sender: AnyObject)
     {
-        JTSplashView.splashViewWithBackgroundColor(nil, circleColor: nil, circleSize: nil)
-        NSTimer.scheduledTimerWithTimeInterval(20.0, target: self, selector: Selector("hideSplashView"), userInfo: nil, repeats: false)
+
     }
 
 }

@@ -27,4 +27,21 @@ extension UIViewController {
         self.slideMenuController()?.removeLeftGestures()
         self.slideMenuController()?.removeRightGestures()
     }
+    
+    func getWidthScreen() -> CGFloat
+    {
+       return UIScreen.mainScreen().bounds.size.width
+    }
+    
+    func getHeightScreen() -> CGFloat
+    {
+        return UIScreen.mainScreen().bounds.size.height
+    }
+    
+    func setupPushView(view : AnyClass ) -> UIViewController
+    {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewControllerWithIdentifier(String.className(view)) as! UIViewController
+        return vc
+    }
 }

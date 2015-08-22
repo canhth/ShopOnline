@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Spring
 
 class SOIntroViewController: UIViewController , UIScrollViewDelegate {
     
@@ -14,12 +15,18 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
     @IBOutlet weak var mTextImageView: UIImageView!
     @IBOutlet weak var mLogoImageView: UIImageView!
     @IBOutlet weak var mGetStartButton: UIButton!
-    @IBOutlet weak var mDescriptionLabel: UILabel!
     @IBOutlet weak var mPageControl: UIPageControl!
+    
+    @IBOutlet weak var mOddLabel: UILabel!
+    @IBOutlet weak var mOddView: SpringView!
+    @IBOutlet weak var mEvenView: SpringView!
+    @IBOutlet weak var mEvenLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self .setupView()
+        self .removeNavigationBarItem()
+        self.navigationController?.navigationBar.hidden = true
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,13 +39,17 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
     //Setup content of view
     func setupView()
     {
+        //Setup layout border and layer
+        self.mOddView .setupBorderView()
+        self.mEvenView .setupBorderView()
+        
         //Set up frame of scroll view equals super view
-        self.mScrollView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)
+        self.mScrollView.frame = CGRectMake(0, 0, getWidthScreen(), getHeightScreen())
         let scrollViewWidth:CGFloat = self.mScrollView.frame.width
         let scrollViewHeight:CGFloat = self.mScrollView.frame.height
         
         //Setup text & button
-        self.mDescriptionLabel.text = "Bạn muốn trở thành doanh nhân ?"
+        self.mOddLabel.text = "Bạn muốn trở thành doanh nhân ?"
         self.mGetStartButton.layer.cornerRadius = 4.0;
         
         //Create background image for scroll view
@@ -62,7 +73,7 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
         self.mPageControl.currentPage = 0
         
         // Schedule a timer to auto slide to next page
-        NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
+        //NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
     }
 
     func moveToNextPage ()
@@ -89,6 +100,7 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
         var blurredImage = UIImage(CIImage: resultImage)
         return blurredImage!
     }
+    
     //MARK: ScrollView Delegate
     
     func scrollViewDidScroll(scrollView: UIScrollView)
@@ -110,38 +122,52 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
         // Change the text accordingly
         if Int(currentPage) == 0
         {
-            self.mDescriptionLabel.text = "Những mặt hàng chất lượng."
+            self.mOddLabel.text = "Những mặt hàng chất lượng."
             UIView.animateWithDuration(0.5, animations: { () -> Void in
                 self.mGetStartButton.alpha = 0.0
             })
+            self.mEvenView.hidden = true
+            self.mOddView.hidden = false
+            self.mOddView.animation = "squeezeRight"
+            self.mOddView.animate()
         }
         else if Int(currentPage) == 1
         {
-            self.mDescriptionLabel.text = "Giúp bạn có những sự lựa chọn tốt nhất!"
+            self.mEvenLabel.text = "Giúp bạn có những sự lựa chọn tốt nhất!"
+            self.mOddView.hidden = true
+            self.mEvenView.hidden = false
+            self.mEvenView.animation = "slideLeft"
+            self.mEvenView.animate()
         }
         else if Int(currentPage) == 2
         {
-            self.mDescriptionLabel.text = "Phong phú, đa dạng các mặt hàng."
+            self.mEvenView.hidden = true
+            self.mOddView.hidden = false
+            self.mOddLabel.text = "Phong phú, đa dạng các mặt hàng."
             UIView.animateWithDuration(0.5, animations: { () -> Void in
                 self.mGetStartButton.alpha = 0.0
             })
+            self.mOddView.animation = "squeezeUp"
+            self.mOddView.animate()
         }
         else
         {
-            self.mDescriptionLabel.text = "Hãy cùng ShopOnline mua may bán đắt nào!"
+            self.mOddView.hidden = true
+            self.mEvenView.hidden = false
+            self.mEvenLabel.text = "Hãy cùng ShopOnline mua may bán đắt nào!"
             // Show the "Let's Start" button in the last slide (with a fade in animation)
             UIView.animateWithDuration(1.0, animations: { () -> Void in
                 self.mGetStartButton.alpha = 1.0
             })
+            self.mEvenView.animation = "squeezeDown"
+            self.mEvenView.animate()
         }
     }
     
-    
     @IBAction func clickGetStartButton(sender: AnyObject)
     {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("SOLoginViewController") as! UIViewController
-        self.presentViewController(vc, animated: true, completion: nil)
+        // Present viewcontroller . like popup
+        self.presentViewController(setupPushView(SOLoginViewController), animated: true, completion: nil)
     }
  
 }

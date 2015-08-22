@@ -12,6 +12,9 @@
 		B0AA4C381B86C65C0029CB8C /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA4C371B86C65C0029CB8C /* SlideMenuController.swift */; };
 		B0AA4C3B1B86C6650029CB8C /* JTSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA4C3A1B86C6650029CB8C /* JTSplashView.swift */; };
 		B5C039161B83A004009F49D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C039151B83A004009F49D3 /* AppDelegate.swift */; };
+		B5CCF89C1B88346A00A0C6FD /* UIView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89B1B88346A00A0C6FD /* UIView+Custom.swift */; };
+		B5CCF89E1B88347A00A0C6FD /* UIImageView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89D1B88347A00A0C6FD /* UIImageView+Custom.swift */; };
+		B5CCF8A01B88349300A0C6FD /* SOUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89F1B88349300A0C6FD /* SOUtils.swift */; };
 		B5FA708E1B864CE20050980A /* SOLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA708D1B864CE20050980A /* SOLoginViewController.swift */; };
 		CE3A39351B78E2F50069A2A5 /* ShopOnline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE3A39331B78E2F50069A2A5 /* ShopOnline.xcdatamodeld */; };
 		CE3A39371B78E2F50069A2A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A39361B78E2F50069A2A5 /* ViewController.swift */; };
@@ -45,6 +48,9 @@
 		B0AA4C371B86C65C0029CB8C /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		B0AA4C3A1B86C6650029CB8C /* JTSplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTSplashView.swift; sourceTree = "<group>"; };
 		B5C039151B83A004009F49D3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ShopOnline/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		B5CCF89B1B88346A00A0C6FD /* UIView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Custom.swift"; sourceTree = "<group>"; };
+		B5CCF89D1B88347A00A0C6FD /* UIImageView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Custom.swift"; sourceTree = "<group>"; };
+		B5CCF89F1B88349300A0C6FD /* SOUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOUtils.swift; sourceTree = "<group>"; };
 		B5FA708D1B864CE20050980A /* SOLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOLoginViewController.swift; sourceTree = "<group>"; };
 		CB1E80F9667F0DB2E129E257 /* Pods_ShopOnline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopOnline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3A392C1B78E2F50069A2A5 /* ShopOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				CE9AD5C51B7A51E000A58D06 /* SODefine.h */,
+				B5CCF89F1B88349300A0C6FD /* SOUtils.swift */,
 			);
 			path = SOHelpers;
 			sourceTree = "<group>";
@@ -300,6 +307,8 @@
 				CE9AD5BF1B7A4DD600A58D06 /* NSString+Custom.swift */,
 				CE9AD5C11B7A4DE800A58D06 /* UIViewController+Custom.swift */,
 				CE9AD5C31B7A4E0B00A58D06 /* UITableViewController+Custom.swift */,
+				B5CCF89B1B88346A00A0C6FD /* UIView+Custom.swift */,
+				B5CCF89D1B88347A00A0C6FD /* UIImageView+Custom.swift */,
 			);
 			name = SOExtension;
 			path = MCExtension;
@@ -473,8 +482,11 @@
 				CE9AD5C41B7A4E0B00A58D06 /* UITableViewController+Custom.swift in Sources */,
 				CE9AD5B61B7A470900A58D06 /* SOLeftMenuViewController.swift in Sources */,
 				CE9AD5AF1B7A46C400A58D06 /* SOSplashViewController.swift in Sources */,
+				B5CCF89E1B88347A00A0C6FD /* UIImageView+Custom.swift in Sources */,
+				B5CCF89C1B88346A00A0C6FD /* UIView+Custom.swift in Sources */,
 				B0AA4C3B1B86C6650029CB8C /* JTSplashView.swift in Sources */,
 				CE9AD5C01B7A4DD600A58D06 /* NSString+Custom.swift in Sources */,
+				B5CCF8A01B88349300A0C6FD /* SOUtils.swift in Sources */,
 				CE9AD5C21B7A4DE800A58D06 /* UIViewController+Custom.swift in Sources */,
 				CE3A39351B78E2F50069A2A5 /* ShopOnline.xcdatamodeld in Sources */,
 				B0AA4C381B86C65C0029CB8C /* SlideMenuController.swift in Sources */,
