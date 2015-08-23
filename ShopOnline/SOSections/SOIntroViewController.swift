@@ -25,8 +25,12 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self .setupView()
-        self .removeNavigationBarItem()
         self.navigationController?.navigationBar.hidden = true
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(true)
+        self.navigationController?.navigationBar.hidden = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,7 +53,6 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
         let scrollViewHeight:CGFloat = self.mScrollView.frame.height
         
         //Setup text & button
-        self.mOddLabel.text = "Bạn muốn trở thành doanh nhân ?"
         self.mGetStartButton.layer.cornerRadius = 4.0;
         
         //Create background image for scroll view
@@ -111,63 +114,63 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
         }
         else
         {
-            self.mScrollView.scrollEnabled = true
+            var pageWidth:CGFloat = CGRectGetWidth(scrollView.frame)
+            var currentPage:CGFloat = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1
+            
+            // Change the indicator
+            self.mPageControl.currentPage = Int(currentPage)
+            // Change the text accordingly
+            if Int(currentPage) == 0
+            {
+                self.mOddLabel.text = "Những mặt hàng chất lượng."
+                UIView.animateWithDuration(0.5, animations: { () -> Void in
+                    self.mGetStartButton.alpha = 0.0
+                })
+                self.mEvenView.hidden = true
+                self.mOddView.hidden = false
+                self.mOddView.animation = "squeezeRight"
+                self.mOddView.animate()
+            }
+            else if Int(currentPage) == 1
+            {
+                self.mEvenLabel.text = "Những sự lựa chọn tốt nhất!"
+                self.mOddView.hidden = true
+                self.mEvenView.hidden = false
+                self.mEvenView.animation = "slideLeft"
+                self.mEvenView.animate()
+            }
+            else if Int(currentPage) == 2
+            {
+                self.mEvenView.hidden = true
+                self.mOddView.hidden = false
+                self.mOddLabel.text = "Đa dạng các mặt hàng."
+                UIView.animateWithDuration(0.5, animations: { () -> Void in
+                    self.mGetStartButton.alpha = 0.0
+                })
+                self.mOddView.animation = "squeezeUp"
+                self.mOddView.animate()
+            }
+            else
+            {
+                self.mOddView.hidden = true
+                self.mEvenView.hidden = false
+                self.mEvenLabel.text = "Hãy cùng ShopOnline mua may bán đắt nào!"
+                // Show the "Let's Start" button in the last slide (with a fade in animation)
+                UIView.animateWithDuration(1.0, animations: { () -> Void in
+                    self.mGetStartButton.alpha = 1.0
+                })
+                self.mEvenView.animation = "squeezeDown"
+                self.mEvenView.animate()
+            }
         }
-        
-        var pageWidth:CGFloat = CGRectGetWidth(scrollView.frame)
-        var currentPage:CGFloat = floor((scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1
-        
-        // Change the indicator
-        self.mPageControl.currentPage = Int(currentPage)
-        // Change the text accordingly
-        if Int(currentPage) == 0
-        {
-            self.mOddLabel.text = "Những mặt hàng chất lượng."
-            UIView.animateWithDuration(0.5, animations: { () -> Void in
-                self.mGetStartButton.alpha = 0.0
-            })
-            self.mEvenView.hidden = true
-            self.mOddView.hidden = false
-            self.mOddView.animation = "squeezeRight"
-            self.mOddView.animate()
-        }
-        else if Int(currentPage) == 1
-        {
-            self.mEvenLabel.text = "Giúp bạn có những sự lựa chọn tốt nhất!"
-            self.mOddView.hidden = true
-            self.mEvenView.hidden = false
-            self.mEvenView.animation = "slideLeft"
-            self.mEvenView.animate()
-        }
-        else if Int(currentPage) == 2
-        {
-            self.mEvenView.hidden = true
-            self.mOddView.hidden = false
-            self.mOddLabel.text = "Phong phú, đa dạng các mặt hàng."
-            UIView.animateWithDuration(0.5, animations: { () -> Void in
-                self.mGetStartButton.alpha = 0.0
-            })
-            self.mOddView.animation = "squeezeUp"
-            self.mOddView.animate()
-        }
-        else
-        {
-            self.mOddView.hidden = true
-            self.mEvenView.hidden = false
-            self.mEvenLabel.text = "Hãy cùng ShopOnline mua may bán đắt nào!"
-            // Show the "Let's Start" button in the last slide (with a fade in animation)
-            UIView.animateWithDuration(1.0, animations: { () -> Void in
-                self.mGetStartButton.alpha = 1.0
-            })
-            self.mEvenView.animation = "squeezeDown"
-            self.mEvenView.animate()
-        }
+        self.mScrollView.scrollEnabled = true
     }
     
     @IBAction func clickGetStartButton(sender: AnyObject)
     {
         // Present viewcontroller . like popup
-        self.presentViewController(setupPushView(SOLoginViewController), animated: true, completion: nil)
+        //self.presentViewController(setupPushView(SOCatagoriesViewController), animated: true, completion: nil)
+        self.navigationController?.pushViewController(setupPushView(SOTabMenuViewController), animated: true)
     }
  
 }

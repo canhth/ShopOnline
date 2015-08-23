@@ -7,16 +7,14 @@
 //
 
 import UIKit
-import PermissionScope
 import JTSplashView
 
 class SOSplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
         JTSplashView.splashViewWithBackgroundColor(nil, circleColor: nil, circleSize: nil)
-        NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: Selector("hideSplashView"), userInfo: nil, repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("hideSplashView"), userInfo: nil, repeats: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,10 +26,12 @@ class SOSplashViewController: UIViewController {
         super.viewWillAppear(animated)
 
     }
-    func hideSplashView() {
+    func hideSplashView()
+    {
         JTSplashView.finishWithCompletion { () -> Void in
             UIApplication.sharedApplication().statusBarHidden = false
         }
+        self.navigationController?.pushViewController(setupPushView(SOIntroViewController), animated: true)
     }
     /*
     // MARK: - Navigation

@@ -21,7 +21,7 @@ public struct SlideMenuOptions {
     public static var rightBezelWidth: CGFloat = 16.0
     public static var rightPanFromBezel: Bool = true
     public static var hideStatusBar: Bool = true
-    public static var pointOfNoReturnWidth: CGFloat = 44.0
+    public static var pointOfNoReturnWidth: CGFloat = 64.0
 }
 
 public class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {

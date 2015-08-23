@@ -15,6 +15,15 @@
 		B5CCF89C1B88346A00A0C6FD /* UIView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89B1B88346A00A0C6FD /* UIView+Custom.swift */; };
 		B5CCF89E1B88347A00A0C6FD /* UIImageView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89D1B88347A00A0C6FD /* UIImageView+Custom.swift */; };
 		B5CCF8A01B88349300A0C6FD /* SOUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89F1B88349300A0C6FD /* SOUtils.swift */; };
+		B5CCF8B41B88845800A0C6FD /* SOCatagoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF8B31B88845800A0C6FD /* SOCatagoriesViewController.swift */; };
+		B5F316191B8979DE0070353B /* UICollectionViewController+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F316181B8979DE0070353B /* UICollectionViewController+Custom.swift */; };
+		B5F3161B1B8984110070353B /* SOCatagoriesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F3161A1B8984110070353B /* SOCatagoriesViewCell.swift */; };
+		B5F3161F1B8990C70070353B /* SOAdCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F3161E1B8990C70070353B /* SOAdCollectionReusableView.swift */; };
+		B5F316221B899ED80070353B /* SOListProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F316211B899ED80070353B /* SOListProductViewController.swift */; };
+		B5F316241B89B50C0070353B /* SOTabMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F316231B89B50C0070353B /* SOTabMenuViewController.swift */; };
+		B5F316281B8A1D5D0070353B /* UITabBar+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F316271B8A1D5D0070353B /* UITabBar+Custom.swift */; };
+		B5F3162B1B8A3D860070353B /* Cache+AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F3162A1B8A3D860070353B /* Cache+AppSetting.swift */; };
+		B5F3162D1B8A472A0070353B /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F3162C1B8A472A0070353B /* Cache.swift */; };
 		B5FA708E1B864CE20050980A /* SOLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA708D1B864CE20050980A /* SOLoginViewController.swift */; };
 		CE3A39351B78E2F50069A2A5 /* ShopOnline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE3A39331B78E2F50069A2A5 /* ShopOnline.xcdatamodeld */; };
 		CE3A39371B78E2F50069A2A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A39361B78E2F50069A2A5 /* ViewController.swift */; };
@@ -51,6 +60,15 @@
 		B5CCF89B1B88346A00A0C6FD /* UIView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Custom.swift"; sourceTree = "<group>"; };
 		B5CCF89D1B88347A00A0C6FD /* UIImageView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Custom.swift"; sourceTree = "<group>"; };
 		B5CCF89F1B88349300A0C6FD /* SOUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOUtils.swift; sourceTree = "<group>"; };
+		B5CCF8B31B88845800A0C6FD /* SOCatagoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOCatagoriesViewController.swift; sourceTree = "<group>"; };
+		B5F316181B8979DE0070353B /* UICollectionViewController+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewController+Custom.swift"; sourceTree = "<group>"; };
+		B5F3161A1B8984110070353B /* SOCatagoriesViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOCatagoriesViewCell.swift; sourceTree = "<group>"; };
+		B5F3161E1B8990C70070353B /* SOAdCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOAdCollectionReusableView.swift; sourceTree = "<group>"; };
+		B5F316211B899ED80070353B /* SOListProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOListProductViewController.swift; sourceTree = "<group>"; };
+		B5F316231B89B50C0070353B /* SOTabMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOTabMenuViewController.swift; sourceTree = "<group>"; };
+		B5F316271B8A1D5D0070353B /* UITabBar+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+Custom.swift"; sourceTree = "<group>"; };
+		B5F3162A1B8A3D860070353B /* Cache+AppSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Cache+AppSetting.swift"; path = "ShopOnline/SOShared/MCExtension/Cache+AppSetting.swift"; sourceTree = SOURCE_ROOT; };
+		B5F3162C1B8A472A0070353B /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = ShopOnline/SOShared/MCExtension/Cache.swift; sourceTree = SOURCE_ROOT; };
 		B5FA708D1B864CE20050980A /* SOLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOLoginViewController.swift; sourceTree = "<group>"; };
 		CB1E80F9667F0DB2E129E257 /* Pods_ShopOnline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopOnline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3A392C1B78E2F50069A2A5 /* ShopOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,9 +89,7 @@
 		CE9AD5C11B7A4DE800A58D06 /* UIViewController+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Custom.swift"; sourceTree = "<group>"; };
 		CE9AD5C31B7A4E0B00A58D06 /* UITableViewController+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewController+Custom.swift"; sourceTree = "<group>"; };
 		CE9AD5C51B7A51E000A58D06 /* SODefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SODefine.h; sourceTree = "<group>"; };
-		CE9AD5C61B7A54C200A58D06 /* SOSharePrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOSharePrefixHeader.pch; sourceTree = "<group>"; };
 		CE9AD5C71B7A54DC00A58D06 /* SOSectionsPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SOSectionsPrefixHeader.pch; sourceTree = "<group>"; };
-		CE9AD5C81B7A54FC00A58D06 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E8B48BBD2AAE45D1BCDF2F05 /* Pods-ShopOnline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopOnline.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShopOnline/Pods-ShopOnline.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,6 +138,49 @@
 			path = JTSplashView;
 			sourceTree = "<group>";
 		};
+		B5CCF8B21B88843000A0C6FD /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B5F316201B899E9E0070353B /* List Products */,
+				B5CCF8B31B88845800A0C6FD /* SOCatagoriesViewController.swift */,
+				B5F3161A1B8984110070353B /* SOCatagoriesViewCell.swift */,
+				B5F3161E1B8990C70070353B /* SOAdCollectionReusableView.swift */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		B5F316201B899E9E0070353B /* List Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5F316211B899ED80070353B /* SOListProductViewController.swift */,
+			);
+			name = "List Products";
+			sourceTree = "<group>";
+		};
+		B5F316251B89B5150070353B /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				CE9AD5AE1B7A46C400A58D06 /* SOSplashViewController.swift */,
+			);
+			name = Splash;
+			sourceTree = "<group>";
+		};
+		B5F316261B89B5210070353B /* TabMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B5F316231B89B50C0070353B /* SOTabMenuViewController.swift */,
+			);
+			name = TabMenu;
+			sourceTree = "<group>";
+		};
+		B5F316291B8A1D670070353B /* SubClass */ = {
+			isa = PBXGroup;
+			children = (
+				B5F316271B8A1D5D0070353B /* UITabBar+Custom.swift */,
+			);
+			name = SubClass;
+			sourceTree = "<group>";
+		};
 		B5FA708C1B864CD20050980A /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,7 +219,6 @@
 				CE3A393D1B78E2F50069A2A5 /* LaunchScreen.xib */,
 				CE3A39331B78E2F50069A2A5 /* ShopOnline.xcdatamodeld */,
 				CE3A392F1B78E2F50069A2A5 /* Supporting Files */,
-				CE9AD5C81B7A54FC00A58D06 /* PrefixHeader.pch */,
 			);
 			path = ShopOnline;
 			sourceTree = "<group>";
@@ -201,7 +259,6 @@
 		CE9AD5A21B7A462A00A58D06 /* SOShared */ = {
 			isa = PBXGroup;
 			children = (
-				CE9AD5C61B7A54C200A58D06 /* SOSharePrefixHeader.pch */,
 				CE9AD5BA1B7A4A3600A58D06 /* SOExtension */,
 				CE9AD5A31B7A462A00A58D06 /* Appdelegate */,
 				CE9AD5A41B7A462A00A58D06 /* SOAssets */,
@@ -251,6 +308,8 @@
 		CE9AD5A91B7A462A00A58D06 /* SOConstants */ = {
 			isa = PBXGroup;
 			children = (
+				B5F3162A1B8A3D860070353B /* Cache+AppSetting.swift */,
+				B5F3162C1B8A472A0070353B /* Cache.swift */,
 			);
 			path = SOConstants;
 			sourceTree = "<group>";
@@ -267,11 +326,13 @@
 		CE9AD5AD1B7A463F00A58D06 /* SOSections */ = {
 			isa = PBXGroup;
 			children = (
+				B5F316261B89B5210070353B /* TabMenu */,
+				B5F316251B89B5150070353B /* Splash */,
+				B5CCF8B21B88843000A0C6FD /* Categories */,
 				B5FA708C1B864CD20050980A /* Login */,
 				CE8D85391B8094C0001354A8 /* Introduce */,
 				CE9AD5C71B7A54DC00A58D06 /* SOSectionsPrefixHeader.pch */,
 				CE9AD5B21B7A46DF00A58D06 /* Menu */,
-				CE9AD5AE1B7A46C400A58D06 /* SOSplashViewController.swift */,
 			);
 			path = SOSections;
 			sourceTree = "<group>";
@@ -304,11 +365,13 @@
 		CE9AD5BA1B7A4A3600A58D06 /* SOExtension */ = {
 			isa = PBXGroup;
 			children = (
+				B5F316291B8A1D670070353B /* SubClass */,
 				CE9AD5BF1B7A4DD600A58D06 /* NSString+Custom.swift */,
 				CE9AD5C11B7A4DE800A58D06 /* UIViewController+Custom.swift */,
 				CE9AD5C31B7A4E0B00A58D06 /* UITableViewController+Custom.swift */,
 				B5CCF89B1B88346A00A0C6FD /* UIView+Custom.swift */,
 				B5CCF89D1B88347A00A0C6FD /* UIImageView+Custom.swift */,
+				B5F316181B8979DE0070353B /* UICollectionViewController+Custom.swift */,
 			);
 			name = SOExtension;
 			path = MCExtension;
@@ -477,20 +540,29 @@
 			files = (
 				B5C039161B83A004009F49D3 /* AppDelegate.swift in Sources */,
 				CE3A39371B78E2F50069A2A5 /* ViewController.swift in Sources */,
+				B5F316221B899ED80070353B /* SOListProductViewController.swift in Sources */,
 				CE9AD5B11B7A46D600A58D06 /* SOIntroViewController.swift in Sources */,
 				B5FA708E1B864CE20050980A /* SOLoginViewController.swift in Sources */,
 				CE9AD5C41B7A4E0B00A58D06 /* UITableViewController+Custom.swift in Sources */,
 				CE9AD5B61B7A470900A58D06 /* SOLeftMenuViewController.swift in Sources */,
+				B5F316241B89B50C0070353B /* SOTabMenuViewController.swift in Sources */,
 				CE9AD5AF1B7A46C400A58D06 /* SOSplashViewController.swift in Sources */,
+				B5F3161B1B8984110070353B /* SOCatagoriesViewCell.swift in Sources */,
+				B5F3161F1B8990C70070353B /* SOAdCollectionReusableView.swift in Sources */,
 				B5CCF89E1B88347A00A0C6FD /* UIImageView+Custom.swift in Sources */,
 				B5CCF89C1B88346A00A0C6FD /* UIView+Custom.swift in Sources */,
 				B0AA4C3B1B86C6650029CB8C /* JTSplashView.swift in Sources */,
 				CE9AD5C01B7A4DD600A58D06 /* NSString+Custom.swift in Sources */,
+				B5F3162B1B8A3D860070353B /* Cache+AppSetting.swift in Sources */,
 				B5CCF8A01B88349300A0C6FD /* SOUtils.swift in Sources */,
+				B5CCF8B41B88845800A0C6FD /* SOCatagoriesViewController.swift in Sources */,
+				B5F316191B8979DE0070353B /* UICollectionViewController+Custom.swift in Sources */,
 				CE9AD5C21B7A4DE800A58D06 /* UIViewController+Custom.swift in Sources */,
 				CE3A39351B78E2F50069A2A5 /* ShopOnline.xcdatamodeld in Sources */,
+				B5F3162D1B8A472A0070353B /* Cache.swift in Sources */,
 				B0AA4C381B86C65C0029CB8C /* SlideMenuController.swift in Sources */,
 				CE9AD5B81B7A471600A58D06 /* SORightMenuViewController.swift in Sources */,
+				B5F316281B8A1D5D0070353B /* UITabBar+Custom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

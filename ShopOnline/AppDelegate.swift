@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // create viewController code...
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let mainViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SOIntroViewController)) as! SOIntroViewController
+        let mainViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SOSplashViewController)) as! SOSplashViewController
         let leftViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SOLeftMenuViewController)) as! SOLeftMenuViewController
         let rightViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SORightMenuViewController)) as! SORightMenuViewController
         
@@ -32,6 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
         self.window?.rootViewController = slideMenuController
         self.window?.makeKeyAndVisible()
+        
+        self.setupTabBar()
+        self.setupNavigationBar()
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -65,6 +68,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
 
+    // MARK: - Setup Application
+    func setupNavigationBar()
+    {
+        UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().tintColor = UIColor.orangeColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+    }
+    
+    func setupTabBar()
+    {
+        /* Custom UItabbar */
+        UITabBar.appearance().translucent = false
+        UITabBar.appearance().barTintColor = UIColor.whiteColor()
+        UITabBar.appearance().tintColor = UIColor.orangeColor()
+    }
+    
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: NSURL = {
