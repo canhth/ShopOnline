@@ -8,8 +8,11 @@
 
 import UIKit
 import FontAwesome_swift
+import FBSDKCoreKit
+import FBSDKShareKit
+import FBSDKLoginKit
 
-class SOLoginViewController: UIViewController {
+class SOLoginViewController: UIViewController , FBSDKLoginButtonDelegate{
 
     @IBOutlet weak var mLoginView: UIView!
     
@@ -20,7 +23,7 @@ class SOLoginViewController: UIViewController {
     @IBOutlet weak var mPasswordTextField: UITextField!
     
     @IBOutlet weak var mLoginButton: UIButton!
-    @IBOutlet weak var mLoginFaceBookButton: UIButton!
+    @IBOutlet weak var mLoginFaceBookButton: FBSDKLoginButton!
     
     @IBOutlet weak var mCloseButton: UIButton!
     
@@ -29,11 +32,19 @@ class SOLoginViewController: UIViewController {
 
         self .dismissKeyboard()
         self.mLoginButton.layer.cornerRadius = 5;
-        self.mLoginFaceBookButton.layer.cornerRadius = 5;
-
+        mLoginFaceBookButton.layer.cornerRadius = 5;
+        mLoginFaceBookButton.delegate = self
         // FontAwesome icon in button
         self.mCloseButton.titleLabel?.font = UIFont.fontAwesomeOfSize(25)
         self.mCloseButton.setTitle(String.fontAwesomeIconWithName(.TimesCircleO), forState: .Normal)
+        if (FBSDKAccessToken.currentAccessToken() != nil)
+        {
+            performSegueWithIdentifier("unwindToViewOtherController", sender: self)
+        }
+        else
+        {
+            mLoginFaceBookButton.readPermissions = ["public_profile", "email", "user_friends"]
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,5 +88,50 @@ class SOLoginViewController: UIViewController {
     {
 
     }
-
+    
+    /*--- FaceBook Delegate method --*/
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        println("User Logged In")
+        
+        if ((error) != nil)
+        {
+            // Process error
+        }
+        else if result.isCancelled {
+            // Handle cancellations
+        }
+        else {
+            // If you ask for multiple permissions at once, you
+            // should check if specific permissions missing
+            if result.grantedPermissions.contains("email")
+            {
+                // Do work
+            }
+        }
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
+        println("User Logged Out")
+    }
+    //Here is an extra method to grab the Users Facebook data. You can call this method anytime after a user has logged in by calling self.returnUserData().
+    func returnUserData()
+    {
+        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
+        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+            
+            if ((error) != nil)
+            {
+                // Process error
+                println("Error: \(error)")
+            }
+            else
+            {
+                println("fetched user: \(result)")
+                let userName : NSString = result.valueForKey("name") as! NSString
+                println("User Name is: \(userName)")
+                let userEmail : NSString = result.valueForKey("email") as! NSString
+                println("User Email is: \(userEmail)")
+            }
+        })
+    }
 }

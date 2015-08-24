@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5420E51ACEAB3E59CFCD22E7"
+               BlueprintIdentifier = "2F9A25BD61C17535312B8836"
                BuildableName = "JTSplashView.framework"
                BlueprintName = "JTSplashView"
                ReferencedContainer = "container:Pods.xcodeproj">

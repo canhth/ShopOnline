@@ -13,5 +13,8 @@ target 'ShopOnline' do
     pod 'SVProgressHUD', :head
     pod 'GoogleMaps'
     pod 'Spring', '~> 1.0.3'
+    pod 'FBSDKCoreKit'
+    pod 'FBSDKLoginKit'
+    pod 'FBSDKShareKit'
 end
 

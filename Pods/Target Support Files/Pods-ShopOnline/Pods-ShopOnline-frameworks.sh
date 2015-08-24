@@ -52,6 +52,10 @@ code_sign_if_enabled() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'Pods-ShopOnline/Bolts.framework'
+  install_framework 'Pods-ShopOnline/FBSDKCoreKit.framework'
+  install_framework 'Pods-ShopOnline/FBSDKLoginKit.framework'
+  install_framework 'Pods-ShopOnline/FBSDKShareKit.framework'
   install_framework 'Pods-ShopOnline/FontAwesome_swift.framework'
   install_framework 'Pods-ShopOnline/JTSplashView.framework'
   install_framework 'Pods-ShopOnline/PermissionScope.framework'
@@ -64,6 +68,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-ShopOnline/TextFieldEffects.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'Pods-ShopOnline/Bolts.framework'
+  install_framework 'Pods-ShopOnline/FBSDKCoreKit.framework'
+  install_framework 'Pods-ShopOnline/FBSDKLoginKit.framework'
+  install_framework 'Pods-ShopOnline/FBSDKShareKit.framework'
   install_framework 'Pods-ShopOnline/FontAwesome_swift.framework'
   install_framework 'Pods-ShopOnline/JTSplashView.framework'
   install_framework 'Pods-ShopOnline/PermissionScope.framework'

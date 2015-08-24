@@ -4,6 +4,26 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKCoreKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKLoginKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FBSDKShareKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FontAwesome.swift-FontAwesome.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,7 +87,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1CF9F8D06E12F8AE9C06DCCA4F825E3D</key>
+		<key>199838A6636ABC4E8813C228FFB33C4A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>20927C7818274B6E5695D113D33A81CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>20AF43D6790D50957CB1512F809BD6DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>259B39393BD3BAA0063A517B8B439A21</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2D28E46EA0ED96DE7218197E5665DB1C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3159CA2A4048AE89BA089A0D8E07C7B0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,12 +137,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A064B75A9838606659BB57FE5AC8A101</key>
+		<key>89E974ECE0D6F280D723E741044C2484</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B73E1AC97BE4677DD9BC70DB307AE395</key>
+		<key>A064B75A9838606659BB57FE5AC8A101</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,22 +152,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2EA73FE3F59985892BFD3953997A3F9</key>
+		<key>BF685881BA42CE44DC1C3ADC0F800C83</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D2A06966C95A0B1BC13B3E9F2ACF3A61</key>
+		<key>C0A6127F39B686E450401E6AB4489441</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>F7ED902DA9B8C7F94554D537AB6765C7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F8E71339785797837AC03026D94DBB80</key>
 		<dict>
 			<key>primary</key>
 			<true/>

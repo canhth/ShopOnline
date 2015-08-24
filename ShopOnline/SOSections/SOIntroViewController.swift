@@ -168,11 +168,17 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
     
     @IBAction func clickGetStartButton(sender: AnyObject)
     {
-        // Present viewcontroller . like popup
-        //self.presentViewController(setupPushView(SOCatagoriesViewController), animated: true, completion: nil)
-        self.navigationController?.pushViewController(setupPushView(SOTabMenuViewController), animated: true)
+        self.presentViewController(setupPushView(SOLoginViewController), animated: true, completion: nil)
+        if (var member = Cache.getMemberId())
+        {
+            // Present viewcontroller . like popup
+            
+        }
+        else
+        {
+            self.navigationController?.pushViewController(setupPushView(SOTabMenuViewController), animated: true)
+        }
     }
- 
 }
 
 

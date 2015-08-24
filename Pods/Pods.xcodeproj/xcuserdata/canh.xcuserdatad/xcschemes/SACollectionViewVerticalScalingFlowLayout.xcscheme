@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A7D4A752D12A4B2020BD7ABF"
+               BlueprintIdentifier = "1211C48DB41CEA1932E779EB"
                BuildableName = "SACollectionViewVerticalScalingFlowLayout.framework"
                BlueprintName = "SACollectionViewVerticalScalingFlowLayout"
                ReferencedContainer = "container:Pods.xcodeproj">
