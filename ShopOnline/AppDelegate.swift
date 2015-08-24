@@ -13,18 +13,29 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
     private func createMenuView()
     {
         // create viewController code...
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let mainViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SOSplashViewController)) as! SOSplashViewController
+        let cache = Cache()
+        var mainViewController: UIViewController?
+        if ((cache.getFirstTimeLauchApp()) == true)
+        {
+            mainViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SOSplashViewController)) as! SOSplashViewController
+            
+        }
+        else
+        {
+            mainViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SOIntroViewController)) as! SOIntroViewController
+            cache.setFirstTimeLauchApp(true)
+            let test = cache.getFirstTimeLauchApp()
+        }
+
         let leftViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SOLeftMenuViewController)) as! SOLeftMenuViewController
         let rightViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SORightMenuViewController)) as! SORightMenuViewController
         
-        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
-        
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController!)
         //leftViewController.mainViewController = nvc
         
         let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)

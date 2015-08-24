@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Cache: NSObject
+public class Cache: AnyObject
 {
     func setBoolValue(value: Bool, key:String)
     {
@@ -24,12 +24,28 @@ class Cache: NSObject
     
     func setIntergerValue(value:NSInteger, key:String)
     {
-        let userDefaut = NSUserDefaults.standardUserDefaults()
-        userDefaut.setInteger(value, forKey: key)
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        userDefault.setInteger(value, forKey: key)
+        userDefault.synchronize()
     }
     func intergerValueForKey(key:String) -> NSInteger
     {
         let userDefaut = NSUserDefaults.standardUserDefaults()
         return userDefaut.integerForKey(key)
     }
+    
+    func setObjectValue(object:NSObject, key:String)
+    {
+        let encodedObject = NSKeyedArchiver.archivedDataWithRootObject(object)
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        userDefault.setObject(encodedObject, forKey: key)
+        userDefault.synchronize()
+    }
+    
+    func objectForKey(key:String) -> AnyObject
+    {
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        return userDefault.objectForKey(key)!
+    }
+    
 }

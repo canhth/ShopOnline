@@ -8,8 +8,8 @@ import Foundation
 import UIKit
 
 public struct SlideMenuOptions {
-    public static var leftViewWidth: CGFloat = 250.0
-    public static var leftBezelWidth: CGFloat = 16.0
+    public static var leftViewWidth: CGFloat = UIScreen.mainScreen().bounds.size.width / 1.4
+    public static var leftBezelWidth: CGFloat = 24
     public static var contentViewScale: CGFloat = 0.96
     public static var contentViewOpacity: CGFloat = 0.5
     public static var shadowOpacity: CGFloat = 0.0
@@ -17,11 +17,11 @@ public struct SlideMenuOptions {
     public static var shadowOffset: CGSize = CGSizeMake(0,0)
     public static var panFromBezel: Bool = true
     public static var animationDuration: CGFloat = 0.4
-    public static var rightViewWidth: CGFloat = 270.0
-    public static var rightBezelWidth: CGFloat = 16.0
+    public static var rightViewWidth: CGFloat = UIScreen.mainScreen().bounds.size.width - 20
+    public static var rightBezelWidth: CGFloat = 24
     public static var rightPanFromBezel: Bool = true
     public static var hideStatusBar: Bool = true
-    public static var pointOfNoReturnWidth: CGFloat = 64.0
+    public static var pointOfNoReturnWidth: CGFloat = 24.0
 }
 
 public class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {

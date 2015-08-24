@@ -30,7 +30,7 @@ class SOLoginViewController: UIViewController {
         self .dismissKeyboard()
         self.mLoginButton.layer.cornerRadius = 5;
         self.mLoginFaceBookButton.layer.cornerRadius = 5;
-        
+
         // FontAwesome icon in button
         self.mCloseButton.titleLabel?.font = UIFont.fontAwesomeOfSize(25)
         self.mCloseButton.setTitle(String.fontAwesomeIconWithName(.TimesCircleO), forState: .Normal)
