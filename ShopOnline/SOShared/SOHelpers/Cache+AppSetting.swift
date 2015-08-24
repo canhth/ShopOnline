@@ -11,41 +11,41 @@ import Foundation
 public extension Cache
 {
     /* Set CID */
-    public func setCid(sCid : String)
+    class func setCid(sCid : String)
     {
         setObjectValue(sCid, key: "Cid")
     }
-    func getCid() -> String
+    class func getCid() -> String
     {
        return objectForKey("Cid") as! String
     }
     
     /* Set member id */
-    func setMemberId(sMemberID : String)
+    class func setMemberId(sMemberID : String)
     {
         setObjectValue(sMemberID, key: "MemberID")
     }
-    func getMemberId() -> String
+    class func getMemberId() -> String
     {
         return objectForKey("MemberID") as! String
     }
     
     /* Set user name */
-    func setUserName(sUserName: String)
+    class func setUserName(sUserName: String)
     {
         setObjectValue(sUserName, key: "UserName")
     }
-    func getUserName() -> String
+    class func getUserName() -> String
     {
         return objectForKey("UserName") as! String
     }
     
     /* Set First time lauch app */
-    func setFirstTimeLauchApp(value:Bool)
+    class func setFirstTimeLauchApp(value:Bool)
     {
         setBoolValue(value, key: "FirstTimeLauchApp")
     }
-    func getFirstTimeLauchApp() -> Bool
+    class func getFirstTimeLauchApp() -> Bool
     {
         return boolValueForKey("FirstTimeLauchApp") as Bool
     }

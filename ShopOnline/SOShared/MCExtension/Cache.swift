@@ -10,31 +10,31 @@ import UIKit
 
 public class Cache: AnyObject
 {
-    func setBoolValue(value: Bool, key:String)
+    class func setBoolValue(value: Bool, key:String)
     {
         let userDefault = NSUserDefaults.standardUserDefaults()
         userDefault.setBool(value, forKey: key)
         userDefault.synchronize()
     }
-    func boolValueForKey(key:String) -> Bool
+    class func boolValueForKey(key:String) -> Bool
     {
         let userDefault = NSUserDefaults.standardUserDefaults()
         return userDefault.boolForKey(key)
     }
     
-    func setIntergerValue(value:NSInteger, key:String)
+    class func setIntergerValue(value:NSInteger, key:String)
     {
         let userDefault = NSUserDefaults.standardUserDefaults()
         userDefault.setInteger(value, forKey: key)
         userDefault.synchronize()
     }
-    func intergerValueForKey(key:String) -> NSInteger
+    class func intergerValueForKey(key:String) -> NSInteger
     {
         let userDefaut = NSUserDefaults.standardUserDefaults()
         return userDefaut.integerForKey(key)
     }
     
-    func setObjectValue(object:NSObject, key:String)
+    class func setObjectValue(object:NSObject, key:String)
     {
         let encodedObject = NSKeyedArchiver.archivedDataWithRootObject(object)
         let userDefault = NSUserDefaults.standardUserDefaults()
@@ -42,7 +42,7 @@ public class Cache: AnyObject
         userDefault.synchronize()
     }
     
-    func objectForKey(key:String) -> AnyObject
+    class func objectForKey(key:String) -> AnyObject
     {
         let userDefault = NSUserDefaults.standardUserDefaults()
         return userDefault.objectForKey(key)!

@@ -18,18 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     {
         // create viewController code...
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let cache = Cache()
         var mainViewController: UIViewController?
-        if ((cache.getFirstTimeLauchApp()) == true)
+        if (Cache.getFirstTimeLauchApp() == true)
         {
             mainViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SOSplashViewController)) as! SOSplashViewController
-            
         }
         else
         {
             mainViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SOIntroViewController)) as! SOIntroViewController
-            cache.setFirstTimeLauchApp(true)
-            let test = cache.getFirstTimeLauchApp()
+            Cache.setFirstTimeLauchApp(true)
         }
 
         let leftViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SOLeftMenuViewController)) as! SOLeftMenuViewController
