@@ -258,8 +258,8 @@
                         <outlet property="mPageControl" destination="wL1-rf-Qhx" id="I8i-sn-wex"/>
                         <outlet property="mScrollView" destination="fov-7X-qf0" id="WnA-6Q-Ldr"/>
                         <outlet property="mTextImageView" destination="tgP-fH-kGh" id="OI4-MP-2bw"/>
-                        <segue destination="iG3-j6-FxZ" kind="presentation" identifier="kSegue_Intro_Push_Logiin" modalTransitionStyle="flipHorizontal" id="Vhi-mU-urz"/>
                         <segue destination="LS8-gb-QGF" kind="show" id="mpI-8K-eRi"/>
+                        <segue destination="iG3-j6-FxZ" kind="show" id="bDN-NS-B3P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZR7-lV-Rf3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -283,20 +283,20 @@
                                 <gestureRecognizers/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="MqT-m9-x7n">
-                                <rect key="frame" x="270" y="40" width="60" height="60"/>
+                                <rect key="frame" x="270" y="84" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="Fb7-3e-evl"/>
                                     <constraint firstAttribute="width" secondItem="MqT-m9-x7n" secondAttribute="height" multiplier="1:1" id="eHf-sf-tC1"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ShopOnline" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewm-tE-qfc">
-                                <rect key="frame" x="254" y="100" width="92" height="23"/>
+                                <rect key="frame" x="254" y="144" width="92" height="23"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="textColor" red="0.9137254901960784" green="0.45490196078431372" blue="0.0039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lvh-Rc-RaE" customClass="SpringView" customModule="Spring">
-                                <rect key="frame" x="0.0" y="139" width="600" height="450"/>
+                                <rect key="frame" x="0.0" y="183" width="600" height="450"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tên đăng nhập/Email" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ihC-0h-4Le">
                                         <rect key="frame" x="30" y="20" width="540" height="40"/>
@@ -422,7 +422,7 @@
                                 </variation>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1zc-yc-Z7P">
-                                <rect key="frame" x="550" y="40" width="30" height="30"/>
+                                <rect key="frame" x="550" y="84" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Edu-pN-Non"/>
                                     <constraint firstAttribute="width" constant="30" id="Gta-UP-c7b"/>
@@ -436,7 +436,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXt-TF-hMM" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="98" y="425" width="405" height="40"/>
+                                <rect key="frame" x="98" y="469" width="405" height="40"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                 <state key="normal" title="Đăng Nhập FaceBook">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -476,7 +476,7 @@
                         <outlet property="mPasswordUnderLineView" destination="DP8-N6-qx7" id="Kw7-sx-FXf"/>
                         <outlet property="mUserNameTextField" destination="ihC-0h-4Le" id="pTf-gU-2ZM"/>
                         <outlet property="mUserNameUnderLineView" destination="4ew-Cy-BqG" id="fU5-Lt-XMf"/>
-                        <segue destination="LS8-gb-QGF" kind="show" identifier="kSegue_Login_Success" id="Gj1-GI-Gpy"/>
+                        <segue destination="LS8-gb-QGF" kind="show" identifier="kSegue_Login_Success" id="E64-M7-uzW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E9Z-M0-g1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -501,7 +501,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vCx-98-Baw">
-                                <rect key="frame" x="0.0" y="44" width="600" height="516"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="560"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="uGi-kQ-GaD">
                                     <size key="itemSize" width="226" height="251"/>
@@ -577,7 +577,7 @@
                         <constraints>
                             <constraint firstItem="vCx-98-Baw" firstAttribute="leading" secondItem="fmb-PD-LjP" secondAttribute="leading" id="DUi-Hv-Ikr"/>
                             <constraint firstItem="Mku-ML-WfH" firstAttribute="top" secondItem="vCx-98-Baw" secondAttribute="bottom" constant="-9" id="aLz-1K-ovY"/>
-                            <constraint firstItem="vCx-98-Baw" firstAttribute="top" secondItem="fmb-PD-LjP" secondAttribute="top" constant="44" id="apN-8y-yDJ"/>
+                            <constraint firstItem="vCx-98-Baw" firstAttribute="top" secondItem="fmb-PD-LjP" secondAttribute="top" id="apN-8y-yDJ"/>
                             <constraint firstAttribute="trailing" secondItem="vCx-98-Baw" secondAttribute="trailing" id="nbB-qs-Pe4"/>
                         </constraints>
                     </view>
@@ -659,7 +659,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1E-4V-7sD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1772" y="1514"/>
+            <point key="canvasLocation" x="1785" y="1333"/>
         </scene>
         <!--Bán-->
         <scene sceneID="Rsr-6F-OQl">
@@ -817,6 +817,6 @@
         <image name="shopping_selected" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mpI-8K-eRi"/>
+        <segue reference="E64-M7-uzW"/>
     </inferredMetricsTieBreakers>
 </document>

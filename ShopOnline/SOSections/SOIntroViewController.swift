@@ -176,6 +176,7 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
         {
             // Present viewcontroller . like popup
             self.presentViewController(setupPushView(SOLoginViewController), animated: true, completion: nil)
+            self.navigationController?.pushViewController(setupPushView(SOTabMenuViewController), animated: true)
         }
         else
         {

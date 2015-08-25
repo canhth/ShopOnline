@@ -39,6 +39,16 @@ class SOLoginViewController: UIViewController {
         self.mCloseButton.setTitle(String.fontAwesomeIconWithName(.TimesCircleO), forState: .Normal)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBar.hidden = true
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(true)
+        self.navigationController?.navigationBar.hidden = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -75,13 +85,13 @@ class SOLoginViewController: UIViewController {
                     if error != nil
                     {
                         println("facebook me request - error is not nil :(")
-                        self.performSegueWithIdentifier("kSegue_Login_Success", sender: self)
+                        self.dismissViewControllerAnimated(true, completion: nil)
                     }
                     else
                     {
                         println("facebook me request - error is nil :) ")
                         self .getUserInfo()
-                        self.performSegueWithIdentifier("kSegue_Login_Success", sender: self)
+                        self.dismissViewControllerAnimated(true, completion: nil)
                     }
                 })
             }
@@ -89,7 +99,7 @@ class SOLoginViewController: UIViewController {
             else
             {
                 NSLog("User logged in through Facebook! \(user!.username)")
-                self.performSegueWithIdentifier("kSegue_Login_Success", sender: self)
+                self.dismissViewControllerAnimated(true, completion: nil)
             }
         })
         
