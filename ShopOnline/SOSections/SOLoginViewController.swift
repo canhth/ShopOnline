@@ -8,130 +8,124 @@
 
 import UIKit
 import FontAwesome_swift
-import FBSDKCoreKit
-import FBSDKShareKit
-import FBSDKLoginKit
+import ParseFacebookUtils
 
-class SOLoginViewController: UIViewController , FBSDKLoginButtonDelegate{
-
+class SOLoginViewController: UIViewController {
+    
     @IBOutlet weak var mLoginView: UIView!
     
     @IBOutlet weak var mUserNameTextField: UITextField!
     @IBOutlet weak var mUserNameUnderLineView: UIView!
-  
+    
     @IBOutlet weak var mPasswordUnderLineView: UIView!
     @IBOutlet weak var mPasswordTextField: UITextField!
     
     @IBOutlet weak var mLoginButton: UIButton!
-    @IBOutlet weak var mLoginFaceBookButton: FBSDKLoginButton!
+    @IBOutlet weak var mLoginFaceBookButton: UIButton!
     
     @IBOutlet weak var mCloseButton: UIButton!
     
+    var dict : NSDictionary!
+    
+    let facebookReadPermissions = ["public_profile", "email", "user_friends","user_about_me"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self .dismissKeyboard()
+        
+        self.dismissKeyboard()
         self.mLoginButton.layer.cornerRadius = 5;
-        mLoginFaceBookButton.layer.cornerRadius = 5;
-        mLoginFaceBookButton.delegate = self
         // FontAwesome icon in button
         self.mCloseButton.titleLabel?.font = UIFont.fontAwesomeOfSize(25)
         self.mCloseButton.setTitle(String.fontAwesomeIconWithName(.TimesCircleO), forState: .Normal)
-        if (FBSDKAccessToken.currentAccessToken() != nil)
-        {
-            performSegueWithIdentifier("unwindToViewOtherController", sender: self)
-        }
-        else
-        {
-            mLoginFaceBookButton.readPermissions = ["public_profile", "email", "user_friends"]
-        }
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // MARK: - Gesture & keyboard
-    
-    func addGesture()
-    {
-        //Looks for single or multiple taps.
-        var tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
-        view.addGestureRecognizer(tap)
-    }
-    
-    //Calls this function when the tap is recognized.
-    func dismissKeyboard()
-    {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     @IBAction func clickCloseButton(sender: AnyObject)
     {
         //Dismiss view controller after this viewcontroller is presentViewController
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
     @IBAction func clickForgotPasswordGesture(sender: AnyObject)
     {
-
-    }
-    
-    /*--- FaceBook Delegate method --*/
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        println("User Logged In")
         
-        if ((error) != nil)
-        {
-            // Process error
-        }
-        else if result.isCancelled {
-            // Handle cancellations
-        }
-        else {
-            // If you ask for multiple permissions at once, you
-            // should check if specific permissions missing
-            if result.grantedPermissions.contains("email")
-            {
-                // Do work
-            }
-        }
     }
-    
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
-        println("User Logged Out")
-    }
-    //Here is an extra method to grab the Users Facebook data. You can call this method anytime after a user has logged in by calling self.returnUserData().
-    func returnUserData()
+    @IBAction func clickLoginFaceBookButton(sender: AnyObject)
     {
-        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: nil)
-        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
-            
-            if ((error) != nil)
+        PFFacebookUtils.logInWithPermissions(facebookReadPermissions, block: { (user: PFUser?, error: NSError?) -> Void in
+            //switched ! to ?
+            if user == nil
             {
-                // Process error
-                println("Error: \(error)")
+                NSLog("Uh oh. The user cancelled the Facebook login.")
             }
+            else if user!.isNew
+            {
+                var user = PFUser.currentUser()
+                //inserted !
+                NSLog("User signed up and logged in through Facebook!")
+                
+                Cache.setIsLogin(true)
+                FBRequestConnection.startForMeWithCompletionHandler({
+                    (connection: FBRequestConnection!, result: AnyObject!, error: NSError!) -> Void in
+                    //println("done me request")
+                    if error != nil
+                    {
+                        println("facebook me request - error is not nil :(")
+                        self.performSegueWithIdentifier("kSegue_Login_Success", sender: self)
+                    }
+                    else
+                    {
+                        println("facebook me request - error is nil :) ")
+                        self .getUserInfo()
+                        self.performSegueWithIdentifier("kSegue_Login_Success", sender: self)
+                    }
+                })
+            }
+                
             else
             {
-                println("fetched user: \(result)")
-                let userName : NSString = result.valueForKey("name") as! NSString
-                println("User Name is: \(userName)")
-                let userEmail : NSString = result.valueForKey("email") as! NSString
-                println("User Email is: \(userEmail)")
+                NSLog("User logged in through Facebook! \(user!.username)")
+                self.performSegueWithIdentifier("kSegue_Login_Success", sender: self)
             }
         })
+        
+    }
+    
+    func getUserInfo()
+    {
+        if let session = PFFacebookUtils.session()
+        {
+            if session.isOpen
+            {
+                println("session is open")
+                FBRequestConnection.startForMeWithCompletionHandler({
+                    (connection: FBRequestConnection!, result: AnyObject!, error: NSError!) -> Void in
+                    //println("done me request")
+                    if error != nil
+                    {
+                        println("facebook me request - error is not nil :(")
+                    }
+                    else
+                    {
+                        println("facebook me request - error is nil :) ")
+                        let urlUserImg = "http://graph.facebook.com/\(result.objectId)/picture?type=large"
+                        let firstName = result.first_name
+                        let lastName = result.last_name } })
+            }
+        } else
+        {
+            //let user:PFUser = PFUser.currentUser() //println("ohooo \(user)")     
+        }
     }
 }
+
+
+
+
+
+
+

@@ -11,6 +11,7 @@
 		B0AA4C381B86C65C0029CB8C /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA4C371B86C65C0029CB8C /* SlideMenuController.swift */; };
 		B0AA4C3B1B86C6650029CB8C /* JTSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA4C3A1B86C6650029CB8C /* JTSplashView.swift */; };
 		B0B06D6E1B8AB1870016B777 /* Cache+AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B06D6D1B8AB1860016B777 /* Cache+AppSetting.swift */; };
+		B586DEB41B8CBF0500497F2E /* FaceBookSDK in Resources */ = {isa = PBXBuildFile; fileRef = B586DEB31B8CBF0500497F2E /* FaceBookSDK */; };
 		B5C039161B83A004009F49D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C039151B83A004009F49D3 /* AppDelegate.swift */; };
 		B5CCF89C1B88346A00A0C6FD /* UIView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89B1B88346A00A0C6FD /* UIView+Custom.swift */; };
 		B5CCF89E1B88347A00A0C6FD /* UIImageView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89D1B88347A00A0C6FD /* UIImageView+Custom.swift */; };
@@ -56,6 +57,16 @@
 		B0AA4C371B86C65C0029CB8C /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		B0AA4C3A1B86C6650029CB8C /* JTSplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTSplashView.swift; sourceTree = "<group>"; };
 		B0B06D6D1B8AB1860016B777 /* Cache+AppSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cache+AppSetting.swift"; sourceTree = "<group>"; };
+		B586DEB31B8CBF0500497F2E /* FaceBookSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FaceBookSDK; sourceTree = "<group>"; };
+		B586DEB51B8CBF2800497F2E /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = ShopOnline/SOShared/MCVendors/FaceBookSDK/FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		B586DEB71B8CBF2B00497F2E /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = ShopOnline/SOShared/MCVendors/FaceBookSDK/FacebookSDKStrings.bundle; sourceTree = "<group>"; };
+		B586DEB91B8CBF6100497F2E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		B586DEBB1B8CBF6900497F2E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B586DEBD1B8CBF7100497F2E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B586DEBF1B8CBF8000497F2E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B586DEC11B8CBF8800497F2E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B586DEC31B8CBF9900497F2E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		B586DEC51B8CBFA100497F2E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		B5A290C01B8B7AA500E8E923 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		B5C039151B83A004009F49D3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ShopOnline/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		B5CCF89B1B88346A00A0C6FD /* UIView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Custom.swift"; sourceTree = "<group>"; };
@@ -289,6 +300,7 @@
 		CE9AD5A61B7A462A00A58D06 /* SOVendors */ = {
 			isa = PBXGroup;
 			children = (
+				B586DEB31B8CBF0500497F2E /* FaceBookSDK */,
 				B0AA4C391B86C6650029CB8C /* JTSplashView */,
 				B0AA4C361B86C65C0029CB8C /* SlideMenuController */,
 			);
@@ -380,6 +392,15 @@
 		DBD36A432D49DBEF36DBE839 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B586DEC51B8CBFA100497F2E /* libz.dylib */,
+				B586DEC31B8CBF9900497F2E /* libsqlite3.dylib */,
+				B586DEC11B8CBF8800497F2E /* MobileCoreServices.framework */,
+				B586DEBF1B8CBF8000497F2E /* CoreLocation.framework */,
+				B586DEBD1B8CBF7100497F2E /* CFNetwork.framework */,
+				B586DEBB1B8CBF6900497F2E /* AudioToolbox.framework */,
+				B586DEB91B8CBF6100497F2E /* Accounts.framework */,
+				B586DEB71B8CBF2B00497F2E /* FacebookSDKStrings.bundle */,
+				B586DEB51B8CBF2800497F2E /* FBAudienceNetwork.framework */,
 				B0AA4C341B86C4110029CB8C /* SlideMenuControllerSwift.framework */,
 				B0AA4C321B86C24E0029CB8C /* SlideMenuControllerSwift.framework */,
 				CB1E80F9667F0DB2E129E257 /* Pods_ShopOnline.framework */,
@@ -473,6 +494,7 @@
 				CE9AD5AB1B7A462A00A58D06 /* Images.xcassets in Resources */,
 				CE3A393A1B78E2F50069A2A5 /* Main.storyboard in Resources */,
 				CE3A393F1B78E2F50069A2A5 /* LaunchScreen.xib in Resources */,
+				B586DEB41B8CBF0500497F2E /* FaceBookSDK in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -690,6 +712,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/ShopOnline/SOShared/MCVendors/FaceBookSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
@@ -710,6 +733,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/ShopOnline/SOShared/MCVendors/FaceBookSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";

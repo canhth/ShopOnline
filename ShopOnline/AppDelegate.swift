@@ -8,9 +8,8 @@
 
 import UIKit
 import CoreData
-import FBSDKCoreKit
-import FBSDKShareKit
-import FBSDKLoginKit
+import Parse
+import ParseFacebookUtils
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -52,7 +51,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.createMenuView()
         application.statusBarHidden = true
-        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        Parse.setApplicationId("oHZesfOE9JWAOxO6vOgOlqS0DmSG2Ozso5k0pcEP", clientKey:"5BvGlRSkUXRZZpnc4fjSIQUyvWFRLjouVgfD7BdO")
+        PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
+        PFFacebookUtils.initializeFacebook()
+        return true
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -71,6 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        FBAppCall.handleDidBecomeActiveWithSession(PFFacebookUtils.session())
     }
 
     func applicationWillTerminate(application: UIApplication) {
@@ -79,14 +82,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
     
-    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?,  annotation: AnyObject?) -> Bool {
-            return FBSDKApplicationDelegate.sharedInstance().application(
-                application,
-                openURL: url,
-                sourceApplication: sourceApplication,
-                annotation: annotation)
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool
+    {
+        return FBAppCall.handleOpenURL(url, sourceApplication:sourceApplication, withSession:PFFacebookUtils.session())
     }
-
+    
     // MARK: - Setup Application
     func setupNavigationBar()
     {

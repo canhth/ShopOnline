@@ -24,6 +24,10 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
         self .setupView()
         self.navigationController?.navigationBar.hidden = true
     }
@@ -168,11 +172,10 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
     
     @IBAction func clickGetStartButton(sender: AnyObject)
     {
-        self.presentViewController(setupPushView(SOLoginViewController), animated: true, completion: nil)
-        if (var member = Cache.getMemberId())
+        if Cache.getMemberId().length == 0
         {
             // Present viewcontroller . like popup
-            
+            self.presentViewController(setupPushView(SOLoginViewController), animated: true, completion: nil)
         }
         else
         {

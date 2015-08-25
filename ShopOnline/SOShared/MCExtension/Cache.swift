@@ -34,7 +34,7 @@ public class Cache: AnyObject
         return userDefaut.integerForKey(key)
     }
     
-    class func setObjectValue(object:AnyObject, key:String)
+    class func setObjectValue(object:String, key:String)
     {
         let encodedObject = NSKeyedArchiver.archivedDataWithRootObject(object)
         let userDefault = NSUserDefaults.standardUserDefaults()
@@ -42,10 +42,17 @@ public class Cache: AnyObject
         userDefault.synchronize()
     }
     
-    class func getObjectForKey(key:String) -> AnyObject
+    class func getObjectForKey(key:String) -> String
     {
         let userDefault = NSUserDefaults.standardUserDefaults()
-        return userDefault.objectForKey(key)!
+        if let object = userDefault.stringForKey(key)
+        {
+            return object
+        }
+        else
+        {
+            return ""
+        }
     }
     
 }

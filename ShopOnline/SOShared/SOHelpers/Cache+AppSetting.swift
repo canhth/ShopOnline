@@ -17,15 +17,15 @@ public extension Cache
     }
     class func getCid() -> String
     {
-       return getObjectForKey("Cid") as! String
+       return getObjectForKey("Cid") as String
     }
     
     /* Set member id */
-    class func setMemberId(sMemberID : AnyObject)
+    class func setMemberId(sMemberID : String)
     {
         setObjectValue(sMemberID, key: "MemberID")
     }
-    class func getMemberId() -> AnyObject
+    class func getMemberId() -> String
     {
         return getObjectForKey("MemberID")
     }
@@ -37,7 +37,7 @@ public extension Cache
     }
     class func getUserName() -> String
     {
-        return getObjectForKey("UserName") as! String
+        return getObjectForKey("UserName") as String
     }
     
     /* Set First time lauch app */
@@ -50,6 +50,15 @@ public extension Cache
         return boolValueForKey("FirstTimeLauchApp") as Bool
     }
     
+    /* Set is login */
+    class func setIsLogin(value:Bool)
+    {
+        setBoolValue(value, key: "Login")
+    }
+    class func getIsLogin() -> Bool
+    {
+        return boolValueForKey("Login") as Bool
+    }
     /* Set  */
     /* Set  */
     

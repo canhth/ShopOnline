@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Facebook-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FontAwesome.swift-FontAwesome.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -35,6 +40,16 @@
 			<false/>
 		</dict>
 		<key>JTSplashView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ParseFacebookUtils.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -87,32 +102,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>199838A6636ABC4E8813C228FFB33C4A</key>
+		<key>22364A4CA53D28BC596F675095BC7EBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>20927C7818274B6E5695D113D33A81CF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>20AF43D6790D50957CB1512F809BD6DB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>259B39393BD3BAA0063A517B8B439A21</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2D28E46EA0ED96DE7218197E5665DB1C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3159CA2A4048AE89BA089A0D8E07C7B0</key>
+		<key>3CD6A168CBF3B631BB2C2F0BE2952A1C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,17 +127,42 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>6FE132843F42B14860F0FF410FD9629B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7A35E3E002D7B52CC96C7A5C8826A951</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>89E974ECE0D6F280D723E741044C2484</key>
+		<key>7C1E12E65361F43C9143E4AB023F9639</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A064B75A9838606659BB57FE5AC8A101</key>
+		<key>837DADFA89549879906134BE22F2CA83</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9360CD0EAE876D2A2465906852C3AA20</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A29A9C79708E23EB311F4092720AB252</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ABC78D2F2A577FB5B90D70DBDD57BE95</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B6063B6D7BE6E7D624A2EB169F9CF56C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -152,12 +172,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BF685881BA42CE44DC1C3ADC0F800C83</key>
+		<key>BCD7262C19F1245E38A854594583BFF1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C0A6127F39B686E450401E6AB4489441</key>
+		<key>CCD31BCB14C6A71CAF097A7D993300DB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F170A43D180446A9C6A89723D69D8363</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F41D06FF8DB0B314CD0891F020257CBC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
