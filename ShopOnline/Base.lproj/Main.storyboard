@@ -6,6 +6,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="FontAwesome.otf">
+            <string>FontAwesome</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Right Menu View Controller-->
         <scene sceneID="V3Y-Dc-HJW">
@@ -90,7 +95,7 @@
                                     <constraint firstAttribute="width" secondItem="gTN-aG-Ov1" secondAttribute="height" multiplier="56:47" id="gu7-3V-Svl"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMD-QV-2yr" customClass="SpringView" customModule="Spring">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMD-QV-2yr" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="35" y="215" width="420" height="210"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Những mặt hàng chất lượng." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3PJ-PO-5HR">
@@ -130,7 +135,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="af9-WO-wpV" customClass="SpringView" customModule="Spring">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="af9-WO-wpV" customClass="SpringView" customModule="Spring">
                                 <rect key="frame" x="213" y="285" width="360" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giúp bạn có những sự lựa chọn tốt nhất!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GW2-K3-ncu">
@@ -500,7 +505,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vCx-98-Baw">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vCx-98-Baw">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="560"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="uGi-kQ-GaD">
@@ -510,19 +515,22 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoriesCell" id="9ze-mQ-FNV" customClass="SOCatagoriesViewCell" customModule="ShopOnline" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="CategoriesCell" id="9ze-mQ-FNV" customClass="SOCatagoriesViewCell" customModule="ShopOnline" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="226" height="251"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pin1" translatesAutoresizingMaskIntoConstraints="NO" id="bJp-Cu-pmd">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="bJp-Cu-pmd">
                                                     <rect key="frame" x="0.0" y="0.0" width="226" height="251"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description menu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ao8-rQ-nKz">
-                                                    <rect key="frame" x="10" y="28" width="206" height="24"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overlay" translatesAutoresizingMaskIntoConstraints="NO" id="JoH-mf-Czq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="226" height="108"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description menu" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ao8-rQ-nKz">
+                                                    <rect key="frame" x="13" y="16" width="203" height="17"/>
+                                                    <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -530,10 +538,24 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="ao8-rQ-nKz" firstAttribute="leading" secondItem="9ze-mQ-FNV" secondAttribute="leading" constant="10" id="W76-Di-tl4"/>
-                                            <constraint firstItem="ao8-rQ-nKz" firstAttribute="top" secondItem="9ze-mQ-FNV" secondAttribute="topMargin" constant="20" id="agz-Xo-q59"/>
+                                            <constraint firstAttribute="trailing" secondItem="bJp-Cu-pmd" secondAttribute="trailing" id="DoD-iN-j9s"/>
+                                            <constraint firstItem="JoH-mf-Czq" firstAttribute="top" secondItem="9ze-mQ-FNV" secondAttribute="top" id="GvX-Sc-IFl"/>
+                                            <constraint firstItem="JoH-mf-Czq" firstAttribute="height" secondItem="bJp-Cu-pmd" secondAttribute="height" multiplier="0.43" id="R0I-Ua-mno"/>
+                                            <constraint firstItem="ao8-rQ-nKz" firstAttribute="leading" secondItem="9ze-mQ-FNV" secondAttribute="leading" constant="13" id="W76-Di-tl4"/>
+                                            <constraint firstItem="ao8-rQ-nKz" firstAttribute="top" secondItem="9ze-mQ-FNV" secondAttribute="topMargin" constant="8" id="agz-Xo-q59"/>
+                                            <constraint firstItem="bJp-Cu-pmd" firstAttribute="top" secondItem="9ze-mQ-FNV" secondAttribute="top" id="fkv-BB-XVJ"/>
+                                            <constraint firstItem="JoH-mf-Czq" firstAttribute="top" secondItem="ao8-rQ-nKz" secondAttribute="bottom" id="gjw-Mn-dGb"/>
+                                            <constraint firstAttribute="bottom" secondItem="bJp-Cu-pmd" secondAttribute="bottom" id="jg4-xb-I86"/>
                                             <constraint firstAttribute="trailing" secondItem="ao8-rQ-nKz" secondAttribute="trailing" constant="10" id="o7E-5Z-J6Z"/>
+                                            <constraint firstItem="bJp-Cu-pmd" firstAttribute="leading" secondItem="9ze-mQ-FNV" secondAttribute="leading" id="pCR-GA-tgW"/>
+                                            <constraint firstAttribute="trailing" secondItem="JoH-mf-Czq" secondAttribute="trailing" id="qZz-S6-nT3"/>
+                                            <constraint firstItem="JoH-mf-Czq" firstAttribute="leading" secondItem="9ze-mQ-FNV" secondAttribute="leading" id="vIH-1q-yYi"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="gjw-Mn-dGb"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <outlet property="mImageView" destination="bJp-Cu-pmd" id="zTH-cz-h6x"/>
                                             <outlet property="mTitleLabel" destination="ao8-rQ-nKz" id="eTA-DD-8Sa"/>
@@ -607,7 +629,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin3" translatesAutoresizingMaskIntoConstraints="NO" id="CLH-QB-xML">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fashion_girl" translatesAutoresizingMaskIntoConstraints="NO" id="CLH-QB-xML">
                                 <rect key="frame" x="116" y="159" width="369" height="283"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="283" id="FXA-gL-GIU"/>
@@ -804,11 +826,12 @@
         <image name="alert_selected" width="24" height="24"/>
         <image name="camera" width="24" height="18"/>
         <image name="camera_selected" width="24" height="17"/>
+        <image name="fashion_girl" width="110" height="130"/>
         <image name="login" width="375" height="667"/>
         <image name="login1" width="375" height="667"/>
         <image name="login3" width="375" height="667"/>
-        <image name="pin1" width="435" height="640"/>
-        <image name="pin3" width="643" height="900"/>
+        <image name="overlay" width="285" height="118"/>
+        <image name="phone" width="110" height="130"/>
         <image name="sale" width="21" height="21"/>
         <image name="sale_selected" width="24" height="24"/>
         <image name="setting" width="24" height="24"/>
@@ -817,6 +840,6 @@
         <image name="shopping_selected" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="E64-M7-uzW"/>
+        <segue reference="mpI-8K-eRi"/>
     </inferredMetricsTieBreakers>
 </document>

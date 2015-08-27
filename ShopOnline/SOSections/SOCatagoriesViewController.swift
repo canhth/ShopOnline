@@ -15,8 +15,10 @@ class SOCatagoriesViewController: UIViewController, UICollectionViewDelegateFlow
 
     @IBOutlet weak var mCollectionView: UICollectionView!
     let mSectionInsets = UIEdgeInsets(top: 1.0, left: 1.0, bottom: 1.0, right: 1.0)
-    let mTitles = ["Sand Harbor, Lake Tahoe - California","Beautiful View of Manhattan skyline.","Watcher in the Fog","Great Smoky Mountains National Park, Tennessee","Most beautiful place"]
+    let mTitles = ["Thời trang Nữ","Phụ kiện & Làm đẹp","Thời trang Nam","Mẹ & Bé","Thiết bị di động", "Nhà cửa & Xe", "Điện tử điện máy", "Thú cưng", "Đồ cũ", "Sản phẩm khác"]
+    let mImages = ["fashion_girl", "phukien_lamdep", "fashion_men", "mom_baby", "phone", "home_car", "dientu_dienmay","pet", "old_things", "orther_product"]
     
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -47,24 +49,21 @@ class SOCatagoriesViewController: UIViewController, UICollectionViewDelegateFlow
     
     /* Num of each item in section */
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //#warning Incomplete method implementation -- Return the number of items in the section
-        return 9
+        return 10
     }
     
     /* Cell for item at index */
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! SOCatagoriesViewCell
-        cell.mTitleLabel.text = self.mTitles[indexPath.row % 5]
-        let curr = indexPath.row % 5  + 1
-        let imgName = "pin\(curr)"
+        cell.mTitleLabel.text = self.mTitles[indexPath.row]
+        let imgName = self.mImages[indexPath.row]
         cell.mImageView.image = UIImage(named: imgName)
-        
         return cell
     }
 
     /* Set size for collection cell */
     func collectionView(collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-            return CGSize(width: getWidthScreen()/2 - 2 , height: getHeightScreen()/4)
+            return CGSize(width: getWidthScreen()/2 - 2 , height: getHeightScreen()/3)
     }
     
     /* Set layout for collection cell */
@@ -83,8 +82,7 @@ class SOCatagoriesViewController: UIViewController, UICollectionViewDelegateFlow
             let indexPath = self.mCollectionView?.indexPathForCell(cell)
             let vc = segue.destinationViewController as! SOListProductViewController
             
-            let curr = indexPath!.row % 5  + 1
-            let imgName = "pin\(curr)"
+            let imgName = self.mImages[indexPath!.row]
             
             println(vc)
             vc.currImage = UIImage(named: imgName)
