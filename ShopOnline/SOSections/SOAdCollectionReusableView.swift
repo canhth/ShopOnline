@@ -45,7 +45,7 @@ class SOAdCollectionReusableView: UICollectionReusableView, UIScrollViewDelegate
         self.mAdPageControll.currentPage = 0
         
         // Schedule a timer to auto slide to next page
-        NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
 
     }
     

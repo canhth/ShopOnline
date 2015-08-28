@@ -32,7 +32,7 @@ class SOLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.dismissKeyboard()
+        self.addGesture()
         self.mLoginButton.layer.cornerRadius = 5;
         // FontAwesome icon in button
         self.mCloseButton.titleLabel?.font = UIFont.fontAwesomeOfSize(25)
@@ -102,7 +102,6 @@ class SOLoginViewController: UIViewController {
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
         })
-        
     }
     
     func getUserInfo()

@@ -23,7 +23,7 @@
 #endif
 
 #if !defined(SAFE_TO_USE_FBTESTSESSION)
-#pragma message ("warning: using FBTestSession, which is designed for unit-testing uses only, in non-DEBUG code -- ensure this is what you really want")
+
 #endif
 
 /*!

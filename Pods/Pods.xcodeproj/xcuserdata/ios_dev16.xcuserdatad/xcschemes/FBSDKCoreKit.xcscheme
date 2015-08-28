@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C35DFFEBF22C6CC6E0A91A32"
-               BuildableName = "Pods_ShopOnline.framework"
-               BlueprintName = "Pods-ShopOnline"
+               BlueprintIdentifier = "99A66E01AC9F18359460876E"
+               BuildableName = "FBSDKCoreKit.framework"
+               BlueprintName = "FBSDKCoreKit"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

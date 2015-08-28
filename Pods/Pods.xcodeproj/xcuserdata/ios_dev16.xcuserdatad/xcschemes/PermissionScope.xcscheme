@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "521A2A185511CC0E62CD5A87"
+               BlueprintIdentifier = "3D9CB672E11CCC941DC3A1A3"
                BuildableName = "PermissionScope.framework"
                BlueprintName = "PermissionScope"
                ReferencedContainer = "container:Pods.xcodeproj">

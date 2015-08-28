@@ -16,7 +16,7 @@ class SOCatagoriesViewController: UIViewController, UICollectionViewDelegateFlow
     @IBOutlet weak var mCollectionView: UICollectionView!
     let mSectionInsets = UIEdgeInsets(top: 1.0, left: 1.0, bottom: 1.0, right: 1.0)
     let mTitles = ["Thời trang Nữ","Phụ kiện & Làm đẹp","Thời trang Nam","Mẹ & Bé","Thiết bị di động", "Nhà cửa & Xe", "Điện tử điện máy", "Thú cưng", "Đồ cũ", "Sản phẩm khác"]
-    let mImages = ["fashion_girl", "phukien_lamdep", "fashion_men", "mom_baby", "phone", "home_car", "dientu_dienmay","pet", "old_things", "orther_product"]
+    let mImages = ["fashion_girl", "phukien_lamdep", "fashion_men", "mom_baby", "phone", "home_car", "dientu_dienmay","pets", "old_thing", "orther_product"]
     
   
     override func viewDidLoad() {
