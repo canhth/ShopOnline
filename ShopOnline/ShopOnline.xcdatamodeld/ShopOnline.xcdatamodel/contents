@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="MenuCategories" representedClassName="MenuCategories" syncable="YES">
-        <attribute name="imageCategories" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="imageCategories" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="nameCategories" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tag" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>

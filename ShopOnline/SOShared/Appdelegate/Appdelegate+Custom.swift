@@ -30,7 +30,7 @@ extension AppDelegate
                     let version: AnyObject? = menuCategories[0].objectForKey("versionApp")
                     var error : NSError?
                     // Check version of data. If diffirent -> let update, or do not thing
-                    if self.deleteData("CategoriesMenu", version: version!)
+                    if self.deleteData(version!)
                     {
                         for category:AnyObject in menuCategories
                         {
@@ -98,14 +98,13 @@ extension AppDelegate
     
     :param: entityName
     */
-    func deleteData(entityName:String, version:AnyObject) -> Bool
+    func deleteData(version:AnyObject) -> Bool
     {
         // Create fetch request
-        let fetchRequest = NSFetchRequest(entityName: entityName)
+        let fetchRequest = NSFetchRequest(entityName: "MenuCategories")
         var error: NSError?
         // Get list object of Entity
         let items = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: &error) as! [MenuCategories]
-        println(error?.description)
         // Check the version is changed ?
         if (items[0].version != version as! String)
         {
