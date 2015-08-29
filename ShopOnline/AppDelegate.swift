@@ -24,10 +24,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (Cache.getFirstTimeLauchApp() == true)
         {
             mainViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SOSplashViewController)) as! SOSplashViewController
+            self.loadData()
         }
         else
         {
             mainViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SOIntroViewController)) as! SOIntroViewController
+            self.insertDateFirstLauchApp()
             Cache.setFirstTimeLauchApp(true)
         }
 
@@ -49,11 +51,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        self.createMenuView()
         application.statusBarHidden = true
         Parse.setApplicationId("oHZesfOE9JWAOxO6vOgOlqS0DmSG2Ozso5k0pcEP", clientKey:"5BvGlRSkUXRZZpnc4fjSIQUyvWFRLjouVgfD7BdO")
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
         PFFacebookUtils.initializeFacebook()
+        self.createMenuView()
+        let paths = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true)
+        print(paths[0])
         return true
     }
 

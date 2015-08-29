@@ -8,6 +8,7 @@
 
 import UIKit
 import Spring
+import Parse
 
 class SOIntroViewController: UIViewController , UIScrollViewDelegate {
     
@@ -68,7 +69,7 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
         imgThree.image = UIImage(named: "intro2")
         var imgFour = UIImageView(frame: CGRectMake(scrollViewWidth * 3, 0, scrollViewWidth, scrollViewHeight))
         imgFour.image = UIImage(named: "intro3")
-
+        
         //Add image into scrollview
         self.mScrollView .addSubview(imgOne)
         self.mScrollView.addSubview(imgTwo)

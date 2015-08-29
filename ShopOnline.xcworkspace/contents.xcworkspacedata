@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:MenuCategories.swift">
+   </FileRef>
+   <FileRef
       location = "group:ShopOnline.xcodeproj">
    </FileRef>
    <FileRef

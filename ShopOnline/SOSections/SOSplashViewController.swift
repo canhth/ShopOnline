@@ -35,7 +35,6 @@ class SOSplashViewController: UIViewController {
         self.navigationController?.pushViewController(setupPushView(SOIntroViewController), animated: true)
     }
     
-    
 //    func addData()
 //    {
 //        let newItem = NSEntityDescription.insertNewObjectForEntityForName("MenuCategories", inManagedObjectContext: self.managedObjectContext!) as! MenuCategories
