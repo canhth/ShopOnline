@@ -13,5 +13,6 @@ target 'ShopOnline' do
     pod 'FBSDKLoginKit'
     pod 'Parse'
     pod 'ParseFacebookUtils'
+    pod 'ReachabilitySwift', git: 'https://github.com/ashleymills/Reachability.swift'
 end
 

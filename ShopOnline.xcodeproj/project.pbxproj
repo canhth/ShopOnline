@@ -11,6 +11,10 @@
 		B0AA4C381B86C65C0029CB8C /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA4C371B86C65C0029CB8C /* SlideMenuController.swift */; };
 		B0AA4C3B1B86C6650029CB8C /* JTSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA4C3A1B86C6650029CB8C /* JTSplashView.swift */; };
 		B0B06D6E1B8AB1870016B777 /* Cache+AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B06D6D1B8AB1860016B777 /* Cache+AppSetting.swift */; };
+		B51990461B91B6F800085A31 /* SORegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51990451B91B6F800085A31 /* SORegisterViewController.swift */; };
+		B51990481B91B82D00085A31 /* UIButton+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51990471B91B82D00085A31 /* UIButton+Custom.swift */; };
+		B519904A1B91BDF200085A31 /* UIAlertView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51990491B91BDF200085A31 /* UIAlertView+Custom.swift */; };
+		B519904F1B91CD3700085A31 /* SONetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B519904E1B91CD3700085A31 /* SONetworking.swift */; };
 		B586DEB41B8CBF0500497F2E /* FaceBookSDK in Resources */ = {isa = PBXBuildFile; fileRef = B586DEB31B8CBF0500497F2E /* FaceBookSDK */; };
 		B5C039161B83A004009F49D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C039151B83A004009F49D3 /* AppDelegate.swift */; };
 		B5CCF89C1B88346A00A0C6FD /* UIView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89B1B88346A00A0C6FD /* UIView+Custom.swift */; };
@@ -57,6 +61,10 @@
 		B0AA4C371B86C65C0029CB8C /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		B0AA4C3A1B86C6650029CB8C /* JTSplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTSplashView.swift; sourceTree = "<group>"; };
 		B0B06D6D1B8AB1860016B777 /* Cache+AppSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cache+AppSetting.swift"; sourceTree = "<group>"; };
+		B51990451B91B6F800085A31 /* SORegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SORegisterViewController.swift; sourceTree = "<group>"; };
+		B51990471B91B82D00085A31 /* UIButton+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Custom.swift"; sourceTree = "<group>"; };
+		B51990491B91BDF200085A31 /* UIAlertView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertView+Custom.swift"; sourceTree = "<group>"; };
+		B519904E1B91CD3700085A31 /* SONetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SONetworking.swift; path = ShopOnline/SOShared/SONetworking.swift; sourceTree = SOURCE_ROOT; };
 		B586DEB31B8CBF0500497F2E /* FaceBookSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FaceBookSDK; sourceTree = "<group>"; };
 		B586DEB51B8CBF2800497F2E /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = ShopOnline/SOShared/MCVendors/FaceBookSDK/FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		B586DEB71B8CBF2B00497F2E /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = ShopOnline/SOShared/MCVendors/FaceBookSDK/FacebookSDKStrings.bundle; sourceTree = "<group>"; };
@@ -148,6 +156,36 @@
 			path = JTSplashView;
 			sourceTree = "<group>";
 		};
+		B51990441B91B6E300085A31 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				B51990451B91B6F800085A31 /* SORegisterViewController.swift */,
+			);
+			name = Register;
+			sourceTree = "<group>";
+		};
+		B519904B1B91CCEE00085A31 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B519904C1B91CCF800085A31 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = APIs;
+			sourceTree = "<group>";
+		};
+		B519904D1B91CCFF00085A31 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				B519904E1B91CD3700085A31 /* SONetworking.swift */,
+			);
+			name = NetWork;
+			sourceTree = "<group>";
+		};
 		B5CCF8B21B88843000A0C6FD /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +232,7 @@
 		B5FA708C1B864CD20050980A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				B51990441B91B6E300085A31 /* Register */,
 				B5FA708D1B864CE20050980A /* SOLoginViewController.swift */,
 			);
 			name = Login;
@@ -311,6 +350,9 @@
 		CE9AD5A81B7A462A00A58D06 /* SOWebservice */ = {
 			isa = PBXGroup;
 			children = (
+				B519904D1B91CCFF00085A31 /* NetWork */,
+				B519904C1B91CCF800085A31 /* APIs */,
+				B519904B1B91CCEE00085A31 /* Models */,
 			);
 			name = SOWebservice;
 			path = MCWebservice;
@@ -384,6 +426,8 @@
 				B5CCF89B1B88346A00A0C6FD /* UIView+Custom.swift */,
 				B5CCF89D1B88347A00A0C6FD /* UIImageView+Custom.swift */,
 				B5F316181B8979DE0070353B /* UICollectionViewController+Custom.swift */,
+				B51990471B91B82D00085A31 /* UIButton+Custom.swift */,
+				B51990491B91BDF200085A31 /* UIAlertView+Custom.swift */,
 			);
 			name = SOExtension;
 			path = MCExtension;
@@ -562,6 +606,7 @@
 			files = (
 				B5C039161B83A004009F49D3 /* AppDelegate.swift in Sources */,
 				CE3A39371B78E2F50069A2A5 /* ViewController.swift in Sources */,
+				B51990481B91B82D00085A31 /* UIButton+Custom.swift in Sources */,
 				B5F316221B899ED80070353B /* SOListProductViewController.swift in Sources */,
 				CE9AD5B11B7A46D600A58D06 /* SOIntroViewController.swift in Sources */,
 				B5FA708E1B864CE20050980A /* SOLoginViewController.swift in Sources */,
@@ -577,9 +622,12 @@
 				CE9AD5C01B7A4DD600A58D06 /* NSString+Custom.swift in Sources */,
 				B5CCF8A01B88349300A0C6FD /* SOUtils.swift in Sources */,
 				B0B06D6E1B8AB1870016B777 /* Cache+AppSetting.swift in Sources */,
+				B519904F1B91CD3700085A31 /* SONetworking.swift in Sources */,
+				B51990461B91B6F800085A31 /* SORegisterViewController.swift in Sources */,
 				B5CCF8B41B88845800A0C6FD /* SOCatagoriesViewController.swift in Sources */,
 				B5F316191B8979DE0070353B /* UICollectionViewController+Custom.swift in Sources */,
 				CE9AD5C21B7A4DE800A58D06 /* UIViewController+Custom.swift in Sources */,
+				B519904A1B91BDF200085A31 /* UIAlertView+Custom.swift in Sources */,
 				CE3A39351B78E2F50069A2A5 /* ShopOnline.xcdatamodeld in Sources */,
 				B5F3162D1B8A472A0070353B /* Cache.swift in Sources */,
 				B0AA4C381B86C65C0029CB8C /* SlideMenuController.swift in Sources */,

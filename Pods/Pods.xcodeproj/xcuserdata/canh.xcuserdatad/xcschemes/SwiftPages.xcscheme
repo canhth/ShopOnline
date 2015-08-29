@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "88F0BDFE4873F455A855E940"
+               BlueprintIdentifier = "C049316B5101FD2A6AA87A53"
                BuildableName = "SwiftPages.framework"
                BlueprintName = "SwiftPages"
                ReferencedContainer = "container:Pods.xcodeproj">

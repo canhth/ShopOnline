@@ -8,6 +8,7 @@
 
 import UIKit
 import JTSplashView
+import CoreData
 
 class SOSplashViewController: UIViewController {
 
@@ -33,14 +34,50 @@ class SOSplashViewController: UIViewController {
         }
         self.navigationController?.pushViewController(setupPushView(SOIntroViewController), animated: true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+    
+//    func addData()
+//    {
+//        let newItem = NSEntityDescription.insertNewObjectForEntityForName("MenuCategories", inManagedObjectContext: self.managedObjectContext!) as! MenuCategories
+//        newItem.nameCategories = "Name of categories1"
+//        newItem.tag = 5
+//        //newItem.imageCategories = UIImageJPEGRepresentation( image, 1);
+//        
+//        var error : NSError? = nil
+//        
+//        if !self.managedObjectContext!.save(&error) {
+//            NSLog("Unresolved error \(error), \(error!.userInfo)")
+//            abort()
+//        }
+//    }
+//
+//    func fetchData()
+//    {
+//        // Create a new fetch request using the LogItem entity
+//        
+//        let fetchRequest = NSFetchRequest(entityName: "MenuCategories")
+//        // Execute the fetch request, and cast the results to an array of LogItem objects
+//        
+//        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [MenuCategories] {
+//   
+//            //            // Create an Alert, and set it's message to whatever the itemText is
+//            
+//            //            let alert = UIAlertController(title: fetchResults[0].nameCategories,
+//            
+//            //                message: fetchResults[0].tag.stringValue,
+//            
+//            //                preferredStyle: UIAlertControllerStyle.Alert)
+//            
+//            //            
+//            
+//            //            // Display the alert
+//            
+//            //            self.presentViewController(alert,
+//            
+//            //                animated: true,
+//            
+//            //                completion: nil)
+//            
+//        }
+//    }
 }
