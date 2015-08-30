@@ -20,6 +20,9 @@
 		B51990611B920D0100085A31 /* MenuCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51990601B920D0100085A31 /* MenuCategories.swift */; };
 		B51990631B9212E100085A31 /* MenuCategoriesParse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51990621B9212E100085A31 /* MenuCategoriesParse.swift */; };
 		B586DEB41B8CBF0500497F2E /* FaceBookSDK in Resources */ = {isa = PBXBuildFile; fileRef = B586DEB31B8CBF0500497F2E /* FaceBookSDK */; };
+		B58DF5CB1B93562300BF8F8B /* NSArray+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58DF5CA1B93562300BF8F8B /* NSArray+Custom.swift */; };
+		B58DF5CE1B936F0A00BF8F8B /* AdBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58DF5CD1B936F0A00BF8F8B /* AdBanner.swift */; };
+		B58DF5D01B93701F00BF8F8B /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58DF5CF1B93701F00BF8F8B /* NSManagedObjectContext.swift */; };
 		B5C039161B83A004009F49D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C039151B83A004009F49D3 /* AppDelegate.swift */; };
 		B5CCF89C1B88346A00A0C6FD /* UIView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89B1B88346A00A0C6FD /* UIView+Custom.swift */; };
 		B5CCF89E1B88347A00A0C6FD /* UIImageView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89D1B88347A00A0C6FD /* UIImageView+Custom.swift */; };
@@ -83,6 +86,9 @@
 		B586DEC11B8CBF8800497F2E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		B586DEC31B8CBF9900497F2E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B586DEC51B8CBFA100497F2E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B58DF5CA1B93562300BF8F8B /* NSArray+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSArray+Custom.swift"; sourceTree = "<group>"; };
+		B58DF5CD1B936F0A00BF8F8B /* AdBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdBanner.swift; path = ShopOnline/SOShared/AdBanner.swift; sourceTree = SOURCE_ROOT; };
+		B58DF5CF1B93701F00BF8F8B /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
 		B5A290C01B8B7AA500E8E923 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		B5C039151B83A004009F49D3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ShopOnline/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		B5CCF89B1B88346A00A0C6FD /* UIView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Custom.swift"; sourceTree = "<group>"; };
@@ -175,6 +181,7 @@
 		B519904B1B91CCEE00085A31 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B58DF5CC1B936EEC00BF8F8B /* AdBanner */,
 				B519905D1B920C7400085A31 /* MenuCategories */,
 			);
 			name = Models;
@@ -210,6 +217,14 @@
 				B51990621B9212E100085A31 /* MenuCategoriesParse.swift */,
 			);
 			name = MenuCategories;
+			sourceTree = "<group>";
+		};
+		B58DF5CC1B936EEC00BF8F8B /* AdBanner */ = {
+			isa = PBXGroup;
+			children = (
+				B58DF5CD1B936F0A00BF8F8B /* AdBanner.swift */,
+			);
+			name = AdBanner;
 			sourceTree = "<group>";
 		};
 		B5CCF8B21B88843000A0C6FD /* Categories */ = {
@@ -456,6 +471,8 @@
 				B5F316181B8979DE0070353B /* UICollectionViewController+Custom.swift */,
 				B51990471B91B82D00085A31 /* UIButton+Custom.swift */,
 				B51990491B91BDF200085A31 /* UIAlertView+Custom.swift */,
+				B58DF5CA1B93562300BF8F8B /* NSArray+Custom.swift */,
+				B58DF5CF1B93701F00BF8F8B /* NSManagedObjectContext.swift */,
 			);
 			name = SOExtension;
 			path = MCExtension;
@@ -651,13 +668,16 @@
 				B5CCF89C1B88346A00A0C6FD /* UIView+Custom.swift in Sources */,
 				B0AA4C3B1B86C6650029CB8C /* JTSplashView.swift in Sources */,
 				CE9AD5C01B7A4DD600A58D06 /* NSString+Custom.swift in Sources */,
+				B58DF5CB1B93562300BF8F8B /* NSArray+Custom.swift in Sources */,
 				B5CCF8A01B88349300A0C6FD /* SOUtils.swift in Sources */,
 				B0B06D6E1B8AB1870016B777 /* Cache+AppSetting.swift in Sources */,
 				B519904F1B91CD3700085A31 /* SONetworking.swift in Sources */,
 				B51990461B91B6F800085A31 /* SORegisterViewController.swift in Sources */,
 				B5CCF8B41B88845800A0C6FD /* SOCatagoriesViewController.swift in Sources */,
+				B58DF5D01B93701F00BF8F8B /* NSManagedObjectContext.swift in Sources */,
 				B5F316191B8979DE0070353B /* UICollectionViewController+Custom.swift in Sources */,
 				CE9AD5C21B7A4DE800A58D06 /* UIViewController+Custom.swift in Sources */,
+				B58DF5CE1B936F0A00BF8F8B /* AdBanner.swift in Sources */,
 				B51990631B9212E100085A31 /* MenuCategoriesParse.swift in Sources */,
 				B519904A1B91BDF200085A31 /* UIAlertView+Custom.swift in Sources */,
 				CE3A39351B78E2F50069A2A5 /* ShopOnline.xcdatamodeld in Sources */,

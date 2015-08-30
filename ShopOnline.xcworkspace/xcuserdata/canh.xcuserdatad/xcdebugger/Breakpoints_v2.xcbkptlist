@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShopOnline/SOShared/SONetworking.swift"
-            timestampString = "462562986.760535"
+            timestampString = "462641674.917001"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "isHaveConnection()"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShopOnline/SOShared/Appdelegate/Appdelegate+Custom.swift"
-            timestampString = "462566753.977138"
+            timestampString = "462641674.917001"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "loadData()"
             landmarkType = "5">
          </BreakpointContent>
@@ -89,13 +89,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShopOnline/SOShared/Appdelegate/Appdelegate+Custom.swift"
-            timestampString = "462566753.977138"
+            filePath = "ShopOnline/SOSections/SOAdCollectionReusableView.swift"
+            timestampString = "462652708.833109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "loadData()"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "fetchDataForAdBanner(_:scrollViewHeight:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShopOnline/SOSections/SOAdCollectionReusableView.swift"
+            timestampString = "462652817.240658"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "fetchDataForAdBanner(_:scrollViewHeight:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

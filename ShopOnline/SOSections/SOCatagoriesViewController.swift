@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 let reuseIdentifier = "CategoriesCell"
 let kSegue_Categories_Push_ListProduct:String = "kSegue_Category_Push_Detail"
@@ -15,18 +16,42 @@ class SOCatagoriesViewController: UIViewController, UICollectionViewDelegateFlow
 
     @IBOutlet weak var mCollectionView: UICollectionView!
     let mSectionInsets = UIEdgeInsets(top: 1.0, left: 1.0, bottom: 1.0, right: 1.0)
-    let mTitles = ["Thời trang Nữ","Phụ kiện & Làm đẹp","Thời trang Nam","Mẹ & Bé","Thiết bị di động", "Nhà cửa & Xe", "Điện tử điện máy", "Thú cưng", "Đồ cũ", "Sản phẩm khác"]
-    let mImages = ["fashion_girl", "phukien_lamdep", "fashion_men", "mom_baby", "phone", "home_car", "dientu_dienmay","pets", "old_thing", "orther_product"]
-    
-  
+    var mTitles : [String] = [String]()// = ["Thời trang Nữ","Phụ kiện & Làm đẹp","Thời trang Nam","Mẹ & Bé","Thiết bị di động", "Nhà cửa & Xe", "Điện tử điện máy", "Thú cưng", "Đồ cũ", "Sản phẩm khác"]
+    var mImages = ["fashion_girl", "phukien_lamdep", "fashion_men", "mom_baby", "phone", "home_car", "dientu_dienmay","pets", "old_thing", "orther_product"]
+    var mImageFile : [UIImage?] = [UIImage]()
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.loadDataForCategories()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    // MARK: - Load Data
+    func loadDataForCategories()
+    {
+        var listCategoriesCoreData : [MenuCategories] = []
+        var fetchRequest = NSFetchRequest(entityName: "MenuCategories")
+        
+        // Create querry sort object with tag value
+        let sortDescriptor = NSSortDescriptor(key: "tag", ascending: true, selector: "localizedCaseInsensitiveCompare:")
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        var error: NSError?
+        // Fetch list object
+        listCategoriesCoreData = self.appDelegateManagedObject().executeFetchRequest(fetchRequest, error: nil) as! [MenuCategories]
+        if error == nil
+        {
+            for categori in listCategoriesCoreData
+            {
+                mTitles += [categori.nameCategories]
+                mImageFile +=  [UIImage(data: categori.imageCategories)]
+            }
+            self.mCollectionView.reloadData()
+        }
     }
     
     //MARK: - UICollection View
@@ -49,21 +74,24 @@ class SOCatagoriesViewController: UIViewController, UICollectionViewDelegateFlow
     
     /* Num of each item in section */
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        if self.mTitles.count > 0
+        {
+            return self.mTitles.count
+        }
+        return 1
     }
     
     /* Cell for item at index */
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! SOCatagoriesViewCell
         cell.mTitleLabel.text = self.mTitles[indexPath.row]
-        let imgName = self.mImages[indexPath.row]
-        cell.mImageView.image = UIImage(named: imgName)
+        cell.mImageView.image = self.mImageFile[indexPath.row]
         return cell
     }
 
     /* Set size for collection cell */
     func collectionView(collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-            return CGSize(width: getWidthScreen()/2 - 2 , height: getHeightScreen()/3)
+            return CGSize(width: getWidthScreen()/2 - 2 , height: 170)
     }
     
     /* Set layout for collection cell */
@@ -82,11 +110,8 @@ class SOCatagoriesViewController: UIViewController, UICollectionViewDelegateFlow
             let indexPath = self.mCollectionView?.indexPathForCell(cell)
             let vc = segue.destinationViewController as! SOListProductViewController
             
-            let imgName = self.mImages[indexPath!.row]
-            
-            println(vc)
-            vc.currImage = UIImage(named: imgName)
-            vc.textHeading = self.mTitles[indexPath!.row % 5]
+            vc.currImage = self.mImageFile[indexPath!.row]
+            vc.textHeading = self.mTitles[indexPath!.row]
         }
     }
 }

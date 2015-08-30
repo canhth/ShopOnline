@@ -17,10 +17,8 @@ extension AppDelegate
     */
     func loadData()
     {
-       var netWorking = SONetworking()
-        
         //Having connect internet
-        if netWorking.isHaveConnection()
+        if SONetworking.sharedInstance.isHaveConnection()
         {
             let querry = PFQuery(className: "CategoriesMenu")
             querry.orderByDescending("tag")

@@ -10,6 +10,19 @@ import UIKit
 
 class SONetworking: NSObject {
     
+    class var sharedInstance: SONetworking
+    {
+        struct Static
+        {
+            static var onceToken: dispatch_once_t = 0
+            static var instance: SONetworking? = nil
+        }
+        dispatch_once(&Static.onceToken) {
+            Static.instance = SONetworking()
+        }
+        return Static.instance!
+    }
+    
     let reachability = Reachability.reachabilityForInternetConnection()
     
     func checkConnection()

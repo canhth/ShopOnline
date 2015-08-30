@@ -7,8 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 extension UIViewController {
+    
+    func appDelegateManagedObject() -> NSManagedObjectContext
+    {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let objectContext = appDelegate.managedObjectContext
+        return objectContext!
+    }
     
     func setNavigationBarItem()
     {
