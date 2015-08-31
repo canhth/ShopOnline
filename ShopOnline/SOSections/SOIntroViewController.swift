@@ -50,7 +50,9 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
     {
         //Setup layout border and layer
         self.mOddView .setupBorderView()
+        self.mOddView.layerGradient()
         self.mEvenView .setupBorderView()
+        self.mEvenView.layerGradient()
         
         //Set up frame of scroll view equals super view
         self.mScrollView.frame = CGRectMake(0, 0, getWidthScreen(), getHeightScreen())

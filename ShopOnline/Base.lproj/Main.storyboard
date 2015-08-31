@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZNI-IL-tg4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZNI-IL-tg4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -147,7 +147,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pi8-Dh-BRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075" y="-1993"/>
+            <point key="canvasLocation" x="981" y="-1322"/>
         </scene>
         <!--Left Menu View Controller-->
         <scene sceneID="Fnu-m7-0Ix">
@@ -178,9 +178,13 @@
                                     <constraint firstAttribute="height" constant="64" id="m7l-nK-Phb"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hfH-N8-CG6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hfH-N8-CG6">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.53409618139266968" green="0.59629547595977783" blue="0.81492191553115845" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="h5J-rC-egm" id="ZRo-YZ-fVj"/>
+                                    <outlet property="delegate" destination="h5J-rC-egm" id="WJV-gd-a5P"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -194,6 +198,10 @@
                             <constraint firstItem="hfH-N8-CG6" firstAttribute="top" secondItem="zrZ-8E-JcO" secondAttribute="bottom" id="z4p-rV-UQ2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mLeftMenuTableView" destination="hfH-N8-CG6" id="WEu-Fl-c1b"/>
+                        <outlet property="mNavigationBannerView" destination="zrZ-8E-JcO" id="LIs-Q4-POM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZT-d7-efI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -415,7 +423,7 @@
                         <outlet property="mScrollView" destination="fov-7X-qf0" id="WnA-6Q-Ldr"/>
                         <outlet property="mTextImageView" destination="tgP-fH-kGh" id="OI4-MP-2bw"/>
                         <segue destination="LS8-gb-QGF" kind="show" identifier="kSegue_Push_TabMenu" id="mpI-8K-eRi"/>
-                        <segue destination="iG3-j6-FxZ" kind="show" identifier="kSegue_Push_Login" id="acU-kK-0cw"/>
+                        <segue destination="iHu-Pb-wHQ" kind="show" identifier="kSegue_Push_Login" id="acU-kK-0cw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZR7-lV-Rf3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -478,7 +486,7 @@
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mật khẩu" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbf-M0-dvW" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                        <rect key="frame" x="30" y="69" width="540" height="40"/>
+                                        <rect key="frame" x="30" y="77" width="540" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
@@ -498,7 +506,7 @@
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZb-mh-W3a">
-                                        <rect key="frame" x="98" y="140" width="405" height="40"/>
+                                        <rect key="frame" x="98" y="148" width="405" height="40"/>
                                         <color key="backgroundColor" red="0.1803921568627451" green="0.69411764705882351" blue="0.52941176470588236" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Udf-50-6bW"/>
@@ -513,7 +521,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quên mật khẩu?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxj-C9-249">
-                                        <rect key="frame" x="218" y="190" width="165" height="30"/>
+                                        <rect key="frame" x="218" y="198" width="165" height="30"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="cUi-Hx-5aS"/>
@@ -527,39 +535,38 @@
                                         </connections>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoặc" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9L-qf-K51">
-                                        <rect key="frame" x="284" y="230" width="33" height="17"/>
+                                        <rect key="frame" x="284" y="238" width="33" height="17"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P0g-69-9wd">
-                                        <rect key="frame" x="61" y="238" width="213" height="1"/>
+                                        <rect key="frame" x="61" y="246" width="213" height="1"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="W2N-5U-Eqt"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="raj-RV-4Ua">
-                                        <rect key="frame" x="327" y="238" width="213" height="1"/>
+                                        <rect key="frame" x="327" y="246" width="213" height="1"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="FW8-2z-kKY"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWc-39-5Xv">
-                                        <rect key="frame" x="139" y="365" width="324" height="32"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                        <rect key="frame" x="139" y="373" width="324" height="24"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                                         <state key="normal" title="Đăng ký !">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="clickRegisterButton:" destination="iG3-j6-FxZ" eventType="touchUpInside" id="Xjr-Wo-dgF"/>
-                                            <segue destination="Awi-zc-CS4" kind="show" id="lTj-6C-RWd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXt-TF-hMM">
-                                        <rect key="frame" x="98" y="262" width="405" height="40"/>
+                                        <rect key="frame" x="98" y="270" width="405" height="40"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <state key="normal" backgroundImage="login-facebook">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -572,8 +579,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="hbf-M0-dvW" firstAttribute="top" secondItem="ihC-0h-4Le" secondAttribute="bottom" constant="17" id="3b9-YR-Mfy"/>
                                     <constraint firstItem="ihC-0h-4Le" firstAttribute="leading" secondItem="hbf-M0-dvW" secondAttribute="leading" id="8yZ-Kn-qtg"/>
-                                    <constraint firstItem="QWc-39-5Xv" firstAttribute="height" secondItem="kXt-TF-hMM" secondAttribute="height" multiplier="0.8" id="A91-X6-LCB"/>
+                                    <constraint firstItem="QWc-39-5Xv" firstAttribute="height" secondItem="kXt-TF-hMM" secondAttribute="height" multiplier="0.6" id="A91-X6-LCB"/>
                                     <constraint firstItem="aZb-mh-W3a" firstAttribute="centerX" secondItem="kXt-TF-hMM" secondAttribute="centerX" id="BaA-la-aCl"/>
                                     <constraint firstAttribute="trailing" secondItem="raj-RV-4Ua" secondAttribute="trailing" constant="60" id="EN6-gI-9nQ"/>
                                     <constraint firstAttribute="bottom" secondItem="QWc-39-5Xv" secondAttribute="bottom" constant="20" id="FcK-bn-2Ni"/>
@@ -623,7 +631,7 @@
                                 </variation>
                             </view>
                             <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZu-gg-PNe">
-                                <rect key="frame" x="544" y="89" width="30" height="30"/>
+                                <rect key="frame" x="554" y="74" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="GNA-3M-qPx"/>
                                     <constraint firstAttribute="height" constant="30" id="lTN-7v-hcX"/>
@@ -641,7 +649,7 @@
                         <constraints>
                             <constraint firstItem="Ewm-tE-qfc" firstAttribute="top" secondItem="MqT-m9-x7n" secondAttribute="bottom" id="6eZ-4l-9Cl"/>
                             <constraint firstItem="urF-G9-8ha" firstAttribute="top" secondItem="3ow-UK-zgO" secondAttribute="bottom" id="7Ya-DS-nEd"/>
-                            <constraint firstItem="nZu-gg-PNe" firstAttribute="top" secondItem="Oto-yV-F2a" secondAttribute="bottom" constant="25" id="B8q-Vn-89D"/>
+                            <constraint firstItem="nZu-gg-PNe" firstAttribute="top" secondItem="Oto-yV-F2a" secondAttribute="bottom" constant="10" id="B8q-Vn-89D"/>
                             <constraint firstItem="3ow-UK-zgO" firstAttribute="top" secondItem="huK-Om-k29" secondAttribute="top" id="FzH-xS-NaF"/>
                             <constraint firstAttribute="trailing" secondItem="3ow-UK-zgO" secondAttribute="trailing" id="GJR-Br-NPd"/>
                             <constraint firstItem="MqT-m9-x7n" firstAttribute="centerX" secondItem="Ewm-tE-qfc" secondAttribute="centerX" id="H7I-5C-XpG"/>
@@ -651,10 +659,11 @@
                             <constraint firstAttribute="bottom" secondItem="Lvh-Rc-RaE" secondAttribute="bottom" id="WI0-vU-yaK"/>
                             <constraint firstAttribute="width" secondItem="Lvh-Rc-RaE" secondAttribute="width" id="jXJ-3P-tih"/>
                             <constraint firstItem="Lvh-Rc-RaE" firstAttribute="top" secondItem="Ewm-tE-qfc" secondAttribute="bottom" constant="16" id="o81-pN-7b8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nZu-gg-PNe" secondAttribute="trailing" constant="10" id="uyV-Px-4y9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nZu-gg-PNe" secondAttribute="trailing" id="uyV-Px-4y9"/>
                             <constraint firstAttribute="centerX" secondItem="Lvh-Rc-RaE" secondAttribute="centerX" id="xWg-sM-W7O"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hhk-kF-XtU"/>
                     <connections>
                         <outlet property="mCloseButton" destination="nZu-gg-PNe" id="ner-6f-HFe"/>
                         <outlet property="mLoginButton" destination="aZb-mh-W3a" id="sjY-Kt-KL4"/>
@@ -663,6 +672,7 @@
                         <outlet property="mRegisterButton" destination="QWc-39-5Xv" id="xQJ-tp-VNe"/>
                         <outlet property="mUserNameTextField" destination="ihC-0h-4Le" id="pTf-gU-2ZM"/>
                         <segue destination="LS8-gb-QGF" kind="show" identifier="kSegue_Login_Success" id="E64-M7-uzW"/>
+                        <segue destination="e9h-Do-2WU" kind="show" identifier="kSegue_Push_Register" id="fg8-lg-ggK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E9Z-M0-g1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -672,7 +682,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3274" y="-527"/>
+            <point key="canvasLocation" x="4086" y="-527"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="1q7-MZ-O2U">
@@ -687,13 +697,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Re-vZ-nJJ">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDF-f4-5VT">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tên đăng nhập *" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsU-Gc-EMx" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                                <rect key="frame" x="20" y="159" width="560" height="40"/>
+                                                <rect key="frame" x="20" y="124" width="560" height="40"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
@@ -713,30 +723,31 @@
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCr-rF-Deq">
-                                                <rect key="frame" x="165" y="404" width="270" height="40"/>
+                                                <rect key="frame" x="165" y="369" width="270" height="40"/>
                                                 <color key="backgroundColor" red="0.18198148906230927" green="0.69426733255386353" blue="0.53024792671203613" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="l95-JG-zxR"/>
                                                     <constraint firstAttribute="width" secondItem="JCr-rF-Deq" secondAttribute="height" multiplier="81:12" id="qle-Yc-8D8"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
-                                                <state key="normal" title="Đăng Nhập">
+                                                <state key="normal" title="Đăng ký">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="clickLoginButton:" destination="iG3-j6-FxZ" eventType="touchUpInside" id="JTU-BT-aem"/>
+                                                    <action selector="clickSignUpButton:" destination="Awi-zc-CS4" eventType="touchUpInside" id="kP6-pi-C8D"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạn đã đồng ý với điều khoản của chúng tôi để trở thành thành viên chính thức và sử dụng những dịch vụ tốt nhất." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PJ-Jo-W8K">
-                                                <rect key="frame" x="30" y="469" width="540" height="29"/>
+                                                <rect key="frame" x="30" y="434" width="540" height="29"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mật khẩu *" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ovX-Wu-mBJ" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                                <rect key="frame" x="20" y="211" width="560" height="40"/>
+                                                <rect key="frame" x="20" y="176" width="560" height="40"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
@@ -756,7 +767,7 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HO6-pd-6j4" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                                <rect key="frame" x="20" y="107" width="560" height="40"/>
+                                                <rect key="frame" x="20" y="72" width="560" height="40"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
@@ -776,7 +787,7 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Xác nhận mật khẩu *" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n0t-cE-Vcp" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                                <rect key="frame" x="20" y="263" width="560" height="40"/>
+                                                <rect key="frame" x="20" y="228" width="560" height="40"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
@@ -796,20 +807,20 @@
                                                 </connections>
                                             </textField>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="Qsn-BB-vsv">
-                                                <rect key="frame" x="174" y="333" width="40" height="40"/>
+                                                <rect key="frame" x="174" y="298" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Qsn-BB-vsv" secondAttribute="height" multiplier="1:1" id="6Gr-pH-IXF"/>
                                                     <constraint firstAttribute="width" constant="40" id="YJo-I2-0FW"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chạm để thêm ảnh đại diện" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbJ-Uu-OY5">
-                                                <rect key="frame" x="234" y="347" width="132" height="13"/>
+                                                <rect key="frame" x="234" y="312" width="132" height="13"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="11"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfK-rj-2pB">
-                                                <rect key="frame" x="60" y="329" width="480" height="50"/>
+                                                <rect key="frame" x="60" y="294" width="480" height="50"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <gestureRecognizers/>
                                                 <constraints>
@@ -819,22 +830,8 @@
                                                     <outletCollection property="gestureRecognizers" destination="yCi-bU-Vup" appends="YES" id="GJu-La-uzq"/>
                                                 </connections>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxX-gC-UOL">
-                                                <rect key="frame" x="550" y="20" width="30" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="30" id="Iyp-ya-cYX"/>
-                                                    <constraint firstAttribute="height" constant="30" id="f41-r4-Als"/>
-                                                </constraints>
-                                                <color key="tintColor" red="0.18198148906230927" green="0.69426733255386353" blue="0.53024792671203613" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" backgroundImage="circle-close">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="clickCloseButton:" destination="Awi-zc-CS4" eventType="touchUpInside" id="lSy-Lb-IkK"/>
-                                                </connections>
-                                            </button>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Số điện thoại *" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XPT-SS-CqQ" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                                <rect key="frame" x="20" y="55" width="560" height="40"/>
+                                                <rect key="frame" x="20" y="20" width="560" height="40"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="2o0-fO-t9b"/>
@@ -868,7 +865,6 @@
                                             <constraint firstItem="bsU-Gc-EMx" firstAttribute="trailing" secondItem="ovX-Wu-mBJ" secondAttribute="trailing" id="EJU-MT-ZRW"/>
                                             <constraint firstItem="JCr-rF-Deq" firstAttribute="top" secondItem="pfK-rj-2pB" secondAttribute="bottom" constant="25" id="EVn-GH-FQq"/>
                                             <constraint firstAttribute="centerX" secondItem="pfK-rj-2pB" secondAttribute="centerX" id="FZF-md-793"/>
-                                            <constraint firstItem="XPT-SS-CqQ" firstAttribute="top" secondItem="OxX-gC-UOL" secondAttribute="bottom" constant="5" id="G6h-mR-0xw"/>
                                             <constraint firstAttribute="trailing" secondItem="XPT-SS-CqQ" secondAttribute="trailing" constant="20" id="HtA-P0-dMA"/>
                                             <constraint firstItem="pfK-rj-2pB" firstAttribute="centerY" secondItem="zbJ-Uu-OY5" secondAttribute="centerY" id="MqA-2y-TTo"/>
                                             <constraint firstItem="zbJ-Uu-OY5" firstAttribute="top" secondItem="n0t-cE-Vcp" secondAttribute="bottom" constant="44" id="O6e-hw-2ov"/>
@@ -892,11 +888,10 @@
                                             <constraint firstItem="pfK-rj-2pB" firstAttribute="leading" secondItem="SDF-f4-5VT" secondAttribute="leading" constant="70" id="loh-L3-Ch2"/>
                                             <constraint firstItem="Qsn-BB-vsv" firstAttribute="leading" secondItem="SDF-f4-5VT" secondAttribute="leading" constant="80" id="ody-C3-LZs"/>
                                             <constraint firstItem="HO6-pd-6j4" firstAttribute="leading" secondItem="bsU-Gc-EMx" secondAttribute="leading" id="pJr-0a-eCa"/>
-                                            <constraint firstItem="OxX-gC-UOL" firstAttribute="top" secondItem="SDF-f4-5VT" secondAttribute="top" constant="20" id="qRe-cd-JLh"/>
                                             <constraint firstItem="pfK-rj-2pB" firstAttribute="width" secondItem="SDF-f4-5VT" secondAttribute="width" multiplier="0.8" id="reK-bx-gO2"/>
                                             <constraint firstAttribute="bottom" secondItem="5PJ-Jo-W8K" secondAttribute="bottom" constant="15" id="s9x-Nl-PwY"/>
                                             <constraint firstAttribute="centerX" secondItem="zbJ-Uu-OY5" secondAttribute="centerX" id="sRV-Hd-5ud"/>
-                                            <constraint firstAttribute="trailing" secondItem="OxX-gC-UOL" secondAttribute="trailing" constant="20" id="ws2-ZP-PYk"/>
+                                            <constraint firstItem="XPT-SS-CqQ" firstAttribute="top" secondItem="SDF-f4-5VT" secondAttribute="top" constant="20" id="wax-1S-BuD"/>
                                             <constraint firstItem="HO6-pd-6j4" firstAttribute="top" secondItem="XPT-SS-CqQ" secondAttribute="bottom" constant="12" id="x8j-hQ-dxc"/>
                                         </constraints>
                                         <variation key="default">
@@ -925,7 +920,7 @@
                             <constraint firstItem="3y1-KK-hHz" firstAttribute="top" secondItem="5Re-vZ-nJJ" secondAttribute="bottom" id="5hm-EB-sI9"/>
                             <constraint firstAttribute="centerY" secondItem="5Re-vZ-nJJ" secondAttribute="centerY" id="8SH-6h-UJ3"/>
                             <constraint firstAttribute="trailing" secondItem="5Re-vZ-nJJ" secondAttribute="trailing" id="KFX-oy-10x"/>
-                            <constraint firstItem="5Re-vZ-nJJ" firstAttribute="top" secondItem="5sM-wY-r2b" secondAttribute="bottom" id="gj1-F5-AOZ"/>
+                            <constraint firstItem="5Re-vZ-nJJ" firstAttribute="top" secondItem="5sM-wY-r2b" secondAttribute="bottom" constant="-64" id="gj1-F5-AOZ"/>
                             <constraint firstAttribute="centerX" secondItem="5Re-vZ-nJJ" secondAttribute="centerX" id="pqX-ee-WIs"/>
                             <constraint firstItem="5Re-vZ-nJJ" firstAttribute="leading" secondItem="cMF-Ab-Xxc" secondAttribute="leading" id="uGl-yY-wH6"/>
                         </constraints>
@@ -935,11 +930,26 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="zH7-zT-lI3"/>
+                    <connections>
+                        <outlet property="mConfirmPasswordTextField" destination="n0t-cE-Vcp" id="udT-kC-9aZ"/>
+                        <outlet property="mDescriptionSelectImage" destination="zbJ-Uu-OY5" id="ZYr-IP-t2F"/>
+                        <outlet property="mEmailTextField" destination="HO6-pd-6j4" id="BbS-N2-U7I"/>
+                        <outlet property="mPasswordTextField" destination="ovX-Wu-mBJ" id="rSR-HZ-d4B"/>
+                        <outlet property="mPhoneNumberTextField" destination="XPT-SS-CqQ" id="trV-EX-1cw"/>
+                        <outlet property="mSignUpButton" destination="JCr-rF-Deq" id="Vng-gO-9ta"/>
+                        <outlet property="mUserAvatarImageView" destination="Qsn-BB-vsv" id="m5x-5N-MOo"/>
+                        <outlet property="mUserNameTextField" destination="bsU-Gc-EMx" id="6vv-qU-LXi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qm-Uz-0fp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="yCi-bU-Vup"/>
+                <tapGestureRecognizer id="yCi-bU-Vup">
+                    <connections>
+                        <action selector="clickSelectImageGesture:" destination="Awi-zc-CS4" id="cCs-w4-Lzb"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3974" y="-527"/>
+            <point key="canvasLocation" x="5598" y="-527"/>
         </scene>
         <!--Mua-->
         <scene sceneID="2WA-TP-iCe">
@@ -1247,7 +1257,6 @@
         <!--Navigation Controller-->
         <scene sceneID="qTB-Fb-gr8">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0j1-JR-YtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZNI-IL-tg4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7ru-KW-69y">
@@ -1260,8 +1269,46 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="R2f-Th-GJD"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0j1-JR-YtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="272" y="136"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Cvn-BN-wUv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e9h-Do-2WU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dd7-FC-Z6d">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1819814891" green="0.69426733259999995" blue="0.53024792669999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Awi-zc-CS4" kind="relationship" relationship="rootViewController" id="maO-gh-sHM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9KP-rX-ZfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4786" y="-527"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P6u-tS-XnD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iHu-Pb-wHQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="awz-Bf-vZf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iG3-j6-FxZ" kind="relationship" relationship="rootViewController" id="n7Y-gf-Byw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c9u-FJ-863" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3274" y="-527"/>
         </scene>
     </scenes>
     <resources>

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import JTSplashView
 
 class SOSplashViewController: UIViewController {
 

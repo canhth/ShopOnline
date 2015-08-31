@@ -8,12 +8,21 @@
 
 import UIKit
 
-class SOLeftMenuViewController: UIViewController {
+class SOLeftMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var mNavigationBannerView: UIView!
+    @IBOutlet weak var mLeftMenuTableView: UITableView!
+
+    var mArrayLeftMenu:NSArray = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.mArrayLeftMenu = [ ["image": "new", "title": "Sản phẩm mới nhất"],
+                                ["image": "pin_map", "title": "Gần bạn nhất"],
+                                ["image" : "discount-coupon", "title" : "Khuyến mãi lớn"]]
         // Do any additional setup after loading the view.
+        self.mLeftMenuTableView.registerNib(UINib(nibName: "SOLeftMenuCell", bundle: nil), forCellReuseIdentifier: "SOLeftMenuCell")
+        UIApplication.sharedApplication().statusBarHidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +31,29 @@ class SOLeftMenuViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: Table view delegate
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Potentially incomplete method implementation.
+        // Return the number of sections.
+        return 1
     }
-    */
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete method implementation.
+        // Return the number of rows in the section.
+        return 3
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell : SOLeftMenuCell = tableView.dequeueReusableCellWithIdentifier("SOLeftMenuCell", forIndexPath: indexPath) as! SOLeftMenuCell
+        // Configure the cell...
+        let title = self.mArrayLeftMenu[indexPath.row] .objectForKey("title") as! String
+        let image = self.mArrayLeftMenu[indexPath.row] .objectForKey("image") as! String
+        cell.setupCell(image, title: title)
+        return cell
+    }
+
 
 }

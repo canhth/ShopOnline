@@ -10,6 +10,8 @@ import UIKit
 
 class SOLeftMenuCell: UITableViewCell {
 
+    @IBOutlet weak var mImageView: UIImageView!
+    @IBOutlet weak var mTitle: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +21,12 @@ class SOLeftMenuCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setupCell (image: NSString, title: NSString)
+    {
+        self.mImageView.image = UIImage(named: image as String)
+        self.mTitle.text = title as String
     }
     
 }

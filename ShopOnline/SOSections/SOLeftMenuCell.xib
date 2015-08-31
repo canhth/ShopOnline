@@ -1,29 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SOLeftMenuCell" customModule="ShopOnline" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SOLeftMenuCell" id="KGk-i7-Jjw" customClass="SOLeftMenuCell" customModule="ShopOnline" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new" translatesAutoresizingMaskIntoConstraints="NO" id="hu4-OB-GeV">
-                        <rect key="frame" x="16" y="10" width="23" height="23"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new" translatesAutoresizingMaskIntoConstraints="NO" id="hu4-OB-GeV">
+                        <rect key="frame" x="16" y="9" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="7Rh-DN-nQO"/>
+                            <constraint firstAttribute="width" constant="25" id="MVW-4P-ZgZ"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sản phẩm mới nhất" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdd-xH-cen">
-                        <rect key="frame" x="59" y="14" width="123" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sản phẩm mới nhất" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdd-xH-cen">
+                        <rect key="frame" x="49" y="14" width="123" height="16"/>
                         <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="xdd-xH-cen" firstAttribute="centerY" secondItem="hu4-OB-GeV" secondAttribute="centerY" id="AoV-Kg-DfF"/>
+                    <constraint firstAttribute="centerY" secondItem="hu4-OB-GeV" secondAttribute="centerY" id="Jvx-Br-KJw"/>
+                    <constraint firstItem="hu4-OB-GeV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ObY-Dq-bJg"/>
+                    <constraint firstItem="xdd-xH-cen" firstAttribute="leading" secondItem="hu4-OB-GeV" secondAttribute="trailing" constant="8" id="kAu-nG-ZYa"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="mImageView" destination="hu4-OB-GeV" id="8cH-aR-8bp"/>
+                <outlet property="mTitle" destination="xdd-xH-cen" id="xUc-B0-3Za"/>
+            </connections>
         </tableViewCell>
     </objects>
     <resources>

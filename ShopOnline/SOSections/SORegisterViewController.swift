@@ -10,7 +10,18 @@ import UIKit
 
 class SORegisterViewController: UIViewController {
     
+    @IBOutlet weak var mPhoneNumberTextField: UITextField!
+    @IBOutlet weak var mEmailTextField: UITextField!
+    @IBOutlet weak var mUserNameTextField: UITextField!
+    @IBOutlet weak var mConfirmPasswordTextField: UITextField!
+    @IBOutlet weak var mPasswordTextField: UITextField!
+    
+    @IBOutlet weak var mUserAvatarImageView: UIImageView!
+    @IBOutlet weak var mDescriptionSelectImage: UILabel!
+    @IBOutlet weak var mSignUpButton: UIButton!
+    
     var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150)) as UIActivityIndicatorView
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,20 +30,49 @@ class SORegisterViewController: UIViewController {
         self.actInd.center = self.view.center
         self.actInd.hidesWhenStopped = true
         self.actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
-        view.addSubview(self.actInd)
-        // Do any additional setup after loading the view.
+        self.setupView()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func clickCloseButton(sender: AnyObject)
+    func setupView()
     {
-         self.dismissViewControllerAnimated(true, completion: nil)
+        view.addSubview(self.actInd)
+        self.customNavigationBar("Đăng ký")
+        // Do any additional setup after loading the view.
+        
+        //create a new button
+        let button: UIButton = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
+        //set image for button
+        button.setImage(UIImage(named: "circle-close"), forState: UIControlState.Normal)
+        //add function for button
+        button.addTarget(self, action: "clickCloseButton", forControlEvents: UIControlEvents.TouchUpInside)
+        //set frame
+        button.frame = CGRectMake(15, 0, 53, 31)
+        
+        let barButton = UIBarButtonItem(customView: button)
+        //assign button to navigationbar
+        self.navigationItem.rightBarButtonItem = barButton
     }
     
+    func clickCloseButton()
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        self.presentingViewController?.dismissViewControllerAnimated(true, completion:nil)
+    }
+    
+    @IBAction func clickSelectImageGesture(sender: AnyObject) {
+    }
+
+    @IBAction func clickSignUpButton(sender: AnyObject) {
+    }
     // MARK: Actions
     
 //    @IBAction func signUpAction(sender: AnyObject) {

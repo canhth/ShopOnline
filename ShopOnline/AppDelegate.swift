@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Cache.setFirstTimeLauchApp(true)
         }
 
-        let leftViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SOLeftMenuTableViewController)) as! SOLeftMenuTableViewController
+        let leftViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SOLeftMenuViewController)) as! SOLeftMenuViewController
         let rightViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SORightMenuViewController)) as! SORightMenuViewController
         
         let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController!)

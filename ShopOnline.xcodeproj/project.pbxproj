@@ -310,8 +310,8 @@
 		CE3A392E1B78E2F50069A2A5 /* ShopOnline */ = {
 			isa = PBXGroup;
 			children = (
-				CE9AD5AD1B7A463F00A58D06 /* SOSections */,
 				CE9AD5A21B7A462A00A58D06 /* SOShared */,
+				CE9AD5AD1B7A463F00A58D06 /* SOSections */,
 				CE3A39361B78E2F50069A2A5 /* ViewController.swift */,
 				CE3A39381B78E2F50069A2A5 /* Main.storyboard */,
 				CE3A393D1B78E2F50069A2A5 /* LaunchScreen.xib */,
@@ -668,6 +668,7 @@
 				B5F316221B899ED80070353B /* SOListProductViewController.swift in Sources */,
 				CE9AD5B11B7A46D600A58D06 /* SOIntroViewController.swift in Sources */,
 				B5FA708E1B864CE20050980A /* SOLoginViewController.swift in Sources */,
+				B0EAA4CB1B943845004B9B87 /* JTSplashView.swift in Sources */,
 				B519905C1B91D64E00085A31 /* Appdelegate+Custom.swift in Sources */,
 				CE9AD5C41B7A4E0B00A58D06 /* UITableViewController+Custom.swift in Sources */,
 				CE9AD5B61B7A470900A58D06 /* SOLeftMenuViewController.swift in Sources */,
@@ -686,7 +687,6 @@
 				B0B06D6E1B8AB1870016B777 /* Cache+AppSetting.swift in Sources */,
 				B519904F1B91CD3700085A31 /* SONetworking.swift in Sources */,
 				B51990461B91B6F800085A31 /* SORegisterViewController.swift in Sources */,
-				B0EAA4CB1B943845004B9B87 /* JTSplashView.swift in Sources */,
 				B5CCF8B41B88845800A0C6FD /* SOCatagoriesViewController.swift in Sources */,
 				B58DF5D01B93701F00BF8F8B /* NSManagedObjectContext.swift in Sources */,
 				B5F316191B8979DE0070353B /* UICollectionViewController+Custom.swift in Sources */,
