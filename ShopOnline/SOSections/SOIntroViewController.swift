@@ -37,7 +37,7 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
         super.viewDidDisappear(true)
         self.navigationController?.navigationBar.hidden = false
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -176,7 +176,7 @@ class SOIntroViewController: UIViewController , UIScrollViewDelegate {
         if Cache.getMemberId().length == 0
         {
             // Present viewcontroller . like popup
-            self.presentViewController(setupPushView(SOLoginViewController), animated: true, completion: nil)
+            self.navigationController!.presentViewController(setupPushView(SOLoginViewController), animated: true, completion: nil)
             self.navigationController?.pushViewController(setupPushView(SOTabMenuViewController), animated: true)
         }
         else

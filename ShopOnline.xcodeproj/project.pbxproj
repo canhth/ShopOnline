@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		572C1BC43633266CB50A2009 /* Pods_ShopOnline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1E80F9667F0DB2E129E257 /* Pods_ShopOnline.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B0AA4C381B86C65C0029CB8C /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA4C371B86C65C0029CB8C /* SlideMenuController.swift */; };
-		B0AA4C3B1B86C6650029CB8C /* JTSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA4C3A1B86C6650029CB8C /* JTSplashView.swift */; };
 		B0B06D6E1B8AB1870016B777 /* Cache+AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B06D6D1B8AB1860016B777 /* Cache+AppSetting.swift */; };
+		B0EAA4C81B942C25004B9B87 /* SOLeftMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EAA4C71B942C25004B9B87 /* SOLeftMenuTableViewController.swift */; };
+		B0EAA4CB1B943845004B9B87 /* JTSplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EAA4CA1B943845004B9B87 /* JTSplashView.swift */; };
+		B0EAA4CD1B946971004B9B87 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EAA4CC1B946971004B9B87 /* UIColor+Custom.swift */; };
+		B0EAA4D01B9476D3004B9B87 /* SOLeftMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EAA4CE1B9476D3004B9B87 /* SOLeftMenuCell.swift */; };
+		B0EAA4D11B9476D3004B9B87 /* SOLeftMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0EAA4CF1B9476D3004B9B87 /* SOLeftMenuCell.xib */; };
 		B51990461B91B6F800085A31 /* SORegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51990451B91B6F800085A31 /* SORegisterViewController.swift */; };
 		B51990481B91B82D00085A31 /* UIButton+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51990471B91B82D00085A31 /* UIButton+Custom.swift */; };
 		B519904A1B91BDF200085A31 /* UIAlertView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51990491B91BDF200085A31 /* UIAlertView+Custom.swift */; };
@@ -66,8 +70,12 @@
 		B0AA4C321B86C24E0029CB8C /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlideMenuControllerSwift.framework; path = "Pods/../build/Debug-iphoneos/SlideMenuControllerSwift.framework"; sourceTree = "<group>"; };
 		B0AA4C341B86C4110029CB8C /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlideMenuControllerSwift.framework; path = "Pods/../build/Debug-iphoneos/SlideMenuControllerSwift.framework"; sourceTree = "<group>"; };
 		B0AA4C371B86C65C0029CB8C /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
-		B0AA4C3A1B86C6650029CB8C /* JTSplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTSplashView.swift; sourceTree = "<group>"; };
 		B0B06D6D1B8AB1860016B777 /* Cache+AppSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cache+AppSetting.swift"; sourceTree = "<group>"; };
+		B0EAA4C71B942C25004B9B87 /* SOLeftMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOLeftMenuTableViewController.swift; sourceTree = "<group>"; };
+		B0EAA4CA1B943845004B9B87 /* JTSplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTSplashView.swift; sourceTree = "<group>"; };
+		B0EAA4CC1B946971004B9B87 /* UIColor+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
+		B0EAA4CE1B9476D3004B9B87 /* SOLeftMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOLeftMenuCell.swift; sourceTree = "<group>"; };
+		B0EAA4CF1B9476D3004B9B87 /* SOLeftMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SOLeftMenuCell.xib; sourceTree = "<group>"; };
 		B51990451B91B6F800085A31 /* SORegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SORegisterViewController.swift; sourceTree = "<group>"; };
 		B51990471B91B82D00085A31 /* UIButton+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Custom.swift"; sourceTree = "<group>"; };
 		B51990491B91BDF200085A31 /* UIAlertView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertView+Custom.swift"; sourceTree = "<group>"; };
@@ -162,10 +170,10 @@
 			path = SlideMenuController;
 			sourceTree = "<group>";
 		};
-		B0AA4C391B86C6650029CB8C /* JTSplashView */ = {
+		B0EAA4C91B943845004B9B87 /* JTSplashView */ = {
 			isa = PBXGroup;
 			children = (
-				B0AA4C3A1B86C6650029CB8C /* JTSplashView.swift */,
+				B0EAA4CA1B943845004B9B87 /* JTSplashView.swift */,
 			);
 			path = JTSplashView;
 			sourceTree = "<group>";
@@ -381,9 +389,9 @@
 		CE9AD5A61B7A462A00A58D06 /* SOVendors */ = {
 			isa = PBXGroup;
 			children = (
+				B0EAA4C91B943845004B9B87 /* JTSplashView */,
 				B51990541B91D2D000085A31 /* Reachability */,
 				B586DEB31B8CBF0500497F2E /* FaceBookSDK */,
-				B0AA4C391B86C6650029CB8C /* JTSplashView */,
 				B0AA4C361B86C65C0029CB8C /* SlideMenuController */,
 			);
 			name = SOVendors;
@@ -447,6 +455,9 @@
 			isa = PBXGroup;
 			children = (
 				CE9AD5B51B7A470900A58D06 /* SOLeftMenuViewController.swift */,
+				B0EAA4C71B942C25004B9B87 /* SOLeftMenuTableViewController.swift */,
+				B0EAA4CE1B9476D3004B9B87 /* SOLeftMenuCell.swift */,
+				B0EAA4CF1B9476D3004B9B87 /* SOLeftMenuCell.xib */,
 			);
 			name = "Left Menu";
 			sourceTree = "<group>";
@@ -473,6 +484,7 @@
 				B51990491B91BDF200085A31 /* UIAlertView+Custom.swift */,
 				B58DF5CA1B93562300BF8F8B /* NSArray+Custom.swift */,
 				B58DF5CF1B93701F00BF8F8B /* NSManagedObjectContext.swift */,
+				B0EAA4CC1B946971004B9B87 /* UIColor+Custom.swift */,
 			);
 			name = SOExtension;
 			path = MCExtension;
@@ -580,6 +592,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0EAA4D11B9476D3004B9B87 /* SOLeftMenuCell.xib in Resources */,
 				CE9AD5AB1B7A462A00A58D06 /* Images.xcassets in Resources */,
 				CE3A393A1B78E2F50069A2A5 /* Main.storyboard in Resources */,
 				CE3A393F1B78E2F50069A2A5 /* LaunchScreen.xib in Resources */,
@@ -663,26 +676,29 @@
 				B5F316241B89B50C0070353B /* SOTabMenuViewController.swift in Sources */,
 				CE9AD5AF1B7A46C400A58D06 /* SOSplashViewController.swift in Sources */,
 				B5F3161B1B8984110070353B /* SOCatagoriesViewCell.swift in Sources */,
+				B0EAA4CD1B946971004B9B87 /* UIColor+Custom.swift in Sources */,
 				B5F3161F1B8990C70070353B /* SOAdCollectionReusableView.swift in Sources */,
 				B5CCF89E1B88347A00A0C6FD /* UIImageView+Custom.swift in Sources */,
 				B5CCF89C1B88346A00A0C6FD /* UIView+Custom.swift in Sources */,
-				B0AA4C3B1B86C6650029CB8C /* JTSplashView.swift in Sources */,
 				CE9AD5C01B7A4DD600A58D06 /* NSString+Custom.swift in Sources */,
 				B58DF5CB1B93562300BF8F8B /* NSArray+Custom.swift in Sources */,
 				B5CCF8A01B88349300A0C6FD /* SOUtils.swift in Sources */,
 				B0B06D6E1B8AB1870016B777 /* Cache+AppSetting.swift in Sources */,
 				B519904F1B91CD3700085A31 /* SONetworking.swift in Sources */,
 				B51990461B91B6F800085A31 /* SORegisterViewController.swift in Sources */,
+				B0EAA4CB1B943845004B9B87 /* JTSplashView.swift in Sources */,
 				B5CCF8B41B88845800A0C6FD /* SOCatagoriesViewController.swift in Sources */,
 				B58DF5D01B93701F00BF8F8B /* NSManagedObjectContext.swift in Sources */,
 				B5F316191B8979DE0070353B /* UICollectionViewController+Custom.swift in Sources */,
 				CE9AD5C21B7A4DE800A58D06 /* UIViewController+Custom.swift in Sources */,
+				B0EAA4C81B942C25004B9B87 /* SOLeftMenuTableViewController.swift in Sources */,
 				B58DF5CE1B936F0A00BF8F8B /* AdBanner.swift in Sources */,
 				B51990631B9212E100085A31 /* MenuCategoriesParse.swift in Sources */,
 				B519904A1B91BDF200085A31 /* UIAlertView+Custom.swift in Sources */,
 				CE3A39351B78E2F50069A2A5 /* ShopOnline.xcdatamodeld in Sources */,
 				B5F3162D1B8A472A0070353B /* Cache.swift in Sources */,
 				B0AA4C381B86C65C0029CB8C /* SlideMenuController.swift in Sources */,
+				B0EAA4D01B9476D3004B9B87 /* SOLeftMenuCell.swift in Sources */,
 				CE9AD5B81B7A471600A58D06 /* SORightMenuViewController.swift in Sources */,
 				B5F316281B8A1D5D0070353B /* UITabBar+Custom.swift in Sources */,
 			);
@@ -817,7 +833,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = ShopOnline/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "79e4fd54-ff91-4789-8bab-961b689edd29";
@@ -839,7 +855,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = ShopOnline/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "79e4fd54-ff91-4789-8bab-961b689edd29";

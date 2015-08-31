@@ -16,14 +16,14 @@ class SOCatagoriesViewController: UIViewController, UICollectionViewDelegateFlow
 
     @IBOutlet weak var mCollectionView: UICollectionView!
     let mSectionInsets = UIEdgeInsets(top: 1.0, left: 1.0, bottom: 1.0, right: 1.0)
-    var mTitles : [String] = [String]()// = ["Thời trang Nữ","Phụ kiện & Làm đẹp","Thời trang Nam","Mẹ & Bé","Thiết bị di động", "Nhà cửa & Xe", "Điện tử điện máy", "Thú cưng", "Đồ cũ", "Sản phẩm khác"]
-    var mImages = ["fashion_girl", "phukien_lamdep", "fashion_men", "mom_baby", "phone", "home_car", "dientu_dienmay","pets", "old_thing", "orther_product"]
+    var mTitles : [String] = [String]()
     var mImageFile : [UIImage?] = [UIImage]()
  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.loadDataForCategories()
+        //SOUtils.sharedInstance.setupNavigationBar()
     }
     
     override func didReceiveMemoryWarning() {

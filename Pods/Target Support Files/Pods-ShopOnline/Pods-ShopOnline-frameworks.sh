@@ -65,6 +65,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-ShopOnline/SVProgressHUD.framework'
   install_framework 'Pods-ShopOnline/Spring.framework'
   install_framework 'Pods-ShopOnline/SwiftPages.framework'
+  install_framework 'Pods-ShopOnline/TextFieldEffects.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-ShopOnline/Bolts.framework'
@@ -80,4 +81,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-ShopOnline/SVProgressHUD.framework'
   install_framework 'Pods-ShopOnline/Spring.framework'
   install_framework 'Pods-ShopOnline/SwiftPages.framework'
+  install_framework 'Pods-ShopOnline/TextFieldEffects.framework'
 fi

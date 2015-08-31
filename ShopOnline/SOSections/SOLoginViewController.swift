@@ -36,8 +36,8 @@ class SOLoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
         self.navigationController?.navigationBar.hidden = true
+        super.viewWillAppear(true)
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -103,7 +103,8 @@ class SOLoginViewController: UIViewController, UITextFieldDelegate {
     */
     @IBAction func clickRegisterButton(sender: AnyObject)
     {
-        self.navigationController?.pushViewController(setupPushView(SORegisterViewController), animated: true)
+        
+        //self.navigationController!.pushViewController(self.storyboard!.instantiateViewControllerWithIdentifier("SORegisterViewController") as! UIViewController, animated: true)
     }
     
     

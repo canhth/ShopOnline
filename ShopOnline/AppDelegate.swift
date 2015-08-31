@@ -33,14 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Cache.setFirstTimeLauchApp(true)
         }
 
-        let leftViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SOLeftMenuViewController)) as! SOLeftMenuViewController
+        let leftViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SOLeftMenuTableViewController)) as! SOLeftMenuTableViewController
         let rightViewController = storyboard.instantiateViewControllerWithIdentifier(String.className(SORightMenuViewController)) as! SORightMenuViewController
         
         let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController!)
         //leftViewController.mainViewController = nvc
         
-        let slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
-        
+        var slideMenuController = SlideMenuController(mainViewController:nvc, leftMenuViewController: leftViewController, rightMenuViewController: rightViewController)
+        slideMenuController.navigationItem.title = ""
         self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
         self.window?.rootViewController = slideMenuController
         self.window?.makeKeyAndVisible()
@@ -92,9 +92,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Setup Application
     func setupNavigationBar()
     {
-        UINavigationBar.appearance().barTintColor = UIColor.whiteColor()
-        UINavigationBar.appearance().tintColor = UIColor.orangeColor()
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        UINavigationBar.appearance().barTintColor = UIColor(red: 46/255, green: 177.0/255, blue: 135/255, alpha: 1.0)
+        UINavigationBar.appearance().tintColor =  UIColor(red: 240/255, green: 242.0/255, blue: 240/255, alpha: 1.0)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.blackColor()]
     }
     
     func setupTabBar()
@@ -102,7 +102,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /* Custom UItabbar */
         UITabBar.appearance().translucent = false
         UITabBar.appearance().barTintColor = UIColor.whiteColor()
-        UITabBar.appearance().tintColor = UIColor.orangeColor()
+        UITabBar.appearance().tintColor = UIColor(red: 46/255, green: 177.0/255, blue: 135/255, alpha: 1.0)
     }
     
     // MARK: - Core Data stack

@@ -32,6 +32,7 @@ PODS:
   - Spring (1.0.3)
   - SVProgressHUD (HEAD based on 1.1.3)
   - SwiftPages (1.1.0)
+  - TextFieldEffects (0.4.2)
 
 DEPENDENCIES:
   - FBSDKCoreKit
@@ -46,6 +47,7 @@ DEPENDENCIES:
   - Spring (~> 1.0.3)
   - SVProgressHUD (HEAD)
   - SwiftPages
+  - TextFieldEffects
 
 EXTERNAL SOURCES:
   ReachabilitySwift:
@@ -71,5 +73,6 @@ SPEC CHECKSUMS:
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
   SwiftPages: 1b24565cb91f24f4f912fbd9878a9c74b41a2ca6
+  TextFieldEffects: de5b2db55fd8af5d5bfe0c7ce5a023076f2835a2
 
 COCOAPODS: 0.38.2

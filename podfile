@@ -9,6 +9,7 @@ target 'ShopOnline' do
     pod 'SVProgressHUD', :head
     pod 'GoogleMaps'
     pod 'Spring', '~> 1.0.3'
+    pod 'TextFieldEffects'
     pod 'FBSDKCoreKit'
     pod 'FBSDKLoginKit'
     pod 'Parse'

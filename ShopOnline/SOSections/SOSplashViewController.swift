@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CoreData
+import JTSplashView
 
 class SOSplashViewController: UIViewController {
 
@@ -15,6 +15,7 @@ class SOSplashViewController: UIViewController {
         super.viewDidLoad()
         JTSplashView.splashViewWithBackgroundColor(nil, circleColor: nil, circleSize: nil)
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("hideSplashView"), userInfo: nil, repeats: false)
+        self.navigationController?.navigationBar.hidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,8 +25,8 @@ class SOSplashViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-
     }
+    
     func hideSplashView()
     {
         JTSplashView.finishWithCompletion { () -> Void in

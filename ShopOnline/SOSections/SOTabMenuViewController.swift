@@ -12,7 +12,8 @@ class SOTabMenuViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self .setNavigationBarItem()
+        self.setNavigationBarItem()
+        self.customNavigationBar("Shop Online")
         self.navigationController?.navigationBar.hidden = false;
         // Do any additional setup after loading the view..// Sets the default color of the icon of the selected 
     }

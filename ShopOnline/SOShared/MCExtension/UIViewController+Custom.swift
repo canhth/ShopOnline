@@ -53,6 +53,11 @@ extension UIViewController {
         return vc
     }
     
+    func customNavigationBar(title:String)
+    {
+        self.navigationItem.title = title
+    }
+    
     // MARK: - Gesture & keyboard
     
     func addGesture()
