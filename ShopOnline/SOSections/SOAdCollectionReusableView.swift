@@ -30,17 +30,17 @@ class SOAdCollectionReusableView: UICollectionReusableView, UIScrollViewDelegate
         if SONetworking.sharedInstance.isHaveConnection()
         {
             var index = 0 as CGFloat
-            self.loadDataToAdBanner()
-            self.fetchDataForAdBanner(scrollViewWidth, scrollViewHeight: scrollViewHeight)
+            self.loadDataToAdBanner(scrollViewWidth, scrollViewHeight: scrollViewHeight)
         }
         else
         {
-            self.loadDataNotConnectInternet(scrollViewWidth, scrollViewHeight: scrollViewHeight)
+            self.fetchDataForAdBanner(scrollViewWidth, scrollViewHeight: scrollViewHeight)
         }
         
         //Reset content size of scroll view
         self.mAdScrollView.contentSize = CGSizeMake(scrollViewWidth * 4, scrollViewHeight)
         self.mAdPageControll.currentPage = 0
+        NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
     }
     
     /* Move scroll view to next page */
@@ -48,7 +48,7 @@ class SOAdCollectionReusableView: UICollectionReusableView, UIScrollViewDelegate
     {
         // Move to next page
         var pageWidth:CGFloat = CGRectGetWidth(self.mAdScrollView.frame)
-        let maxWidth:CGFloat = pageWidth * 4
+        let maxWidth:CGFloat = pageWidth * CGFloat(self.mAdPageControll.numberOfPages)
         var contentOffset:CGFloat = self.mAdScrollView.contentOffset.x
         
         var slideToX = contentOffset + pageWidth
@@ -61,20 +61,22 @@ class SOAdCollectionReusableView: UICollectionReusableView, UIScrollViewDelegate
     }
     
     //MARK: Load data form server
-    func loadDataToAdBanner()
+    func loadDataToAdBanner(scrollViewWidth : CGFloat, scrollViewHeight : CGFloat)
     {
         let querry = PFQuery(className: "AdBanner").whereKey("pageLevel", equalTo: 1)
         querry.findObjectsInBackgroundWithBlock({(objects:[AnyObject]?, error:NSError?) -> Void in
-            if let menuCategories = objects as? [PFObject]
+            if let adBanner = objects as? [PFObject]
             {
                 self.deleteData(SOUtils.sharedInstance.appDelegateManagedObject())
                 var error : NSError?
-                for category:AnyObject! in menuCategories
+                var index = 0 as CGFloat
+                self.mAdPageControll.numberOfPages = adBanner.count
+                for object:AnyObject! in adBanner
                 {
-                    let nameAd = category.objectForKey("nameAd") as! String
+                    let nameAd = object.objectForKey("nameAd") as! String
                     // Get data form server with PFObject
-                    let imageAd = category.objectForKey("imageBanner") as! PFFile
-                    let pageLevel = category.objectForKey("pageLevel") as! NSInteger
+                    let imageAd = object.objectForKey("imageBanner") as! PFFile
+                    let pageLevel = object.objectForKey("pageLevel") as! NSInteger
                     /**
                     *  Get image in background
                     */
@@ -84,6 +86,12 @@ class SOAdCollectionReusableView: UICollectionReusableView, UIScrollViewDelegate
                         {
                             // Get image with PFFile
                             let image:UIImage = UIImage(data:imageData!)!
+                            
+                            // Setup scroll view ad banner
+                            var imgView = UIImageView(frame: CGRectMake(scrollViewWidth * index, 0, scrollViewWidth, scrollViewHeight))
+                            imgView.image = image
+                            self.mAdScrollView.addSubview(imgView)
+                            index += 1
                             // Import data into core data
                             self.addData(nameAd, imageBanner: image, pageLevel: pageLevel, managedObjectContext: SOUtils.sharedInstance.appDelegateManagedObject())
                         }
@@ -103,7 +111,6 @@ class SOAdCollectionReusableView: UICollectionReusableView, UIScrollViewDelegate
         if error == nil
         {
             var index = 0 as CGFloat
-            self.mAdPageControll.numberOfPages = listBannerCoreData.count
             for object in listBannerCoreData
             {
                 if  Int(index) < listBannerCoreData.count
@@ -114,7 +121,11 @@ class SOAdCollectionReusableView: UICollectionReusableView, UIScrollViewDelegate
                 }
                 index += 1
             }
-            NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
+        }
+        else if (listBannerCoreData.count < 1)
+        {
+            UIAlertView .showAlertView("ERROR", message: "Vui lòng bật Wifi hoặc 3G để kết nối internet")
+            self.loadDataNotConnectInternet(scrollViewWidth, scrollViewHeight: scrollViewHeight)
         }
     }
     /**
@@ -170,7 +181,6 @@ class SOAdCollectionReusableView: UICollectionReusableView, UIScrollViewDelegate
         self.mAdScrollView.addSubview(imgTwo)
         self.mAdScrollView.addSubview(imgThree)
         self.mAdScrollView.addSubview(imgFour)
-        NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
     }
     
     //MARK: - Core Data
