@@ -54,6 +54,10 @@ class SOLeftMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.setupCell(image, title: title)
         return cell
     }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 45
+    }
 
 
 }

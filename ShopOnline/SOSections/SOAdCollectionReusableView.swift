@@ -14,7 +14,7 @@ class SOAdCollectionReusableView: UICollectionReusableView, UIScrollViewDelegate
 {
     @IBOutlet weak var mAdScrollView: UIScrollView!
     @IBOutlet weak var mAdPageControll: UIPageControl!
-    
+    var token: dispatch_once_t = 0
     func setupAdResableView()
     {
         // Create list image
@@ -40,7 +40,8 @@ class SOAdCollectionReusableView: UICollectionReusableView, UIScrollViewDelegate
         //Reset content size of scroll view
         self.mAdScrollView.contentSize = CGSizeMake(scrollViewWidth * 4, scrollViewHeight)
         self.mAdPageControll.currentPage = 0
-        NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
+        self.layer.shouldRasterize = true;
+        self.layer.rasterizationScale = UIScreen.mainScreen().scale;
     }
     
     /* Move scroll view to next page */
@@ -84,18 +85,25 @@ class SOAdCollectionReusableView: UICollectionReusableView, UIScrollViewDelegate
                         (imageData, error ) -> Void in
                         if (error == nil)
                         {
-                            // Get image with PFFile
-                            let image:UIImage = UIImage(data:imageData!)!
-                            
-                            // Setup scroll view ad banner
-                            var imgView = UIImageView(frame: CGRectMake(scrollViewWidth * index, 0, scrollViewWidth, scrollViewHeight))
-                            imgView.image = image
-                            self.mAdScrollView.addSubview(imgView)
-                            index += 1
-                            // Import data into core data
-                            self.addData(nameAd, imageBanner: image, pageLevel: pageLevel, managedObjectContext: SOUtils.sharedInstance.appDelegateManagedObject())
+                            if index < CGFloat(adBanner.count)
+                            {
+                                // Get image with PFFile
+                                let image:UIImage = UIImage(data:imageData!)!
+                                
+                                // Setup scroll view ad banner
+                                var imgView = UIImageView(frame: CGRectMake(scrollViewWidth * index, 0, scrollViewWidth, scrollViewHeight))
+                                imgView.image = image
+                                self.mAdScrollView.addSubview(imgView)
+                                index += 1
+                                // Import data into core data
+                                self.addData(nameAd, imageBanner: image, pageLevel: pageLevel, managedObjectContext: SOUtils.sharedInstance.appDelegateManagedObject())
+                            }
                         }
                     })
+                }
+                dispatch_once(&self.token)
+                {
+                    NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "moveToNextPage", userInfo: nil, repeats: true)
                 }
             }
         })

@@ -45,6 +45,9 @@ class SORegisterViewController: UIViewController {
     func setupView()
     {
         view.addSubview(self.actInd)
+        
+        self.mSignUpButton.layer.cornerRadius = 5
+        
         self.customNavigationBar("Đăng ký")
         // Do any additional setup after loading the view.
         

@@ -60,15 +60,12 @@ class SOLoginViewController: UIViewController, UITextFieldDelegate {
         self.mActivityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
         view.addSubview(self.mActivityIndicator)
         self.mLoginButton.layer.cornerRadius = 5;
-        self.mRegisterButton.setupBorder(1.0, color: UIColor.whiteColor(), radius: 5.0)
+        self.mRegisterButton.setupBorder(1.5, color: UIColor.whiteColor(), radius: 5.0)
         // FontAwesome icon in button
         
         self.mCloseButton.titleLabel?.font = UIFont.fontAwesomeOfSize(25)
         
-        let underlineAttriString = NSAttributedString(string:"attriString", attributes:
-            [NSUnderlineStyleAttributeName: NSUnderlineStyle.StyleSingle.rawValue])
-        
-        self.mRegisterButton.titleLabel!.attributedText = underlineAttriString
+        self.mRegisterButton.underlineButtonTextLabel()
     }
     
     //MARK: - TextField delegate

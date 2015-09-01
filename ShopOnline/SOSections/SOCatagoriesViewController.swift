@@ -86,6 +86,8 @@ class SOCatagoriesViewController: UIViewController, UICollectionViewDelegateFlow
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! SOCatagoriesViewCell
         cell.mTitleLabel.text = self.mTitles[indexPath.row]
         cell.mImageView.image = self.mImageFile[indexPath.row]
+//        cell.layer.shouldRasterize = true;
+//        cell.layer.rasterizationScale = UIScreen.mainScreen().scale;
         return cell
     }
 
