@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "419E6498985A87D41CB8FADE"
-               BuildableName = "FBSDKCoreKit.framework"
-               BlueprintName = "FBSDKCoreKit"
+               BlueprintIdentifier = "C57BDCC1CCD2F949E728B27B"
+               BuildableName = "SCLAlertView.framework"
+               BlueprintName = "SCLAlertView"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

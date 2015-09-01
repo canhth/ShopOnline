@@ -32,6 +32,8 @@
 		B5CCF89E1B88347A00A0C6FD /* UIImageView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89D1B88347A00A0C6FD /* UIImageView+Custom.swift */; };
 		B5CCF8A01B88349300A0C6FD /* SOUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89F1B88349300A0C6FD /* SOUtils.swift */; };
 		B5CCF8B41B88845800A0C6FD /* SOCatagoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF8B31B88845800A0C6FD /* SOCatagoriesViewController.swift */; };
+		B5EB85C61B95F1F500B405B8 /* UIImage+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EB85C51B95F1F500B405B8 /* UIImage+Custom.swift */; };
+		B5EB85C91B96122100B405B8 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5EB85C81B96122100B405B8 /* Entitlements.plist */; };
 		B5F316191B8979DE0070353B /* UICollectionViewController+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F316181B8979DE0070353B /* UICollectionViewController+Custom.swift */; };
 		B5F3161B1B8984110070353B /* SOCatagoriesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F3161A1B8984110070353B /* SOCatagoriesViewCell.swift */; };
 		B5F3161F1B8990C70070353B /* SOAdCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F3161E1B8990C70070353B /* SOAdCollectionReusableView.swift */; };
@@ -103,6 +105,8 @@
 		B5CCF89D1B88347A00A0C6FD /* UIImageView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Custom.swift"; sourceTree = "<group>"; };
 		B5CCF89F1B88349300A0C6FD /* SOUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOUtils.swift; sourceTree = "<group>"; };
 		B5CCF8B31B88845800A0C6FD /* SOCatagoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOCatagoriesViewController.swift; sourceTree = "<group>"; };
+		B5EB85C51B95F1F500B405B8 /* UIImage+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Custom.swift"; sourceTree = "<group>"; };
+		B5EB85C81B96122100B405B8 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		B5F316181B8979DE0070353B /* UICollectionViewController+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewController+Custom.swift"; sourceTree = "<group>"; };
 		B5F3161A1B8984110070353B /* SOCatagoriesViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOCatagoriesViewCell.swift; sourceTree = "<group>"; };
 		B5F3161E1B8990C70070353B /* SOAdCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOAdCollectionReusableView.swift; sourceTree = "<group>"; };
@@ -317,6 +321,7 @@
 				CE3A393D1B78E2F50069A2A5 /* LaunchScreen.xib */,
 				CE3A39331B78E2F50069A2A5 /* ShopOnline.xcdatamodeld */,
 				CE3A392F1B78E2F50069A2A5 /* Supporting Files */,
+				B5EB85C81B96122100B405B8 /* Entitlements.plist */,
 			);
 			path = ShopOnline;
 			sourceTree = "<group>";
@@ -485,6 +490,7 @@
 				B58DF5CA1B93562300BF8F8B /* NSArray+Custom.swift */,
 				B58DF5CF1B93701F00BF8F8B /* NSManagedObjectContext.swift */,
 				B0EAA4CC1B946971004B9B87 /* UIColor+Custom.swift */,
+				B5EB85C51B95F1F500B405B8 /* UIImage+Custom.swift */,
 			);
 			name = SOExtension;
 			path = MCExtension;
@@ -522,6 +528,7 @@
 				CE3A392A1B78E2F50069A2A5 /* Resources */,
 				189842553D92B3E11B51B985 /* Embed Pods Frameworks */,
 				AB025BC7847970498148DA00 /* Copy Pods Resources */,
+				50524F424C454D533F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -592,6 +599,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5EB85C91B96122100B405B8 /* Entitlements.plist in Resources */,
 				B0EAA4D11B9476D3004B9B87 /* SOLeftMenuCell.xib in Resources */,
 				CE9AD5AB1B7A462A00A58D06 /* Images.xcassets in Resources */,
 				CE3A393A1B78E2F50069A2A5 /* Main.storyboard in Resources */,
@@ -608,6 +616,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50524F424C454D533F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export CODESIGN_ALLOCATE=/Library/JailCoder/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ]; then\n/Library/JailCoder/Entitlements/Entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 
 /* Begin PBXShellScriptBuildPhase section */
 		189842553D92B3E11B51B985 /* Embed Pods Frameworks */ = {
@@ -684,6 +709,7 @@
 				CE9AD5C01B7A4DD600A58D06 /* NSString+Custom.swift in Sources */,
 				B58DF5CB1B93562300BF8F8B /* NSArray+Custom.swift in Sources */,
 				B5CCF8A01B88349300A0C6FD /* SOUtils.swift in Sources */,
+				B5EB85C61B95F1F500B405B8 /* UIImage+Custom.swift in Sources */,
 				B0B06D6E1B8AB1870016B777 /* Cache+AppSetting.swift in Sources */,
 				B519904F1B91CD3700085A31 /* SONetworking.swift in Sources */,
 				B51990461B91B6F800085A31 /* SORegisterViewController.swift in Sources */,
@@ -759,7 +785,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -801,7 +829,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -824,7 +854,7 @@
 			baseConfigurationReference = 4081AE140FE94B3FABB94590 /* Pods-ShopOnline.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -836,7 +866,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "79e4fd54-ff91-4789-8bab-961b689edd29";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "./ShopOnline/SOShared/SOHelpers/Bridging-Header.h";
 			};
 			name = Debug;
@@ -846,7 +876,7 @@
 			baseConfigurationReference = E8B48BBD2AAE45D1BCDF2F05 /* Pods-ShopOnline.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -858,7 +888,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "79e4fd54-ff91-4789-8bab-961b689edd29";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "./ShopOnline/SOShared/SOHelpers/Bridging-Header.h";
 			};
 			name = Release;

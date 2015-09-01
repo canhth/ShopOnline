@@ -9,15 +9,15 @@
 import UIKit
 import FontAwesome_swift
 import ParseFacebookUtils
+import SCLAlertView
 
 class SOLoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var mLoginView: UIView!
     
+    @IBOutlet weak var mLoaddingView: UIView!
     @IBOutlet weak var mUserNameTextField: UITextField!
-    @IBOutlet weak var mUserNameUnderLineView: UIView!
-    
-    @IBOutlet weak var mPasswordUnderLineView: UIView!
+
     @IBOutlet weak var mPasswordTextField: UITextField!
     
     @IBOutlet weak var mRegisterButton: UIButton!
@@ -27,17 +27,15 @@ class SOLoginViewController: UIViewController, UITextFieldDelegate {
     
     let facebookReadPermissions = ["public_profile", "email", "user_friends","user_about_me"]
     
-    var mActivityIndicator : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150)) as UIActivityIndicatorView
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupView()
-        self.addGesture()
     }
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.hidden = true
         super.viewWillAppear(true)
+        self.setupView()
+        self.addGesture()
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -55,15 +53,12 @@ class SOLoginViewController: UIViewController, UITextFieldDelegate {
     */
     func setupView()
     {
-        self.mActivityIndicator.center = self.view.center
-        self.mActivityIndicator.hidesWhenStopped = true
-        self.mActivityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
-        view.addSubview(self.mActivityIndicator)
-        self.mLoginButton.layer.cornerRadius = 5;
+        self.mLoginButton.layer.cornerRadius = 5.0
         self.mRegisterButton.setupBorder(1.5, color: UIColor.whiteColor(), radius: 5.0)
         // FontAwesome icon in button
         
         self.mCloseButton.titleLabel?.font = UIFont.fontAwesomeOfSize(25)
+       // self.mRegisterButton.titleLabel?.font = UIFont.fontAwesomeOfSize(25)
         
         self.mRegisterButton.underlineButtonTextLabel()
     }
@@ -120,21 +115,21 @@ class SOLoginViewController: UIViewController, UITextFieldDelegate {
         }
         else
         {
-            self.mActivityIndicator.startAnimating()
+            self.mLoaddingView.showLoading()
             
             PFUser.logInWithUsernameInBackground(username, password: password, block: { (user, error) -> Void in
                 
-                self.mActivityIndicator.stopAnimating()
+                self.mLoaddingView.hideLoading()
                 
                 if ((user) != nil)
                 {
                     //Save info of user.
-                    UIAlertView.showAlertView("Login Success", message: "Wellcome")
+                    SCLAlertView().showSuccess("Lỗi xảy ra!", subTitle: "Bạn nhập số điện thoại chưa đúng, vui lòng nhập chính xác số điện thoại của mình.")
                     self.dismissViewControllerAnimated(true, completion: nil)
                 }
                 else
                 {
-                    UIAlertView.showAlertView("Error", message: "\(error)")
+                   SCLAlertView().showError("Lỗi xảy ra!", subTitle: "Bạn nhập số điện thoại chưa đúng, vui lòng nhập chính xác số điện thoại của mình.")
                 }
             })
         }
@@ -147,7 +142,7 @@ class SOLoginViewController: UIViewController, UITextFieldDelegate {
     */
     @IBAction func clickForgotPasswordGesture(sender: AnyObject)
     {
-        
+        println("Clicked forgot password")
     }
     
     /**

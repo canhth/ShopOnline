@@ -1,6 +1,0 @@
-framework module SACollectionViewVerticalScalingFlowLayout {
-  umbrella header "SACollectionViewVerticalScalingFlowLayout-umbrella.h"
-
-  export *
-  module * { export * }
-}

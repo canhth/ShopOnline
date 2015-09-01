@@ -2,12 +2,9 @@ platform :ios,'8.0'
 use_frameworks!
 
 target 'ShopOnline' do
-    pod 'PermissionScope', '~> 0.7'
+    pod 'SCLAlertView'
 	pod 'SwiftPages'
     pod 'FontAwesome.swift'
-    pod 'SACollectionViewVerticalScalingFlowLayout'
-    pod 'SVProgressHUD', :head
-    pod 'GoogleMaps'
     pod 'Spring', '~> 1.0.3'
     pod 'TextFieldEffects'
     pod 'FBSDKCoreKit'

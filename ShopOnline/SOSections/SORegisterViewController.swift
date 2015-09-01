@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import SCLAlertView
+import Parse
 
 class SORegisterViewController: UIViewController {
     
+    @IBOutlet weak var mLoaddingView: UIView!
     @IBOutlet weak var mPhoneNumberTextField: UITextField!
     @IBOutlet weak var mEmailTextField: UITextField!
     @IBOutlet weak var mUserNameTextField: UITextField!
@@ -45,9 +48,9 @@ class SORegisterViewController: UIViewController {
     func setupView()
     {
         view.addSubview(self.actInd)
-        
+        self.mUserAvatarImageView.layer.cornerRadius = self.mUserAvatarImageView.frame.size.width / 2
         self.mSignUpButton.layer.cornerRadius = 5
-        
+        self.mUserAvatarImageView.clipsToBounds = true
         self.customNavigationBar("Đăng ký")
         // Do any additional setup after loading the view.
         
@@ -71,69 +74,98 @@ class SORegisterViewController: UIViewController {
         self.presentingViewController?.dismissViewControllerAnimated(true, completion:nil)
     }
     
-    @IBAction func clickSelectImageGesture(sender: AnyObject) {
+    @IBAction func clickSelectImageGesture(sender: AnyObject)
+    {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
 
-    @IBAction func clickSignUpButton(sender: AnyObject) {
+    @IBAction func clickSignUpButton(sender: AnyObject)
+    {
+        
+        var username = self.mUserNameTextField.text
+        var password = self.mPasswordTextField.text
+        var email = self.mEmailTextField.text
+        var newUser = PFUser()
+        newUser.username = username
+        newUser.password = password
+        newUser.email = email
+        if self.checkTextFieldValidate()
+        {
+            self.mLoaddingView.showLoading()
+            newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
+                if ((error) != nil)
+                {
+                    
+                    var alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
+                    alert.show()
+                    self.mLoaddingView.hideLoading()
+                }
+                else
+                {
+                    let imageData = UIImagePNGRepresentation(self.mUserAvatarImageView.image)
+                    let imageFile:PFFile = PFFile(data: imageData)
+                    PFUser.currentUser()!.setObject(imageFile, forKey: "avartaProfile")
+                    PFUser.currentUser()!.saveInBackgroundWithBlock
+                        {
+                            (success, error) -> Void in
+                            if (success)
+                            {
+                                self.mLoaddingView.hideLoading()
+                            }
+                            else
+                            {
+                                SCLAlertView().showError("Lỗi xảy ra!", subTitle: "Khong the upload image.")
+                            }
+                    }
+                    self.mLoaddingView.hideLoading()
+                    SCLAlertView().showSuccess("Hoàn tất", subTitle: "Chúc mừng bạn đã đăng ký thành công, hãy bắt đầu trải nghiệm với chúng tôi nào!")
+                    self.clickCloseButton()
+                }
+            })
+        }
     }
+    
+    // MARK: Check validate
+    
+    func checkTextFieldValidate() -> Bool
+    {
+       if !self.mPhoneNumberTextField.text.validatePhoneNumber()
+       {
+            SCLAlertView().showError("Lỗi xảy ra!", subTitle: "Bạn nhập số điện thoại chưa đúng, vui lòng nhập chính xác số điện thoại của mình.")
+            return false
+        }
+        if !self.mEmailTextField.text.isEmail()
+        {
+           SCLAlertView().showError("Lỗi xảy ra!", subTitle: "Vui lòng nhập chính xác email.")
+            return false
+        }
+        if !(self.mConfirmPasswordTextField.text == self.mPasswordTextField.text)
+        {
+            SCLAlertView().showError("Lỗi xảy ra!", subTitle: "Vui lòng nhập lại mật khẩu xác nhận. Mật khẩu xác nhận phải trùng với mật khẩu của bạn.")
+            return false
+        }
+        return true
+    }
+    
     // MARK: Actions
     
 //    @IBAction func signUpAction(sender: AnyObject) {
 //        
-//        var username = self.usernameField.text
-//        var password = self.passwordField.text
-//        var email = self.emailField.text
-//        
-//        if (username.utf16Count < 4 || password.utf16Count < 5) {
-//            
-//            var alert = UIAlertView(title: "Invalid", message: "Username must be greater then 4 and Password must be greater then 5", delegate: self, cancelButtonTitle: "OK")
-//            alert.show()
-//            
-//        }else if (email.utf16Count < 8){
-//            
-//            var alert = UIAlertView(title: "Invalid", message: "Please enter a valid password.", delegate: self, cancelButtonTitle: "OK")
-//            alert.show()
-//            
-//            
-//        }else {
-//            
-//            self.actInd.startAnimating()
-//            
-//            var newUser = PFUser()
-//            newUser.username = username
-//            newUser.password = password
-//            newUser.email = email
-//            
-//            newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
-//                
-//                self.actInd.stopAnimating()
-//                
-//                if ((error) != nil) {
-//                    
-//                    var alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
-//                    alert.show()
-//                    
-//                }else {
-//                    
-//                    var alert = UIAlertView(title: "Success", message: "Signed Up", delegate: self, cancelButtonTitle: "OK")
-//                    alert.show()
-//                    
-//                }
-//                
-//            })
-//            
-//        }
-//        
 //    }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+}
+extension SORegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+        //Place the image in the imageview
+        //imageToUpload.image = image
+        let profilePicture : UIImage! = image
+        profilePicture.rounded
+        profilePicture.circle
+        self.mUserAvatarImageView.image = profilePicture
+        picker.dismissViewControllerAnimated(true, completion: nil)
     }
-    */
-
 }

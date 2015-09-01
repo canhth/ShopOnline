@@ -1,6 +1,6 @@
 #include "ParseFacebookUtils.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/ParseFacebookUtils" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GoogleMaps" "${PODS_ROOT}/Headers/Public/GoogleMaps/GoogleMaps"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/ParseFacebookUtils" "${PODS_ROOT}/Headers/Public"
 LIBRARY_SEARCH_PATHS = ${PARSEFACEBOOKUTILS_LIBRARY_SEARCH_PATHS}
 OTHER_LDFLAGS = ${PARSEFACEBOOKUTILS_OTHER_LDFLAGS}
 PODS_ROOT = ${SRCROOT}

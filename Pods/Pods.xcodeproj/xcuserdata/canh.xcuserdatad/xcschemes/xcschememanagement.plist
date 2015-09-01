@@ -8,121 +8,76 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>FBSDKCoreKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>FBSDKLoginKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>4</integer>
 		</dict>
 		<key>Facebook-iOS-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>FontAwesome.swift-FontAwesome.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>6</integer>
 		</dict>
 		<key>FontAwesome.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>5</integer>
 		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>7</integer>
 		</dict>
 		<key>ParseFacebookUtils.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>8</integer>
-		</dict>
-		<key>PermissionScope.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>9</integer>
 		</dict>
 		<key>Pods-ShopOnline.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>10</integer>
 		</dict>
 		<key>ReachabilitySwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>11</integer>
 		</dict>
-		<key>SACollectionViewVerticalScalingFlowLayout.xcscheme</key>
+		<key>SCLAlertView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>12</integer>
-		</dict>
-		<key>SVProgressHUD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>14</integer>
 		</dict>
 		<key>Spring.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>13</integer>
 		</dict>
 		<key>SwiftPages.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>15</integer>
 		</dict>
 		<key>TextFieldEffects.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>16</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>04DDE22EBD8404243F642E5444222A4F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>0C31FD4E445834E1628904CC4FC564B9</key>
+		<key>07894360D166D25288539B3817239E90</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,57 +87,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>169B31FD5320A6F6C4163C8D1962B771</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>16C668921875520E03B7413C1198B56D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1ACCCE08AFA0C48BBDB26998F0405767</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>219D7B1A9174DFE6912B15E36BC97C33</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>347BA67EEBDC82E27AC9B26E884BFA75</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>37B569DBF1F5FCD4F2B0CCB02F786B3F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3CD6A168CBF3B631BB2C2F0BE2952A1C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4302DD744483803092CDC8956ADBBCA3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>4ADDC830F1F3957A877DC0A28F0CBD4E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>559B48090C9F0431AF4DD8E1F2CBFA7D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>57BDCF600E7BF1CCB2C25EE4862522A6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -192,52 +97,47 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>64E205FB1FBE54DA5401AD5C048FBE95</key>
+		<key>69E02705A8DA73C746907B3F5674B7C6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7F8D37B6C9EA8E837E72ECD60FE0E893</key>
+		<key>80F26DD739F95822C4D255D28C6F5BC2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>90A04D15E2DC291FD837B8AF246D42A0</key>
+		<key>83A3B424D114D50804FD8E9E66684B37</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>90B9FC056D855DCB0398094CE186A6B0</key>
+		<key>8A120D80B1016CD7A27A85A9D98F7FAE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ACDBF16298CFC3D45DCC2DE3B52D18D0</key>
+		<key>9FDE07AFA614A5D2674CB2A84FD8ED57</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BAC3773707E7A74FAEA8732C1F1FEFA4</key>
+		<key>AF6821D9C60648A222A9ADD3A043CFEF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C4E837110A7C2B154B5D6932FE2B850D</key>
+		<key>B133B7C2D978B7FC49BA2AB3E80D1B63</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DD110B722970DC5AE8792CC1A753E65A</key>
+		<key>B9DC7FE6EE6890DEFDFFEDA69EBF3E00</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EACD1F624FC6131FB3B911AF8DAC7C43</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EADD15C37BE7FBB9FEA44EA75D13973C</key>
+		<key>E175C8D93D7FA7D2B74137512E8702AC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
