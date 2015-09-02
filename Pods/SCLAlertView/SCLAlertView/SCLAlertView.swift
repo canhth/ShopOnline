@@ -85,8 +85,8 @@ public class SCLAlertView: UIViewController {
 
     // UI Colour
     var viewColor = UIColor()
-    var pressBrightnessFactor = 0.85
-    
+    var pressBrightnessFactor = 0.8
+
     // UI Options
     public var showCloseButton = true
 
@@ -102,7 +102,7 @@ public class SCLAlertView: UIViewController {
     private var inputs = [UITextField]()
     private var buttons = [SCLButton]()
     private var selfReference: SCLAlertView?
-    
+
     required public init(coder aDecoder: NSCoder) {
         fatalError("NSCoding not supported")
     }
@@ -172,7 +172,7 @@ public class SCLAlertView: UIViewController {
         }
         // Set background frame
         view.frame.size = sz
-        
+
         // computing the right size to use for the textView
         let maxHeight = sz.height - 100 // max overall height
         var consumedHeight = CGFloat(0)
@@ -184,18 +184,18 @@ public class SCLAlertView: UIViewController {
         let viewTextWidth = kWindowWidth - 24
         let suggestedViewTextSize = viewText.sizeThatFits(CGSizeMake(viewTextWidth, CGFloat.max))
         let viewTextHeight = min(suggestedViewTextSize.height, maxViewTextHeight)
-        
+
         // scroll management
         if (suggestedViewTextSize.height > maxViewTextHeight) {
             viewText.scrollEnabled = true
         } else {
             viewText.scrollEnabled = false
         }
-        
+
         let windowHeight = consumedHeight + viewTextHeight
         // Set frames
         var x = (sz.width - kWindowWidth) / 2
-        var y = (sz.height - windowHeight - (kCircleHeight / 8)) / 2
+        var y = (sz.height - windowHeight - (kCircleHeight / 8)) / 2.8
         contentView.frame = CGRect(x:x, y:y, width:kWindowWidth, height:windowHeight)
         y -= kCircleHeightBackground * 0.6
         x = (sz.width - kCircleHeightBackground) / 2
@@ -218,7 +218,7 @@ public class SCLAlertView: UIViewController {
             y += kButtonHeight
         }
     }
-    
+
     override public func touchesEnded(touches:Set<NSObject>, withEvent event:UIEvent) {
         if event.touchesForView(view)?.count > 0 {
             view.endEditing(true)
@@ -287,7 +287,7 @@ public class SCLAlertView: UIViewController {
         } else {
             println("Unknow action type for button")
         }
-        hideView()
+        //hideView()
     }
 
 
@@ -304,7 +304,7 @@ public class SCLAlertView: UIViewController {
     func buttonRelease(btn:SCLButton) {
         btn.backgroundColor = viewColor
     }
-    
+
     //Dismiss keyboard when tapped outside textfield
     func dismissKeyboard(){
         self.view.endEditing(true)
@@ -339,8 +339,8 @@ public class SCLAlertView: UIViewController {
     public func showWait(title: String, subTitle: String, closeButtonTitle:String?=nil, duration:NSTimeInterval=0.0, colorStyle: UInt?=0xD62DA5, colorTextButton: UInt=0xFFFFFF) -> SCLAlertViewResponder {
         return showTitle(title, subTitle: subTitle, duration: duration, completeText:closeButtonTitle, style: .Wait, colorStyle: colorStyle, colorTextButton: colorTextButton)
     }
-  
-    public func showEdit(title: String, subTitle: String, closeButtonTitle:String?=nil, duration:NSTimeInterval=0.0, colorStyle: UInt=0xA429FF, colorTextButton: UInt=0xFFFFFF) -> SCLAlertViewResponder {
+
+    public func showEdit(title: String, subTitle: String, closeButtonTitle:String?=nil, duration:NSTimeInterval=0.0, colorStyle: UInt=0x22B573, colorTextButton: UInt=0xFFFFFF) -> SCLAlertViewResponder {
         return showTitle(title, subTitle: subTitle, duration: duration, completeText:closeButtonTitle, style: .Edit, colorStyle: colorStyle, colorTextButton: colorTextButton)
     }
 
@@ -414,7 +414,7 @@ public class SCLAlertView: UIViewController {
 
         // Done button
         if showCloseButton {
-            let txt = completeText != nil ? completeText! : "Done"
+            let txt = completeText != nil ? completeText! : "Đóng"
             addButton(txt, target:self, selector:Selector("hideView"))
         }
 
@@ -507,8 +507,8 @@ class SCLAlertViewStyleKit : NSObject {
 
     // Initialization
     /// swift 1.2 abolish func load
-//    override class func load() {
-//    }
+    //    override class func load() {
+    //    }
 
     // Drawing Methods
     class func drawCheckmark() {

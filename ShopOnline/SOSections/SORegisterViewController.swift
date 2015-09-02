@@ -9,6 +9,7 @@
 import UIKit
 import SCLAlertView
 import Parse
+import SwiftRequest
 
 class SORegisterViewController: UIViewController {
     
@@ -23,16 +24,12 @@ class SORegisterViewController: UIViewController {
     @IBOutlet weak var mDescriptionSelectImage: UILabel!
     @IBOutlet weak var mSignUpButton: UIButton!
     
-    var actInd : UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 150, 150)) as UIActivityIndicatorView
-    
-    
+    let mMessageRegister = "Vui lòng nhập mã xác nhận trên."
+    let mTitleRegisterConfirm = "Nhập mã"
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.addGesture()
-        self.actInd.center = self.view.center
-        self.actInd.hidesWhenStopped = true
-        self.actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
         self.setupView()
     }
 
@@ -47,7 +44,6 @@ class SORegisterViewController: UIViewController {
     
     func setupView()
     {
-        view.addSubview(self.actInd)
         self.mUserAvatarImageView.layer.cornerRadius = self.mUserAvatarImageView.frame.size.width / 2
         self.mSignUpButton.layer.cornerRadius = 5
         self.mUserAvatarImageView.clipsToBounds = true
@@ -84,47 +80,9 @@ class SORegisterViewController: UIViewController {
 
     @IBAction func clickSignUpButton(sender: AnyObject)
     {
-        
-        var username = self.mUserNameTextField.text
-        var password = self.mPasswordTextField.text
-        var email = self.mEmailTextField.text
-        var newUser = PFUser()
-        newUser.username = username
-        newUser.password = password
-        newUser.email = email
         if self.checkTextFieldValidate()
         {
-            self.mLoaddingView.showLoading()
-            newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
-                if ((error) != nil)
-                {
-                    
-                    var alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
-                    alert.show()
-                    self.mLoaddingView.hideLoading()
-                }
-                else
-                {
-                    let imageData = UIImagePNGRepresentation(self.mUserAvatarImageView.image)
-                    let imageFile:PFFile = PFFile(data: imageData)
-                    PFUser.currentUser()!.setObject(imageFile, forKey: "avartaProfile")
-                    PFUser.currentUser()!.saveInBackgroundWithBlock
-                        {
-                            (success, error) -> Void in
-                            if (success)
-                            {
-                                self.mLoaddingView.hideLoading()
-                            }
-                            else
-                            {
-                                SCLAlertView().showError("Lỗi xảy ra!", subTitle: "Khong the upload image.")
-                            }
-                    }
-                    self.mLoaddingView.hideLoading()
-                    SCLAlertView().showSuccess("Hoàn tất", subTitle: "Chúc mừng bạn đã đăng ký thành công, hãy bắt đầu trải nghiệm với chúng tôi nào!")
-                    self.clickCloseButton()
-                }
-            })
+            self.checkIsTheHuman()
         }
     }
     
@@ -150,11 +108,92 @@ class SORegisterViewController: UIViewController {
         return true
     }
     
-    // MARK: Actions
+    func handleError(errorCode : NSError) -> String
+    {
+        var errorDescription:String = ""
+        switch errorCode.code {
+        case 100:
+            errorDescription = "ConnectionFailed"
+            break
+        case 101:
+            errorDescription = "ObjectNotFound"
+            break
+        case 202:
+            errorDescription = "Tên đăng nhập đã có người sử dụng"
+            break
+        default:
+            break
+        }
+        
+        return errorDescription
+    }
     
-//    @IBAction func signUpAction(sender: AnyObject) {
-//        
-//    }
+    func checkIsTheHuman()
+    {
+        let alert = SCLAlertView()
+        let textInput = alert.addTextField(title: mTitleRegisterConfirm)
+        let randomString : String = String.randomStringWithLength(4) as String
+        alert.addButton("Đăng ký")
+            {
+                if textInput.text == randomString
+                {
+                    self.registerUserAccount()
+                    alert.hideView()
+                }
+                else
+                {
+                    SCLAlertView().showError("Lỗi!", subTitle: "Mã xác nhận bạn vừa nhập chưa đúng, vui lòng nhập lại.")
+                }
+            }
+        alert.showCloseButton = false
+        alert.showEdit(randomString, subTitle:mMessageRegister)
+    }
+    
+    func registerUserAccount()
+    {
+        var username = self.mUserNameTextField.text
+        var password = self.mPasswordTextField.text
+        var email = self.mEmailTextField.text
+        var newUser = PFUser()
+        newUser.username = username
+        newUser.password = password
+        newUser.email = email
+        self.mLoaddingView.showLoading()
+        /**
+        *  Sign up account in background
+        */
+        newUser.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
+            if ((error) != nil)
+            {
+                // Show error
+                SCLAlertView().showError("Lỗi xảy ra!", subTitle: self.handleError(error!))
+                self.mLoaddingView.hideLoading()
+            }
+            else
+            {
+                // Save image of user and upload it on server
+                let imageData = UIImagePNGRepresentation(self.mUserAvatarImageView.image)
+                let imageFile:PFFile = PFFile(data: imageData)
+                PFUser.currentUser()!.setObject(imageFile, forKey: "avartaProfile")
+                PFUser.currentUser()!.saveInBackgroundWithBlock
+                    {
+                        (success, error) -> Void in
+                        if (success)
+                        {
+                            self.mLoaddingView.hideLoading()
+                        }
+                        else
+                        {
+                            SCLAlertView().showError("Lỗi xảy ra!", subTitle: "Khong the upload image.")
+                        }
+                }
+                // Finish
+                self.mLoaddingView.hideLoading()
+                SCLAlertView().showSuccess("Hoàn tất", subTitle: "Chúc mừng bạn đã đăng ký thành công, hãy bắt đầu trải nghiệm với chúng tôi nào!")
+                self.clickCloseButton()
+            }
+        })
+    }
 
 }
 extension SORegisterViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

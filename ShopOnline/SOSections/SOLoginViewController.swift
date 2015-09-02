@@ -103,7 +103,11 @@ class SOLoginViewController: UIViewController, UITextFieldDelegate {
         self.performSegueWithIdentifier("kSegue_Push_Register", sender: self)
     }
     
+    /**
+    Action click login button with user name & password
     
+    :param: sender
+    */
     @IBAction func clickLoginButton(sender: AnyObject)
     {
         var username = self.mUserNameTextField.text

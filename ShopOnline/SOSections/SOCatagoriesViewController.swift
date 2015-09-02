@@ -111,9 +111,6 @@ class SOCatagoriesViewController: UIViewController, UICollectionViewDelegateFlow
             let cell = sender as! SOCatagoriesViewCell
             let indexPath = self.mCollectionView?.indexPathForCell(cell)
             let vc = segue.destinationViewController as! SOListProductViewController
-            
-            vc.currImage = self.mImageFile[indexPath!.row]
-            vc.textHeading = self.mTitles[indexPath!.row]
         }
     }
 }

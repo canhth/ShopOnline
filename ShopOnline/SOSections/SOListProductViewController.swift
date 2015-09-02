@@ -10,8 +10,8 @@ import UIKit
 
 class SOListProductViewController: UIViewController {
     
-    
     @IBOutlet weak var mImageView: UIImageView!
+    @IBOutlet weak var mSwiftPages: SwiftPages!
     @IBOutlet weak var mLabel: UILabel!
     
     var currImage: UIImage?
@@ -19,9 +19,18 @@ class SOListProductViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mImageView.image = currImage
-        mLabel.text = textHeading
+
         // Do any additional setup after loading the view.
+    
+        var VCIDs : [String] = ["SONewProductViewController", "SODiscountProductViewController", "SOCloestProductViewController"]
+        //var buttonImages : [UIImage] = [UIImage(named:"HomeIcon.png")!, UIImage(named:"CollectionIcon.png")!, UIImage(named:"LocationIcon.png")!]
+        var buttonTitles : [String] = ["Hàng mới", "Giảm giá", "Gần bạn nhất"]
+        mSwiftPages.setOriginY(0.0)
+        mSwiftPages.enableAeroEffectInTopBar(true)
+        mSwiftPages.setButtonsTextColor(UIColor.blackColor())
+        mSwiftPages.setAnimatedBarColor(UIColor(red: 46/255, green: 177.0/255, blue: 135/255, alpha: 1.0))
+
+        mSwiftPages.initializeWithVCIDsArrayAndButtonTitlesArray(VCIDs, buttonTitlesArray: buttonTitles)
     }
 
     override func didReceiveMemoryWarning() {

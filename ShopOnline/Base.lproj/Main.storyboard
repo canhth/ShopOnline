@@ -680,7 +680,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="4086" y="-527"/>
+            <point key="canvasLocation" x="3482" y="-527"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="1q7-MZ-O2U">
@@ -951,7 +951,85 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5598" y="-527"/>
+            <point key="canvasLocation" x="5064" y="-527"/>
+        </scene>
+        <!--New Product View Controller-->
+        <scene sceneID="Jpu-Gg-FUh">
+            <objects>
+                <viewController storyboardIdentifier="SONewProductViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g4h-AR-Ryf" customClass="SONewProductViewController" customModule="ShopOnline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h7E-ba-PGa"/>
+                        <viewControllerLayoutGuide type="bottom" id="i1n-6z-NlE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1d2-UF-tLu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nA8-z1-7yE">
+                                <rect key="frame" x="259" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66902792453765869" green="0.73128575086593628" blue="0.94889926910400391" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xmv-fD-3K1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4278" y="146"/>
+        </scene>
+        <!--Discount Product View Controller-->
+        <scene sceneID="Bjr-0q-Vfc">
+            <objects>
+                <viewController storyboardIdentifier="SODiscountProductViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mtn-x8-97y" customClass="SODiscountProductViewController" customModule="ShopOnline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iXp-sP-wyx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q1j-wb-y76"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e1C-of-GaC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udi-6p-Sol">
+                                <rect key="frame" x="244" y="297" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78738981485366821" green="0.24644413590431213" blue="0.27221894264221191" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O96-aA-jKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4278" y="834"/>
+        </scene>
+        <!--Cloest Product View Controller-->
+        <scene sceneID="hqM-EB-hmx">
+            <objects>
+                <viewController storyboardIdentifier="SOCloestProductViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mtr-aa-LYJ" customClass="SOCloestProductViewController" customModule="ShopOnline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a2t-M3-8Uv"/>
+                        <viewControllerLayoutGuide type="bottom" id="PDO-bH-5Ua"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fec-0R-FSM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlh-ta-jZG">
+                                <rect key="frame" x="209" y="140" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uXT-EL-Bz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4278" y="1564"/>
         </scene>
         <!--Mua-->
         <scene sceneID="2WA-TP-iCe">
@@ -1074,7 +1152,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3l-SG-zuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="9m8-tA-hgX"/>
             </objects>
-            <point key="canvasLocation" x="2619" y="310"/>
+            <point key="canvasLocation" x="2619" y="834"/>
         </scene>
         <!--List Product View Controller-->
         <scene sceneID="EOk-Ce-pPN">
@@ -1088,37 +1166,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fashion_girl" translatesAutoresizingMaskIntoConstraints="NO" id="CLH-QB-xML">
-                                <rect key="frame" x="116" y="159" width="369" height="283"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="283" id="FXA-gL-GIU"/>
-                                    <constraint firstAttribute="width" secondItem="CLH-QB-xML" secondAttribute="height" multiplier="369:283" id="dE7-U1-Faa"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V59-hv-dyU">
-                                <rect key="frame" x="264" y="481" width="42" height="21"/>
-                                <color key="backgroundColor" red="0.66902792453765869" green="0.73128575086593628" blue="0.94889926910400391" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.15101002156734467" green="0.56891876459121704" blue="0.43715286254882812" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="miP-Hg-Wsw" customClass="SwiftPages" customModule="ShopOnline" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="CLH-QB-xML" secondAttribute="centerX" id="B0j-Y4-AQ5"/>
-                            <constraint firstAttribute="centerY" secondItem="CLH-QB-xML" secondAttribute="centerY" id="QTI-aM-MrR"/>
-                            <constraint firstItem="V59-hv-dyU" firstAttribute="centerX" secondItem="CLH-QB-xML" secondAttribute="centerX" constant="-15.5" id="jjO-zs-NPe"/>
-                            <constraint firstItem="V59-hv-dyU" firstAttribute="top" secondItem="CLH-QB-xML" secondAttribute="bottom" constant="39" id="ldo-8a-IXx"/>
+                            <constraint firstAttribute="trailing" secondItem="miP-Hg-Wsw" secondAttribute="trailing" id="BYf-ue-GaU"/>
+                            <constraint firstItem="miP-Hg-Wsw" firstAttribute="leading" secondItem="ZYZ-U1-tzh" secondAttribute="leading" id="FFr-3Q-P1l"/>
+                            <constraint firstAttribute="bottom" secondItem="miP-Hg-Wsw" secondAttribute="bottom" id="LF2-WL-P0T"/>
+                            <constraint firstItem="miP-Hg-Wsw" firstAttribute="top" secondItem="sLT-0A-pUx" secondAttribute="bottom" id="Poy-DK-KQ1"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mImageView" destination="CLH-QB-xML" id="Hvj-U9-B2Y"/>
-                        <outlet property="mLabel" destination="V59-hv-dyU" id="yd5-rJ-jwR"/>
+                        <outlet property="mSwiftPages" destination="miP-Hg-Wsw" id="ecc-AW-qds"/>
+                        <segue destination="g4h-AR-Ryf" kind="show" identifier="kSegue_NewProduct" id="GaK-Md-5lk"/>
+                        <segue destination="Mtn-x8-97y" kind="show" identifier="kSegue_DiscountProduct" id="uPJ-fF-CFI"/>
+                        <segue destination="mtr-aa-LYJ" kind="show" identifier="kSegue_CloestProduct" id="vgS-kC-4ZY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdc-0L-zEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3384" y="310"/>
+            <point key="canvasLocation" x="3498" y="834"/>
         </scene>
         <!--Tab Menu View Controller-->
         <scene sceneID="LOu-3c-Rmb">
@@ -1140,7 +1210,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1E-4V-7sD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1785" y="1333"/>
+            <point key="canvasLocation" x="1749" y="2393"/>
         </scene>
         <!--Bán-->
         <scene sceneID="Rsr-6F-OQl">
@@ -1157,6 +1227,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="a14-Hf-sTt">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Đăng bán sản phẩm.  Chụp hình và chuyển tới page bán " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfh-4I-Lln">
+                                <rect key="frame" x="248" y="255" width="164" height="122"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1174,9 +1250,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddT-MU-pbI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2619" y="1051"/>
+            <point key="canvasLocation" x="2619" y="1615"/>
         </scene>
-        <!--Cài đặt-->
+        <!--Quản lý-->
         <scene sceneID="M6c-1t-W2T">
             <objects>
                 <viewController id="hY5-Lm-fcY" sceneMemberID="viewController">
@@ -1187,17 +1263,34 @@
                     <view key="view" contentMode="scaleToFill" id="P9m-C6-lyO">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jey-ks-RrJ">
+                                <rect key="frame" x="80" y="269" width="440" height="61"/>
+                                <string key="text">Quan ly thong tin ca nhan.          
+Quan ly danh sach mua hang      
+Quan ly kho hang      </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Jey-ks-RrJ" secondAttribute="centerX" id="CA6-Mu-mg9"/>
+                            <constraint firstItem="Jey-ks-RrJ" firstAttribute="leading" secondItem="P9m-C6-lyO" secondAttribute="leading" constant="80" id="eEX-qN-ke9"/>
+                            <constraint firstAttribute="trailing" secondItem="Jey-ks-RrJ" secondAttribute="trailing" constant="80" id="g9f-j5-dgP"/>
+                            <constraint firstAttribute="centerY" secondItem="Jey-ks-RrJ" secondAttribute="centerY" id="qJL-AT-oCd"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="5" title="Cài đặt" image="setting" id="vdx-yp-4Rm">
+                    <tabBarItem key="tabBarItem" tag="5" title="Quản lý" image="profile" id="vdx-yp-4Rm">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="setting_selected"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="profile_selected"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rq2-FT-aRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2641" y="3455"/>
+            <point key="canvasLocation" x="2619" y="3947"/>
         </scene>
         <!--Thông báo-->
         <scene sceneID="4e2-JO-Hhw">
@@ -1210,6 +1303,14 @@
                     <view key="view" contentMode="scaleToFill" id="ev3-bY-WO2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thông báo trạng thái đơn hàng (gồm đặt mua và đặt bán)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmX-m3-MJD">
+                                <rect key="frame" x="174" y="235" width="263" height="125"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Thông báo" image="alert" id="yvZ-UB-KBP">
@@ -1220,9 +1321,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a2p-Wa-bxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2619" y="2440"/>
+            <point key="canvasLocation" x="2619" y="3192"/>
         </scene>
-        <!--Khuyến mãi-->
+        <!--Danh sách-->
         <scene sceneID="4eH-lP-xN8">
             <objects>
                 <viewController id="P1w-83-OHS" sceneMemberID="viewController">
@@ -1237,6 +1338,12 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login1" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-ad-M79">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Danh sách các người bán hàng đang khuyến mãi, mặt hàng khuyến mãi đang hot" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NF-60-AWu">
+                                <rect key="frame" x="177" y="195" width="258" height="209"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1246,7 +1353,7 @@
                             <constraint firstAttribute="bottom" secondItem="ZCD-ad-M79" secondAttribute="bottom" id="Gqe-7H-svJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Khuyến mãi" image="sale" id="VoC-AA-7Ki">
+                    <tabBarItem key="tabBarItem" title="Danh sách" image="sale" id="VoC-AA-7Ki">
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="sale_selected"/>
                         </userDefinedRuntimeAttributes>
@@ -1254,7 +1361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="22v-mJ-CZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2619" y="1749"/>
+            <point key="canvasLocation" x="2619" y="2393"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qTB-Fb-gr8">
@@ -1292,7 +1399,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9KP-rX-ZfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4786" y="-527"/>
+            <point key="canvasLocation" x="4278" y="-527"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="P6u-tS-XnD">
@@ -1310,7 +1417,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c9u-FJ-863" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3274" y="-527"/>
+            <point key="canvasLocation" x="2619" y="-527"/>
         </scene>
     </scenes>
     <resources>
@@ -1322,7 +1429,6 @@
         <image name="camera_selected" width="24" height="17"/>
         <image name="circle-close" width="24" height="24"/>
         <image name="discount-coupon" width="24" height="24"/>
-        <image name="fashion_girl" width="110" height="130"/>
         <image name="login" width="375" height="667"/>
         <image name="login-facebook" width="411" height="91"/>
         <image name="login1" width="375" height="667"/>
@@ -1331,15 +1437,15 @@
         <image name="overlay" width="285" height="118"/>
         <image name="phone" width="110" height="130"/>
         <image name="pin_map" width="24" height="24"/>
+        <image name="profile" width="24" height="24"/>
+        <image name="profile_selected" width="24" height="24"/>
         <image name="sale" width="21" height="21"/>
         <image name="sale_selected" width="24" height="24"/>
-        <image name="setting" width="24" height="24"/>
-        <image name="setting_selected" width="24" height="24"/>
         <image name="shopping" width="24" height="24"/>
         <image name="shopping_selected" width="24" height="24"/>
         <image name="user" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="E64-M7-uzW"/>
+        <segue reference="mpI-8K-eRi"/>
     </inferredMetricsTieBreakers>
 </document>
