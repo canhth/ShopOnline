@@ -9,7 +9,6 @@
 import UIKit
 import SCLAlertView
 import Parse
-import SwiftRequest
 
 class SORegisterViewController: UIViewController {
     

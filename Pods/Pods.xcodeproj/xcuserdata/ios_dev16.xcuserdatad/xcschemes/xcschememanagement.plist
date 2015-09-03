@@ -8,81 +8,118 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>FBSDKCoreKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>FBSDKLoginKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>Facebook-iOS-SDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>FontAwesome.swift-FontAwesome.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 		<key>FontAwesome.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 		<key>ParseFacebookUtils.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>PermissionScope.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>9</integer>
 		</dict>
 		<key>Pods-ShopOnline.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>10</integer>
 		</dict>
 		<key>ReachabilitySwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>11</integer>
 		</dict>
 		<key>SACollectionViewVerticalScalingFlowLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
+		<key>SCLAlertView.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>17</integer>
 		</dict>
 		<key>SVProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>14</integer>
 		</dict>
 		<key>Spring.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>13</integer>
 		</dict>
 		<key>SwiftPages.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>15</integer>
 		</dict>
 		<key>TextFieldEffects.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>16</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -102,6 +139,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1380351CE70C8BBEE49F3CAB65E81E88</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>16C668921875520E03B7413C1198B56D</key>
 		<dict>
 			<key>primary</key>
@@ -117,7 +159,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>2B4649CAEA809EB527BEC02A9351B593</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>347BA67EEBDC82E27AC9B26E884BFA75</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>37372AFB4FBC04A9510A587C6D990114</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,7 +184,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>48E0497F3FD335DC8744B9CFC090262F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4ADDC830F1F3957A877DC0A28F0CBD4E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4C8232592B1FA9807343600F25203667</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -147,7 +209,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8DC61B1FECC74151ACE575DDFA5244A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>90A04D15E2DC291FD837B8AF246D42A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9FDE07AFA614A5D2674CB2A84FD8ED57</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -157,7 +229,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>AF6821D9C60648A222A9ADD3A043CFEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>EACD1F624FC6131FB3B911AF8DAC7C43</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EBCA61CB0BCDAB7C6D7D839EC2790802</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F4A43F86541EE699B69391F41A1C1EA7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
