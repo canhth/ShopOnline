@@ -29,7 +29,6 @@
 		B58DF5CB1B93562300BF8F8B /* NSArray+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58DF5CA1B93562300BF8F8B /* NSArray+Custom.swift */; };
 		B58DF5CE1B936F0A00BF8F8B /* AdBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58DF5CD1B936F0A00BF8F8B /* AdBanner.swift */; };
 		B58DF5D01B93701F00BF8F8B /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58DF5CF1B93701F00BF8F8B /* NSManagedObjectContext.swift */; };
-		B593D3531B96EFF40054D493 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = B593D3521B96EFF40054D493 /* Entitlements.plist */; };
 		B593D3561B9716B20054D493 /* BackupSCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D3551B9716B20054D493 /* BackupSCLAlertView.swift */; };
 		B593D35C1B97653E0054D493 /* SOCloestProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D35B1B97653E0054D493 /* SOCloestProductViewController.swift */; };
 		B593D35E1B9765560054D493 /* SODiscountProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D35D1B9765560054D493 /* SODiscountProductViewController.swift */; };
@@ -108,7 +107,6 @@
 		B58DF5CA1B93562300BF8F8B /* NSArray+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSArray+Custom.swift"; sourceTree = "<group>"; };
 		B58DF5CD1B936F0A00BF8F8B /* AdBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdBanner.swift; path = ShopOnline/SOShared/AdBanner.swift; sourceTree = SOURCE_ROOT; };
 		B58DF5CF1B93701F00BF8F8B /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
-		B593D3521B96EFF40054D493 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		B593D3551B9716B20054D493 /* BackupSCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupSCLAlertView.swift; sourceTree = "<group>"; };
 		B593D35B1B97653E0054D493 /* SOCloestProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOCloestProductViewController.swift; sourceTree = "<group>"; };
 		B593D35D1B9765560054D493 /* SODiscountProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SODiscountProductViewController.swift; sourceTree = "<group>"; };
@@ -389,7 +387,6 @@
 		CE3A392E1B78E2F50069A2A5 /* ShopOnline */ = {
 			isa = PBXGroup;
 			children = (
-				B593D3521B96EFF40054D493 /* Entitlements.plist */,
 				CE9AD5A21B7A462A00A58D06 /* SOShared */,
 				CE9AD5AD1B7A463F00A58D06 /* SOSections */,
 				CE3A39361B78E2F50069A2A5 /* ViewController.swift */,
@@ -599,13 +596,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE3A394E1B78E2F50069A2A5 /* Build configuration list for PBXNativeTarget "ShopOnline" */;
 			buildPhases = (
-				BE80FBB2FFC43DEDEEBE64B3 /* Check Pods Manifest.lock */,
 				CE3A39281B78E2F50069A2A5 /* Sources */,
 				CE3A39291B78E2F50069A2A5 /* Frameworks */,
 				CE3A392A1B78E2F50069A2A5 /* Resources */,
-				189842553D92B3E11B51B985 /* Embed Pods Frameworks */,
-				AB025BC7847970498148DA00 /* Copy Pods Resources */,
-				50524F424C454D533F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -676,7 +669,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B593D3531B96EFF40054D493 /* Entitlements.plist in Resources */,
 				B0EAA4D11B9476D3004B9B87 /* SOLeftMenuCell.xib in Resources */,
 				B0DF02E91B98496000AE388A /* ProductCollectionCell.xib in Resources */,
 				CE9AD5AB1B7A462A00A58D06 /* Images.xcassets in Resources */,
@@ -694,67 +686,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		189842553D92B3E11B51B985 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShopOnline/Pods-ShopOnline-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		50524F424C454D533F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export CODESIGN_ALLOCATE=/Library/JailCoder/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ]; then\n/Library/JailCoder/Entitlements/Entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
-		};
-		AB025BC7847970498148DA00 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShopOnline/Pods-ShopOnline-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BE80FBB2FFC43DEDEEBE64B3 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE3A39281B78E2F50069A2A5 /* Sources */ = {

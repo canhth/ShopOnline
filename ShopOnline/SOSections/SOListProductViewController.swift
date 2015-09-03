@@ -26,7 +26,8 @@ class SOListProductViewController: UIViewController {
         //var buttonImages : [UIImage] = [UIImage(named:"HomeIcon.png")!, UIImage(named:"CollectionIcon.png")!, UIImage(named:"LocationIcon.png")!]
         var buttonTitles : [String] = ["Hàng mới", "Giảm giá", "Gần bạn nhất"]
         mSwiftPages.setOriginY(0.0)
-        mSwiftPages.enableAeroEffectInTopBar(true)
+        //mSwiftPages.enableAeroEffectInTopBar(true)
+        mSwiftPages.setTopBarBackground(UIColor(red: 232/255, green: 236/255, blue: 238/255, alpha: 1.0))
         mSwiftPages.setButtonsTextColor(UIColor.blackColor())
         mSwiftPages.setAnimatedBarColor(UIColor(red: 46/255, green: 177.0/255, blue: 135/255, alpha: 1.0))
 
