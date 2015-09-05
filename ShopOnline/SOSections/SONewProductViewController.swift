@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 let ProductCell = "ProductCollectionCell"
 
@@ -14,19 +15,63 @@ class SONewProductViewController: UIViewController, UICollectionViewDelegateFlow
 
     @IBOutlet weak var mListProductCollectionView: UICollectionView!
     
-    let mTitles = ["Thời trang Nữ","Phụ kiện & Làm đẹp","Thời trang Nam","Mẹ & Bé","Thiết bị di động", "Nhà cửa & Xe", "Điện tử điện máy", "Thú cưng", "Đồ cũ", "Sản phẩm khác"]
-    let mImages = ["fashion_girl", "phukien_lamdep", "fashion_men", "mom_baby", "phone", "home_car", "dientu_dienmay","pet", "old_things", "orther_product"]
+    var mListNewProduct :[Product] = []
+    
     let mSectionInsets = UIEdgeInsets(top: 3.0, left: 3.0, bottom: 3.0, right: 3.0)
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.mListProductCollectionView.registerNib(UINib(nibName: "ProductCollectionCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionCell")
+        self.getDataNewProduct()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - Setup view
+    
+    func setupView()
+    {
+        
+    }
+    
+    // MARK: - Load Data from server Parse
+    
+    func getDataNewProduct()
+    {
+        self.view.showLoading()
+        let querry = Product.query()
+        querry?.orderByDescending("createdAt")
+        querry!.includeKey("nameCategories")
+        querry?.whereKey("nameCategories", equalTo: SOListProductViewController.mCategories)
+        querry!.findObjectsInBackgroundWithBlock({(objects , error) -> Void in
+            if let listProducts = objects as? [Product]
+            {
+                for object : Product in listProducts
+                {
+//                    if let parentPointer:PFObject = object["nameCategories"] as? Product
+//                    {
+//                        if (parentPointer["objectId"] as! String == SOListProductViewController.mCategories)
+//                        {
+                            self.mListNewProduct.append(object)
+//                        }
+//                    }
+                }
+                self.mListProductCollectionView.reloadData()
+            }
+            else
+            {
+                println("Error:\(error?.description)")
+            }
+            self.view.hideLoading()
+        })
+        
+    }
+    
     //MARK: - UICollection View
     
     /* Num of sections collection view */
@@ -38,16 +83,20 @@ class SONewProductViewController: UIViewController, UICollectionViewDelegateFlow
     /* Num of each item in section */
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return 10
+        if self.mListNewProduct.count > 0
+        {
+            return self.mListNewProduct.count
+        }
+        return 0
     }
     
     /* Cell for item at index */
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = self.mListProductCollectionView.dequeueReusableCellWithReuseIdentifier(ProductCell, forIndexPath: indexPath) as! ProductCollectionCell
-        cell.mNameProduct.text = self.mTitles[indexPath.row]
-        cell.mImageProduct.image = UIImage(named: self.mImages[indexPath.row])
-        cell.layer.shouldRasterize = true;
-        cell.layer.rasterizationScale = UIScreen.mainScreen().scale;
+        if self.mListNewProduct.count > 0
+        {
+            cell.fillCellWithData(self.mListNewProduct[indexPath.row])
+        }
         return cell
     }
     

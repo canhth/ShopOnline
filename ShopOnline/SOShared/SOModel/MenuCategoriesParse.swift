@@ -7,14 +7,13 @@
 //
 
 import UIKit
-import Foundation
 import Parse
 
 class MenuCategoriesParse: PFObject, PFSubclassing {
     @NSManaged var imageCategories: PFFile
     @NSManaged var nameCategories: String?
     @NSManaged var version: String?
-    @NSManaged var tag: NSInteger
+    @NSManaged var tag: Int
     //1
     class func parseClassName() -> String {
         return "CategoriesMenu"
@@ -34,9 +33,10 @@ class MenuCategoriesParse: PFObject, PFSubclassing {
         return query
     }
     
-    init(imageCategories: PFFile, nameCategories: String?, version: String?, tag: NSInteger) {
+    init(objectId: String, nameCategories: String?, version: String?, tag: Int) {
         super.init()
-        self.imageCategories = imageCategories
+        self.objectId = objectId
+        //self.imageCategories = imageCategories
         self.nameCategories = nameCategories
         self.version = version
         self.tag = tag

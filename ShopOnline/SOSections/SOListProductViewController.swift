@@ -10,12 +10,9 @@ import UIKit
 
 class SOListProductViewController: UIViewController {
     
-    @IBOutlet weak var mImageView: UIImageView!
     @IBOutlet weak var mSwiftPages: SwiftPages!
-    @IBOutlet weak var mLabel: UILabel!
     
-    var currImage: UIImage?
-    var textHeading: String?
+    static var mCategories = MenuCategoriesParse()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +21,7 @@ class SOListProductViewController: UIViewController {
     
         var VCIDs : [String] = ["SONewProductViewController", "SODiscountProductViewController", "SOCloestProductViewController"]
         //var buttonImages : [UIImage] = [UIImage(named:"HomeIcon.png")!, UIImage(named:"CollectionIcon.png")!, UIImage(named:"LocationIcon.png")!]
-        var buttonTitles : [String] = ["Hàng mới", "Giảm giá", "Gần bạn nhất"]
+        var buttonTitles : [String] = ["Hàng mới", "Phổ biến", "Gần tôi"]
         mSwiftPages.setOriginY(0.0)
         //mSwiftPages.enableAeroEffectInTopBar(true)
         mSwiftPages.setTopBarBackground(UIColor(red: 232/255, green: 236/255, blue: 238/255, alpha: 1.0))
@@ -38,16 +35,5 @@ class SOListProductViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

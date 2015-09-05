@@ -961,7 +961,7 @@
                         <viewControllerLayoutGuide type="top" id="h7E-ba-PGa"/>
                         <viewControllerLayoutGuide type="bottom" id="i1n-6z-NlE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1d2-UF-tLu">
+                    <view key="view" contentMode="scaleToFill" id="1d2-UF-tLu" customClass="SpringView" customModule="Spring">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1070,7 +1070,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" reuseIdentifier="CategoriesCell" id="9ze-mQ-FNV" customClass="SOCatagoriesViewCell" customModule="ShopOnline" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" reuseIdentifier="CategoriesCell" id="9ze-mQ-FNV" customClass="SOCatagoriesViewCell" customModule="ShopOnline" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -1080,7 +1080,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="bJp-Cu-pmd">
                                                     <rect key="frame" x="0.0" y="0.0" width="226" height="251"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overlay" translatesAutoresizingMaskIntoConstraints="NO" id="JoH-mf-Czq">
+                                                <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overlay" translatesAutoresizingMaskIntoConstraints="NO" id="JoH-mf-Czq">
                                                     <rect key="frame" x="0.0" y="0.0" width="226" height="108"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description menu" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ao8-rQ-nKz">
@@ -1114,7 +1114,6 @@
                                         <connections>
                                             <outlet property="mImageView" destination="bJp-Cu-pmd" id="zTH-cz-h6x"/>
                                             <outlet property="mTitleLabel" destination="ao8-rQ-nKz" id="eTA-DD-8Sa"/>
-                                            <segue destination="nHB-kd-xhL" kind="show" identifier="kSegue_Category_Push_Detail" id="CA4-e0-KNL"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1126,8 +1125,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
                                         </scrollView>
                                         <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="BGj-7D-aoL">
-                                            <rect key="frame" x="280" y="40" width="39" height="37"/>
-                                            <color key="currentPageIndicatorTintColor" red="0.91372549020000005" green="0.4549019608" blue="0.0039215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <rect key="frame" x="280" y="48" width="39" height="37"/>
+                                            <color key="pageIndicatorTintColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="currentPageIndicatorTintColor" red="0.18039215689999999" green="0.69411764710000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                         </pageControl>
                                     </subviews>
                                     <constraints>
@@ -1136,7 +1136,7 @@
                                         <constraint firstAttribute="centerX" secondItem="BGj-7D-aoL" secondAttribute="centerX" id="Cdd-uF-BaD"/>
                                         <constraint firstItem="sHa-K3-2Kh" firstAttribute="top" secondItem="mgz-3a-heN" secondAttribute="top" id="Oke-0y-Q7J"/>
                                         <constraint firstItem="sHa-K3-2Kh" firstAttribute="leading" secondItem="mgz-3a-heN" secondAttribute="leading" id="W20-4K-K5C"/>
-                                        <constraint firstAttribute="bottom" secondItem="BGj-7D-aoL" secondAttribute="bottom" constant="3" id="rFc-Ee-ZaC"/>
+                                        <constraint firstAttribute="bottom" secondItem="BGj-7D-aoL" secondAttribute="bottom" constant="-5" id="rFc-Ee-ZaC"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="mAdPageControll" destination="BGj-7D-aoL" id="gDH-P7-WqF"/>
@@ -1164,6 +1164,7 @@
                     </tabBarItem>
                     <connections>
                         <outlet property="mCollectionView" destination="vCx-98-Baw" id="hlh-is-0zd"/>
+                        <segue destination="nHB-kd-xhL" kind="show" identifier="kSegue_Push_ListProduct" id="hZQ-Og-O7o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3l-SG-zuL" userLabel="First Responder" sceneMemberID="firstResponder"/>

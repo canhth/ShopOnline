@@ -30,7 +30,7 @@ extension AppDelegate
                     // Check version of data. If diffirent -> let update, or do not thing
                     if self.deleteData(version!, index: menuCategories.count)
                     {
-                        for category:AnyObject in menuCategories
+                        for category:PFObject in menuCategories
                         {
                             // Get data form server with PFObject
                             let nameCategory: AnyObject? = category.objectForKey("nameCategories")
@@ -47,7 +47,8 @@ extension AppDelegate
                                     // Get image with PFFile
                                     let image = UIImage(data:imageData!)
                                     // Import data into core data
-                                    self.addData(nameCategory!, imageCategories: image, version: version, tag: tag)
+                                    //self.addData(nameCategory!, imageCategories: image, version: version, tag: tag, )
+                                    self.addData(nameCategory!, imageCategories: image, version: version, tag: tag, objectId: category.objectId!)
                                 }
                             })
                         }
@@ -73,7 +74,7 @@ extension AppDelegate
     :param: version
     :param: tag
     */
-    func addData(nameCategories: AnyObject, imageCategories:UIImage?, version:AnyObject, tag:NSInteger)
+    func addData(nameCategories: AnyObject, imageCategories:UIImage?, version:AnyObject, tag:NSInteger, objectId:String)
     {
         // Create object with entity name
         let newItem = NSEntityDescription.insertNewObjectForEntityForName("MenuCategories", inManagedObjectContext: self.managedObjectContext!) as! MenuCategories
@@ -81,6 +82,7 @@ extension AppDelegate
         newItem.tag = tag
         newItem.imageCategories = UIImageJPEGRepresentation( imageCategories, 1);
         newItem.version = version as! String
+        newItem.objectId = objectId
         
         var error : NSError? = nil
         // Save object
@@ -147,7 +149,7 @@ extension AppDelegate
                             // Get image with PFFile
                             let image = UIImage(data:imageData!)
                             // Import data into core data
-                            self.addData(nameCategory!, imageCategories: image, version: version, tag: tag)
+                            self.addData(nameCategory!, imageCategories: image, version: version, tag: tag, objectId: category.objectId!)
                         }
                     })
                 }

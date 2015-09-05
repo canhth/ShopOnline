@@ -16,9 +16,8 @@ class SOCatagoriesViewController: UIViewController, UICollectionViewDelegateFlow
 
     @IBOutlet weak var mCollectionView: UICollectionView!
     let mSectionInsets = UIEdgeInsets(top: 1.0, left: 1.0, bottom: 1.0, right: 1.0)
-    var mTitles : [String] = [String]()
-    var mImageFile : [UIImage?] = [UIImage]()
- 
+    var mListCategoriesCoreData : [MenuCategories] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -34,7 +33,6 @@ class SOCatagoriesViewController: UIViewController, UICollectionViewDelegateFlow
     // MARK: - Load Data
     func loadDataForCategories()
     {
-        var listCategoriesCoreData : [MenuCategories] = []
         var fetchRequest = NSFetchRequest(entityName: "MenuCategories")
         
         // Create querry sort object with tag value
@@ -42,16 +40,7 @@ class SOCatagoriesViewController: UIViewController, UICollectionViewDelegateFlow
         fetchRequest.sortDescriptors = [sortDescriptor]
         var error: NSError?
         // Fetch list object
-        listCategoriesCoreData = self.appDelegateManagedObject().executeFetchRequest(fetchRequest, error: nil) as! [MenuCategories]
-        if error == nil
-        {
-            for categori in listCategoriesCoreData
-            {
-                mTitles += [categori.nameCategories]
-                mImageFile +=  [UIImage(data: categori.imageCategories)]
-            }
-            self.mCollectionView.reloadData()
-        }
+        mListCategoriesCoreData = self.appDelegateManagedObject().executeFetchRequest(fetchRequest, error: nil) as! [MenuCategories]
     }
     
     //MARK: - UICollection View
@@ -74,9 +63,9 @@ class SOCatagoriesViewController: UIViewController, UICollectionViewDelegateFlow
     
     /* Num of each item in section */
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if self.mTitles.count > 0
+        if self.mListCategoriesCoreData.count > 0
         {
-            return self.mTitles.count
+            return self.mListCategoriesCoreData.count
         }
         return 1
     }
@@ -84,10 +73,8 @@ class SOCatagoriesViewController: UIViewController, UICollectionViewDelegateFlow
     /* Cell for item at index */
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! SOCatagoriesViewCell
-        cell.mTitleLabel.text = self.mTitles[indexPath.row]
-        cell.mImageView.image = self.mImageFile[indexPath.row]
-//        cell.layer.shouldRasterize = true;
-//        cell.layer.rasterizationScale = UIScreen.mainScreen().scale;
+        cell.mTitleLabel.text = self.mListCategoriesCoreData[indexPath.row].nameCategories
+        cell.mImageView.image = UIImage(data: self.mListCategoriesCoreData[indexPath.row].imageCategories as NSData)
         return cell
     }
 
@@ -102,15 +89,13 @@ class SOCatagoriesViewController: UIViewController, UICollectionViewDelegateFlow
             return mSectionInsets
     }
     
-    // MARK: - Navigation
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
-        if (segue.identifier == kSegue_Categories_Push_ListProduct)
-        {
-            let cell = sender as! SOCatagoriesViewCell
-            let indexPath = self.mCollectionView?.indexPathForCell(cell)
-            let vc = segue.destinationViewController as! SOListProductViewController
-        }
+    func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
+        let listProductVC = setupPushView(SOListProductViewController) as! SOListProductViewController
+        let menuCategory : MenuCategories = self.mListCategoriesCoreData[indexPath.row]
+        let objectMenuParse = MenuCategoriesParse(objectId: menuCategory.objectId, nameCategories: menuCategory.nameCategories, version: menuCategory.version, tag: Int(menuCategory.tag))
+        SOListProductViewController.mCategories = objectMenuParse
+        self.navigationController?.pushViewController(listProductVC, animated: true)
+        return true
     }
+    
 }

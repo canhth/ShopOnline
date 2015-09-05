@@ -8,11 +8,12 @@
     <entity name="MenuCategories" representedClassName="MenuCategories" syncable="YES">
         <attribute name="imageCategories" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
         <attribute name="nameCategories" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="objectId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tag" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="MenuCategories" positionX="-45" positionY="0" width="128" height="105"/>
         <element name="AdBanner" positionX="-45" positionY="27" width="128" height="90"/>
+        <element name="MenuCategories" positionX="-45" positionY="0" width="128" height="120"/>
     </elements>
 </model>

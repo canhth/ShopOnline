@@ -133,7 +133,7 @@ class SOLoginViewController: UIViewController, UITextFieldDelegate {
                 }
                 else
                 {
-                   SCLAlertView().showError("Lỗi xảy ra!", subTitle: "Bạn nhập số điện thoại chưa đúng, vui lòng nhập chính xác số điện thoại của mình.")
+                   SCLAlertView().showError("Lỗi xảy ra!", subTitle: "Bạn nhập Email/Số điện thoại chưa đúng, vui lòng nhập chính xác Email/Số điện thoại của mình.")
                 }
             })
         }
