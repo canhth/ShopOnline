@@ -79,9 +79,16 @@ class SORegisterViewController: UIViewController {
 
     @IBAction func clickSignUpButton(sender: AnyObject)
     {
-        if self.checkTextFieldValidate()
+        if SONetworking.sharedInstance.isHaveConnection()
         {
-            self.checkIsTheHuman()
+            if self.checkTextFieldValidate()
+            {
+                self.checkIsTheHuman()
+            }
+        }
+        else
+        {
+            UIAlertView.showAlertView("Không có kết nối mạng!", message: "Vui lòng bật 3G/Wifi của bạn.")
         }
     }
     

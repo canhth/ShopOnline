@@ -12,9 +12,14 @@ import Parse
 import ParseFacebookUtils
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
+    
+    var locationManager: CLLocationManager!
+    var seenError : Bool = false
+    var locationFixAchieved : Bool = false
+    var locationStatus : NSString = "Not Started"
     
     private func createMenuView()
     {
@@ -43,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         slideMenuController.navigationItem.title = ""
         self.window?.backgroundColor = UIColor(red: 236.0, green: 238.0, blue: 241.0, alpha: 1.0)
         self.window?.rootViewController = slideMenuController
-        self.window?.makeKeyAndVisible()
+        self.window?.makeKeyAndVisible()    
         
         self.setupTabBar()
         self.setupNavigationBar()
@@ -52,6 +57,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         application.statusBarHidden = true
+        initLocationManager();
         Parse.setApplicationId("oHZesfOE9JWAOxO6vOgOlqS0DmSG2Ozso5k0pcEP", clientKey:"5BvGlRSkUXRZZpnc4fjSIQUyvWFRLjouVgfD7BdO")
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
         PFFacebookUtils.initializeFacebook()

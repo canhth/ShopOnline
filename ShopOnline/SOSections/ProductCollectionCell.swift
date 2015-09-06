@@ -69,6 +69,10 @@ class ProductCollectionCell: UICollectionViewCell {
         {
             self.mTypeProductLabel.text = "Sale \(product.discountProduct)%"
         }
+        else
+        {
+            self.mTypeProductLabel.text = ""
+        }
         self.layer.shouldRasterize = true;
         self.layer.rasterizationScale = UIScreen.mainScreen().scale;
     }

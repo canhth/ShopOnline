@@ -5055,7 +5055,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 128F712BFF87BC8755D25958DC081FD5 /* ReachabilitySwift-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -5083,7 +5083,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FDE093E080638A4EE4489DEC7B22ACE1 /* FontAwesome.swift-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 0.4.3;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 0.4.3;
@@ -5111,7 +5111,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7E2024FE9B441BF342C321D1200A7800 /* FBSDKLoginKit-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 4.5.1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 4;
@@ -5138,7 +5138,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4FFDAD47D92132053DE44EAC348F582F /* TextFieldEffects-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 0.4.2;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 0.4.2;
@@ -5165,7 +5165,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 128F712BFF87BC8755D25958DC081FD5 /* ReachabilitySwift-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -5192,7 +5192,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 01DD952EC1D030784FBA03CE3FABCAD9 /* Pods-ShopOnline.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -5221,7 +5221,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5C05487DA7328ACDBFE4678A3B990637 /* FBSDKCoreKit-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 4.5.1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 4;
@@ -5248,7 +5248,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 936EA872CF8E0965EED1956E3083186F /* Spring-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -5275,7 +5275,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E69BB310A8A947547F623E6E7A75160A /* Bolts-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1.2.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -5302,7 +5302,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 434D0311FA5D7471A356EB3CE3659B4C /* Parse-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1.8.1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -5329,7 +5329,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FC3680E49953C9CEE95D3C7506EA7894 /* SCLAlertView-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 0.4.1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 0.4.1;
@@ -5357,7 +5357,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5F8E9E6FFD0EEA1806E72EBF0C563401 /* Facebook-iOS-SDK-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 3.23.2;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 3;
@@ -5384,7 +5384,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FC3680E49953C9CEE95D3C7506EA7894 /* SCLAlertView-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 0.4.1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 0.4.1;
@@ -5411,7 +5411,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 936EA872CF8E0965EED1956E3083186F /* Spring-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1.0.3;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -5439,7 +5439,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 79994BDF5599C318FF24FA4A7E097CE6 /* Pods-ShopOnline.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -5469,7 +5469,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E22C2878D4413ECB1690D4B360BEFC2 /* ParseFacebookUtils-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1.8.1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -5496,7 +5496,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5C05487DA7328ACDBFE4678A3B990637 /* FBSDKCoreKit-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 4.5.1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 4;
@@ -5535,7 +5535,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E22C2878D4413ECB1690D4B360BEFC2 /* ParseFacebookUtils-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1.8.1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -5603,7 +5603,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5F8E9E6FFD0EEA1806E72EBF0C563401 /* Facebook-iOS-SDK-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 3.23.2;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 3;
@@ -5630,8 +5630,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FE2E606B7E1B4D128CB3BC41CF9BAF00 /* SwiftPages-Private.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -5659,7 +5659,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 434D0311FA5D7471A356EB3CE3659B4C /* Parse-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1.8.1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -5698,7 +5698,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E69BB310A8A947547F623E6E7A75160A /* Bolts-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1.2.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -5725,7 +5725,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4FFDAD47D92132053DE44EAC348F582F /* TextFieldEffects-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 0.4.2;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 0.4.2;
@@ -5753,7 +5753,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7E2024FE9B441BF342C321D1200A7800 /* FBSDKLoginKit-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 4.5.1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 4;
@@ -5780,7 +5780,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FE2E606B7E1B4D128CB3BC41CF9BAF00 /* SwiftPages-Private.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 1.1.0;
 				DEFINES_MODULE = YES;
@@ -5808,7 +5808,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FDE093E080638A4EE4489DEC7B22ACE1 /* FontAwesome.swift-Private.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				CURRENT_PROJECT_VERSION = 0.4.3;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 0.4.3;

@@ -203,7 +203,7 @@ public class SwiftPages: UIView, UIScrollViewDelegate {
             // Do nothing. The view is already loaded.
         } else
         {
-            println("Loading Page \(page)")
+
             //The pageView instance is nil, create the page
             var frame = scrollView.bounds
             frame.origin.x = frame.size.width * CGFloat(page)

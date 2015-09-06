@@ -58,7 +58,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sản phẩm mới nhất" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4K-b6-E0U">
                                                     <rect key="frame" x="41" y="14" width="123" height="16"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -94,7 +94,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gần bạn nhất" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20r-eY-uA6">
                                                     <rect key="frame" x="41" y="14" width="85" height="16"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -122,7 +122,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khuyến mãi lớn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5U-Nt-XoT">
                                                     <rect key="frame" x="41" y="14" width="98" height="16"/>
                                                     <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -167,7 +167,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop Online" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krp-y4-M0U">
                                         <rect key="frame" x="255" y="21" width="90" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -965,7 +965,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cAg-oT-ksE">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cAg-oT-ksE">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="BwO-YC-abl">
@@ -980,19 +980,62 @@
                                     <outlet property="delegate" destination="g4h-AR-Ryf" id="VQP-lC-12Y"/>
                                 </connections>
                             </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llR-CB-d3Y">
+                                <rect key="frame" x="30" y="128" width="540" height="344"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chạm để tải lại." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcm-qT-C8L">
+                                        <rect key="frame" x="20" y="163" width="500" height="18"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="listproducttap_refresh" translatesAutoresizingMaskIntoConstraints="NO" id="VtT-ZQ-zaE">
+                                        <rect key="frame" x="254" y="126" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="Afy-H9-6x9"/>
+                                            <constraint firstAttribute="height" constant="32" id="NlP-wJ-50T"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pcm-qT-C8L" secondAttribute="trailing" constant="20" id="1Hk-WE-EOw"/>
+                                    <constraint firstItem="pcm-qT-C8L" firstAttribute="top" secondItem="VtT-ZQ-zaE" secondAttribute="bottom" constant="5" id="HQP-bI-0J5"/>
+                                    <constraint firstItem="pcm-qT-C8L" firstAttribute="leading" secondItem="llR-CB-d3Y" secondAttribute="leading" constant="20" id="SJd-9A-759"/>
+                                    <constraint firstAttribute="centerX" secondItem="pcm-qT-C8L" secondAttribute="centerX" id="dg4-On-vA9"/>
+                                    <constraint firstAttribute="centerY" secondItem="pcm-qT-C8L" secondAttribute="centerY" id="nmZ-Az-ryI"/>
+                                    <constraint firstAttribute="centerX" secondItem="VtT-ZQ-zaE" secondAttribute="centerX" id="qdc-HW-0c8"/>
+                                    <constraint firstAttribute="width" secondItem="llR-CB-d3Y" secondAttribute="height" multiplier="259:165" id="xsD-LF-zGR"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="XoH-7s-Ebh" appends="YES" id="Auz-V1-Ti7"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="cAg-oT-ksE" secondAttribute="trailing" id="0Ve-7o-uZd"/>
+                            <constraint firstAttribute="centerY" secondItem="llR-CB-d3Y" secondAttribute="centerY" id="Dgf-D5-wMa"/>
                             <constraint firstAttribute="bottom" secondItem="cAg-oT-ksE" secondAttribute="bottom" id="UwG-XT-Yma"/>
                             <constraint firstItem="cAg-oT-ksE" firstAttribute="leading" secondItem="1d2-UF-tLu" secondAttribute="leading" id="WYm-Su-tIl"/>
+                            <constraint firstItem="llR-CB-d3Y" firstAttribute="leading" secondItem="1d2-UF-tLu" secondAttribute="leading" constant="30" id="XMY-2Q-H72"/>
+                            <constraint firstAttribute="trailing" secondItem="llR-CB-d3Y" secondAttribute="trailing" constant="30" id="d9Z-VK-IK3"/>
                             <constraint firstItem="cAg-oT-ksE" firstAttribute="top" secondItem="h7E-ba-PGa" secondAttribute="bottom" id="qgX-Gq-iVq"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mListProductCollectionView" destination="cAg-oT-ksE" id="sV9-Ru-NVG"/>
+                        <outlet property="mResultLoadingLabel" destination="pcm-qT-C8L" id="CJS-RW-eYn"/>
+                        <outlet property="mResultLoadingView" destination="llR-CB-d3Y" id="tau-3A-58y"/>
+                        <segue destination="B6P-rV-urN" kind="show" identifier="kPush_DetailProduct" id="KHA-cw-crb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xmv-fD-3K1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="XoH-7s-Ebh">
+                    <connections>
+                        <action selector="clickReloadPageTapGesture:" destination="g4h-AR-Ryf" id="eS5-vQ-O3j"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4278" y="146"/>
         </scene>
@@ -1004,23 +1047,107 @@
                         <viewControllerLayoutGuide type="top" id="iXp-sP-wyx"/>
                         <viewControllerLayoutGuide type="bottom" id="Q1j-wb-y76"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="e1C-of-GaC">
+                    <view key="view" contentMode="scaleToFill" id="e1C-of-GaC" customClass="SpringView" customModule="Spring">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udi-6p-Sol">
-                                <rect key="frame" x="244" y="297" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3no-e9-Mwm">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="Kw9-hf-KRe">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Mtn-x8-97y" id="ioM-Xm-Rad"/>
+                                    <outlet property="delegate" destination="Mtn-x8-97y" id="eV2-uh-0o0"/>
+                                </connections>
+                            </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qfw-Eg-cTg">
+                                <rect key="frame" x="30" y="128" width="540" height="344"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="listproducttap_refresh" translatesAutoresizingMaskIntoConstraints="NO" id="wPa-tz-7iF">
+                                        <rect key="frame" x="254" y="126" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="2vl-R3-L57"/>
+                                            <constraint firstAttribute="width" constant="32" id="MKx-eu-S8k"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hiện tại chưa có sản phẩm nào." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1Z-AD-DR5">
+                                        <rect key="frame" x="20" y="163" width="500" height="18"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="s1Z-AD-DR5" secondAttribute="trailing" constant="20" id="8fD-Uh-bfU"/>
+                                    <constraint firstAttribute="centerX" secondItem="s1Z-AD-DR5" secondAttribute="centerX" id="Est-yJ-jqm"/>
+                                    <constraint firstAttribute="width" secondItem="Qfw-Eg-cTg" secondAttribute="height" multiplier="135:86" id="HIg-ns-F4n"/>
+                                    <constraint firstItem="s1Z-AD-DR5" firstAttribute="leading" secondItem="Qfw-Eg-cTg" secondAttribute="leading" constant="20" id="Ogj-0L-ZBe"/>
+                                    <constraint firstAttribute="centerX" secondItem="wPa-tz-7iF" secondAttribute="centerX" id="V08-b1-61Z"/>
+                                    <constraint firstItem="s1Z-AD-DR5" firstAttribute="top" secondItem="wPa-tz-7iF" secondAttribute="bottom" constant="5" id="sIA-69-8ns"/>
+                                    <constraint firstAttribute="centerY" secondItem="s1Z-AD-DR5" secondAttribute="centerY" id="xHU-7J-14e"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="UKW-hI-M1d" appends="YES" id="e7G-rv-WQ8"/>
+                                </connections>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.78738981485366821" green="0.24644413590431213" blue="0.27221894264221191" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="3no-e9-Mwm" firstAttribute="leading" secondItem="e1C-of-GaC" secondAttribute="leading" id="A8K-QI-IrB"/>
+                            <constraint firstAttribute="centerY" secondItem="Qfw-Eg-cTg" secondAttribute="centerY" id="G8Z-dy-3Ok"/>
+                            <constraint firstAttribute="trailing" secondItem="3no-e9-Mwm" secondAttribute="trailing" id="IPR-kh-DNa"/>
+                            <constraint firstItem="Qfw-Eg-cTg" firstAttribute="leading" secondItem="e1C-of-GaC" secondAttribute="leading" constant="30" id="OYG-4x-1WJ"/>
+                            <constraint firstAttribute="trailing" secondItem="Qfw-Eg-cTg" secondAttribute="trailing" constant="30" id="RwY-O1-4Pz"/>
+                            <constraint firstAttribute="centerX" secondItem="Qfw-Eg-cTg" secondAttribute="centerX" id="WvD-fS-izb"/>
+                            <constraint firstAttribute="bottom" secondItem="3no-e9-Mwm" secondAttribute="bottom" id="pbX-Kp-QIp"/>
+                            <constraint firstItem="3no-e9-Mwm" firstAttribute="top" secondItem="iXp-sP-wyx" secondAttribute="bottom" id="qaS-sy-kwQ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="WvD-fS-izb"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="mListProductCollectionView" destination="3no-e9-Mwm" id="FPU-YA-J7y"/>
+                        <outlet property="mResultLoadingLabel" destination="s1Z-AD-DR5" id="7kP-k7-Zpr"/>
+                        <outlet property="mResultLoadingView" destination="Qfw-Eg-cTg" id="7Iq-cf-mZo"/>
+                        <segue destination="B6P-rV-urN" kind="show" identifier="kPush_Detail_Product" id="kCv-on-rnH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O96-aA-jKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="UKW-hI-M1d">
+                    <connections>
+                        <action selector="clickReloadPageTapGesture:" destination="Mtn-x8-97y" id="9zW-W7-wIx"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4278" y="834"/>
+        </scene>
+        <!--Product Detail View Controller-->
+        <scene sceneID="QAK-4I-KX3">
+            <objects>
+                <viewController id="B6P-rV-urN" customClass="SOProductDetailViewController" customModule="ShopOnline" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ulM-GV-uz2"/>
+                        <viewControllerLayoutGuide type="bottom" id="859-Zl-8dI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rup-qh-7NR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l5f-Tq-5Bs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5212" y="834"/>
         </scene>
         <!--Cloest Product View Controller-->
         <scene sceneID="hqM-EB-hmx">
@@ -1030,21 +1157,81 @@
                         <viewControllerLayoutGuide type="top" id="a2t-M3-8Uv"/>
                         <viewControllerLayoutGuide type="bottom" id="PDO-bH-5Ua"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Fec-0R-FSM">
+                    <view key="view" contentMode="scaleToFill" id="Fec-0R-FSM" customClass="SpringView" customModule="Spring">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlh-ta-jZG">
-                                <rect key="frame" x="209" y="140" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Whb-C2-YeU">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="3xr-bN-zUW">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="mtr-aa-LYJ" id="Q3z-5e-lDJ"/>
+                                    <outlet property="delegate" destination="mtr-aa-LYJ" id="dJo-F3-y4H"/>
+                                </connections>
+                            </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B32-j3-usb">
+                                <rect key="frame" x="30" y="128" width="540" height="344"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="listproducttap_refresh" translatesAutoresizingMaskIntoConstraints="NO" id="Sx0-J9-vsJ">
+                                        <rect key="frame" x="254" y="108" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="5D0-KY-aWg"/>
+                                            <constraint firstAttribute="height" constant="32" id="oqZ-Vl-8zF"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chạm để tải lại." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0P-qf-b7e">
+                                        <rect key="frame" x="20" y="163" width="500" height="18"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="B32-j3-usb" secondAttribute="height" multiplier="135:86" id="2yQ-9f-5cE"/>
+                                    <constraint firstItem="n0P-qf-b7e" firstAttribute="centerX" secondItem="Sx0-J9-vsJ" secondAttribute="centerX" id="4fr-4M-avi"/>
+                                    <constraint firstAttribute="centerY" secondItem="n0P-qf-b7e" secondAttribute="centerY" id="4gO-ug-Q3N"/>
+                                    <constraint firstItem="n0P-qf-b7e" firstAttribute="top" secondItem="Sx0-J9-vsJ" secondAttribute="bottom" constant="23" id="8UK-ia-p3Z"/>
+                                    <constraint firstItem="n0P-qf-b7e" firstAttribute="leading" secondItem="B32-j3-usb" secondAttribute="leading" constant="20" id="Ccm-o1-zrq"/>
+                                    <constraint firstAttribute="centerX" secondItem="n0P-qf-b7e" secondAttribute="centerX" id="K9v-XA-zA6"/>
+                                    <constraint firstAttribute="trailing" secondItem="n0P-qf-b7e" secondAttribute="trailing" constant="20" id="QTC-d2-GyA"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="PQe-bi-43G" appends="YES" id="bML-Lr-KZI"/>
+                                </connections>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Whb-C2-YeU" firstAttribute="leading" secondItem="Fec-0R-FSM" secondAttribute="leading" id="5jk-6G-2BK"/>
+                            <constraint firstAttribute="trailing" secondItem="B32-j3-usb" secondAttribute="trailing" constant="30" id="Lfe-nC-HEW"/>
+                            <constraint firstAttribute="trailing" secondItem="Whb-C2-YeU" secondAttribute="trailing" id="N3Q-O3-pCT"/>
+                            <constraint firstAttribute="centerY" secondItem="B32-j3-usb" secondAttribute="centerY" id="Qz9-9T-sJD"/>
+                            <constraint firstAttribute="bottom" secondItem="Whb-C2-YeU" secondAttribute="bottom" id="RVE-eU-B59"/>
+                            <constraint firstItem="B32-j3-usb" firstAttribute="leading" secondItem="Fec-0R-FSM" secondAttribute="leading" constant="30" id="WGO-43-S7p"/>
+                            <constraint firstItem="Whb-C2-YeU" firstAttribute="top" secondItem="a2t-M3-8Uv" secondAttribute="bottom" id="nPy-XB-9cd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mListProductCollectionView" destination="Whb-C2-YeU" id="N27-ox-jwM"/>
+                        <outlet property="mResultLoadingLabel" destination="n0P-qf-b7e" id="OSD-V8-KHf"/>
+                        <outlet property="mResultLoadingView" destination="B32-j3-usb" id="0Bg-Pk-tFD"/>
+                        <segue destination="B6P-rV-urN" kind="show" identifier="kPush_Detail_Product" id="Zcy-CX-bTP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXT-EL-Bz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="PQe-bi-43G">
+                    <connections>
+                        <action selector="clickReloadPageTapGesture:" destination="mtr-aa-LYJ" id="03j-9F-APd"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4278" y="1564"/>
         </scene>
@@ -1080,7 +1267,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="bJp-Cu-pmd">
                                                     <rect key="frame" x="0.0" y="0.0" width="226" height="251"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overlay" translatesAutoresizingMaskIntoConstraints="NO" id="JoH-mf-Czq">
+                                                <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="overlay" translatesAutoresizingMaskIntoConstraints="NO" id="JoH-mf-Czq">
                                                     <rect key="frame" x="0.0" y="0.0" width="226" height="108"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description menu" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ao8-rQ-nKz">
@@ -1248,7 +1435,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Đăng bán sản phẩm.  Chụp hình và chuyển tới page bán " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfh-4I-Lln">
                                 <rect key="frame" x="248" y="255" width="164" height="122"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1288,7 +1475,7 @@
 Quan ly danh sach mua hang      
 Quan ly kho hang      </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1325,7 +1512,7 @@ Quan ly kho hang      </string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thông báo trạng thái đơn hàng (gồm đặt mua và đặt bán)" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GmX-m3-MJD">
                                 <rect key="frame" x="174" y="235" width="263" height="125"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1359,7 +1546,7 @@ Quan ly kho hang      </string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Danh sách các người bán hàng đang khuyến mãi, mặt hàng khuyến mãi đang hot" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3NF-60-AWu">
                                 <rect key="frame" x="177" y="195" width="258" height="209"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1447,8 +1634,9 @@ Quan ly kho hang      </string>
         <image name="camera_selected" width="24" height="17"/>
         <image name="circle-close" width="24" height="24"/>
         <image name="discount-coupon" width="24" height="24"/>
+        <image name="listproducttap_refresh" width="32" height="32"/>
         <image name="login" width="375" height="667"/>
-        <image name="login-facebook" width="411" height="91"/>
+        <image name="login-facebook" width="205" height="45"/>
         <image name="login1" width="375" height="667"/>
         <image name="login3" width="375" height="667"/>
         <image name="new" width="24" height="24"/>
@@ -1465,5 +1653,6 @@ Quan ly kho hang      </string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mpI-8K-eRi"/>
+        <segue reference="kCv-on-rnH"/>
     </inferredMetricsTieBreakers>
 </document>

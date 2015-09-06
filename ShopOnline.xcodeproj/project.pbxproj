@@ -38,6 +38,10 @@
 		B593D35E1B9765560054D493 /* SODiscountProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D35D1B9765560054D493 /* SODiscountProductViewController.swift */; };
 		B593D3601B97657A0054D493 /* SONewProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D35F1B97657A0054D493 /* SONewProductViewController.swift */; };
 		B593D3641B976F1C0054D493 /* SwiftPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B593D3631B976F1C0054D493 /* SwiftPages.swift */; };
+		B59F2FDD1B9C01AA001DE663 /* CustomUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59F2FDC1B9C01AA001DE663 /* CustomUIView.swift */; };
+		B59F2FDF1B9C02D0001DE663 /* CustomUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59F2FDE1B9C02D0001DE663 /* CustomUIButton.swift */; };
+		B59F2FE11B9C09C7001DE663 /* SOProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59F2FE01B9C09C7001DE663 /* SOProductDetailViewController.swift */; };
+		B5AB39071B9C2AAE00C703E1 /* Appdelegate+CLLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AB39061B9C2AAE00C703E1 /* Appdelegate+CLLocation.swift */; };
 		B5C039161B83A004009F49D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C039151B83A004009F49D3 /* AppDelegate.swift */; };
 		B5CCF89C1B88346A00A0C6FD /* UIView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89B1B88346A00A0C6FD /* UIView+Custom.swift */; };
 		B5CCF89E1B88347A00A0C6FD /* UIImageView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89D1B88347A00A0C6FD /* UIImageView+Custom.swift */; };
@@ -120,7 +124,11 @@
 		B593D35D1B9765560054D493 /* SODiscountProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SODiscountProductViewController.swift; sourceTree = "<group>"; };
 		B593D35F1B97657A0054D493 /* SONewProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SONewProductViewController.swift; sourceTree = "<group>"; };
 		B593D3631B976F1C0054D493 /* SwiftPages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftPages.swift; sourceTree = "<group>"; };
+		B59F2FDC1B9C01AA001DE663 /* CustomUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIView.swift; sourceTree = "<group>"; };
+		B59F2FDE1B9C02D0001DE663 /* CustomUIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUIButton.swift; sourceTree = "<group>"; };
+		B59F2FE01B9C09C7001DE663 /* SOProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOProductDetailViewController.swift; sourceTree = "<group>"; };
 		B5A290C01B8B7AA500E8E923 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		B5AB39061B9C2AAE00C703E1 /* Appdelegate+CLLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Appdelegate+CLLocation.swift"; sourceTree = "<group>"; };
 		B5C039151B83A004009F49D3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ShopOnline/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		B5CCF89B1B88346A00A0C6FD /* UIView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Custom.swift"; sourceTree = "<group>"; };
 		B5CCF89D1B88347A00A0C6FD /* UIImageView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Custom.swift"; sourceTree = "<group>"; };
@@ -355,6 +363,14 @@
 			name = SwiftPages;
 			sourceTree = "<group>";
 		};
+		B5AB39051B9C299700C703E1 /* Product Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B59F2FE01B9C09C7001DE663 /* SOProductDetailViewController.swift */,
+			);
+			name = "Product Detail";
+			sourceTree = "<group>";
+		};
 		B5CCF8B21B88843000A0C6FD /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,6 +411,8 @@
 			isa = PBXGroup;
 			children = (
 				B5F316271B8A1D5D0070353B /* UITabBar+Custom.swift */,
+				B59F2FDC1B9C01AA001DE663 /* CustomUIView.swift */,
+				B59F2FDE1B9C02D0001DE663 /* CustomUIButton.swift */,
 			);
 			name = SubClass;
 			sourceTree = "<group>";
@@ -494,6 +512,7 @@
 			children = (
 				B5C039151B83A004009F49D3 /* AppDelegate.swift */,
 				B519905B1B91D64E00085A31 /* Appdelegate+Custom.swift */,
+				B5AB39061B9C2AAE00C703E1 /* Appdelegate+CLLocation.swift */,
 			);
 			path = Appdelegate;
 			sourceTree = "<group>";
@@ -554,6 +573,7 @@
 		CE9AD5AD1B7A463F00A58D06 /* SOSections */ = {
 			isa = PBXGroup;
 			children = (
+				B5AB39051B9C299700C703E1 /* Product Detail */,
 				B5F316261B89B5210070353B /* TabMenu */,
 				B5F316251B89B5150070353B /* Splash */,
 				B5CCF8B21B88843000A0C6FD /* Categories */,
@@ -740,6 +760,7 @@
 				B59016891B9AE584006E9DB1 /* MenuCategoriesParse.swift in Sources */,
 				CE3A39371B78E2F50069A2A5 /* ViewController.swift in Sources */,
 				B59016831B9AE54F006E9DB1 /* User.swift in Sources */,
+				B59F2FDD1B9C01AA001DE663 /* CustomUIView.swift in Sources */,
 				B51990481B91B82D00085A31 /* UIButton+Custom.swift in Sources */,
 				B0DF02E81B98496000AE388A /* ProductCollectionCell.swift in Sources */,
 				B5F316221B899ED80070353B /* SOListProductViewController.swift in Sources */,
@@ -747,10 +768,12 @@
 				CE9AD5B11B7A46D600A58D06 /* SOIntroViewController.swift in Sources */,
 				B5FA708E1B864CE20050980A /* SOLoginViewController.swift in Sources */,
 				B0EAA4CB1B943845004B9B87 /* JTSplashView.swift in Sources */,
+				B5AB39071B9C2AAE00C703E1 /* Appdelegate+CLLocation.swift in Sources */,
 				B519905C1B91D64E00085A31 /* Appdelegate+Custom.swift in Sources */,
 				CE9AD5C41B7A4E0B00A58D06 /* UITableViewController+Custom.swift in Sources */,
 				CE9AD5B61B7A470900A58D06 /* SOLeftMenuViewController.swift in Sources */,
 				B51990581B91D55500085A31 /* Reachability.swift in Sources */,
+				B59F2FE11B9C09C7001DE663 /* SOProductDetailViewController.swift in Sources */,
 				B593D3641B976F1C0054D493 /* SwiftPages.swift in Sources */,
 				B5F316241B89B50C0070353B /* SOTabMenuViewController.swift in Sources */,
 				CE9AD5AF1B7A46C400A58D06 /* SOSplashViewController.swift in Sources */,
@@ -779,6 +802,7 @@
 				B519904A1B91BDF200085A31 /* UIAlertView+Custom.swift in Sources */,
 				CE3A39351B78E2F50069A2A5 /* ShopOnline.xcdatamodeld in Sources */,
 				B593D3561B9716B20054D493 /* BackupSCLAlertView.swift in Sources */,
+				B59F2FDF1B9C02D0001DE663 /* CustomUIButton.swift in Sources */,
 				B5F3162D1B8A472A0070353B /* Cache.swift in Sources */,
 				B590168C1B9B0975006E9DB1 /* Comment.swift in Sources */,
 				B590168E1B9B098E006E9DB1 /* ImageProduct.swift in Sources */,
@@ -844,9 +868,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -863,7 +887,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -888,9 +912,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -901,7 +925,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -914,7 +938,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -926,7 +950,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "79e4fd54-ff91-4789-8bab-961b689edd29";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "./ShopOnline/SOShared/SOHelpers/Bridging-Header.h";
 			};
 			name = Debug;
@@ -937,7 +961,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -949,7 +973,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "79e4fd54-ff91-4789-8bab-961b689edd29";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "./ShopOnline/SOShared/SOHelpers/Bridging-Header.h";
 			};
 			name = Release;

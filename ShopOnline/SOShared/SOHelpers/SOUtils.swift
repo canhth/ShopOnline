@@ -29,4 +29,11 @@ class SOUtils: NSObject {
         let objectContext = appDelegate.managedObjectContext
         return objectContext!
     }
+
+    func getLocationAppDelegate() -> AnyObject
+    {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let objectLocation = appDelegate.locationManager
+        return objectLocation
+    }
 }

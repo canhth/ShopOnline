@@ -119,23 +119,30 @@ class SOLoginViewController: UIViewController, UITextFieldDelegate {
         }
         else
         {
-            self.mLoaddingView.showLoading()
-            
-            PFUser.logInWithUsernameInBackground(username, password: password, block: { (user, error) -> Void in
+            if SONetworking.sharedInstance.isHaveConnection()
+            {
+                self.mLoaddingView.showLoading()
                 
-                self.mLoaddingView.hideLoading()
-                
-                if ((user) != nil)
-                {
-                    //Save info of user.
-                    SCLAlertView().showSuccess("Lỗi xảy ra!", subTitle: "Bạn nhập số điện thoại chưa đúng, vui lòng nhập chính xác số điện thoại của mình.")
-                    self.dismissViewControllerAnimated(true, completion: nil)
-                }
-                else
-                {
-                   SCLAlertView().showError("Lỗi xảy ra!", subTitle: "Bạn nhập Email/Số điện thoại chưa đúng, vui lòng nhập chính xác Email/Số điện thoại của mình.")
-                }
-            })
+                PFUser.logInWithUsernameInBackground(username, password: password, block: { (user, error) -> Void in
+                    
+                    self.mLoaddingView.hideLoading()
+                    
+                    if ((user) != nil)
+                    {
+                        //Save info of user.
+                        SCLAlertView().showSuccess("Lỗi xảy ra!", subTitle: "Bạn nhập số điện thoại chưa đúng, vui lòng nhập chính xác số điện thoại của mình.")
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    }
+                    else
+                    {
+                        SCLAlertView().showError("Lỗi xảy ra!", subTitle: "Bạn nhập Email/Số điện thoại chưa đúng, vui lòng nhập chính xác Email/Số điện thoại của mình.")
+                    }
+                })
+            }
+            else
+            {
+                UIAlertView.showAlertView("Không có kết nối mạng!", message: "Vui lòng bật 3G/Wifi của bạn.")
+            }
         }
     }
     
