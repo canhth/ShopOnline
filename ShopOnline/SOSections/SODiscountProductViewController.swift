@@ -25,6 +25,16 @@ class SODiscountProductViewController: UIViewController, UICollectionViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.setupView()
+//        self.mListProductCollectionView.registerNib(UINib(nibName: "ProductCollectionCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionCell")
+//        self.refreshControl = UIRefreshControl()
+//        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+//        self.mListProductCollectionView.addSubview(refreshControl)
+//        self.mListProductCollectionView.alwaysBounceVertical = true
+    }
+    
+    override func viewDidAppear(animated: Bool)
+    {
         self.setupView()
         self.mListProductCollectionView.registerNib(UINib(nibName: "ProductCollectionCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionCell")
         self.refreshControl = UIRefreshControl()

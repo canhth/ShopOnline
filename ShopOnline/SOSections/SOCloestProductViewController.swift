@@ -25,6 +25,11 @@ class SOCloestProductViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+    
+    override func viewDidAppear(animated: Bool)
+    {
         self.setupView()
         self.mListProductCollectionView.registerNib(UINib(nibName: "ProductCollectionCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionCell")
         self.refreshControl = UIRefreshControl()
@@ -75,8 +80,20 @@ class SOCloestProductViewController: UIViewController {
     {
         // Loading view
         self.view.showLoading()
+        // Get user location
         let userLocation : CLLocationManager! = SOUtils.sharedInstance.getLocationAppDelegate() as! CLLocationManager
-        let objectLocation = PFGeoPoint(latitude:userLocation.location.coordinate.latitude, longitude:userLocation.location.coordinate.longitude)
+        var objectLocation = PFGeoPoint()
+        
+        // If user is turn on location
+        if userLocation != nil
+        {
+            objectLocation = PFGeoPoint(latitude:userLocation.location.coordinate.latitude, longitude:userLocation.location.coordinate.longitude)
+        }
+        else
+        {
+            objectLocation = PFGeoPoint(latitude:10.87018, longitude:106.8023)
+        }
+        
         //Create querry Product
         let querry = Product.query()
         //Include key with pointer nameCategories

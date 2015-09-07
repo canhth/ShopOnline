@@ -16,8 +16,8 @@ class SOListProductViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.customNavigationBar(SOListProductViewController.mCategories.nameCategories!)
     
         var VCIDs : [String] = ["SONewProductViewController", "SODiscountProductViewController", "SOCloestProductViewController"]
         //var buttonImages : [UIImage] = [UIImage(named:"HomeIcon.png")!, UIImage(named:"CollectionIcon.png")!, UIImage(named:"LocationIcon.png")!]
@@ -30,7 +30,13 @@ class SOListProductViewController: UIViewController {
 
         mSwiftPages.initializeWithVCIDsArrayAndButtonTitlesArray(VCIDs, buttonTitlesArray: buttonTitles)
     }
-
+    
+    override func viewWillDisappear(animated: Bool)
+    {
+        super.viewWillDisappear(true)
+        self.customNavigationBar("")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

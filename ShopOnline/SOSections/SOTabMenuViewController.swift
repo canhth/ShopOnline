@@ -22,6 +22,13 @@ class SOTabMenuViewController: UITabBarController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewWillDisappear(animated: Bool)
+    {
+        super.viewWillDisappear(true)
+        self.customNavigationBar("")
+    }
+    
     override func viewWillLayoutSubviews()
     {
         var tabFrame = self.tabBar.frame

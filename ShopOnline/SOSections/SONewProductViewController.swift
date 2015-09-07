@@ -30,6 +30,7 @@ class SONewProductViewController: UIViewController, UICollectionViewDelegateFlow
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.setupView()
         self.mListProductCollectionView.registerNib(UINib(nibName: "ProductCollectionCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionCell")
         self.refreshControl = UIRefreshControl()

@@ -48,6 +48,7 @@
 		B5CCF89E1B88347A00A0C6FD /* UIImageView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89D1B88347A00A0C6FD /* UIImageView+Custom.swift */; };
 		B5CCF8A01B88349300A0C6FD /* SOUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89F1B88349300A0C6FD /* SOUtils.swift */; };
 		B5CCF8B41B88845800A0C6FD /* SOCatagoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF8B31B88845800A0C6FD /* SOCatagoriesViewController.swift */; };
+		B5D358D11B9E08F00099FECC /* UIViewWithOutBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D358D01B9E08F00099FECC /* UIViewWithOutBorder.swift */; };
 		B5EB85C61B95F1F500B405B8 /* UIImage+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EB85C51B95F1F500B405B8 /* UIImage+Custom.swift */; };
 		B5F316191B8979DE0070353B /* UICollectionViewController+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F316181B8979DE0070353B /* UICollectionViewController+Custom.swift */; };
 		B5F3161B1B8984110070353B /* SOCatagoriesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F3161A1B8984110070353B /* SOCatagoriesViewCell.swift */; };
@@ -149,6 +150,7 @@
 		B5CCF89D1B88347A00A0C6FD /* UIImageView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Custom.swift"; sourceTree = "<group>"; };
 		B5CCF89F1B88349300A0C6FD /* SOUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOUtils.swift; sourceTree = "<group>"; };
 		B5CCF8B31B88845800A0C6FD /* SOCatagoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOCatagoriesViewController.swift; sourceTree = "<group>"; };
+		B5D358D01B9E08F00099FECC /* UIViewWithOutBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewWithOutBorder.swift; sourceTree = "<group>"; };
 		B5EB85C51B95F1F500B405B8 /* UIImage+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Custom.swift"; sourceTree = "<group>"; };
 		B5F316181B8979DE0070353B /* UICollectionViewController+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewController+Custom.swift"; sourceTree = "<group>"; };
 		B5F3161A1B8984110070353B /* SOCatagoriesViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOCatagoriesViewCell.swift; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 				B5F316271B8A1D5D0070353B /* UITabBar+Custom.swift */,
 				B59F2FDC1B9C01AA001DE663 /* CustomUIView.swift */,
 				B59F2FDE1B9C02D0001DE663 /* CustomUIButton.swift */,
+				B5D358D01B9E08F00099FECC /* UIViewWithOutBorder.swift */,
 			);
 			name = SubClass;
 			sourceTree = "<group>";
@@ -812,6 +815,7 @@
 				B519904F1B91CD3700085A31 /* SONetworking.swift in Sources */,
 				B593D3601B97657A0054D493 /* SONewProductViewController.swift in Sources */,
 				B51990461B91B6F800085A31 /* SORegisterViewController.swift in Sources */,
+				B5D358D11B9E08F00099FECC /* UIViewWithOutBorder.swift in Sources */,
 				B593D35C1B97653E0054D493 /* SOCloestProductViewController.swift in Sources */,
 				B5CCF8B41B88845800A0C6FD /* SOCatagoriesViewController.swift in Sources */,
 				B58DF5D01B93701F00BF8F8B /* NSManagedObjectContext.swift in Sources */,
