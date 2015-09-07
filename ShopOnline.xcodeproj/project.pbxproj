@@ -17,6 +17,7 @@
 		B0EAA4CD1B946971004B9B87 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EAA4CC1B946971004B9B87 /* UIColor+Custom.swift */; };
 		B0EAA4D01B9476D3004B9B87 /* SOLeftMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EAA4CE1B9476D3004B9B87 /* SOLeftMenuCell.swift */; };
 		B0EAA4D11B9476D3004B9B87 /* SOLeftMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0EAA4CF1B9476D3004B9B87 /* SOLeftMenuCell.xib */; };
+		B0ECC2D01B9D450D000F5985 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0ECC2CB1B9D448F000F5985 /* CoreAudio.framework */; };
 		B51990461B91B6F800085A31 /* SORegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51990451B91B6F800085A31 /* SORegisterViewController.swift */; };
 		B51990481B91B82D00085A31 /* UIButton+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51990471B91B82D00085A31 /* UIButton+Custom.swift */; };
 		B519904A1B91BDF200085A31 /* UIAlertView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51990491B91BDF200085A31 /* UIAlertView+Custom.swift */; };
@@ -81,6 +82,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B0ECC2CF1B9D44B0000F5985 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4081AE140FE94B3FABB94590 /* Pods-ShopOnline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopOnline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShopOnline/Pods-ShopOnline.debug.xcconfig"; sourceTree = "<group>"; };
 		B0AA4C321B86C24E0029CB8C /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlideMenuControllerSwift.framework; path = "Pods/../build/Debug-iphoneos/SlideMenuControllerSwift.framework"; sourceTree = "<group>"; };
@@ -94,6 +108,7 @@
 		B0EAA4CC1B946971004B9B87 /* UIColor+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 		B0EAA4CE1B9476D3004B9B87 /* SOLeftMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOLeftMenuCell.swift; sourceTree = "<group>"; };
 		B0EAA4CF1B9476D3004B9B87 /* SOLeftMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SOLeftMenuCell.xib; sourceTree = "<group>"; };
+		B0ECC2CB1B9D448F000F5985 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		B51990451B91B6F800085A31 /* SORegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SORegisterViewController.swift; sourceTree = "<group>"; };
 		B51990471B91B82D00085A31 /* UIButton+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Custom.swift"; sourceTree = "<group>"; };
 		B51990491B91BDF200085A31 /* UIAlertView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertView+Custom.swift"; sourceTree = "<group>"; };
@@ -179,6 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0ECC2D01B9D450D000F5985 /* CoreAudio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +653,7 @@
 		DBD36A432D49DBEF36DBE839 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B0ECC2CB1B9D448F000F5985 /* CoreAudio.framework */,
 				B586DEC51B8CBFA100497F2E /* libz.dylib */,
 				B586DEC31B8CBF9900497F2E /* libsqlite3.dylib */,
 				B586DEC11B8CBF8800497F2E /* MobileCoreServices.framework */,
@@ -663,6 +680,7 @@
 				CE3A39281B78E2F50069A2A5 /* Sources */,
 				CE3A39291B78E2F50069A2A5 /* Frameworks */,
 				CE3A392A1B78E2F50069A2A5 /* Resources */,
+				B0ECC2CF1B9D44B0000F5985 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -702,6 +720,7 @@
 				TargetAttributes = {
 					CE3A392B1B78E2F50069A2A5 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = W632CJZ6Y5;
 					};
 					CE3A39431B78E2F50069A2A5 = {
 						CreatedOnToolsVersion = 6.2;
@@ -869,7 +888,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -890,6 +909,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "79e4fd54-ff91-4789-8bab-961b689edd29";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -913,7 +933,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -927,6 +947,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "79e4fd54-ff91-4789-8bab-961b689edd29";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -938,7 +959,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -950,7 +971,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "79e4fd54-ff91-4789-8bab-961b689edd29";
 				SWIFT_OBJC_BRIDGING_HEADER = "./ShopOnline/SOShared/SOHelpers/Bridging-Header.h";
 			};
 			name = Debug;
@@ -961,7 +982,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -973,7 +994,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "79e4fd54-ff91-4789-8bab-961b689edd29";
 				SWIFT_OBJC_BRIDGING_HEADER = "./ShopOnline/SOShared/SOHelpers/Bridging-Header.h";
 			};
 			name = Release;
@@ -983,6 +1004,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -994,6 +1016,7 @@
 				INFOPLIST_FILE = ShopOnlineTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "79e4fd54-ff91-4789-8bab-961b689edd29";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShopOnline.app/ShopOnline";
 			};
 			name = Debug;
@@ -1003,6 +1026,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1010,6 +1034,7 @@
 				INFOPLIST_FILE = ShopOnlineTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "79e4fd54-ff91-4789-8bab-961b689edd29";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShopOnline.app/ShopOnline";
 			};
 			name = Release;

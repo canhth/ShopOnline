@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZNI-IL-tg4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZNI-IL-tg4">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -965,7 +965,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cAg-oT-ksE">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cAg-oT-ksE" customClass="PFQueryCollectionViewController">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="BwO-YC-abl">
@@ -974,52 +974,50 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <view key="backgroundView" hidden="YES" contentMode="scaleToFill" id="llR-CB-d3Y">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chạm để tải lại." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcm-qT-C8L">
+                                            <rect key="frame" x="20" y="163" width="500" height="18"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="listproducttap_refresh" translatesAutoresizingMaskIntoConstraints="NO" id="VtT-ZQ-zaE">
+                                            <rect key="frame" x="254" y="126" width="32" height="32"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="32" id="Afy-H9-6x9"/>
+                                                <constraint firstAttribute="height" constant="32" id="NlP-wJ-50T"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="pcm-qT-C8L" secondAttribute="trailing" constant="20" id="1Hk-WE-EOw"/>
+                                        <constraint firstItem="pcm-qT-C8L" firstAttribute="top" secondItem="VtT-ZQ-zaE" secondAttribute="bottom" constant="5" id="HQP-bI-0J5"/>
+                                        <constraint firstItem="pcm-qT-C8L" firstAttribute="leading" secondItem="llR-CB-d3Y" secondAttribute="leading" constant="20" id="SJd-9A-759"/>
+                                        <constraint firstAttribute="centerX" secondItem="pcm-qT-C8L" secondAttribute="centerX" id="dg4-On-vA9"/>
+                                        <constraint firstAttribute="centerY" secondItem="pcm-qT-C8L" secondAttribute="centerY" id="nmZ-Az-ryI"/>
+                                        <constraint firstAttribute="centerX" secondItem="VtT-ZQ-zaE" secondAttribute="centerX" id="qdc-HW-0c8"/>
+                                        <constraint firstAttribute="width" secondItem="llR-CB-d3Y" secondAttribute="height" multiplier="259:165" id="xsD-LF-zGR"/>
+                                    </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="XoH-7s-Ebh" appends="YES" id="Auz-V1-Ti7"/>
+                                    </connections>
+                                </view>
                                 <cells/>
                                 <connections>
                                     <outlet property="dataSource" destination="g4h-AR-Ryf" id="iqO-Rn-zhK"/>
                                     <outlet property="delegate" destination="g4h-AR-Ryf" id="VQP-lC-12Y"/>
                                 </connections>
                             </collectionView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llR-CB-d3Y">
-                                <rect key="frame" x="30" y="128" width="540" height="344"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chạm để tải lại." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcm-qT-C8L">
-                                        <rect key="frame" x="20" y="163" width="500" height="18"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="listproducttap_refresh" translatesAutoresizingMaskIntoConstraints="NO" id="VtT-ZQ-zaE">
-                                        <rect key="frame" x="254" y="126" width="32" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="32" id="Afy-H9-6x9"/>
-                                            <constraint firstAttribute="height" constant="32" id="NlP-wJ-50T"/>
-                                        </constraints>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="pcm-qT-C8L" secondAttribute="trailing" constant="20" id="1Hk-WE-EOw"/>
-                                    <constraint firstItem="pcm-qT-C8L" firstAttribute="top" secondItem="VtT-ZQ-zaE" secondAttribute="bottom" constant="5" id="HQP-bI-0J5"/>
-                                    <constraint firstItem="pcm-qT-C8L" firstAttribute="leading" secondItem="llR-CB-d3Y" secondAttribute="leading" constant="20" id="SJd-9A-759"/>
-                                    <constraint firstAttribute="centerX" secondItem="pcm-qT-C8L" secondAttribute="centerX" id="dg4-On-vA9"/>
-                                    <constraint firstAttribute="centerY" secondItem="pcm-qT-C8L" secondAttribute="centerY" id="nmZ-Az-ryI"/>
-                                    <constraint firstAttribute="centerX" secondItem="VtT-ZQ-zaE" secondAttribute="centerX" id="qdc-HW-0c8"/>
-                                    <constraint firstAttribute="width" secondItem="llR-CB-d3Y" secondAttribute="height" multiplier="259:165" id="xsD-LF-zGR"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="XoH-7s-Ebh" appends="YES" id="Auz-V1-Ti7"/>
-                                </connections>
-                            </view>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="cAg-oT-ksE" secondAttribute="trailing" id="0Ve-7o-uZd"/>
-                            <constraint firstAttribute="centerY" secondItem="llR-CB-d3Y" secondAttribute="centerY" id="Dgf-D5-wMa"/>
                             <constraint firstAttribute="bottom" secondItem="cAg-oT-ksE" secondAttribute="bottom" id="UwG-XT-Yma"/>
                             <constraint firstItem="cAg-oT-ksE" firstAttribute="leading" secondItem="1d2-UF-tLu" secondAttribute="leading" id="WYm-Su-tIl"/>
-                            <constraint firstItem="llR-CB-d3Y" firstAttribute="leading" secondItem="1d2-UF-tLu" secondAttribute="leading" constant="30" id="XMY-2Q-H72"/>
-                            <constraint firstAttribute="trailing" secondItem="llR-CB-d3Y" secondAttribute="trailing" constant="30" id="d9Z-VK-IK3"/>
                             <constraint firstItem="cAg-oT-ksE" firstAttribute="top" secondItem="h7E-ba-PGa" secondAttribute="bottom" id="qgX-Gq-iVq"/>
                         </constraints>
                     </view>
@@ -1653,6 +1651,6 @@ Quan ly kho hang      </string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mpI-8K-eRi"/>
-        <segue reference="kCv-on-rnH"/>
+        <segue reference="KHA-cw-crb"/>
     </inferredMetricsTieBreakers>
 </document>

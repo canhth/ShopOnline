@@ -8,7 +8,6 @@
 
 import UIKit
 import Spring
-import Parse
 
 class SOIntroViewController: UIViewController , UIScrollViewDelegate {
     

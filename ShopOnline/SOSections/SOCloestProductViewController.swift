@@ -143,7 +143,7 @@ class SOCloestProductViewController: UIViewController {
     func collectionView(collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let screenWidth = getWidthScreen()
         let twoPiecesWidth = floor(screenWidth / 2.0 - 4.0)
-        return CGSizeMake(twoPiecesWidth, 220)
+        return CGSizeMake(twoPiecesWidth, 215 * SOUtils.sharedInstance.getRatioHeight())
     }
     
     /* Set layout for collection cell */
