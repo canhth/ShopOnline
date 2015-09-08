@@ -161,6 +161,11 @@ class SODiscountProductViewController: UIViewController, UICollectionViewDelegat
             return mSectionInsets
     }
 
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let productDetail = setupPushView(SOProductDetailViewController) as! SOProductDetailViewController
+        self.navigationController?.pushViewController(productDetail, animated: true)
+    }
+    
     @IBAction func clickReloadPageTapGesture(sender: AnyObject)
     {
         if SONetworking.sharedInstance.isHaveConnection()

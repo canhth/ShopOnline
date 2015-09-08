@@ -159,6 +159,12 @@ class SONewProductViewController: UIViewController, UICollectionViewDelegateFlow
             return mSectionInsets
     }
 
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let productDetail = setupPushView(SOProductDetailViewController) as! SOProductDetailViewController
+        //self.navigationController?.pushViewController(productDetail, animated: true)
+        self .performSegueWithIdentifier("kPush_Detail_Product", sender: self)
+    }
+    
     @IBAction func clickReloadPageTapGesture(sender: AnyObject)
     {
         if SONetworking.sharedInstance.isHaveConnection()
@@ -170,7 +176,4 @@ class SONewProductViewController: UIViewController, UICollectionViewDelegateFlow
             SCLAlertView().showNotice("Lỗi!", subTitle: "Không có kết nối mạng, vui lòng kết nối với Wifi/3G.")
         }
     }
-
-    
-
 }

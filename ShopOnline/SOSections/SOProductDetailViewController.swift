@@ -10,6 +10,40 @@ import UIKit
 
 class SOProductDetailViewController: UIViewController {
 
+    @IBOutlet weak var mMainScrollView: UIScrollView!
+    
+    @IBOutlet weak var mDetailView: UIView!
+    
+    /* Title & description product */
+    @IBOutlet weak var mImageProductScrollView: UIScrollView!
+    @IBOutlet weak var mPageControll: UIPageControl!
+    @IBOutlet weak var mProductNameLabel: UILabel!
+    @IBOutlet weak var mPriceProduct: UILabel!
+    @IBOutlet weak var mFeeTransportLabel: UILabel!
+    @IBOutlet weak var mProductAvailable: UILabel!
+    @IBOutlet weak var mLikeImageView: UIImageView!
+    @IBOutlet weak var mNumberLikeLabel: UILabel!
+    @IBOutlet weak var mRatingView: FloatRatingView!
+    /* Detail product */
+    @IBOutlet weak var mShopProfileImageView: UIImageView!
+    @IBOutlet weak var mShopNameLabel: UILabel!
+    @IBOutlet weak var mNumberProductLabel: UILabel!
+    @IBOutlet weak var mSomeDetailLabel: UILabel!
+    @IBOutlet weak var mHeightConstraintTextView: NSLayoutConstraint!
+    @IBOutlet weak var mContentDetailProductLabel: UITextView!
+    @IBOutlet weak var mCategoriesLabel: UILabel!
+    @IBOutlet weak var mTradeMarkLabel: UILabel!
+    @IBOutlet weak var mStatusProductLabel: UILabel!
+    @IBOutlet weak var mAddressLabel: UILabel!
+    /* Comment tableview */
+    @IBOutlet weak var mListCommentTableView: UITableView!
+    
+    @IBOutlet weak var mProductConcernCollectionView: UICollectionView!
+    @IBOutlet weak var mBottomView: UIView!
+    @IBOutlet weak var mContactButton: UIButton!
+    @IBOutlet weak var mBuyNowButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,15 +55,12 @@ class SOProductDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        var frameScrollView = self.mMainScrollView.frame
+        frameScrollView.size.width = self.getWidthScreen()
+        self.mImageProductScrollView.contentSize = CGSizeMake(self.getWidthScreen(), self.getHeightScreen()/2.5)
+        self.mMainScrollView.contentSize = CGSizeMake(self.getWidthScreen(), self.mDetailView.frame.origin.y + self.mDetailView.frame.size.height)
     }
-    */
-
+    
 }

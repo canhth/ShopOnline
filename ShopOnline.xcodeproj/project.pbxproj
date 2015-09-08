@@ -57,6 +57,12 @@
 		B5F316241B89B50C0070353B /* SOTabMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F316231B89B50C0070353B /* SOTabMenuViewController.swift */; };
 		B5F316281B8A1D5D0070353B /* UITabBar+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F316271B8A1D5D0070353B /* UITabBar+Custom.swift */; };
 		B5F3162D1B8A472A0070353B /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F3162C1B8A472A0070353B /* Cache.swift */; };
+		B5F9D68B1B9F2D15002AD239 /* FloatRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F9D68A1B9F2D15002AD239 /* FloatRatingView.swift */; };
+		B5F9D68D1B9F2EC7002AD239 /* FloatRatingView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F9D68C1B9F2EC7002AD239 /* FloatRatingView+Custom.swift */; };
+		B5F9D68F1B9F318A002AD239 /* UIViewWithOutRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F9D68E1B9F318A002AD239 /* UIViewWithOutRadius.swift */; };
+		B5F9D6951B9F3437002AD239 /* SOProductDetailCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F9D6931B9F3437002AD239 /* SOProductDetailCommentCell.swift */; };
+		B5F9D6961B9F3437002AD239 /* SOProductDetailCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F9D6941B9F3437002AD239 /* SOProductDetailCommentCell.xib */; };
+		B5F9D6981B9F3880002AD239 /* UIImageViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F9D6971B9F3880002AD239 /* UIImageViewCircle.swift */; };
 		B5FA708E1B864CE20050980A /* SOLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA708D1B864CE20050980A /* SOLoginViewController.swift */; };
 		CE3A39351B78E2F50069A2A5 /* ShopOnline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE3A39331B78E2F50069A2A5 /* ShopOnline.xcdatamodeld */; };
 		CE3A39371B78E2F50069A2A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A39361B78E2F50069A2A5 /* ViewController.swift */; };
@@ -159,6 +165,12 @@
 		B5F316231B89B50C0070353B /* SOTabMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOTabMenuViewController.swift; sourceTree = "<group>"; };
 		B5F316271B8A1D5D0070353B /* UITabBar+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+Custom.swift"; sourceTree = "<group>"; };
 		B5F3162C1B8A472A0070353B /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = ShopOnline/SOShared/MCExtension/Cache.swift; sourceTree = SOURCE_ROOT; };
+		B5F9D68A1B9F2D15002AD239 /* FloatRatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatRatingView.swift; sourceTree = "<group>"; };
+		B5F9D68C1B9F2EC7002AD239 /* FloatRatingView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FloatRatingView+Custom.swift"; sourceTree = "<group>"; };
+		B5F9D68E1B9F318A002AD239 /* UIViewWithOutRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewWithOutRadius.swift; sourceTree = "<group>"; };
+		B5F9D6931B9F3437002AD239 /* SOProductDetailCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOProductDetailCommentCell.swift; sourceTree = "<group>"; };
+		B5F9D6941B9F3437002AD239 /* SOProductDetailCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SOProductDetailCommentCell.xib; sourceTree = "<group>"; };
+		B5F9D6971B9F3880002AD239 /* UIImageViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewCircle.swift; sourceTree = "<group>"; };
 		B5FA708D1B864CE20050980A /* SOLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOLoginViewController.swift; sourceTree = "<group>"; };
 		CB1E80F9667F0DB2E129E257 /* Pods_ShopOnline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopOnline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3A392C1B78E2F50069A2A5 /* ShopOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -384,6 +396,7 @@
 		B5AB39051B9C299700C703E1 /* Product Detail */ = {
 			isa = PBXGroup;
 			children = (
+				B5F9D6921B9F33FF002AD239 /* Comment Cell */,
 				B59F2FE01B9C09C7001DE663 /* SOProductDetailViewController.swift */,
 			);
 			name = "Product Detail";
@@ -432,8 +445,27 @@
 				B59F2FDC1B9C01AA001DE663 /* CustomUIView.swift */,
 				B59F2FDE1B9C02D0001DE663 /* CustomUIButton.swift */,
 				B5D358D01B9E08F00099FECC /* UIViewWithOutBorder.swift */,
+				B5F9D68E1B9F318A002AD239 /* UIViewWithOutRadius.swift */,
+				B5F9D6971B9F3880002AD239 /* UIImageViewCircle.swift */,
 			);
 			name = SubClass;
+			sourceTree = "<group>";
+		};
+		B5F9D6891B9F2D15002AD239 /* FloatRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				B5F9D68A1B9F2D15002AD239 /* FloatRatingView.swift */,
+			);
+			path = FloatRatingView;
+			sourceTree = "<group>";
+		};
+		B5F9D6921B9F33FF002AD239 /* Comment Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B5F9D6931B9F3437002AD239 /* SOProductDetailCommentCell.swift */,
+				B5F9D6941B9F3437002AD239 /* SOProductDetailCommentCell.xib */,
+			);
+			name = "Comment Cell";
 			sourceTree = "<group>";
 		};
 		B5FA708C1B864CD20050980A /* Login */ = {
@@ -548,6 +580,7 @@
 		CE9AD5A61B7A462A00A58D06 /* SOVendors */ = {
 			isa = PBXGroup;
 			children = (
+				B5F9D6891B9F2D15002AD239 /* FloatRatingView */,
 				B593D3621B976F020054D493 /* SwiftPages */,
 				B593D3541B97168C0054D493 /* EditSCLAlertView */,
 				B0EAA4C91B943845004B9B87 /* JTSplashView */,
@@ -648,6 +681,7 @@
 				B58DF5CF1B93701F00BF8F8B /* NSManagedObjectContext.swift */,
 				B0EAA4CC1B946971004B9B87 /* UIColor+Custom.swift */,
 				B5EB85C51B95F1F500B405B8 /* UIImage+Custom.swift */,
+				B5F9D68C1B9F2EC7002AD239 /* FloatRatingView+Custom.swift */,
 			);
 			name = SOExtension;
 			path = MCExtension;
@@ -756,6 +790,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0EAA4D11B9476D3004B9B87 /* SOLeftMenuCell.xib in Resources */,
+				B5F9D6961B9F3437002AD239 /* SOProductDetailCommentCell.xib in Resources */,
 				B0DF02E91B98496000AE388A /* ProductCollectionCell.xib in Resources */,
 				CE9AD5AB1B7A462A00A58D06 /* Images.xcassets in Resources */,
 				CE3A393A1B78E2F50069A2A5 /* Main.storyboard in Resources */,
@@ -799,6 +834,7 @@
 				B593D3641B976F1C0054D493 /* SwiftPages.swift in Sources */,
 				B5F316241B89B50C0070353B /* SOTabMenuViewController.swift in Sources */,
 				CE9AD5AF1B7A46C400A58D06 /* SOSplashViewController.swift in Sources */,
+				B5F9D68D1B9F2EC7002AD239 /* FloatRatingView+Custom.swift in Sources */,
 				B5F3161B1B8984110070353B /* SOCatagoriesViewCell.swift in Sources */,
 				B0EAA4CD1B946971004B9B87 /* UIColor+Custom.swift in Sources */,
 				B5F3161F1B8990C70070353B /* SOAdCollectionReusableView.swift in Sources */,
@@ -808,6 +844,7 @@
 				CE9AD5C01B7A4DD600A58D06 /* NSString+Custom.swift in Sources */,
 				B59016851B9AE576006E9DB1 /* AdBanner.swift in Sources */,
 				B58DF5CB1B93562300BF8F8B /* NSArray+Custom.swift in Sources */,
+				B5F9D68B1B9F2D15002AD239 /* FloatRatingView.swift in Sources */,
 				B5CCF8A01B88349300A0C6FD /* SOUtils.swift in Sources */,
 				B5EB85C61B95F1F500B405B8 /* UIImage+Custom.swift in Sources */,
 				B0B06D6E1B8AB1870016B777 /* Cache+AppSetting.swift in Sources */,
@@ -822,7 +859,10 @@
 				B5F316191B8979DE0070353B /* UICollectionViewController+Custom.swift in Sources */,
 				CE9AD5C21B7A4DE800A58D06 /* UIViewController+Custom.swift in Sources */,
 				B0EAA4C81B942C25004B9B87 /* SOLeftMenuTableViewController.swift in Sources */,
+				B5F9D6951B9F3437002AD239 /* SOProductDetailCommentCell.swift in Sources */,
 				B519904A1B91BDF200085A31 /* UIAlertView+Custom.swift in Sources */,
+				B5F9D6981B9F3880002AD239 /* UIImageViewCircle.swift in Sources */,
+				B5F9D68F1B9F318A002AD239 /* UIViewWithOutRadius.swift in Sources */,
 				CE3A39351B78E2F50069A2A5 /* ShopOnline.xcdatamodeld in Sources */,
 				B593D3561B9716B20054D493 /* BackupSCLAlertView.swift in Sources */,
 				B59F2FDF1B9C02D0001DE663 /* CustomUIButton.swift in Sources */,

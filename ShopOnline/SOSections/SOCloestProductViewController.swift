@@ -168,6 +168,11 @@ class SOCloestProductViewController: UIViewController {
         insetForSectionAtIndex section: Int) -> UIEdgeInsets {
             return mSectionInsets
     }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let productDetail = setupPushView(SOProductDetailViewController) as! SOProductDetailViewController
+        self.navigationController?.pushViewController(productDetail, animated: true)
+    }
 
     @IBAction func clickReloadPageTapGesture(sender: AnyObject)
     {
