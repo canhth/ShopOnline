@@ -64,6 +64,7 @@
 		B5F9D6961B9F3437002AD239 /* SOProductDetailCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5F9D6941B9F3437002AD239 /* SOProductDetailCommentCell.xib */; };
 		B5F9D6981B9F3880002AD239 /* UIImageViewCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F9D6971B9F3880002AD239 /* UIImageViewCircle.swift */; };
 		B5FA708E1B864CE20050980A /* SOLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA708D1B864CE20050980A /* SOLoginViewController.swift */; };
+		B5FDD1AD1BA323D7003EE1E3 /* UIButtonBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDD1AC1BA323D7003EE1E3 /* UIButtonBorder.swift */; };
 		CE3A39351B78E2F50069A2A5 /* ShopOnline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE3A39331B78E2F50069A2A5 /* ShopOnline.xcdatamodeld */; };
 		CE3A39371B78E2F50069A2A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A39361B78E2F50069A2A5 /* ViewController.swift */; };
 		CE3A393A1B78E2F50069A2A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3A39381B78E2F50069A2A5 /* Main.storyboard */; };
@@ -172,6 +173,7 @@
 		B5F9D6941B9F3437002AD239 /* SOProductDetailCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SOProductDetailCommentCell.xib; sourceTree = "<group>"; };
 		B5F9D6971B9F3880002AD239 /* UIImageViewCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewCircle.swift; sourceTree = "<group>"; };
 		B5FA708D1B864CE20050980A /* SOLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOLoginViewController.swift; sourceTree = "<group>"; };
+		B5FDD1AC1BA323D7003EE1E3 /* UIButtonBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonBorder.swift; sourceTree = "<group>"; };
 		CB1E80F9667F0DB2E129E257 /* Pods_ShopOnline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShopOnline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3A392C1B78E2F50069A2A5 /* ShopOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE3A39301B78E2F50069A2A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -447,6 +449,7 @@
 				B5D358D01B9E08F00099FECC /* UIViewWithOutBorder.swift */,
 				B5F9D68E1B9F318A002AD239 /* UIViewWithOutRadius.swift */,
 				B5F9D6971B9F3880002AD239 /* UIImageViewCircle.swift */,
+				B5FDD1AC1BA323D7003EE1E3 /* UIButtonBorder.swift */,
 			);
 			name = SubClass;
 			sourceTree = "<group>";
@@ -855,6 +858,7 @@
 				B5D358D11B9E08F00099FECC /* UIViewWithOutBorder.swift in Sources */,
 				B593D35C1B97653E0054D493 /* SOCloestProductViewController.swift in Sources */,
 				B5CCF8B41B88845800A0C6FD /* SOCatagoriesViewController.swift in Sources */,
+				B5FDD1AD1BA323D7003EE1E3 /* UIButtonBorder.swift in Sources */,
 				B58DF5D01B93701F00BF8F8B /* NSManagedObjectContext.swift in Sources */,
 				B5F316191B8979DE0070353B /* UICollectionViewController+Custom.swift in Sources */,
 				CE9AD5C21B7A4DE800A58D06 /* UIViewController+Custom.swift in Sources */,

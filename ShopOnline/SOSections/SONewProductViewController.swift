@@ -98,8 +98,7 @@ class SONewProductViewController: UIViewController, UICollectionViewDelegateFlow
                 {
                     self.mListNewProduct.append(object)
                 }
-               
-                // Reloaddata collection view
+                
                 if self.mListNewProduct.count < 1
                 {
                     self.mResultLoadingView.hidden = false
@@ -161,7 +160,7 @@ class SONewProductViewController: UIViewController, UICollectionViewDelegateFlow
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let productDetail = setupPushView(SOProductDetailViewController) as! SOProductDetailViewController
-
+        SOProductDetailViewController.mProductModel = self.mListNewProduct[indexPath.row]
         NSNotificationCenter.defaultCenter().postNotificationName("ViewDetailProduct", object: nil)
     }
     

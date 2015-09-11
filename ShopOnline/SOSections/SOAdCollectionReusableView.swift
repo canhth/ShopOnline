@@ -40,8 +40,6 @@ class SOAdCollectionReusableView: UICollectionReusableView, UIScrollViewDelegate
         //Reset content size of scroll view
         self.mAdScrollView.contentSize = CGSizeMake(scrollViewWidth * CGFloat(self.mAdPageControll.numberOfPages), scrollViewHeight)
         self.mAdPageControll.currentPage = 0
-        self.layer.shouldRasterize = true;
-        self.layer.rasterizationScale = UIScreen.mainScreen().scale;
     }
     
     /* Move scroll view to next page */

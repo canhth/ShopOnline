@@ -1,14 +1,14 @@
 //
-//  UIViewWithOutRadius.swift
+//  UIButtonBorder.swift
 //  ShopOnline
 //
-//  Created by Canh on 9/8/15.
+//  Created by Canh on 9/11/15.
 //  Copyright (c) 2015 CanhTran. All rights reserved.
 //
 
 import UIKit
 
-class UIViewWithOutRadius: UIView {
+class UIButtonBorder: UIButton {
     
     /*
     // Only override drawRect: if you perform custom drawing.
@@ -17,10 +17,10 @@ class UIViewWithOutRadius: UIView {
     // Drawing code
     }
     */
-    override func awakeFromNib() {
-        self.layer.borderColor = UIColor.darkTextColor().CGColor
-        self.layer.borderWidth = 0.5
-        self.layer.cornerRadius = 1.0
-    }
     
+    override func awakeFromNib() {
+        self.layer.cornerRadius = 5.0
+        self.layer.borderWidth = 0.5
+        self.layer.borderColor = UIColor.whiteColor().CGColor
+    }
 }

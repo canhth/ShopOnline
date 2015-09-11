@@ -19,7 +19,7 @@ class CustomUIView: UIView {
     */
     override func awakeFromNib() {
         self.layer.borderColor = UIColor.darkTextColor().CGColor
-        self.layer.borderWidth = 1.0
+        self.layer.borderWidth = 0.5
         self.layer.cornerRadius = 5.0
     }
 

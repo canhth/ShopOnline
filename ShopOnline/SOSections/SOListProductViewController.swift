@@ -45,7 +45,9 @@ class SOListProductViewController: UIViewController {
     
     func viewDetailProduct()
     {
-        self.navigationController?.pushViewController(self.setupPushView(SOProductDetailViewController), animated: true)
+        let productDetail = setupPushView(SOProductDetailViewController) as! SOProductDetailViewController
+        productDetail.mCategoriesName = SOListProductViewController.mCategories.nameCategories!
+        self.navigationController?.pushViewController(productDetail, animated: true)
     }
 
 }

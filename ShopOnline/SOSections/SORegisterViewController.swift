@@ -141,7 +141,7 @@ class SORegisterViewController: UIViewController {
         let randomString : String = String.randomStringWithLength(4) as String
         alert.addButton("Đăng ký")
             {
-                if textInput.text == randomString
+                if textInput.text.uppercaseString == randomString
                 {
                     self.registerUserAccount()
                     alert.hideView()

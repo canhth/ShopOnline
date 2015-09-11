@@ -130,7 +130,7 @@ class SOLoginViewController: UIViewController, UITextFieldDelegate {
                     if ((user) != nil)
                     {
                         //Save info of user.
-                        SCLAlertView().showSuccess("Lỗi xảy ra!", subTitle: "Bạn nhập số điện thoại chưa đúng, vui lòng nhập chính xác số điện thoại của mình.")
+                        SCLAlertView().showSuccess("Đăng nhập thành công!", subTitle: "Hãy cùng chúng tôi mua và bán những mặt hàng tốt nhất.")
                         self.dismissViewControllerAnimated(true, completion: nil)
                     }
                     else

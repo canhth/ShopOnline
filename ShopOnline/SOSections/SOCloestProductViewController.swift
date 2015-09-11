@@ -85,7 +85,7 @@ class SOCloestProductViewController: UIViewController {
         var objectLocation = PFGeoPoint()
         
         // If user is turn on location
-        if userLocation != nil
+        if userLocation.location != nil
         {
             objectLocation = PFGeoPoint(latitude:userLocation.location.coordinate.latitude, longitude:userLocation.location.coordinate.longitude)
         }
