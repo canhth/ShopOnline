@@ -29,6 +29,7 @@ class SOListProductViewController: UIViewController {
         mSwiftPages.setAnimatedBarColor(UIColor(red: 46/255, green: 177.0/255, blue: 135/255, alpha: 1.0))
 
         mSwiftPages.initializeWithVCIDsArrayAndButtonTitlesArray(VCIDs, buttonTitlesArray: buttonTitles)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "viewDetailProduct", name:"ViewDetailProduct", object: nil)
     }
     
     override func viewWillDisappear(animated: Bool)
@@ -40,6 +41,11 @@ class SOListProductViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func viewDetailProduct()
+    {
+        self.navigationController?.pushViewController(self.setupPushView(SOProductDetailViewController), animated: true)
     }
 
 }

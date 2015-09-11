@@ -23,7 +23,7 @@ class SOProductDetailViewController: UIViewController {
     @IBOutlet weak var mProductAvailable: UILabel!
     @IBOutlet weak var mLikeImageView: UIImageView!
     @IBOutlet weak var mNumberLikeLabel: UILabel!
-    @IBOutlet weak var mRatingView: FloatRatingView!
+    @IBOutlet weak var mRatingView: UIView!
     /* Detail product */
     @IBOutlet weak var mShopProfileImageView: UIImageView!
     @IBOutlet weak var mShopNameLabel: UILabel!
@@ -57,10 +57,13 @@ class SOProductDetailViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        var frameScrollView = self.mMainScrollView.frame
-        frameScrollView.size.width = self.getWidthScreen()
+        self.edgesForExtendedLayout = UIRectEdge.None
+//        var frameScrollView = self.mMainScrollView.frame
+//        frameScrollView.size.width = self.getWidthScreen()
+//        frameScrollView.origin.y = -64
+//        self.mMainScrollView.frame = frameScrollView
         self.mImageProductScrollView.contentSize = CGSizeMake(self.getWidthScreen(), self.getHeightScreen()/2.5)
-        self.mMainScrollView.contentSize = CGSizeMake(self.getWidthScreen(), self.mDetailView.frame.origin.y + self.mDetailView.frame.size.height)
+        self.mMainScrollView.contentSize = CGSizeMake(self.getWidthScreen(), self.mBottomView.frame.origin.y + self.mBottomView.frame.size.height)
     }
     
 }

@@ -161,8 +161,8 @@ class SONewProductViewController: UIViewController, UICollectionViewDelegateFlow
 
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let productDetail = setupPushView(SOProductDetailViewController) as! SOProductDetailViewController
-        //self.navigationController?.pushViewController(productDetail, animated: true)
-        self .performSegueWithIdentifier("kPush_Detail_Product", sender: self)
+
+        NSNotificationCenter.defaultCenter().postNotificationName("ViewDetailProduct", object: nil)
     }
     
     @IBAction func clickReloadPageTapGesture(sender: AnyObject)

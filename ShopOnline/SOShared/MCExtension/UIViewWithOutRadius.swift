@@ -19,7 +19,7 @@ class UIViewWithOutRadius: UIView {
     */
     override func awakeFromNib() {
         self.layer.borderColor = UIColor.darkGrayColor().CGColor
-        self.layer.borderWidth = 1.0
+        self.layer.borderWidth = 0.5
     }
     
 }
