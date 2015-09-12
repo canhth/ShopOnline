@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Parse
 
-class SOProductDetailViewController: UIViewController, UIScrollViewDelegate {
+class SOProductDetailViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate {
 
     static var mProductModel = Product()
     var mCategoriesName = String()
@@ -49,29 +50,26 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var mConstraintHeightTextDetailProduct: NSLayoutConstraint!
     
     @IBOutlet weak var mConstraintTableViewComment: UITableView!
-    
-    let mImageProduct = ["dientu_dienmay","fashion_men","home_car"]
+
+    //Data
+    var mImageOfProduct = [ImageProduct]()
+    var mCommentProduct : NSMutableArray = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
-        self.mPageControll.numberOfPages = 3
+        
         //Set up frame of scroll view equals super view
         let scrollViewWidth:CGFloat = self.mImageProductScrollView.frame.width
         let scrollViewHeight:CGFloat = self.mImageProductScrollView.frame.height
-        var imgOne = UIImageView(frame: CGRectMake(0, 0, scrollViewWidth, scrollViewHeight))
-        imgOne.image = UIImage(named: "dientu_dienmay")
-        var imgTwo = UIImageView(frame: CGRectMake(scrollViewWidth, 0, scrollViewWidth, scrollViewHeight))
-        imgTwo.image = UIImage(named: "fashion_men")
-        var imgThree = UIImageView(frame: CGRectMake(scrollViewWidth * 2, 0, scrollViewWidth, scrollViewHeight))
-        imgThree.image = UIImage(named: "home_car")
-        //Add image into scrollview
-        self.mImageProductScrollView .addSubview(imgOne)
-        self.mImageProductScrollView.addSubview(imgTwo)
-        self.mImageProductScrollView.addSubview(imgThree)
+        
         //Reset content size of scroll view
         self.mPageControll.currentPage = 0
-         self.mImageProductScrollView.contentSize = CGSizeMake(scrollViewWidth * 3, scrollViewHeight)
+        self.getListImage(scrollViewWidth, scrollViewHeight: scrollViewHeight)
+        
+        self.mListCommentTableView.registerNib(UINib(nibName:"SOProductDetailCommentCell", bundle: nil), forCellReuseIdentifier: "SOProductDetailCommentCell")
+
+        self.getCommentProduct()
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,14 +79,25 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        self.edgesForExtendedLayout = UIRectEdge.None
+        // Setup content size of big scrollview
         self.mMainScrollView.contentSize = CGSizeMake(self.getWidthScreen(), self.mBottomView.frame.origin.y + self.mBottomView.frame.size.height)
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(true)
+        self.customNavigationBar("")
+    }
+    
+    /**
+    Setup view, data of each label
+    */
     func setupView()
     {
+        self.customNavigationBar(SOListProductViewController.mCategories.nameCategories!)
+        
         self.mListCommentTableView.layer.cornerRadius = 5.0
         
+        // Array labels
         var arrayLabels : NSArray = [self.mProductNameLabel,
         self.mPriceProduct,
         self.mFeeTransportLabel,
@@ -101,6 +110,7 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate {
         self.mStatusProductLabel,
         self.mAddressLabel]
         
+        // Array valuse of label
         var arrayValues  = [SOProductDetailViewController.mProductModel.title,
         "\(SOProductDetailViewController.mProductModel.priceProduct!.convertNumberToMoneyVND() as String)",
         "Phí vận chuyển: \(SOProductDetailViewController.mProductModel.transportFee)",
@@ -113,12 +123,114 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate {
         SOProductDetailViewController.mProductModel.status,
         "Address of own shop"]
         
+        // Set text label
         arrayLabels.enumerateObjectsUsingBlock( { (objectLabel, idx, stop) -> Void in
             var label : UILabel = objectLabel as! UILabel
             label.text = arrayValues[idx]
         })
         self.mContentDetailProductLabel.text = SOProductDetailViewController.mProductModel.subTitle
     }
+    
+    //MARK:- Image product
+    
+    /**
+    Get list image from server
+    
+    :param: scrollViewWidth  scroll imageview
+    :param: scrollViewHeight scroll imageview
+    */
+    func getListImage(scrollViewWidth : CGFloat, scrollViewHeight : CGFloat)
+    {
+        /// Create querry with where key
+        let query = ImageProduct.query()
+        query!.whereKey("productID", equalTo: SOProductDetailViewController.mProductModel.objectId!)
+        
+        query!.findObjectsInBackgroundWithBlock
+            {
+            (objects: [AnyObject]?, error: NSError?) -> Void in
+            if let listImage = objects as? [PFObject]
+            {
+                // Index of image
+                var index = 0 as CGFloat
+                self.mPageControll.numberOfPages = listImage.count
+                // Setup content size of image scrollview when loaded
+                self.mImageProductScrollView.contentSize = CGSizeMake(scrollViewWidth * CGFloat(self.mPageControll.numberOfPages), scrollViewHeight)
+                // Get image with data
+                for object:AnyObject! in listImage
+                {
+                    println("get image\(index)")
+                    let image = object.objectForKey("imageProduct") as! PFFile
+                    /**
+                    *  Get image in background
+                    */
+                    image.getDataInBackgroundWithBlock({
+                        (imageData, error ) -> Void in
+                        if (error == nil)
+                        {
+                            // Get image with PFFile
+                            let image:UIImage = UIImage(data:imageData!)!
+                            
+                            // Setup scroll view
+                            var imgView = UIImageView(frame: CGRectMake(scrollViewWidth * index, 0, scrollViewWidth, scrollViewHeight))
+                            imgView.contentMode = UIViewContentMode.ScaleAspectFit
+                            imgView.image = image
+                            self.mImageProductScrollView.addSubview(imgView)
+                            index += 1
+                        }
+                    })
+                }
+            }
+        }
+    }
+    
+    //MARK: Comment product
+    
+    /**
+    Get all comment of product
+    */
+    func getCommentProduct()
+    {
+        /// Create querry with where key
+        let query = Comment.query()
+        query!.whereKey("productID", equalTo: SOProductDetailViewController.mProductModel.objectId!)
+        
+        query!.findObjectsInBackgroundWithBlock
+            {
+                (objects: [AnyObject]?, error: NSError?) -> Void in
+                if let listComment = objects as? [PFObject]
+                {
+                    for comment in listComment
+                    {
+                        self.mCommentProduct.addObject(comment)
+                    }
+                    self.mListCommentTableView.reloadData()
+                }
+        }
+    }
+    
+    //MARK: - UITableView delegate 
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        return self.mCommentProduct.count
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 30
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("SOProductDetailCommentCell", forIndexPath: indexPath) as! SOProductDetailCommentCell
+        cell.setupDataOfCell(self.mCommentProduct[indexPath.row] as! Comment)
+        
+        return cell
+    }
+    
+    
+    //MARK: - ScrollView delegate
     
     func scrollViewDidScroll(scrollView: UIScrollView)
     {

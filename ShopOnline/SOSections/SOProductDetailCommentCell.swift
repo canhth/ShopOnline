@@ -21,8 +21,13 @@ class SOProductDetailCommentCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func setupDataOfCell(comment:Comment)
+    {
+        mUserNameLabel.text = "Find user"
+        mCreateTimeLabel.text = comment.createdAt?.description
+        mContentCommentLabel.text = comment.contentComment
     }
     
 }

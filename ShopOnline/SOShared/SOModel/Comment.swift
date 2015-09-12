@@ -13,6 +13,7 @@ class Comment: PFObject, PFSubclassing {
     
     @NSManaged var contentComment : String
     @NSManaged var userID : PFUser
+    @NSManaged var productID : String
     
     class func parseClassName() -> String {
         return "CommentProduct"
@@ -35,6 +36,24 @@ class Comment: PFObject, PFSubclassing {
     init(imageCategories: PFFile, nameCategories: String?, version: String?, tag: NSInteger) {
         super.init()
 
+    }
+    
+    func getCommentByUserID(userID : String) -> String
+    {
+        let querry = Comment.query()
+        
+        //Include key with pointer nameCategories
+        querry!.includeKey("userID")
+        querry?.whereKey("userID", equalTo: userID)
+        
+        querry!.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+            if error == nil
+            {
+                println(objects)
+            }
+        }
+    
+        return ""
     }
     
     override init() {

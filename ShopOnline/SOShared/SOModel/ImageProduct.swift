@@ -12,6 +12,7 @@ import Parse
 class ImageProduct: PFObject, PFSubclassing
 {
     @NSManaged var imageProduct : PFFile
+    @NSManaged var productID : String
     
     class func parseClassName() -> String {
         return "ImageProduct"

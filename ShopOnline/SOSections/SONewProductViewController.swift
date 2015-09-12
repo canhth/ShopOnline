@@ -33,6 +33,7 @@ class SONewProductViewController: UIViewController, UICollectionViewDelegateFlow
 
         self.setupView()
         self.mListProductCollectionView.registerNib(UINib(nibName: "ProductCollectionCell", bundle: nil), forCellWithReuseIdentifier: "ProductCollectionCell")
+        
         self.refreshControl = UIRefreshControl()
         self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         self.mListProductCollectionView.addSubview(refreshControl)

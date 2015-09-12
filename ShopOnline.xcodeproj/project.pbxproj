@@ -24,7 +24,7 @@
 		B519904F1B91CD3700085A31 /* SONetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B519904E1B91CD3700085A31 /* SONetworking.swift */; };
 		B51990581B91D55500085A31 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51990571B91D55500085A31 /* Reachability.swift */; };
 		B519905C1B91D64E00085A31 /* Appdelegate+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B519905B1B91D64E00085A31 /* Appdelegate+Custom.swift */; };
-		B586DEB41B8CBF0500497F2E /* FaceBookSDK in Resources */ = {isa = PBXBuildFile; fileRef = B586DEB31B8CBF0500497F2E /* FaceBookSDK */; };
+		B56B20BD1BA456F900C11A47 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56B20BC1BA456F900C11A47 /* TableViewController.swift */; };
 		B58DF5CB1B93562300BF8F8B /* NSArray+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58DF5CA1B93562300BF8F8B /* NSArray+Custom.swift */; };
 		B58DF5D01B93701F00BF8F8B /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58DF5CF1B93701F00BF8F8B /* NSManagedObjectContext.swift */; };
 		B59016831B9AE54F006E9DB1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59016821B9AE54F006E9DB1 /* User.swift */; };
@@ -123,7 +123,7 @@
 		B519904E1B91CD3700085A31 /* SONetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SONetworking.swift; path = ShopOnline/SOShared/SONetworking.swift; sourceTree = SOURCE_ROOT; };
 		B51990571B91D55500085A31 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Rechability/Reachability.swift; sourceTree = "<group>"; };
 		B519905B1B91D64E00085A31 /* Appdelegate+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Appdelegate+Custom.swift"; sourceTree = "<group>"; };
-		B586DEB31B8CBF0500497F2E /* FaceBookSDK */ = {isa = PBXFileReference; lastKnownFileType = folder; path = FaceBookSDK; sourceTree = "<group>"; };
+		B56B20BC1BA456F900C11A47 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B586DEB51B8CBF2800497F2E /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = ShopOnline/SOShared/MCVendors/FaceBookSDK/FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		B586DEB71B8CBF2B00497F2E /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = ShopOnline/SOShared/MCVendors/FaceBookSDK/FacebookSDKStrings.bundle; sourceTree = "<group>"; };
 		B586DEB91B8CBF6100497F2E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -467,6 +467,7 @@
 			children = (
 				B5F9D6931B9F3437002AD239 /* SOProductDetailCommentCell.swift */,
 				B5F9D6941B9F3437002AD239 /* SOProductDetailCommentCell.xib */,
+				B56B20BC1BA456F900C11A47 /* TableViewController.swift */,
 			);
 			name = "Comment Cell";
 			sourceTree = "<group>";
@@ -588,7 +589,6 @@
 				B593D3541B97168C0054D493 /* EditSCLAlertView */,
 				B0EAA4C91B943845004B9B87 /* JTSplashView */,
 				B51990541B91D2D000085A31 /* Reachability */,
-				B586DEB31B8CBF0500497F2E /* FaceBookSDK */,
 				B0AA4C361B86C65C0029CB8C /* SlideMenuController */,
 			);
 			name = SOVendors;
@@ -798,7 +798,6 @@
 				CE9AD5AB1B7A462A00A58D06 /* Images.xcassets in Resources */,
 				CE3A393A1B78E2F50069A2A5 /* Main.storyboard in Resources */,
 				CE3A393F1B78E2F50069A2A5 /* LaunchScreen.xib in Resources */,
-				B586DEB41B8CBF0500497F2E /* FaceBookSDK in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,6 +830,7 @@
 				B5AB39071B9C2AAE00C703E1 /* Appdelegate+CLLocation.swift in Sources */,
 				B519905C1B91D64E00085A31 /* Appdelegate+Custom.swift in Sources */,
 				CE9AD5C41B7A4E0B00A58D06 /* UITableViewController+Custom.swift in Sources */,
+				B56B20BD1BA456F900C11A47 /* TableViewController.swift in Sources */,
 				CE9AD5B61B7A470900A58D06 /* SOLeftMenuViewController.swift in Sources */,
 				B51990581B91D55500085A31 /* Reachability.swift in Sources */,
 				B59F2FE11B9C09C7001DE663 /* SOProductDetailViewController.swift in Sources */,
@@ -1006,6 +1006,7 @@
 			baseConfigurationReference = 4081AE140FE94B3FABB94590 /* Pods-ShopOnline.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hai Nguyen (7XV4A7MU2Z)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hai Nguyen (7XV4A7MU2Z)";
@@ -1030,6 +1031,7 @@
 			baseConfigurationReference = E8B48BBD2AAE45D1BCDF2F05 /* Pods-ShopOnline.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
 				DEFINES_MODULE = YES;

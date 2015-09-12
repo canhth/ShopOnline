@@ -377,7 +377,7 @@
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="wL1-rf-Qhx">
                                 <rect key="frame" x="272" y="538" width="55" height="37"/>
-                                <color key="pageIndicatorTintColor" red="0.87058823529999996" green="0.20784313730000001" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.18039215689999999" green="0.69411764710000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -966,7 +966,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cAg-oT-ksE">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="2" id="BwO-YC-abl">
                                     <size key="itemSize" width="150" height="150"/>
@@ -1019,12 +1019,14 @@
                             <constraint firstAttribute="bottom" secondItem="llR-CB-d3Y" secondAttribute="bottom" id="TZn-gH-LhA"/>
                             <constraint firstItem="llR-CB-d3Y" firstAttribute="leading" secondItem="1d2-UF-tLu" secondAttribute="leading" id="Tqv-v2-BPy"/>
                             <constraint firstAttribute="bottom" secondItem="cAg-oT-ksE" secondAttribute="bottom" id="UwG-XT-Yma"/>
+                            <constraint firstItem="cAg-oT-ksE" firstAttribute="top" secondItem="1d2-UF-tLu" secondAttribute="topMargin" id="V6C-E8-uDS"/>
                             <constraint firstItem="cAg-oT-ksE" firstAttribute="leading" secondItem="1d2-UF-tLu" secondAttribute="leading" id="WYm-Su-tIl"/>
                             <constraint firstItem="cAg-oT-ksE" firstAttribute="top" secondItem="h7E-ba-PGa" secondAttribute="bottom" id="qgX-Gq-iVq"/>
                             <constraint firstItem="i1n-6z-NlE" firstAttribute="top" secondItem="llR-CB-d3Y" secondAttribute="bottom" id="rrY-YY-aby"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="qgX-Gq-iVq"/>
                                 <exclude reference="rrY-YY-aby"/>
                             </mask>
                         </variation>
@@ -1033,7 +1035,6 @@
                         <outlet property="mListProductCollectionView" destination="cAg-oT-ksE" id="sV9-Ru-NVG"/>
                         <outlet property="mResultLoadingLabel" destination="pcm-qT-C8L" id="CJS-RW-eYn"/>
                         <outlet property="mResultLoadingView" destination="llR-CB-d3Y" id="tau-3A-58y"/>
-                        <segue destination="B6P-rV-urN" kind="show" identifier="kSegue_push_detail" id="pDF-ej-wL6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xmv-fD-3K1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1125,7 +1126,6 @@
                         <outlet property="mListProductCollectionView" destination="3no-e9-Mwm" id="FPU-YA-J7y"/>
                         <outlet property="mResultLoadingLabel" destination="s1Z-AD-DR5" id="7kP-k7-Zpr"/>
                         <outlet property="mResultLoadingView" destination="Qfw-Eg-cTg" id="7Iq-cf-mZo"/>
-                        <segue destination="B6P-rV-urN" kind="show" identifier="kSegue_push_detail" id="Oh7-jL-k0V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O96-aA-jKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1150,7 +1150,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ifb-w5-HP1">
-                                <rect key="frame" x="0.0" y="64" width="320" height="1251"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1315"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSS-Cv-Wqi">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1295"/>
@@ -1611,6 +1611,10 @@
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="cwS-eV-jPb" secondAttribute="height" multiplier="140:50" id="OSM-DF-gGd"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outlet property="dataSource" destination="B6P-rV-urN" id="NYM-Dh-G33"/>
+                                                            <outlet property="delegate" destination="B6P-rV-urN" id="1Vj-cy-Ybg"/>
+                                                        </connections>
                                                     </tableView>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Vzf-QZ-OU3">
                                                         <rect key="frame" x="20" y="506" width="280" height="105"/>
@@ -1694,7 +1698,7 @@
                                                     <constraint firstItem="mcg-Wd-uJs" firstAttribute="top" secondItem="oVc-0d-1ZB" secondAttribute="top" constant="5" id="dyX-35-pU5"/>
                                                 </constraints>
                                             </view>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M38-aU-LRc">
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M38-aU-LRc">
                                                 <rect key="frame" x="8" y="0.0" width="304" height="190"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="M38-aU-LRc" secondAttribute="height" multiplier="40:25" id="IIr-Rm-FOC"/>
@@ -1705,7 +1709,7 @@
                                             </scrollView>
                                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="QQE-DM-MAL">
                                                 <rect key="frame" x="141" y="143" width="39" height="37"/>
-                                                <color key="pageIndicatorTintColor" red="0.18039215689999999" green="0.69411764710000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="currentPageIndicatorTintColor" red="0.18039215689999999" green="0.69411764710000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                             </pageControl>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1823,6 +1827,7 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Ifb-w5-HP1" secondAttribute="bottom" id="45u-Wa-ibC"/>
                             <constraint firstItem="Ifb-w5-HP1" firstAttribute="width" secondItem="rup-qh-7NR" secondAttribute="width" id="IEX-Pc-Hwj"/>
+                            <constraint firstItem="Ifb-w5-HP1" firstAttribute="top" secondItem="rup-qh-7NR" secondAttribute="topMargin" id="Rlc-Bq-cBl"/>
                             <constraint firstItem="Ifb-w5-HP1" firstAttribute="top" secondItem="ulM-GV-uz2" secondAttribute="bottom" id="X7A-1a-dRZ"/>
                             <constraint firstItem="859-Zl-8dI" firstAttribute="top" secondItem="Ifb-w5-HP1" secondAttribute="bottom" id="XKr-Hr-wvL"/>
                             <constraint firstAttribute="centerX" secondItem="Ifb-w5-HP1" secondAttribute="centerX" id="aFK-7d-jOZ"/>
@@ -1832,6 +1837,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="X7A-1a-dRZ"/>
                                 <exclude reference="aFK-7d-jOZ"/>
                                 <exclude reference="XKr-Hr-wvL"/>
                             </mask>
@@ -1948,7 +1954,6 @@
                         <outlet property="mListProductCollectionView" destination="Whb-C2-YeU" id="N27-ox-jwM"/>
                         <outlet property="mResultLoadingLabel" destination="n0P-qf-b7e" id="OSD-V8-KHf"/>
                         <outlet property="mResultLoadingView" destination="B32-j3-usb" id="0Bg-Pk-tFD"/>
-                        <segue destination="B6P-rV-urN" kind="show" identifier="kSegue_push_detail" id="KgF-qK-Q9G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uXT-EL-Bz3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2381,6 +2386,5 @@ Quan ly kho hang      </string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mpI-8K-eRi"/>
-        <segue reference="pDF-ej-wL6"/>
     </inferredMetricsTieBreakers>
 </document>
