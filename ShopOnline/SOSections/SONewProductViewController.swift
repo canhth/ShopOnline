@@ -149,7 +149,7 @@ class SONewProductViewController: UIViewController, UICollectionViewDelegateFlow
     /* Set size for collection cell */
     func collectionView(collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let screenWidth = getWidthScreen()
-        let twoPiecesWidth = floor(screenWidth / 2.0 - 4.0)
+        let twoPiecesWidth = floor(screenWidth / 2.0 - 6.0)
         return CGSizeMake(twoPiecesWidth, 215 * SOUtils.sharedInstance.getRatioHeight())
     }
     

@@ -31,7 +31,6 @@ class ProductCollectionCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.layer.cornerRadius = 3.0
     }
     
     func fillCellWithData( product:Product )

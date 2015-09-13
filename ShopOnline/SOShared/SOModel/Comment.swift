@@ -12,7 +12,7 @@ import Parse
 class Comment: PFObject, PFSubclassing {
     
     @NSManaged var contentComment : String
-    @NSManaged var userID : PFUser
+    @NSManaged var userID : User
     @NSManaged var productID : String
     
     class func parseClassName() -> String {
@@ -38,11 +38,10 @@ class Comment: PFObject, PFSubclassing {
 
     }
     
-    func getCommentByUserID(userID : String) -> String
+    class func getUserByCommentID(userID : User) -> User
     {
         let querry = Comment.query()
-        
-        //Include key with pointer nameCategories
+        var userComment:User = User()
         querry!.includeKey("userID")
         querry?.whereKey("userID", equalTo: userID)
         
@@ -50,10 +49,14 @@ class Comment: PFObject, PFSubclassing {
             if error == nil
             {
                 println(objects)
+                if let user:[User] = objects as? [User]
+                {
+                    userComment = user[0]
+                }
             }
         }
     
-        return ""
+        return userComment
     }
     
     override init() {

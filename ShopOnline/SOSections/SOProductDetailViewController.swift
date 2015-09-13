@@ -52,7 +52,7 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate, UIT
     @IBOutlet weak var mConstraintTableViewComment: UITableView!
 
     //Data
-    var mImageOfProduct = [ImageProduct]()
+    var mProducts = [Product]()
     var mCommentProduct : NSMutableArray = []
     
     override func viewDidLoad() {
@@ -95,8 +95,7 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate, UIT
     {
         self.customNavigationBar(SOListProductViewController.mCategories.nameCategories!)
         
-        self.mListCommentTableView.layer.cornerRadius = 5.0
-        
+        mContentDetailProductLabel.layer.cornerRadius = 5.0
         // Array labels
         var arrayLabels : NSArray = [self.mProductNameLabel,
         self.mPriceProduct,
@@ -117,7 +116,7 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate, UIT
         "Sẵn có:\(SOProductDetailViewController.mProductModel.numberProduct)",
         "\(SOProductDetailViewController.mProductModel.likeNumber)",
             "number product of shop",
-        "some detail label",
+        "",
         self.mCategoriesName,
         "Add trademark",
         SOProductDetailViewController.mProductModel.status,
@@ -208,6 +207,27 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate, UIT
         }
     }
     
+    //MARK: - Product advise
+    func getListProductAdvise()
+    {
+        /// Create querry with where key
+        let query = Product.query()
+        query!.whereKey("status", equalTo: "Hot") // Maybe add more condition with request if user want to make product is advise
+        
+        query!.findObjectsInBackgroundWithBlock
+            {
+                (objects: [AnyObject]?, error: NSError?) -> Void in
+                if let listProduct = objects as? [Product]
+                {
+                    for product in listProduct
+                    {
+                        self.mProducts += [product]
+                    }
+                    self.mProductConcernCollectionView.reloadData()
+                }
+        }
+    }
+    
     //MARK: - UITableView delegate 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -219,7 +239,7 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate, UIT
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 30
+        return 40
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

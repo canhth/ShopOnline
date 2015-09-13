@@ -29,7 +29,6 @@ class User: PFObject, PFSubclassing {
     
     override class func query() -> PFQuery? {
         let query = PFQuery(className: User.parseClassName()) //1
-        query.orderByDescending("tag") //3
         return query
     }
 

@@ -304,6 +304,13 @@
 			name = MenuCategories;
 			sourceTree = "<group>";
 		};
+		B5638E5E1BA54740005ECEFA /* san pham lien quan */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "san pham lien quan";
+			sourceTree = "<group>";
+		};
 		B58DF5CC1B936EEC00BF8F8B /* AdBanner */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +405,7 @@
 		B5AB39051B9C299700C703E1 /* Product Detail */ = {
 			isa = PBXGroup;
 			children = (
+				B5638E5E1BA54740005ECEFA /* san pham lien quan */,
 				B5F9D6921B9F33FF002AD239 /* Comment Cell */,
 				B59F2FE01B9C09C7001DE663 /* SOProductDetailViewController.swift */,
 			);

@@ -181,12 +181,13 @@ class SOLoginViewController: UIViewController, UITextFieldDelegate {
                     //println("done me request")
                     if error != nil
                     {
-                        println("facebook me request - error is not nil :(")
+                        println("facebook me request - error is nil :) ")
+                        
                         self.dismissViewControllerAnimated(true, completion: nil)
                     }
                     else
                     {
-                        println("facebook me request - error is nil :) ")
+                        println("facebook me request - error is not nil :(")
                         self .getUserInfo()
                         self.dismissViewControllerAnimated(true, completion: nil)
                     }
@@ -216,14 +217,20 @@ class SOLoginViewController: UIViewController, UITextFieldDelegate {
                     //println("done me request")
                     if error != nil
                     {
-                        println("facebook me request - error is not nil :(")
+                        println("facebook me request - error is nil :) ")
                     }
                     else
                     {
-                        println("facebook me request - error is nil :) ")
                         let urlUserImg = "http://graph.facebook.com/\(result.objectId)/picture?type=large"
                         let firstName = result.first_name
-                        let lastName = result.last_name } })
+                        let lastName = result.last_name
+                        // Save to Parse:
+                        PFUser.currentUser()!.username = result.name
+                        PFUser.currentUser()!.email = result.email
+                        PFUser.currentUser()!.setValue(result.objectID, forKey: "fbId")
+                        PFUser.currentUser()!.saveEventually() // Always use saveEventuall
+                        println("facebook me request - error is not nil :(")
+                    } })
             }
         } else
         {
