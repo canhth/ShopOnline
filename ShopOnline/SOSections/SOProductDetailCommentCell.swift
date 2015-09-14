@@ -28,7 +28,6 @@ class SOProductDetailCommentCell: UITableViewCell {
     {
         let querry = PFUser.query()
         querry?.whereKey("objectId", equalTo: comment.userID.objectId!)
-        println(comment.userID.objectId!)
         querry?.getFirstObjectInBackgroundWithBlock({ (object, error) -> Void in
             if error == nil
             {

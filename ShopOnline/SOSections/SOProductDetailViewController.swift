@@ -70,6 +70,8 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate, UIT
         self.mListCommentTableView.registerNib(UINib(nibName:"SOProductDetailCommentCell", bundle: nil), forCellReuseIdentifier: "SOProductDetailCommentCell")
 
         self.getCommentProduct()
+        self.getListProductRelated()
+        self.countNumberProduct()
     }
 
     override func didReceiveMemoryWarning() {
@@ -130,11 +132,9 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate, UIT
         self.mContentDetailProductLabel.text = SOProductDetailViewController.mProductModel.subTitle
     }
     
-    //MARK:- Image product
-    
+    //MARK:- Infomation of Product (images, own shop)
     /**
     Get list image from server
-    
     :param: scrollViewWidth  scroll imageview
     :param: scrollViewHeight scroll imageview
     */
@@ -182,8 +182,29 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate, UIT
         }
     }
     
-    //MARK: Comment product
+    func countNumberProduct()
+    {
+        /// Get user own shop
+        let querry = PFUser.query()
+        querry?.whereKey("objectId", equalTo: SOProductDetailViewController.mProductModel.userID.objectId!)
+        querry?.getFirstObjectInBackgroundWithBlock({ (object, error) -> Void in
+            if let user:PFUser = object as? PFUser
+            {
+                self.mShopNameLabel.text = user.username
+                let query = Product.query()
+                querry!.includeKey("userID")
+                query!.whereKey("userID", equalTo: user)
+                query!.countObjectsInBackgroundWithBlock({ (count, error) -> Void in
+                    if error == nil
+                    {
+                        self.mNumberProductLabel.text = "\(Int(count))"
+                    }
+                })
+            }
+        })
+    }
     
+    //MARK: Comment product
     /**
     Get all comment of product
     */
@@ -208,15 +229,17 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate, UIT
     }
     
     //MARK: - Product advise
-    func getListProductAdvise()
+    /**
+    Get list product Related
+    */
+    func getListProductRelated()
     {
         /// Create querry with where key
         let query = Product.query()
         query!.whereKey("status", equalTo: "Hot") // Maybe add more condition with request if user want to make product is advise
-        
-        query!.findObjectsInBackgroundWithBlock
-            {
-                (objects: [AnyObject]?, error: NSError?) -> Void in
+        query?.orderByDescending("createdAt")
+        query?.whereKey("nameCategories", equalTo: SOListProductViewController.mCategories)
+        query!.findObjectsInBackgroundWithBlock {(objects: [AnyObject]?, error: NSError?) -> Void in
                 if let listProduct = objects as? [Product]
                 {
                     for product in listProduct
