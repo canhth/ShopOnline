@@ -8,8 +8,9 @@
 
 import UIKit
 import Parse
+let ProductLinked = "ProductLinked"
 
-class SOProductDetailViewController: UIViewController, UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate {
+class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
 
     static var mProductModel = Product()
     var mCategoriesName = String()
@@ -50,7 +51,7 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate, UIT
     @IBOutlet weak var mConstraintHeightTextDetailProduct: NSLayoutConstraint!
     
     @IBOutlet weak var mConstraintTableViewComment: UITableView!
-
+    
     //Data
     var mProducts = [Product]()
     var mCommentProduct : NSMutableArray = []
@@ -68,7 +69,7 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate, UIT
         self.getListImage(scrollViewWidth, scrollViewHeight: scrollViewHeight)
         
         self.mListCommentTableView.registerNib(UINib(nibName:"SOProductDetailCommentCell", bundle: nil), forCellReuseIdentifier: "SOProductDetailCommentCell")
-
+        self.mProductConcernCollectionView.registerNib(UINib(nibName:"ProductLinkedCollectionCell", bundle: nil), forCellWithReuseIdentifier: "ProductLinked")
         self.getCommentProduct()
         self.getListProductRelated()
         self.countNumberProduct()
@@ -239,6 +240,7 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate, UIT
         query!.whereKey("status", equalTo: "Hot") // Maybe add more condition with request if user want to make product is advise
         query?.orderByDescending("createdAt")
         query?.whereKey("nameCategories", equalTo: SOListProductViewController.mCategories)
+        query?.limit = 10
         query!.findObjectsInBackgroundWithBlock {(objects: [AnyObject]?, error: NSError?) -> Void in
                 if let listProduct = objects as? [Product]
                 {
@@ -246,6 +248,7 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate, UIT
                     {
                         self.mProducts += [product]
                     }
+                    println(self.mProducts)
                     self.mProductConcernCollectionView.reloadData()
                 }
         }
@@ -286,4 +289,47 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate, UIT
             self.mPageControll.currentPage = Int(currentPage)
         }
     }
+    
+    //MARK: - UICollection View
+    
+    /* Num of sections collection view */
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
+    {
+        return 1
+    }
+    
+    /* Num of each item in section */
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        if self.mProducts.count > 0
+        {
+            return self.mProducts.count
+        }
+        return 0
+    }
+    
+    /* Cell for item at index */
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = self.mProductConcernCollectionView.dequeueReusableCellWithReuseIdentifier(ProductLinked, forIndexPath: indexPath) as! ProductLinkedCollectionCell
+        // Fill data to cell with value
+        if self.mProducts.count > 0
+        {
+            cell.setupCollectionCell(self.mProducts[indexPath.row])
+        }
+        return cell
+    }
+    
+    /* Set size for collection cell */
+    func collectionView(collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let screenWidth = getWidthScreen()
+        let oncePiecesWidth = floor(screenWidth / 4)
+        return CGSizeMake(oncePiecesWidth, self.mProductConcernCollectionView.frame.size.height)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let productDetail = setupPushView(SOProductDetailViewController) as! SOProductDetailViewController
+        SOProductDetailViewController.mProductModel = self.mProducts[indexPath.row]
+        NSNotificationCenter.defaultCenter().postNotificationName("ViewDetailProduct", object: nil)
+    }
+
 }

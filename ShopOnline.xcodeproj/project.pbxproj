@@ -51,6 +51,8 @@
 		B5CCF8A01B88349300A0C6FD /* SOUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF89F1B88349300A0C6FD /* SOUtils.swift */; };
 		B5CCF8B41B88845800A0C6FD /* SOCatagoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CCF8B31B88845800A0C6FD /* SOCatagoriesViewController.swift */; };
 		B5D358D11B9E08F00099FECC /* UIViewWithOutBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D358D01B9E08F00099FECC /* UIViewWithOutBorder.swift */; };
+		B5D86D731BA885EA00627955 /* ProductLinkedCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D86D711BA885EA00627955 /* ProductLinkedCollectionCell.swift */; };
+		B5D86D741BA885EA00627955 /* ProductLinkedCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5D86D721BA885EA00627955 /* ProductLinkedCollectionCell.xib */; };
 		B5EB85C61B95F1F500B405B8 /* UIImage+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EB85C51B95F1F500B405B8 /* UIImage+Custom.swift */; };
 		B5F316191B8979DE0070353B /* UICollectionViewController+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F316181B8979DE0070353B /* UICollectionViewController+Custom.swift */; };
 		B5F3161B1B8984110070353B /* SOCatagoriesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F3161A1B8984110070353B /* SOCatagoriesViewCell.swift */; };
@@ -70,7 +72,6 @@
 		CE3A39351B78E2F50069A2A5 /* ShopOnline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE3A39331B78E2F50069A2A5 /* ShopOnline.xcdatamodeld */; };
 		CE3A39371B78E2F50069A2A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A39361B78E2F50069A2A5 /* ViewController.swift */; };
 		CE3A393A1B78E2F50069A2A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3A39381B78E2F50069A2A5 /* Main.storyboard */; };
-		CE3A393F1B78E2F50069A2A5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE3A393D1B78E2F50069A2A5 /* LaunchScreen.xib */; };
 		CE3A394B1B78E2F50069A2A5 /* ShopOnlineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3A394A1B78E2F50069A2A5 /* ShopOnlineTests.swift */; };
 		CE9AD5AB1B7A462A00A58D06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE9AD5A51B7A462A00A58D06 /* Images.xcassets */; };
 		CE9AD5AF1B7A46C400A58D06 /* SOSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9AD5AE1B7A46C400A58D06 /* SOSplashViewController.swift */; };
@@ -164,6 +165,8 @@
 		B5CCF89F1B88349300A0C6FD /* SOUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOUtils.swift; sourceTree = "<group>"; };
 		B5CCF8B31B88845800A0C6FD /* SOCatagoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOCatagoriesViewController.swift; sourceTree = "<group>"; };
 		B5D358D01B9E08F00099FECC /* UIViewWithOutBorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewWithOutBorder.swift; sourceTree = "<group>"; };
+		B5D86D711BA885EA00627955 /* ProductLinkedCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductLinkedCollectionCell.swift; sourceTree = "<group>"; };
+		B5D86D721BA885EA00627955 /* ProductLinkedCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductLinkedCollectionCell.xib; sourceTree = "<group>"; };
 		B5EB85C51B95F1F500B405B8 /* UIImage+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Custom.swift"; sourceTree = "<group>"; };
 		B5F316181B8979DE0070353B /* UICollectionViewController+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewController+Custom.swift"; sourceTree = "<group>"; };
 		B5F3161A1B8984110070353B /* SOCatagoriesViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOCatagoriesViewCell.swift; sourceTree = "<group>"; };
@@ -321,11 +324,13 @@
 			name = MenuCategories;
 			sourceTree = "<group>";
 		};
-		B5638E5E1BA54740005ECEFA /* san pham lien quan */ = {
+		B5638E5E1BA54740005ECEFA /* Product linked */ = {
 			isa = PBXGroup;
 			children = (
+				B5D86D711BA885EA00627955 /* ProductLinkedCollectionCell.swift */,
+				B5D86D721BA885EA00627955 /* ProductLinkedCollectionCell.xib */,
 			);
-			name = "san pham lien quan";
+			name = "Product linked";
 			sourceTree = "<group>";
 		};
 		B58DF5CC1B936EEC00BF8F8B /* AdBanner */ = {
@@ -422,7 +427,7 @@
 		B5AB39051B9C299700C703E1 /* Product Detail */ = {
 			isa = PBXGroup;
 			children = (
-				B5638E5E1BA54740005ECEFA /* san pham lien quan */,
+				B5638E5E1BA54740005ECEFA /* Product linked */,
 				B5F9D6921B9F33FF002AD239 /* Comment Cell */,
 				B59F2FE01B9C09C7001DE663 /* SOProductDetailViewController.swift */,
 			);
@@ -820,10 +825,10 @@
 			files = (
 				B0EAA4D11B9476D3004B9B87 /* SOLeftMenuCell.xib in Resources */,
 				B5F9D6961B9F3437002AD239 /* SOProductDetailCommentCell.xib in Resources */,
+				B5D86D741BA885EA00627955 /* ProductLinkedCollectionCell.xib in Resources */,
 				B0DF02E91B98496000AE388A /* ProductCollectionCell.xib in Resources */,
 				CE9AD5AB1B7A462A00A58D06 /* Images.xcassets in Resources */,
 				CE3A393A1B78E2F50069A2A5 /* Main.storyboard in Resources */,
-				CE3A393F1B78E2F50069A2A5 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -879,6 +884,7 @@
 				B0B06D6E1B8AB1870016B777 /* Cache+AppSetting.swift in Sources */,
 				B593D35E1B9765560054D493 /* SODiscountProductViewController.swift in Sources */,
 				B519904F1B91CD3700085A31 /* SONetworking.swift in Sources */,
+				B5D86D731BA885EA00627955 /* ProductLinkedCollectionCell.swift in Sources */,
 				B593D3601B97657A0054D493 /* SONewProductViewController.swift in Sources */,
 				B51990461B91B6F800085A31 /* SORegisterViewController.swift in Sources */,
 				B5D358D11B9E08F00099FECC /* UIViewWithOutBorder.swift in Sources */,

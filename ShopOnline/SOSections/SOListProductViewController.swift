@@ -17,8 +17,6 @@ class SOListProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.customNavigationBar(SOListProductViewController.mCategories.nameCategories!)
-    
         var VCIDs : [String] = ["SONewProductViewController", "SODiscountProductViewController", "SOCloestProductViewController"]
         //var buttonImages : [UIImage] = [UIImage(named:"HomeIcon.png")!, UIImage(named:"CollectionIcon.png")!, UIImage(named:"LocationIcon.png")!]
         var buttonTitles : [String] = ["Hàng mới", "Phổ biến", "Gần tôi"]
@@ -27,7 +25,6 @@ class SOListProductViewController: UIViewController {
         mSwiftPages.setTopBarBackground(UIColor(red: 232/255, green: 236/255, blue: 238/255, alpha: 1.0))
         mSwiftPages.setButtonsTextColor(UIColor.blackColor())
         mSwiftPages.setAnimatedBarColor(UIColor(red: 46/255, green: 177.0/255, blue: 135/255, alpha: 1.0))
-
         mSwiftPages.initializeWithVCIDsArrayAndButtonTitlesArray(VCIDs, buttonTitlesArray: buttonTitles)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "viewDetailProduct", name:"ViewDetailProduct", object: nil)
     }
@@ -36,6 +33,11 @@ class SOListProductViewController: UIViewController {
     {
         super.viewWillDisappear(true)
         self.customNavigationBar("")
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        self.customNavigationBar(SOListProductViewController.mCategories.nameCategories!)
     }
     
     override func didReceiveMemoryWarning() {
