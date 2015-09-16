@@ -27,6 +27,8 @@
 		B51990581B91D55500085A31 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51990571B91D55500085A31 /* Reachability.swift */; };
 		B519905C1B91D64E00085A31 /* Appdelegate+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B519905B1B91D64E00085A31 /* Appdelegate+Custom.swift */; };
 		B56B20BD1BA456F900C11A47 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56B20BC1BA456F900C11A47 /* TableViewController.swift */; };
+		B570510C1BA9D2920045F3AD /* SOSellProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B570510B1BA9D2920045F3AD /* SOSellProductViewController.swift */; };
+		B570510E1BA9D6EE0045F3AD /* UITextView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B570510D1BA9D6EE0045F3AD /* UITextView+Custom.swift */; };
 		B58DF5CB1B93562300BF8F8B /* NSArray+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58DF5CA1B93562300BF8F8B /* NSArray+Custom.swift */; };
 		B58DF5D01B93701F00BF8F8B /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58DF5CF1B93701F00BF8F8B /* NSManagedObjectContext.swift */; };
 		B59016831B9AE54F006E9DB1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59016821B9AE54F006E9DB1 /* User.swift */; };
@@ -131,6 +133,8 @@
 		B51990571B91D55500085A31 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Rechability/Reachability.swift; sourceTree = "<group>"; };
 		B519905B1B91D64E00085A31 /* Appdelegate+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Appdelegate+Custom.swift"; sourceTree = "<group>"; };
 		B56B20BC1BA456F900C11A47 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		B570510B1BA9D2920045F3AD /* SOSellProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOSellProductViewController.swift; sourceTree = "<group>"; };
+		B570510D1BA9D6EE0045F3AD /* UITextView+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Custom.swift"; sourceTree = "<group>"; };
 		B586DEB51B8CBF2800497F2E /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = ShopOnline/SOShared/MCVendors/FaceBookSDK/FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		B586DEB71B8CBF2B00497F2E /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FacebookSDKStrings.bundle; path = ShopOnline/SOShared/MCVendors/FaceBookSDK/FacebookSDKStrings.bundle; sourceTree = "<group>"; };
 		B586DEB91B8CBF6100497F2E /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -331,6 +335,14 @@
 				B5D86D721BA885EA00627955 /* ProductLinkedCollectionCell.xib */,
 			);
 			name = "Product linked";
+			sourceTree = "<group>";
+		};
+		B570510A1BA9D2610045F3AD /* Sell Product */ = {
+			isa = PBXGroup;
+			children = (
+				B570510B1BA9D2920045F3AD /* SOSellProductViewController.swift */,
+			);
+			name = "Sell Product";
 			sourceTree = "<group>";
 		};
 		B58DF5CC1B936EEC00BF8F8B /* AdBanner */ = {
@@ -659,6 +671,7 @@
 		CE9AD5AD1B7A463F00A58D06 /* SOSections */ = {
 			isa = PBXGroup;
 			children = (
+				B570510A1BA9D2610045F3AD /* Sell Product */,
 				B5AB39051B9C299700C703E1 /* Product Detail */,
 				B5F316261B89B5210070353B /* TabMenu */,
 				B5F316251B89B5150070353B /* Splash */,
@@ -716,6 +729,7 @@
 				B0EAA4CC1B946971004B9B87 /* UIColor+Custom.swift */,
 				B5EB85C51B95F1F500B405B8 /* UIImage+Custom.swift */,
 				B5F9D68C1B9F2EC7002AD239 /* FloatRatingView+Custom.swift */,
+				B570510D1BA9D6EE0045F3AD /* UITextView+Custom.swift */,
 			);
 			name = SOExtension;
 			path = MCExtension;
@@ -786,6 +800,7 @@
 		CE3A39241B78E2F50069A2A5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = CanhTran;
 				TargetAttributes = {
@@ -862,6 +877,7 @@
 				B519905C1B91D64E00085A31 /* Appdelegate+Custom.swift in Sources */,
 				CE9AD5C41B7A4E0B00A58D06 /* UITableViewController+Custom.swift in Sources */,
 				B56B20BD1BA456F900C11A47 /* TableViewController.swift in Sources */,
+				B570510E1BA9D6EE0045F3AD /* UITextView+Custom.swift in Sources */,
 				CE9AD5B61B7A470900A58D06 /* SOLeftMenuViewController.swift in Sources */,
 				B51990581B91D55500085A31 /* Reachability.swift in Sources */,
 				B59F2FE11B9C09C7001DE663 /* SOProductDetailViewController.swift in Sources */,
@@ -888,6 +904,7 @@
 				B593D3601B97657A0054D493 /* SONewProductViewController.swift in Sources */,
 				B51990461B91B6F800085A31 /* SORegisterViewController.swift in Sources */,
 				B5D358D11B9E08F00099FECC /* UIViewWithOutBorder.swift in Sources */,
+				B570510C1BA9D2920045F3AD /* SOSellProductViewController.swift in Sources */,
 				B593D35C1B97653E0054D493 /* SOCloestProductViewController.swift in Sources */,
 				B5CCF8B41B88845800A0C6FD /* SOCatagoriesViewController.swift in Sources */,
 				B5FDD1AD1BA323D7003EE1E3 /* UIButtonBorder.swift in Sources */,

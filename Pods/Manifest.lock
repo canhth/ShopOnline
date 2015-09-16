@@ -1,4 +1,5 @@
 PODS:
+  - ALCameraViewController (1.0.8)
   - Bolts (1.2.0):
     - Bolts/AppLinks (= 1.2.0)
     - Bolts/Tasks (= 1.2.0)
@@ -7,17 +8,6 @@ PODS:
   - Bolts/Tasks (1.2.0)
   - Facebook-iOS-SDK (3.23.2):
     - Bolts (~> 1.0)
-  - FBSDKCoreKit (4.5.1):
-    - Bolts (~> 1.1)
-    - FBSDKCoreKit/arc (= 4.5.1)
-    - FBSDKCoreKit/no-arc (= 4.5.1)
-  - FBSDKCoreKit/arc (4.5.1):
-    - Bolts (~> 1.1)
-  - FBSDKCoreKit/no-arc (4.5.1):
-    - Bolts (~> 1.1)
-    - FBSDKCoreKit/arc
-  - FBSDKLoginKit (4.5.1):
-    - FBSDKCoreKit
   - FontAwesome.swift (0.4.3)
   - Parse (1.8.1):
     - Bolts/Tasks (>= 1.2.0)
@@ -28,19 +18,16 @@ PODS:
   - ReachabilitySwift (1.1)
   - SCLAlertView (0.4.1)
   - Spring (1.0.3)
-  - SwiftPages (1.1.0)
   - TextFieldEffects (0.4.2)
 
 DEPENDENCIES:
-  - FBSDKCoreKit
-  - FBSDKLoginKit
+  - ALCameraViewController
   - FontAwesome.swift
   - Parse
   - ParseFacebookUtils
   - ReachabilitySwift (from `https://github.com/ashleymills/Reachability.swift`)
   - SCLAlertView
   - Spring (~> 1.0.3)
-  - SwiftPages
   - TextFieldEffects
 
 EXTERNAL SOURCES:
@@ -53,17 +40,15 @@ CHECKOUT OPTIONS:
     :git: https://github.com/ashleymills/Reachability.swift
 
 SPEC CHECKSUMS:
+  ALCameraViewController: fbaed8a35a9272b419ec10004231da356d75bcaa
   Bolts: d176cb1e0012175589e389a9db49b85e27787576
   Facebook-iOS-SDK: cd87f0b2f0c1d9574b44e8fa2baacc275524bac3
-  FBSDKCoreKit: f335eaf6865e1e1597dee1debfb533045500da47
-  FBSDKLoginKit: 225cc9a388a92916ee3f3bb14422017b6e44b65b
   FontAwesome.swift: 4f3dbf913b9ef9db275d02b75f6b794fa3bcbabc
   Parse: 2155953b1565494095d5fa5c83b3c77f2c677c09
   ParseFacebookUtils: f3e670d3f8edd0cfb8429ac39b30959d4ab13f0b
   ReachabilitySwift: 1e53abddb01111deac0d229dabdb8bb043567b18
   SCLAlertView: 9e60641edd9efcfc6d58227558eb7b03678dbcf3
   Spring: 3f02b5dc3308572ef177b3cad0fa7bbc4b0706f7
-  SwiftPages: 1b24565cb91f24f4f912fbd9878a9c74b41a2ca6
   TextFieldEffects: de5b2db55fd8af5d5bfe0c7ce5a023076f2835a2
 
 COCOAPODS: 0.38.2

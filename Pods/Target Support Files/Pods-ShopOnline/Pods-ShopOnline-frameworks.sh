@@ -52,9 +52,8 @@ code_sign_if_enabled() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'Pods-ShopOnline/ALCameraViewController.framework'
   install_framework 'Pods-ShopOnline/Bolts.framework'
-  install_framework 'Pods-ShopOnline/FBSDKCoreKit.framework'
-  install_framework 'Pods-ShopOnline/FBSDKLoginKit.framework'
   install_framework 'Pods-ShopOnline/FacebookSDK.framework'
   install_framework 'Pods-ShopOnline/FontAwesome_swift.framework'
   install_framework 'Pods-ShopOnline/Parse.framework'
@@ -62,13 +61,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods-ShopOnline/ReachabilitySwift.framework'
   install_framework 'Pods-ShopOnline/SCLAlertView.framework'
   install_framework 'Pods-ShopOnline/Spring.framework'
-  install_framework 'Pods-ShopOnline/SwiftPages.framework'
   install_framework 'Pods-ShopOnline/TextFieldEffects.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'Pods-ShopOnline/ALCameraViewController.framework'
   install_framework 'Pods-ShopOnline/Bolts.framework'
-  install_framework 'Pods-ShopOnline/FBSDKCoreKit.framework'
-  install_framework 'Pods-ShopOnline/FBSDKLoginKit.framework'
   install_framework 'Pods-ShopOnline/FacebookSDK.framework'
   install_framework 'Pods-ShopOnline/FontAwesome_swift.framework'
   install_framework 'Pods-ShopOnline/Parse.framework'
@@ -76,6 +73,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods-ShopOnline/ReachabilitySwift.framework'
   install_framework 'Pods-ShopOnline/SCLAlertView.framework'
   install_framework 'Pods-ShopOnline/Spring.framework'
-  install_framework 'Pods-ShopOnline/SwiftPages.framework'
   install_framework 'Pods-ShopOnline/TextFieldEffects.framework'
 fi

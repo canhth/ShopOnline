@@ -4,17 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ALCameraViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Bolts.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FBSDKCoreKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FBSDKLoginKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -64,11 +59,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SwiftPages.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>TextFieldEffects.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,27 +67,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0C0F6CE22FBF5E934BAA95914FAEFD1D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0C66C30381F86C3D642FC983CCADEBB6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1380351CE70C8BBEE49F3CAB65E81E88</key>
+		<key>1CDA2C98EF491BB2A15D6C035820966D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2B4649CAEA809EB527BEC02A9351B593</key>
+		<key>1FAF541E67CB66BC99E27D132DB12476</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>37372AFB4FBC04A9510A587C6D990114</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>48E0497F3FD335DC8744B9CFC090262F</key>
+		<key>3DDD335C9EFBAD242C41067F31832FAB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,22 +97,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4C8232592B1FA9807343600F25203667</key>
+		<key>527D42E70731B1BAE3961DC0F8391515</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5DC02D504E0403AE9863F5E9FFE8E658</key>
+		<key>598D2EB620B6C7C31177EAC31A668DAF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8DC61B1FECC74151ACE575DDFA5244A3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9FDE07AFA614A5D2674CB2A84FD8ED57</key>
+		<key>A50916D2E2E505E6EC82C14B47410624</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,12 +117,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EBCA61CB0BCDAB7C6D7D839EC2790802</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F4A43F86541EE699B69391F41A1C1EA7</key>
+		<key>F592E6E7B8BD6439958EF5FA9A71FD82</key>
 		<dict>
 			<key>primary</key>
 			<true/>

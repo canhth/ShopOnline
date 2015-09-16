@@ -3,12 +3,10 @@ use_frameworks!
 
 target 'ShopOnline' do
     pod 'SCLAlertView'
-	pod 'SwiftPages'
     pod 'FontAwesome.swift'
     pod 'Spring', '~> 1.0.3'
     pod 'TextFieldEffects'
-    pod 'FBSDKCoreKit'
-    pod 'FBSDKLoginKit'
+    pod 'ALCameraViewController'
     pod 'Parse'
     pod 'ParseFacebookUtils'
     pod 'ReachabilitySwift', git: 'https://github.com/ashleymills/Reachability.swift'

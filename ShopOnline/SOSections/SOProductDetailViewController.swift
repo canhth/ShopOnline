@@ -8,7 +8,9 @@
 
 import UIKit
 import Parse
+
 let ProductLinked = "ProductLinked"
+let HeightCommentCell = 40.0 as CGFloat
 
 class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate {
 
@@ -33,7 +35,7 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UI
     @IBOutlet weak var mShopNameLabel: UILabel!
     @IBOutlet weak var mNumberProductLabel: UILabel!
     @IBOutlet weak var mSomeDetailLabel: UILabel!
-    @IBOutlet weak var mHeightConstraintTextView: NSLayoutConstraint!
+
     @IBOutlet weak var mContentDetailProductLabel: UITextView!
     @IBOutlet weak var mCategoriesLabel: UILabel!
     @IBOutlet weak var mTradeMarkLabel: UILabel!
@@ -43,14 +45,16 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UI
     /* Comment tableview */
     @IBOutlet weak var mListCommentTableView: UITableView!
     
+    @IBOutlet weak var mHeightCommentTableView: NSLayoutConstraint!
     @IBOutlet weak var mProductConcernCollectionView: UICollectionView!
     @IBOutlet weak var mBottomView: UIView!
     @IBOutlet weak var mContactButton: UIButton!
     @IBOutlet weak var mBuyNowButton: UIButton!
     
+    @IBOutlet weak var mProductLinkedCollectionView: UIView!
     @IBOutlet weak var mConstraintHeightTextDetailProduct: NSLayoutConstraint!
     
-    @IBOutlet weak var mConstraintTableViewComment: UITableView!
+    @IBOutlet weak var mConstraintLinkedProduct: NSLayoutConstraint!
     
     //Data
     var mProducts = [Product]()
@@ -118,7 +122,7 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UI
         "Phí vận chuyển: \(SOProductDetailViewController.mProductModel.transportFee)",
         "Sẵn có:\(SOProductDetailViewController.mProductModel.numberProduct)",
         "\(SOProductDetailViewController.mProductModel.likeNumber)",
-            "number product of shop",
+        "number product of shop",
         "",
         self.mCategoriesName,
         "Add trademark",
@@ -130,7 +134,44 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UI
             var label : UILabel = objectLabel as! UILabel
             label.text = arrayValues[idx]
         })
+        
+        // Setup constraint height of detail text view
         self.mContentDetailProductLabel.text = SOProductDetailViewController.mProductModel.subTitle
+        self.mConstraintHeightTextDetailProduct.constant = SOUtils.sharedInstance.heightForView(self.mContentDetailProductLabel.text, width: self.mContentDetailProductLabel.frame.size.width)
+        self.mContentDetailProductLabel.layoutIfNeeded()
+    }
+    
+    /**
+    Setup contraint height of comment table view
+    */
+    func setupConstraintCommentTableView()
+    {
+        // Calculator height with list comment
+        if self.mCommentProduct.count > 4
+        {
+            self.mHeightCommentTableView.constant = 4 * HeightCommentCell
+        }
+        else if self.mCommentProduct.count == 0
+        {
+            self.mHeightCommentTableView.constant = HeightCommentCell
+        }
+        else
+        {
+            self.mHeightCommentTableView.constant = CGFloat(self.mCommentProduct.count) * HeightCommentCell
+        }
+        self.mListCommentTableView.layoutIfNeeded()
+    }
+    
+    /**
+    Setup contraint height of product linked collection view
+    */
+    func setupConstraintProductLinked()
+    {
+        if self.mProducts.count == 0
+        {
+            self.mConstraintLinkedProduct.constant = 0;
+            self.mProductLinkedCollectionView.layoutIfNeeded()
+        }
     }
     
     //MARK:- Infomation of Product (images, own shop)
@@ -183,6 +224,9 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UI
         }
     }
     
+    /**
+    Count number product by user own shop
+    */
     func countNumberProduct()
     {
         /// Get user own shop
@@ -225,6 +269,7 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UI
                         self.mCommentProduct.addObject(comment)
                     }
                     self.mListCommentTableView.reloadData()
+                    self.setupConstraintCommentTableView()
                 }
         }
     }
@@ -248,8 +293,8 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UI
                     {
                         self.mProducts += [product]
                     }
-                    println(self.mProducts)
                     self.mProductConcernCollectionView.reloadData()
+                    self.setupConstraintProductLinked()
                 }
         }
     }
