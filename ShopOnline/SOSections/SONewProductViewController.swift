@@ -45,6 +45,10 @@ class SONewProductViewController: UIViewController, UICollectionViewDelegateFlow
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+    }
+    
     func refresh(sender:AnyObject)
     {
         if SONetworking.sharedInstance.isHaveConnection()

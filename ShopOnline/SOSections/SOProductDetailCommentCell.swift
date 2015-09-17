@@ -39,7 +39,11 @@ class SOProductDetailCommentCell: UITableViewCell {
             }
         })
         
-        mCreateTimeLabel.text = comment.createdAt?.description
+
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "EE dd-MM"
+        mCreateTimeLabel.text = dateFormatter.stringFromDate(comment.createdAt!)
+        
         mContentCommentLabel.text = comment.contentComment
     }
     

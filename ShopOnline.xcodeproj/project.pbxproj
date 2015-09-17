@@ -29,6 +29,10 @@
 		B56B20BD1BA456F900C11A47 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56B20BC1BA456F900C11A47 /* TableViewController.swift */; };
 		B570510C1BA9D2920045F3AD /* SOSellProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B570510B1BA9D2920045F3AD /* SOSellProductViewController.swift */; };
 		B570510E1BA9D6EE0045F3AD /* UITextView+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B570510D1BA9D6EE0045F3AD /* UITextView+Custom.swift */; };
+		B58C4F2D1BAB2BC200D04121 /* SOListImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58C4F2C1BAB2BC200D04121 /* SOListImageViewController.swift */; };
+		B58C4F2F1BAB2BDC00D04121 /* SOAddCommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58C4F2E1BAB2BDC00D04121 /* SOAddCommentViewController.swift */; };
+		B58C4F331BAB2C1F00D04121 /* SOBuyProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58C4F321BAB2C1F00D04121 /* SOBuyProductViewController.swift */; };
+		B58C4F371BAB2C6000D04121 /* SOContactOwnShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58C4F361BAB2C6000D04121 /* SOContactOwnShopViewController.swift */; };
 		B58DF5CB1B93562300BF8F8B /* NSArray+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58DF5CA1B93562300BF8F8B /* NSArray+Custom.swift */; };
 		B58DF5D01B93701F00BF8F8B /* NSManagedObjectContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58DF5CF1B93701F00BF8F8B /* NSManagedObjectContext.swift */; };
 		B59016831B9AE54F006E9DB1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59016821B9AE54F006E9DB1 /* User.swift */; };
@@ -144,6 +148,10 @@
 		B586DEC11B8CBF8800497F2E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		B586DEC31B8CBF9900497F2E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		B586DEC51B8CBFA100497F2E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B58C4F2C1BAB2BC200D04121 /* SOListImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOListImageViewController.swift; sourceTree = "<group>"; };
+		B58C4F2E1BAB2BDC00D04121 /* SOAddCommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOAddCommentViewController.swift; sourceTree = "<group>"; };
+		B58C4F321BAB2C1F00D04121 /* SOBuyProductViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOBuyProductViewController.swift; sourceTree = "<group>"; };
+		B58C4F361BAB2C6000D04121 /* SOContactOwnShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOContactOwnShopViewController.swift; sourceTree = "<group>"; };
 		B58DF5CA1B93562300BF8F8B /* NSArray+Custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSArray+Custom.swift"; sourceTree = "<group>"; };
 		B58DF5CF1B93701F00BF8F8B /* NSManagedObjectContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObjectContext.swift; sourceTree = "<group>"; };
 		B59016821B9AE54F006E9DB1 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = ShopOnline/SOShared/SOModel/User.swift; sourceTree = SOURCE_ROOT; };
@@ -343,6 +351,39 @@
 				B570510B1BA9D2920045F3AD /* SOSellProductViewController.swift */,
 			);
 			name = "Sell Product";
+			sourceTree = "<group>";
+		};
+		B58C4F2B1BAB2B8500D04121 /* List Image Product View */ = {
+			isa = PBXGroup;
+			children = (
+				B58C4F2C1BAB2BC200D04121 /* SOListImageViewController.swift */,
+			);
+			name = "List Image Product View";
+			sourceTree = "<group>";
+		};
+		B58C4F301BAB2BE900D04121 /* Add Comment */ = {
+			isa = PBXGroup;
+			children = (
+				B58C4F2E1BAB2BDC00D04121 /* SOAddCommentViewController.swift */,
+			);
+			name = "Add Comment";
+			sourceTree = "<group>";
+		};
+		B58C4F311BAB2C0300D04121 /* Buy Product */ = {
+			isa = PBXGroup;
+			children = (
+				B58C4F351BAB2C4000D04121 /* Contact Own Shop */,
+				B58C4F321BAB2C1F00D04121 /* SOBuyProductViewController.swift */,
+			);
+			name = "Buy Product";
+			sourceTree = "<group>";
+		};
+		B58C4F351BAB2C4000D04121 /* Contact Own Shop */ = {
+			isa = PBXGroup;
+			children = (
+				B58C4F361BAB2C6000D04121 /* SOContactOwnShopViewController.swift */,
+			);
+			name = "Contact Own Shop";
 			sourceTree = "<group>";
 		};
 		B58DF5CC1B936EEC00BF8F8B /* AdBanner */ = {
@@ -671,6 +712,9 @@
 		CE9AD5AD1B7A463F00A58D06 /* SOSections */ = {
 			isa = PBXGroup;
 			children = (
+				B58C4F311BAB2C0300D04121 /* Buy Product */,
+				B58C4F301BAB2BE900D04121 /* Add Comment */,
+				B58C4F2B1BAB2B8500D04121 /* List Image Product View */,
 				B570510A1BA9D2610045F3AD /* Sell Product */,
 				B5AB39051B9C299700C703E1 /* Product Detail */,
 				B5F316261B89B5210070353B /* TabMenu */,
@@ -871,6 +915,7 @@
 				B5F316221B899ED80070353B /* SOListProductViewController.swift in Sources */,
 				B59016921B9B0A41006E9DB1 /* Product.swift in Sources */,
 				CE9AD5B11B7A46D600A58D06 /* SOIntroViewController.swift in Sources */,
+				B58C4F331BAB2C1F00D04121 /* SOBuyProductViewController.swift in Sources */,
 				B5FA708E1B864CE20050980A /* SOLoginViewController.swift in Sources */,
 				B0EAA4CB1B943845004B9B87 /* JTSplashView.swift in Sources */,
 				B5AB39071B9C2AAE00C703E1 /* Appdelegate+CLLocation.swift in Sources */,
@@ -880,6 +925,7 @@
 				B570510E1BA9D6EE0045F3AD /* UITextView+Custom.swift in Sources */,
 				CE9AD5B61B7A470900A58D06 /* SOLeftMenuViewController.swift in Sources */,
 				B51990581B91D55500085A31 /* Reachability.swift in Sources */,
+				B58C4F371BAB2C6000D04121 /* SOContactOwnShopViewController.swift in Sources */,
 				B59F2FE11B9C09C7001DE663 /* SOProductDetailViewController.swift in Sources */,
 				B593D3641B976F1C0054D493 /* SwiftPages.swift in Sources */,
 				B5F316241B89B50C0070353B /* SOTabMenuViewController.swift in Sources */,
@@ -891,6 +937,7 @@
 				B5CCF89E1B88347A00A0C6FD /* UIImageView+Custom.swift in Sources */,
 				B59016881B9AE584006E9DB1 /* MenuCategories.swift in Sources */,
 				B5CCF89C1B88346A00A0C6FD /* UIView+Custom.swift in Sources */,
+				B58C4F2D1BAB2BC200D04121 /* SOListImageViewController.swift in Sources */,
 				CE9AD5C01B7A4DD600A58D06 /* NSString+Custom.swift in Sources */,
 				B59016851B9AE576006E9DB1 /* AdBanner.swift in Sources */,
 				B58DF5CB1B93562300BF8F8B /* NSArray+Custom.swift in Sources */,
@@ -911,6 +958,7 @@
 				B58DF5D01B93701F00BF8F8B /* NSManagedObjectContext.swift in Sources */,
 				B5F316191B8979DE0070353B /* UICollectionViewController+Custom.swift in Sources */,
 				CE9AD5C21B7A4DE800A58D06 /* UIViewController+Custom.swift in Sources */,
+				B58C4F2F1BAB2BDC00D04121 /* SOAddCommentViewController.swift in Sources */,
 				B0EAA4C81B942C25004B9B87 /* SOLeftMenuTableViewController.swift in Sources */,
 				B5F9D6951B9F3437002AD239 /* SOProductDetailCommentCell.swift in Sources */,
 				B519904A1B91BDF200085A31 /* UIAlertView+Custom.swift in Sources */,

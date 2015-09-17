@@ -37,7 +37,7 @@ class SOListProductViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
-        self.customNavigationBar(SOListProductViewController.mCategories.nameCategories!)
+        self.customNavigationBar(SOListProductViewController.mCategories.nameCategories!) 
     }
     
     override func didReceiveMemoryWarning() {

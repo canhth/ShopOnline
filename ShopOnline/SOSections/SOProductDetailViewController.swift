@@ -137,7 +137,7 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UI
         
         // Setup constraint height of detail text view
         self.mContentDetailProductLabel.text = SOProductDetailViewController.mProductModel.subTitle
-        self.mConstraintHeightTextDetailProduct.constant = SOUtils.sharedInstance.heightForView(self.mContentDetailProductLabel.text, width: self.mContentDetailProductLabel.frame.size.width)
+        self.mConstraintHeightTextDetailProduct.constant = SOUtils.sharedInstance.heightForView(self.mContentDetailProductLabel.text, width: self.mContentDetailProductLabel.frame.size.width, size: 19)
         self.mContentDetailProductLabel.layoutIfNeeded()
     }
     
@@ -169,8 +169,9 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UI
     {
         if self.mProducts.count == 0
         {
-            self.mConstraintLinkedProduct.constant = 0;
+            self.mConstraintLinkedProduct.constant = 1;
             self.mProductLinkedCollectionView.layoutIfNeeded()
+            self.mProductLinkedCollectionView.backgroundColor = UIColor.clearColor()
         }
     }
     
@@ -305,21 +306,61 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UI
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-        return self.mCommentProduct.count
+        if self.mCommentProduct.count > 0
+        {
+            return self.mCommentProduct.count
+        }
+        return 1
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if  self.mCommentProduct.count > 0
+        {
+            let subTitle:String = self.mCommentProduct[indexPath.row].objectForKey("contentComment") as! String
+            var height:CGFloat = SOUtils.sharedInstance.heightForView(subTitle, width: self.getWidthScreen()*0.75, size: 9.0)
+            if height < 40
+            {
+                if  height > 10
+                {
+                    return height + 30
+                }
+                else
+                {
+                    return 40
+                }
+            }
+            else
+            {
+                return height + 20
+            }
+        }
+        return 40
+    }
+    
+    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 40
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("SOProductDetailCommentCell", forIndexPath: indexPath) as! SOProductDetailCommentCell
-        cell.setupDataOfCell(self.mCommentProduct[indexPath.row] as! Comment)
-        
-        return cell
+        if self.mCommentProduct.count > 0
+        {
+            let cell = tableView.dequeueReusableCellWithIdentifier("SOProductDetailCommentCell", forIndexPath: indexPath) as! SOProductDetailCommentCell
+            cell.setupDataOfCell(self.mCommentProduct[indexPath.row] as! Comment)
+            return cell
+        }
+        else
+        {
+            let cell = tableView.dequeueReusableCellWithIdentifier("AddCommentCell", forIndexPath: indexPath) as! UITableViewCell
+            return cell
+        }
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if  self.mCommentProduct.count == 0
+        {
+            // Goto create comment view. !!!
+        }
+    }
     
     //MARK: - ScrollView delegate
     

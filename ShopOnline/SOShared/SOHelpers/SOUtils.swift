@@ -104,8 +104,8 @@ class SOUtils: NSObject {
         return objectLocation
     }
     
-    func heightForView(text:String, width:CGFloat) -> CGFloat {
-        let font = UIFont(name: "Helvetica Neue", size: 20.0)
+    func heightForView(text:String, width:CGFloat, size:CGFloat) -> CGFloat {
+        let font = UIFont(name: "Helvetica Neue", size: size)
         let label:UILabel = UILabel(frame: CGRectMake(0, 0, width, CGFloat.max))
         label.numberOfLines = 0
         label.lineBreakMode = NSLineBreakMode.ByWordWrapping
