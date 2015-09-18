@@ -177,7 +177,6 @@
 		3C1930495B63E5AFADD629567B34F2EF /* PFJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = DF4C6437700DF09D38AC034FC8031A3E /* PFJSONSerialization.m */; };
 		3C502444652C0840E29DC9D096745C65 /* PFCloudCodeController.h in Headers */ = {isa = PBXBuildFile; fileRef = BBBFDF79ECA8148432A5AA5C633A5631 /* PFCloudCodeController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3C86EFF33C5C5153EEBB5F7B168864CA /* FBGraphObjectTableSelection.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A7C246FF870F87EFE2C07AC140AB4D0 /* FBGraphObjectTableSelection.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3C8D2DEEF76A1AD1F99DC6A53ABC612B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 806789FF361425212EB4B18CDF8CA730 /* Foundation.framework */; };
 		3CB99F7D472774D14B84D950B5700CC6 /* PFACL.m in Sources */ = {isa = PBXBuildFile; fileRef = ABDFD256FA0BC9433748A61A217F3196 /* PFACL.m */; };
 		3D162E1DD84C3F8C07598BC13AF1D483 /* FBFriendPickerCacheDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BD96F0A1691522901C4A007BA40B108 /* FBFriendPickerCacheDescriptor.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3D695268A2E3BFA3116720D7659CED7D /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 73444851337A3351368B1F238814A16B /* FontAwesome.otf */; };
@@ -504,6 +503,7 @@
 		AF23953042D03823A9210F73E0BF0569 /* FBOpenGraphActionShareDialogParams.h in Headers */ = {isa = PBXBuildFile; fileRef = 515D5A2875E046AABD01A2CCC3CFA6A3 /* FBOpenGraphActionShareDialogParams.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AFC0905E8B9FD7BD96E3305BEC6A408F /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9876D10625C1E9006562055D3BF119 /* SpringAnimation.swift */; };
 		B0AEF9154E51393B2E2991060571D615 /* BFCancellationTokenSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A927DDF3F02E76D6B56A95F7CFDDA77D /* BFCancellationTokenSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B0B93A651BABB1BE00201059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B93A641BABB1BE00201059 /* Foundation.framework */; };
 		B127E0079448624B0402EEE3D8485119 /* PFFieldOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E0B051ECF13A3D3CD90E1D8AE84ED163 /* PFFieldOperation.m */; };
 		B1526F737F8754B9637038A81C19492A /* SpringImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017820BFEFFA04C8392724C5BE0810A8 /* SpringImageView.swift */; };
 		B1AC6E1E4DBEC8501E71802E7A895155 /* FBFetchedAppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = DC82CA09A4C975DA09F660ACE296F53F /* FBFetchedAppSettings.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -1444,6 +1444,7 @@
 		AF62209893619158137FF0C21F9C4362 /* PFRESTCommand.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFRESTCommand.m; path = Parse/Internal/Commands/PFRESTCommand.m; sourceTree = "<group>"; };
 		AFD331946B7D2EB453B305FA68B56424 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		B0A888EAC3951D7571B829EA2DA7BC2F /* Pods-ShopOnline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ShopOnline.release.xcconfig"; sourceTree = "<group>"; };
+		B0B93A641BABB1BE00201059 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		B0E1F8F325A9DAC2DE488773F7FE0546 /* PFInstallationConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PFInstallationConstants.h; path = Parse/Internal/Installation/Constants/PFInstallationConstants.h; sourceTree = "<group>"; };
 		B12661C957D1FD8F4DF176628ECF25AC /* PFSessionController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PFSessionController.m; path = Parse/Internal/Session/Controller/PFSessionController.m; sourceTree = "<group>"; };
 		B13A08B54DB5F2E26970E1BB3942002B /* FBSessionAppSwitchingLoginStategy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSessionAppSwitchingLoginStategy.m; path = src/Login/FBSessionAppSwitchingLoginStategy.m; sourceTree = "<group>"; };
@@ -1724,7 +1725,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C8D2DEEF76A1AD1F99DC6A53ABC612B /* Foundation.framework in Frameworks */,
+				B0B93A651BABB1BE00201059 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2854,6 +2855,7 @@
 		F0494790626905C81AC98972F4CEDEBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B0B93A641BABB1BE00201059 /* Foundation.framework */,
 				0258D82564B65AF90F94B5357EF08A55 /* Bolts.framework */,
 				C0C377C7A96FEE72E68E08317F6DCC8F /* FacebookSDK.framework */,
 				8EC2A1F52CDC68ABA28711453E24EEBC /* Parse.framework */,
@@ -4276,12 +4278,14 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
 				MODULEMAP_FILE = "Target Support Files/ALCameraViewController/ALCameraViewController.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = ALCameraViewController;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -4331,6 +4335,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = mh_dylib;
 				MODULEMAP_FILE = "Target Support Files/ALCameraViewController/ALCameraViewController.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = ALCameraViewController;
@@ -4338,6 +4343,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -4455,6 +4461,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C607A0BDE7D73178F0FFE344A309CDDF /* FontAwesome.swift-Private.xcconfig */;
 			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				PRODUCT_NAME = FontAwesome.swift;
 				SDKROOT = iphoneos;
@@ -4733,6 +4740,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -4785,6 +4793,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C607A0BDE7D73178F0FFE344A309CDDF /* FontAwesome.swift-Private.xcconfig */;
 			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				PRODUCT_NAME = FontAwesome.swift;
 				SDKROOT = iphoneos;
@@ -4839,6 +4848,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";

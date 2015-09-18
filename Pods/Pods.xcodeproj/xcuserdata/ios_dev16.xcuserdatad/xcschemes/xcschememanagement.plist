@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ALCameraViewController.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>18</integer>
+		</dict>
 		<key>Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -129,6 +134,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>0C0F6CE22FBF5E934BAA95914FAEFD1D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0C31FD4E445834E1628904CC4FC564B9</key>
 		<dict>
 			<key>primary</key>
@@ -150,6 +160,16 @@
 			<true/>
 		</dict>
 		<key>1ACCCE08AFA0C48BBDB26998F0405767</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1CDA2C98EF491BB2A15D6C035820966D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1FAF541E67CB66BC99E27D132DB12476</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -179,6 +199,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>3DDD335C9EFBAD242C41067F31832FAB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4302DD744483803092CDC8956ADBBCA3</key>
 		<dict>
 			<key>primary</key>
@@ -199,7 +224,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>527D42E70731B1BAE3961DC0F8391515</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>559B48090C9F0431AF4DD8E1F2CBFA7D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>598D2EB620B6C7C31177EAC31A668DAF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -220,6 +255,11 @@
 			<true/>
 		</dict>
 		<key>9FDE07AFA614A5D2674CB2A84FD8ED57</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A50916D2E2E505E6EC82C14B47410624</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -245,6 +285,11 @@
 			<true/>
 		</dict>
 		<key>F4A43F86541EE699B69391F41A1C1EA7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F592E6E7B8BD6439958EF5FA9A71FD82</key>
 		<dict>
 			<key>primary</key>
 			<true/>

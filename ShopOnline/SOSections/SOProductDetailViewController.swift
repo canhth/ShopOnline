@@ -30,6 +30,7 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UI
     @IBOutlet weak var mLikeImageView: UIImageView!
     @IBOutlet weak var mNumberLikeLabel: UILabel!
     @IBOutlet weak var mRatingView: UIView!
+  
     /* Detail product */
     @IBOutlet weak var mShopProfileImageView: UIImageView!
     @IBOutlet weak var mShopNameLabel: UILabel!
@@ -59,6 +60,7 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UI
     //Data
     var mProducts = [Product]()
     var mCommentProduct : NSMutableArray = []
+    var mListImage = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,6 +92,11 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UI
         self.mMainScrollView.contentSize = CGSizeMake(self.getWidthScreen(), self.mBottomView.frame.origin.y + self.mBottomView.frame.size.height)
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        self.customNavigationBar(SOListProductViewController.mCategories.nameCategories!)
+    }
+    
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(true)
         self.customNavigationBar("")
@@ -100,8 +107,6 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UI
     */
     func setupView()
     {
-        self.customNavigationBar(SOListProductViewController.mCategories.nameCategories!)
-        
         mContentDetailProductLabel.layer.cornerRadius = 5.0
         // Array labels
         var arrayLabels : NSArray = [self.mProductNameLabel,
@@ -211,7 +216,7 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UI
                         {
                             // Get image with PFFile
                             let image:UIImage = UIImage(data:imageData!)!
-                            
+                            self.mListImage += [image]
                             // Setup scroll view
                             var imgView = UIImageView(frame: CGRectMake(scrollViewWidth * index, 0, scrollViewWidth, scrollViewHeight))
                             imgView.contentMode = UIViewContentMode.ScaleAspectFit
@@ -418,4 +423,13 @@ class SOProductDetailViewController: UIViewController, UIScrollViewDelegate , UI
         NSNotificationCenter.defaultCenter().postNotificationName("ViewDetailProduct", object: nil)
     }
 
+    //MARK: - Actions
+    
+    @IBAction func clickViewListImageGesture(sender: AnyObject)
+    {
+        let imageDetail = setupPushView(SOListImageViewController) as! SOListImageViewController
+        imageDetail.mListImageData = self.mListImage
+        self.navigationController!.presentViewController(imageDetail, animated: true, completion: nil)
+    }
+    
 }

@@ -10,8 +10,6 @@
 		572C1BC43633266CB50A2009 /* Pods_ShopOnline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1E80F9667F0DB2E129E257 /* Pods_ShopOnline.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B0AA4C381B86C65C0029CB8C /* SlideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AA4C371B86C65C0029CB8C /* SlideMenuController.swift */; };
 		B0B06D6E1B8AB1870016B777 /* Cache+AppSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B06D6D1B8AB1860016B777 /* Cache+AppSetting.swift */; };
-		B0B5B9491BA6E46500891E62 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B5B9431BA6E42D00891E62 /* Bolts.framework */; };
-		B0B5B94A1BA6E46500891E62 /* Bolts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0B5B9431BA6E42D00891E62 /* Bolts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B0DF02E81B98496000AE388A /* ProductCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DF02E61B98496000AE388A /* ProductCollectionCell.swift */; };
 		B0DF02E91B98496000AE388A /* ProductCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0DF02E71B98496000AE388A /* ProductCollectionCell.xib */; };
 		B0EAA4C81B942C25004B9B87 /* SOLeftMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EAA4C71B942C25004B9B87 /* SOLeftMenuTableViewController.swift */; };
@@ -99,29 +97,10 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		B0ECC2CF1B9D44B0000F5985 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B0B5B94A1BA6E46500891E62 /* Bolts.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		4081AE140FE94B3FABB94590 /* Pods-ShopOnline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShopOnline.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShopOnline/Pods-ShopOnline.debug.xcconfig"; sourceTree = "<group>"; };
-		B0AA4C321B86C24E0029CB8C /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlideMenuControllerSwift.framework; path = "Pods/../build/Debug-iphoneos/SlideMenuControllerSwift.framework"; sourceTree = "<group>"; };
-		B0AA4C341B86C4110029CB8C /* SlideMenuControllerSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlideMenuControllerSwift.framework; path = "Pods/../build/Debug-iphoneos/SlideMenuControllerSwift.framework"; sourceTree = "<group>"; };
 		B0AA4C371B86C65C0029CB8C /* SlideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuController.swift; sourceTree = "<group>"; };
 		B0B06D6D1B8AB1860016B777 /* Cache+AppSetting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cache+AppSetting.swift"; sourceTree = "<group>"; };
-		B0B5B9431BA6E42D00891E62 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		B0B5B9441BA6E42D00891E62 /* FacebookSDKStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKStrings.bundle; sourceTree = "<group>"; };
-		B0B5B9451BA6E42D00891E62 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		B0DF02E61B98496000AE388A /* ProductCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionCell.swift; sourceTree = "<group>"; };
 		B0DF02E71B98496000AE388A /* ProductCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductCollectionCell.xib; sourceTree = "<group>"; };
 		B0EAA4C71B942C25004B9B87 /* SOLeftMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SOLeftMenuTableViewController.swift; sourceTree = "<group>"; };
@@ -224,7 +203,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				572C1BC43633266CB50A2009 /* Pods_ShopOnline.framework in Frameworks */,
-				B0B5B9491BA6E46500891E62 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,16 +232,6 @@
 				B0AA4C371B86C65C0029CB8C /* SlideMenuController.swift */,
 			);
 			path = SlideMenuController;
-			sourceTree = "<group>";
-		};
-		B0B5B9421BA6E42D00891E62 /* FaceBookSDK */ = {
-			isa = PBXGroup;
-			children = (
-				B0B5B9431BA6E42D00891E62 /* Bolts.framework */,
-				B0B5B9441BA6E42D00891E62 /* FacebookSDKStrings.bundle */,
-				B0B5B9451BA6E42D00891E62 /* FBAudienceNetwork.framework */,
-			);
-			path = FaceBookSDK;
 			sourceTree = "<group>";
 		};
 		B0DF02E31B9848F300AE388A /* Collection Cell */ = {
@@ -667,7 +635,6 @@
 		CE9AD5A61B7A462A00A58D06 /* SOVendors */ = {
 			isa = PBXGroup;
 			children = (
-				B0B5B9421BA6E42D00891E62 /* FaceBookSDK */,
 				B5F9D6891B9F2D15002AD239 /* FloatRatingView */,
 				B593D3621B976F020054D493 /* SwiftPages */,
 				B593D3541B97168C0054D493 /* EditSCLAlertView */,
@@ -792,8 +759,6 @@
 				B586DEB91B8CBF6100497F2E /* Accounts.framework */,
 				B586DEB71B8CBF2B00497F2E /* FacebookSDKStrings.bundle */,
 				B586DEB51B8CBF2800497F2E /* FBAudienceNetwork.framework */,
-				B0AA4C341B86C4110029CB8C /* SlideMenuControllerSwift.framework */,
-				B0AA4C321B86C24E0029CB8C /* SlideMenuControllerSwift.framework */,
 				CB1E80F9667F0DB2E129E257 /* Pods_ShopOnline.framework */,
 			);
 			name = Frameworks;
@@ -809,7 +774,6 @@
 				CE3A39281B78E2F50069A2A5 /* Sources */,
 				CE3A39291B78E2F50069A2A5 /* Frameworks */,
 				CE3A392A1B78E2F50069A2A5 /* Resources */,
-				B0ECC2CF1B9D44B0000F5985 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1111,12 +1075,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShopOnline/SOShared/MCVendors/FaceBookSDK",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = ShopOnline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = " $(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "da8ff26c-ab97-4ea2-856c-6889acf11333";
 				SWIFT_OBJC_BRIDGING_HEADER = "./ShopOnline/SOShared/SOHelpers/Bridging-Header.h";
@@ -1130,17 +1096,19 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ShopOnline/SOShared/MCVendors/FaceBookSDK",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = ShopOnline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = " $(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "da8ff26c-ab97-4ea2-856c-6889acf11333";
 				SWIFT_OBJC_BRIDGING_HEADER = "./ShopOnline/SOShared/SOHelpers/Bridging-Header.h";
@@ -1152,7 +1120,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hai Nguyen (7XV4A7MU2Z)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1164,7 +1132,7 @@
 				INFOPLIST_FILE = ShopOnlineTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "79e4fd54-ff91-4789-8bab-961b689edd29";
+				PROVISIONING_PROFILE = "da8ff26c-ab97-4ea2-856c-6889acf11333";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShopOnline.app/ShopOnline";
 			};
 			name = Debug;
@@ -1174,7 +1142,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Sutrix Media (Vietnam) Joint Stock Company";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hai Nguyen (7XV4A7MU2Z)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1182,7 +1150,7 @@
 				INFOPLIST_FILE = ShopOnlineTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "79e4fd54-ff91-4789-8bab-961b689edd29";
+				PROVISIONING_PROFILE = "da8ff26c-ab97-4ea2-856c-6889acf11333";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShopOnline.app/ShopOnline";
 			};
 			name = Release;
